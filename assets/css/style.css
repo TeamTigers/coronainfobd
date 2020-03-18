@@ -56,6 +56,35 @@ h3 {
   border-radius: 20px;
 }
 
+#toTop {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 20px;
+  /* Place the button at the bottom of the page */
+  right: 30px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  background-color: red;
+  /* Set a background color */
+  color: white;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 15px;
+  /* Some padding */
+  border-radius: 10px;
+  /* Rounded corners */
+  font-size: 18px;
+  /* Increase font size */
+}
+
 .tabs .tab a {
   color: rgba(110, 161, 238, 0.7);
 }
@@ -146,28 +175,6 @@ ul.side-nav.leftside-navigation hr {
   height: 42px;
 }
 
-#left-sidebar-nav {
-  position: fixed;
-  width: 100px;
-  left: 180px;
-  z-index: 999;
-  height: auto;
-}
-
-#slide-out li a i {
-  line-height: inherit;
-  width: 2rem;
-  font-size: 1.6rem;
-  display: block;
-  float: left;
-  text-align: center;
-  margin-right: 1rem;
-}
-
-#slide-out ul.side-nav li {
-  padding: 0px !important;
-}
-
 ul.side-nav li {
   padding: 0;
 }
@@ -189,15 +196,15 @@ ul.side-nav .collapsible-header {
     display: none;
   }
   .customContainer {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 0rem;
+    margin-right: 0rem;
   }
 }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
   .customContainer {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 0rem;
+    margin-right: 0rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

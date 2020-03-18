@@ -48,11 +48,18 @@
         </nav>
       </div>
       <ul class="sidenav" id="mobile-nav">
-        <li><a href="signup.html">SignUp</a></li>
-        <li><a href="signin.html">SignIn</a></li>
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#case_study">Case study</a></li>
       </ul>
     </header>
     <main>
+      <a
+        class="btn-floating btn-large waves-effect waves-light red"
+        id="toTop"
+        onclick="abcd()"
+        ><i class="material-icons">add</i></a
+      >
       <div id="home">
         <div class="row">
           <div class="slider">
@@ -101,32 +108,30 @@
 
       <!-- summary card -->
 
-      <div class="container">
-        <div id="summary">
-          <div class="row">
-            <h3 class="center-align">Summary of COVID-19 in Bangladesh</h3>
-            <div class="col s12 m4 l4">
-              <div class="card round center-align hoverable">
-                <div class="card-content">
-                  <h1 class="caseCard">14</h1>
-                  <h6>Coronavirus cases</h6>
-                </div>
+      <div class="container" id="summary">
+        <div class="row">
+          <h3 class="center-align">Summary of COVID-19 in Bangladesh</h3>
+          <div class="col s12 m4 l4">
+            <div class="card round center-align hoverable">
+              <div class="card-content">
+                <h1 class="caseCard">14</h1>
+                <h6>Coronavirus cases</h6>
               </div>
             </div>
-            <div class="col s12 m4 l4">
-              <div class="card round center-align hoverable">
-                <div class="card-content">
-                  <h1 class="deathCard">1</h1>
-                  <h6>Deaths</h6>
-                </div>
+          </div>
+          <div class="col s12 m4 l4">
+            <div class="card round center-align hoverable">
+              <div class="card-content">
+                <h1 class="deathCard">1</h1>
+                <h6>Deaths</h6>
               </div>
             </div>
-            <div class="col s12 m4 l4">
-              <div class="card round center-align hoverable">
-                <div class="card-content">
-                  <h1 class="recoveryCard">3</h1>
-                  <h6>Recovered</h6>
-                </div>
+          </div>
+          <div class="col s12 m4 l4">
+            <div class="card round center-align hoverable">
+              <div class="card-content">
+                <h1 class="recoveryCard">3</h1>
+                <h6>Recovered</h6>
               </div>
             </div>
           </div>
@@ -144,7 +149,9 @@
                 alt="coronavirus"
                 responsive-img
               />
-              <figcaption>Fig.1 - Mind map of cases</figcaption>
+              <figcaption class="center-align">
+                Fig.1 - Mind map of cases
+              </figcaption>
             </figure>
           </div>
           <div class="col s12 l8 m8">
@@ -196,5 +203,19 @@
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/materialize.js"></script>
     <script src="assets/js/plugin.js"></script>
+    <script>
+      window.onscroll = scroll1;
+
+      function scroll1() {
+        var toTop = document.getElementById("toTop");
+        window.scrollY > 500
+          ? (toTop.style.display = "Block")
+          : (toTop.style.display = "none");
+      }
+
+      function abcd() {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    </script>
   </body>
 </html>
