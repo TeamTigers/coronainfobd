@@ -1,13 +1,14 @@
-html {
-  scroll-behavior: smooth;
+header li a {
+  color: #ededee;
 }
 
 header li :hover {
-  font-weight: bold;
+  color: #ffffff;
 }
 
 header li :hover a :active {
-  font-weight: bold;
+  font-weight: bolder;
+  color: #ffffff;
 }
 
 .customContainer {
@@ -175,19 +176,6 @@ ul.side-nav .collapsible-header {
   margin: 0;
 }
 
-.caption {
-  font-size: 1.25rem;
-  font-weight: 300;
-  margin-bottom: 30px;
-}
-
-.caption-uppercase {
-  font-size: 1.25rem;
-  font-weight: 300;
-  margin-bottom: 30px;
-  text-transform: uppercase;
-}
-
 .sidebar-collapse {
   position: absolute;
   left: -170px;
@@ -200,41 +188,25 @@ ul.side-nav .collapsible-header {
   #cpa-logo {
     display: none;
   }
-  #presentation-svg {
-    display: none;
-  }
-  #info-svg-signup {
-    display: none;
-  }
-  #info-svg-signin {
-    display: none;
-  }
-  div.smallPresentationImage {
-    content: url(../img/coding.gif);
-    /*Centering Image*/
-    height: 140px;
-    width: 140px;
-    margin-left: -40px;
-  }
-  #presentation-page-text {
-    font-size: 20px;
-    margin-left: -55%;
-    text-align: justify;
-  }
-  #presentation-page-header {
-    font-size: 30px;
-    margin-left: -50%;
+  .customContainer {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
-/* For Tables ----------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* STYLES GO HERE */
-  .doughnut-chart-status {
-    display: none;
-  }
-  #card-stats .card-stats-compare {
-    font-size: 0.8rem;
+  .customContainer {
+    margin-left: 0;
+    margin-right: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
