@@ -23,30 +23,32 @@
 
   <body>
     <header>
-      <nav class="nav-extended nav-fixed light-blue darken-3 z-depth-2">
-        <div class="nav-wrapper">
-          <a class="brand-logo" id="cpa-logo"
-            ><i class="material-icons" id="logo-icon">ac_unit</i>CoronaInfoBD</a
-          >
-          <a href="#" class="sidenav-trigger" data-target="mobile-nav">
-            <i class="material-icons">menu</i>
-          </a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li>
-              <a href="signin.html" class="btn-flat">SignIn</a>
-            </li>
-            <li>
-              <a href="signup.html" class="btn-flat">SignUp</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="navbar-fixed">
+        <nav class="nav-extended nav-fixed light-blue darken-2 z-depth-2">
+          <div class="nav-wrapper">
+            <a class="brand-logo" id="cpa-logo"
+              ><i class="material-icons" id="logo-icon">ac_unit</i
+              >CoronaInfoBD</a
+            >
+            <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+              <i class="material-icons">menu</i>
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li>
+                <a href="#summary" class="scroll">Summary</a>
+              </li>
+              <li>
+                <a href="#signup">SignUp</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
       <ul class="sidenav" id="mobile-nav">
         <li><a href="signup.html">SignUp</a></li>
         <li><a href="signin.html">SignIn</a></li>
       </ul>
     </header>
-
     <main>
       <div class="row">
         <div class="slider">
@@ -89,6 +91,35 @@
               </div>
             </li>
           </ul>
+        </div>
+      </div>
+      <div class="container" id="summary">
+        <div class="row">
+          <h2 class="center-align">Summary of COVID 19 in Bangladesh</h2>
+          <div class="col s12 m4 l4">
+            <div class="card round center-align hoverable">
+              <div class="card-content">
+                <h1 class="caseCard">14</h1>
+                <h6>Coronavirus cases</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4 l4">
+            <div class="card round center-align hoverable">
+              <div class="card-content">
+                <h1 class="deathCard">1</h1>
+                <h6>Deaths</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4 l4">
+            <div class="card round center-align hoverable">
+              <div class="card-content">
+                <h1 class="recoveryCard">3</h1>
+                <h6>Recovered</h6>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>

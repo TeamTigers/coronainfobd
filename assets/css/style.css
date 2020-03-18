@@ -1,3 +1,15 @@
+html {
+  scroll-behavior: smooth;
+}
+
+header li :hover {
+  font-weight: bold;
+}
+
+header li :hover a :active {
+  font-weight: bold;
+}
+
 #cpa-logo {
   font-family: "El Messiri", sans-serif;
   font-size: 25px;
@@ -11,7 +23,22 @@
   margin-right: 6px;
 }
 
-.card-border {
+.caseCard {
+  color: #0288d1;
+  display: inline;
+}
+
+.deathCard {
+  color: #e53935;
+  display: inline;
+}
+
+.recoveryCard {
+  color: #2e7d32;
+  display: inline;
+}
+
+.round {
   border-radius: 20px;
 }
 

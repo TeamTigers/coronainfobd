@@ -1,3 +1,19 @@
+$foregroundColor: #0288d1;
+$backgroundColor: #0288d1;
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  li :hover {
+    font-weight: bold;
+    a :active {
+      font-weight: bold;
+    }
+  }
+}
+
 #cpa-logo {
   font-family: "El Messiri", sans-serif;
   font-size: 25px;
@@ -11,7 +27,22 @@
   margin-right: 6px;
 }
 
-.card-border {
+.caseCard {
+  color: $foregroundColor;
+  display: inline;
+}
+
+.deathCard {
+  color: #e53935;
+  display: inline;
+}
+
+.recoveryCard {
+  color: #2e7d32;
+  display: inline;
+}
+
+.round {
   border-radius: 20px;
 }
 
@@ -558,8 +589,6 @@ ul.side-nav .collapsible-header {
 //   text-align: center;
 //   padding: 20px 0 !important;
 // }
-
-
 
 // .blog-card .card {
 //   margin: 0px;
