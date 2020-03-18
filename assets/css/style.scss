@@ -14,6 +14,19 @@ header {
   }
 }
 
+.customContainer {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
+
+h3 {
+  margin-bottom: 2rem;
+}
+
+.title {
+  color: $foregroundColor;
+}
+
 #cpa-logo {
   font-family: "El Messiri", sans-serif;
   font-size: 25px;
