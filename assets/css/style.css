@@ -1,5 +1,6 @@
 header li a {
   color: #ededee;
+  font-family: "Google Sans", sans-serif;
 }
 
 header li :hover {
@@ -7,13 +8,47 @@ header li :hover {
 }
 
 header li :hover a :active {
+  font-family: "El Messiri", sans-serif;
   font-weight: bolder;
   color: #ffffff;
+}
+
+#cpa-logo {
+  font-family: "Google Sans", sans-serif;
+  font-size: 25px;
+  margin-top: 2px;
+  margin-left: 10px;
+  color: #ffffff;
+}
+
+.contextTextTheme {
+  color: #03a892;
+}
+
+.progressbarTheme {
+  color: #026b5d;
+}
+
+#scrollTop {
+  display: none;
+}
+
+.gsans {
+  font-family: "Google Sans", sans-serif;
 }
 
 .customContainer {
   margin-left: 4rem;
   margin-right: 4rem;
+}
+
+.footerLink a {
+  color: #bdbdbd;
+}
+
+.footerLink a :hover {
+  color: #f5f5f5;
+  text-decoration: underline;
 }
 
 h3 {
@@ -24,8 +59,12 @@ h3 {
   color: #0288d1;
 }
 
-#cpa-logo {
-  font-family: "Google Sans", sans-serif;
+.navTheme {
+  background-color: #03a892;
+}
+
+.brand-logo {
+  font-family: "El Messiri", sans-serif;
   font-size: 25px;
   margin-top: 2px;
   margin-left: 10px;
@@ -48,41 +87,12 @@ h3 {
 }
 
 .recoveryCard {
-  color: #339138;
+  color: #2e7d32;
   display: inline;
 }
 
 .round {
   border-radius: 20px;
-}
-
-#toTop {
-  display: none;
-  /* Hidden by default */
-  position: fixed;
-  /* Fixed/sticky position */
-  bottom: 20px;
-  /* Place the button at the bottom of the page */
-  right: 30px;
-  /* Place the button 30px from the right */
-  z-index: 99;
-  /* Make sure it does not overlap */
-  border: none;
-  /* Remove borders */
-  outline: none;
-  /* Remove outline */
-  background-color: red;
-  /* Set a background color */
-  color: white;
-  /* Text color */
-  cursor: pointer;
-  /* Add a mouse pointer on hover */
-  padding: 15px;
-  /* Some padding */
-  border-radius: 10px;
-  /* Rounded corners */
-  font-size: 18px;
-  /* Increase font size */
 }
 
 .tabs .tab a {
@@ -217,24 +227,3 @@ ul.side-nav .collapsible-header {
   }
 }
 /*# sourceMappingURL=style.css.map */
-
-.navTheme {
-  background-color: #03A892;
-}
-
-.contextTextTheme {
-  color: #03A892;
-}
-
-.gsans {
-  font-family: "Google Sans", sans-serif;
-}
-
-.suggestion {
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-.progress {
-  margin: 0px;
-}
