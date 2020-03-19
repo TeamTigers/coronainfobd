@@ -1,422 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:title" content="CoronaInfoBD 2020" />
-    <meta
-      property="og:description"
-      content="An application to get updated with corona virus affected in Bangladesh"
-    />
-    <title>CoronaInfoBD</title>
-    <link rel="icon" href="assets/img/logo.png" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=El+Messiri&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Pacifico&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/materializecss.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-  </head>
 
-  <body>
-    <header>
-      <div class="navbar-fixed">
-        <nav class="nav-extended nav-fixed light-blue darken-2 z-depth-2">
-          <div class="nav-wrapper">
-            <a class="brand-logo" id="cpa-logo"
-              ><i class="material-icons" id="logo-icon">ac_unit</i
-              >CoronaInfoBD</a
-            >
-            <a href="#" class="sidenav-trigger" data-target="mobile-nav">
-              <i class="material-icons">menu</i>
-            </a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li class="active">
-                <a href="#home" class="scroll">Home</a>
-              </li>
-              <li>
-                <a href="#summary" class="scroll">Summary</a>
-              </li>
-              <li>
-                <a href="#case_study" class="scroll">Case study</a>
-              </li>
-              <li>
-                <a href="#charts" class="scroll">Charts</a>
-              </li>
-              <li>
-                <a href="#hotline" class="scroll">Hotline</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-      <ul class="sidenav" id="mobile-nav">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#summary">Summary</a></li>
-        <li><a href="#case_study">Case study</a></li>
-        <li><a href="#charts">Charts</a></li>
-        <li><a href="#hotline">Hotline</a></li>
-      </ul>
-    </header>
-    <main>
-      <div class="fixed-action-btn">
-        <a
-          class="btn-floating btn-medium blue-grey darken-4 tooltipped"
-          data-position="left"
-          data-tooltip="Top"
-          id="scrollTop"
-          onclick="toTop()"
-          style="display: none;"
-        >
-          <i class="large material-icons">arrow_upward</i>
-        </a>
-      </div>
-      <div id="home">
-        <div class="row">
-          <div class="slider">
-            <ul class="slides">
-              <li>
-                <img src="assets/img/virus.jpg" />
-                <!-- random image -->
-                <div class="caption center-align">
-                  <h4 class="amber-text text-lighten-4">
-                    Stay home, stay safe
-                  </h4>
-                </div>
-              </li>
-              <li>
-                <img src="assets/img/virus.jpg" />
-                <!-- random image -->
-                <div class="caption center-align">
-                  <h4 class="amber-text text-lighten-3">
-                    Social distancing measures can help delay and slow the
-                    spread of the disease and save lives.
-                  </h4>
-                </div>
-              </li>
-              <li>
-                <img src="assets/img/virus.jpg" />
-                <!-- random image -->
-                <div class="caption center-align">
-                  <h4 class="amber-text text-lighten-3">
-                    Keep yourself and your family stay sanitized
-                  </h4>
-                </div>
-              </li>
-              <li>
-                <img src="assets/img/virus.jpg" />
-                <!-- random image -->
-                <div class="caption center-align">
-                  <h4 class="amber-text text-lighten-3">
-                    Use mask, gloves and sanitizer
-                  </h4>
-                </div>
-              </li>
-            </ul>
-          </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:title" content="CoronaInfoBD 2020" />
+  <meta property="og:description" content="An application to get updated with corona virus affected in Bangladesh" />
+  <title>CoronaInfoBD</title>
+  <link rel="icon" href="assets/img/logo.png" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=El+Messiri&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/materializecss.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <header>
+    <div class="navbar-fixed">
+      <nav class="nav-extended nav-fixed navTheme darken-2 z-depth-0">
+        <div class="nav-wrapper">
+          <a class="brand-logo" id="cpa-logo"><i class="material-icons" id="logo-icon">ac_unit</i>CoronaInfoBD</a>
+          <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="active">
+              <a href="#home" class="scroll">Home</a>
+            </li>
+            <li>
+              <a href="#summary" class="scroll">Summary</a>
+            </li>
+            <li>
+              <a href="#case_study" class="scroll">Case study</a>
+            </li>
+            <li>
+              <a href="#charts" class="scroll">Charts</a>
+            </li>
+            <li>
+              <a href="#hotline" class="scroll">Hotline</a>
+            </li>
+          </ul>
         </div>
-      </div>
-
-      <!-- summary card -->
-
-      <div class="customContainer" id="summary">
-        <div class="row">
-          <h3 class="center-align">Summary of COVID-19 in Bangladesh</h3>
-          <div class="col s12 m4 l4">
-            <div class="card round center-align hoverable">
-              <div class="card-content">
-                <h1 class="caseCard">18</h1>
-                <h6>Coronavirus cases</h6>
-              </div>
+      </nav>
+    </div>
+    <ul class="sidenav" id="mobile-nav">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#summary">Summary</a></li>
+      <li><a href="#case_study">Case study</a></li>
+      <li><a href="#charts">Charts</a></li>
+      <li><a href="#hotline">Hotline</a></li>
+    </ul>
+    <div class="progress pink lighten-4">
+      <div class="indeterminate yellow darken-4"></div>
+    </div>
+  </header>
+  <main id="elemets">
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-medium blue-grey darken-4 tooltipped" data-position="left" data-tooltip="Top"
+        id="scrollTop" onclick="toTop()" style="display: none;">
+        <i class="large material-icons">arrow_upward</i>
+      </a>
+    </div>
+    <div id="home">
+      <div class="row">
+        <div class="col s12">
+          <div class="card horizontal hoverable">
+            <div class="card-image">
+              <img src="assets/img/health.png" height="120">
             </div>
-          </div>
-          <div class="col s12 m4 l4">
-            <div class="card round center-align hoverable">
-              <div class="card-content">
-                <h1 class="deathCard">1</h1>
-                <h6>Deaths</h6>
-              </div>
-            </div>
-          </div>
-          <div class="col s12 m4 l4">
-            <div class="card round center-align hoverable">
-              <div class="card-content">
-                <h1 class="recoveryCard">3</h1>
-                <h6>Recovered</h6>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col s12 m12 l12">
-            <div class="card round">
-              <div class="card-content">
-                <h5 class="center-align">More info</h5>
-                <table class="centered responsive-table">
-                  <thead>
-                    <tr>
-                      <th>Total Cases</th>
-                      <th>Active Cases</th>
-                      <th>Deaths</th>
-                      <th>Recovered</th>
-                      <th>Male</th>
-                      <th>Female</th>
-                      <th>Children</th>
-                      <th class="red-text text-darken-1">Italy</th>
-                      <th class="amber-text text-darken-1">Kuwait</th>
-                      <th class="amber-text text-darken-1">Germany</th>
-                      <th>Unknown</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <!-- total case -->
-                      <td>18</td>
-                      <!-- active case -->
-                      <td>14</td>
-                      <!-- death -->
-                      <td>1</td>
-                      <!-- recovered -->
-                      <td>3</td>
-                      <!-- male -->
-                      <td>8</td>
-                      <!-- female -->
-                      <td>4</td>
-                      <!-- children -->
-                      <td>2</td>
-                      <!-- italy -->
-                      <td>7</td>
-                      <!-- kuwait -->
-                      <td>1</td>
-                      <!-- germany -->
-                      <td>1</td>
-                      <!-- unknown -->
-                      <td>4</td>
-                    </tr>
-                  </tbody>
-                </table>
+            <div class="card-stacked">
+              <div class="card-content suggestion">
+                <p class="suggestion">
+                  <b class="red-text">○</b> Stay home, stay safe
+                </p>
+                <p>
+                  <b class="red-text">○</b> Keep yourself and your family stay sanitized
+                </p>
+                <p>
+                  <b class="red-text">○</b> Use mask, gloves and sanitizer
+                </p>
+                <p>
+                  <b class="red-text">○</b> Social distancing measures can help delay and slow the spread of the disease
+                  and save lives.
+                </p>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- image -->
-      <div class="customContainer" id="case_study">
-        <div class="row">
-          <h3 class="center-align">Case study</h3>
-          <div class="col s12 l4 m4">
-            <figure>
-              <img
-                src="assets/img/CoronaInfo.PNG"
-                alt="coronavirus"
-                class="responsive-img"
-              />
-              <figcaption class="center-align red-text">
-                Fig.1 - Mind map of cases
-              </figcaption>
-            </figure>
-          </div>
-          <div class="col s12 l8 m8">
-            <ul class="collection">
-              <li class="collection-item">
-                <span class="title">8th march,2020</span>
-                <p>
-                  First time 3 patients. 2 were Italy-returnees. Third one was
-                  the wife one of them (They returned home after their
-                  treatment)
-                </p>
-              </li>
-              <li class="collection-item">
-                <span class="title">14th march,2020</span>
-                <p>
-                  Health Minister Zahid Maleque said 2 more corona virus cases
-                  were detected (Italy-1, Germany-1)
-                </p>
-              </li>
-              <li class="collection-item">
-                <span class="title">16th march,2020</span>
-                <p>
-                  3 more detected positive of COVID-19 from the same family. (1
-                  Female, 2 Child)
-                </p>
-              </li>
-              <li class="collection-item">
-                <span class="title">17th march,2020</span>
-                <p>
-                  2 more from that same family whom were detected on 16th
-                  march,2020 (Italy-1, 1 affected by USA Expatriate. That
-                  Expatriate already went back to USA)
-                </p>
-              </li>
-              <li class="collection-item">
-                <span class="title">18th march,2020</span>
-                <p>
-                  4 new person detected corona positive (2 returnees of Italy(1
-                  male), 1 from Kuwait, another one is affected by an old corona
-                  patient) (Total: 3 man, 1 woman)
-                </p>
-              </li>
-              <li class="collection-item">
-                <span class="title">19th march,2020</span>
-                <p>
-                  4 person detected corona positive. 2 of them are men age of 65
-                  years and 32 years. 1 woman of age 22 years. They were
-                  affected by their relative who came from Italy. Last one was
-                  30 years old male who was in the Isolation procedure in
-                  Chuadanga Sadar Hospital and came from Italy.
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
+    <!-- summary card -->
 
-      <!-- charts -->
-
-      <div class="customContainer" id="charts">
-        <div class="row">
-          <h3 class="center-align">Charts</h3>
-          <div class="col s12 l6 m6">
-            <div class="card round">
-              <div class="card-content">
-                <div
-                  id="infectionWithDate"
-                  style="height: 370px; max-width: 920px; margin: 0px auto;"
-                ></div>
-              </div>
+    <div class="customContainer" id="summary">
+      <div class="row">
+        <h4 class="center-align gsans"><b class="contextTextTheme">Summary of COVID-19 in Bangladesh</b></h4>
+        <div class="col s12 m4 l4">
+          <div class="card round center-align hoverable">
+            <div class="card-content">
+              <h1 class="caseCard" id="numberOfConfirmedCases"></h1>
+              <h6>Coronavirus cases</h6>
             </div>
           </div>
-          <div class="col s12 l6 m6">
-            <div class="card round">
-              <div class="card-content">
-                <div
-                  id="deathWithDate"
-                  style="height: 370px; max-width: 920px; margin: 0px auto;"
-                ></div>
-              </div>
+        </div>
+        <div class="col s12 m4 l4">
+          <div class="card round center-align hoverable">
+            <div class="card-content">
+              <h1 class="deathCard" id="numberOfDeaths"></h1>
+              <h6>Deaths</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m4 l4">
+          <div class="card round center-align hoverable">
+            <div class="card-content">
+              <h1 class="recoveryCard" id="numberOfRecovery"></h1>
+              <h6>Recovered</h6>
             </div>
           </div>
         </div>
       </div>
-
-      <!-- hotline numbers -->
-
-      <div class="customContainer" id="hotline">
-        <div class="row">
-          <h3 class="center-align">Hotline</h3>
-          <div class="col s12 m6 l6 center-align">
-            <ul class="collection with-header">
-              <li class="collection-header amber-text text-darken-3">
-                <h5>Numbers</h5>
-              </li>
-              <li class="collection-item">01401184551</li>
-              <li class="collection-item">01401184554</li>
-              <li class="collection-item">01401184555</li>
-              <li class="collection-item">01401184556</li>
-              <li class="collection-item">01401184559</li>
-              <li class="collection-item">01401184560</li>
-              <li class="collection-item">01401184563</li>
-              <li class="collection-item">01401184568</li>
-              <li class="collection-item">01927711784</li>
-              <li class="collection-item">01927711785</li>
-              <li class="collection-item">01937000011</li>
-              <li class="collection-item">01937110011</li>
-            </ul>
+      <div class="row">
+        <div class="col s12 m12 l12">
+          <div class="card round">
+            <div class="card-content">
+              <h5 class="center-align">More info</h5>
+              <table class="centered responsive-table">
+                <thead>
+                  <tr>
+                    <th>Total Cases</th>
+                    <th>Active Cases</th>
+                    <th>Cases Today</th>
+                    <th>Deaths</th>
+                    <th>Recovered</th>
+                    
+                    <th class="red-text text-darken-1">Italy</th>
+                    <th class="amber-text text-darken-1">Kuwait</th>
+                    <th class="amber-text text-darken-1">Germany</th>
+                    <th>Unknown</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <!-- total case -->
+                    <td id="td_total"></td>
+                    <!-- active case -->
+                    <td id="td_active"></td>
+                    <!-- today case -->
+                    <td id="td_cases_today"></td>
+                    <!-- death -->
+                    <td id="td_deaths"></td>
+                    <!-- recovered -->
+                    <td id="td_recovered"></td>
+                    
+                    <!-- italy -->
+                    <td id="italy"></td>
+                    <!-- kuwait -->
+                    <td id="kuwait"></td>
+                    <!-- germany -->
+                    <td id="germany"></td>
+                    <!-- unknown -->
+                    <td id="unknown"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
-          <div class="col s12 l6 m6">
-            <p style="line-height: 200%;">
-              <span class="light-blue-text text-darken-2"
-                ><b
-                  >The Institute of Epidemiology, Disease Control and Research
-                  (IEDCR)</b
-                ></span
-              >
-              increased the hotline numbers to report any suspected cases of
-              coronavirus to 12 from four, after three cases were confirmed in
-              Bangladesh on Sunday. Sources at the IEDCR also said that, if
-              contacted and according to necessity, their special medical teams
-              would visit suspected coronavirus patients' homes and collect
-              samples for testing. According to the IEDCR, the hotline numbers
-              were increased as the coronavirus alert level has been raised to
-              three from one.
+        </div>
+      </div>
+    </div>
+
+    <!-- image -->
+    <div class="customContainer" id="case_study">
+      <div class="row">
+        <h3 class="center-align">Case study</h3>
+        <div class="col s12 l4 m4">
+          <figure>
+            <img src="assets/img/CoronaInfo.PNG" alt="coronavirus" class="responsive-img" />
+            <figcaption class="center-align red-text">
+              Fig.1 - Mind map of cases
+            </figcaption>
+          </figure>
+        </div>
+        <div class="col s12 l8 m8">
+          <ul class="collection">
+            <li class="collection-item">
+              <span class="title">8th march,2020</span>
+              <p>
+                First time 3 patients. 2 were Italy-returnees. Third one was
+                the wife one of them (They returned home after their
+                treatment)
+              </p>
+            </li>
+            <li class="collection-item">
+              <span class="title">14th march,2020</span>
+              <p>
+                Health Minister Zahid Maleque said 2 more corona virus cases
+                were detected (Italy-1, Germany-1)
+              </p>
+            </li>
+            <li class="collection-item">
+              <span class="title">16th march,2020</span>
+              <p>
+                3 more detected positive of COVID-19 from the same family. (1
+                Female, 2 Child)
+              </p>
+            </li>
+            <li class="collection-item">
+              <span class="title">17th march,2020</span>
+              <p>
+                2 more from that same family whom were detected on 16th
+                march,2020 (Italy-1, 1 affected by USA Expatriate. That
+                Expatriate already went back to USA)
+              </p>
+            </li>
+            <li class="collection-item">
+              <span class="title">18th march,2020</span>
+              <p>
+                4 new person detected corona positive (2 returnees of Italy(1
+                male), 1 from Kuwait, another one is affected by an old corona
+                patient) (Total: 3 man, 1 woman)
+              </p>
+            </li>
+            <li class="collection-item">
+              <span class="title">19th march,2020</span>
+              <p>
+                4 person detected corona positive. 2 of them are men age of 65
+                years and 32 years. 1 woman of age 22 years. They were
+                affected by their relative who came from Italy. Last one was
+                30 years old male who was in the Isolation procedure in
+                Chuadanga Sadar Hospital and came from Italy.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- charts -->
+
+    <div class="customContainer" id="charts">
+      <div class="row">
+        <h3 class="center-align">Charts</h3>
+        <div class="col s12 l6 m6">
+          <div class="card round">
+            <div class="card-content">
+              <div id="infectionWithDate" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 l6 m6">
+          <div class="card round">
+            <div class="card-content">
+              <div id="deathWithDate" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- hotline numbers -->
+
+    <div class="customContainer" id="hotline">
+      <div class="row">
+        <h3 class="center-align">Hotline</h3>
+        <div class="col s12 m6 l6 center-align">
+          <ul class="collection with-header">
+            <li class="collection-header amber-text text-darken-3">
+              <h5>Numbers</h5>
+            </li>
+            <li class="collection-item">01401184551</li>
+            <li class="collection-item">01401184554</li>
+            <li class="collection-item">01401184555</li>
+            <li class="collection-item">01401184556</li>
+            <li class="collection-item">01401184559</li>
+            <li class="collection-item">01401184560</li>
+            <li class="collection-item">01401184563</li>
+            <li class="collection-item">01401184568</li>
+            <li class="collection-item">01927711784</li>
+            <li class="collection-item">01927711785</li>
+            <li class="collection-item">01937000011</li>
+            <li class="collection-item">01937110011</li>
+          </ul>
+        </div>
+        <div class="col s12 l6 m6">
+          <p style="line-height: 200%;">
+            <span class="light-blue-text text-darken-2"><b>The Institute of Epidemiology, Disease Control and Research
+                (IEDCR)</b></span>
+            increased the hotline numbers to report any suspected cases of
+            coronavirus to 12 from four, after three cases were confirmed in
+            Bangladesh on Sunday. Sources at the IEDCR also said that, if
+            contacted and according to necessity, their special medical teams
+            would visit suspected coronavirus patients' homes and collect
+            samples for testing. According to the IEDCR, the hotline numbers
+            were increased as the coronavirus alert level has been raised to
+            three from one.
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer class="page-footer blue-grey darken-3">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">CoronaInfoBD Team</h5>
+            <p class="grey-text text-lighten-4">
+              It is a voluntary act aimed at mass awareness. All content used
+              here is open to everyone.
+            </p>
+            <br />
+            <h6 class="whtie-text">Taking initiative:</h6>
+            <p class="grey-text text-lighten-4">
+              Department of Software Engineering <br />
+              Daffodil International University
             </p>
           </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Important Links</h5>
+            <ul>
+              <li>
+                <a class="grey-text text-lighten-1" href="https://daffodilvarsity.edu.bd/article/corona"
+                  target="_blank">Activiy of DIU against Corona</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-      <footer class="page-footer blue-grey darken-3">
+      <div class="footer-copyright">
         <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text">CoronaInfoBD Team</h5>
-              <p class="grey-text text-lighten-4">
-                It is a voluntary act aimed at mass awareness. All content used
-                here is open to everyone.
-              </p>
-              <br />
-              <h6 class="whtie-text">Taking initiative:</h6>
-              <p class="grey-text text-lighten-4">
-                Department of Software Engineering <br />
-                Daffodil International University
-              </p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-              <h5 class="white-text">Important Links</h5>
-              <ul>
-                <li>
-                  <a
-                    class="grey-text text-lighten-1"
-                    href="https://daffodilvarsity.edu.bd/article/corona"
-                    target="_blank"
-                    >Activiy of DIU against Corona</a
-                  >
-                </li>
-              </ul>
-            </div>
-          </div>
+          © 2020 Copyright TeamTigers
+          <a class="grey-text text-lighten-4 right" href="https://github.com/teamtigers" target="_blank">TeamTigers</a>
         </div>
-        <div class="footer-copyright">
-          <div class="container">
-            © 2020 Copyright TeamTigers
-            <a
-              class="grey-text text-lighten-4 right"
-              href="https://github.com/teamtigers"
-              target="_blank"
-              >TeamTigers</a
-            >
-          </div>
-        </div>
-      </footer>
-    </main>
+      </div>
+    </footer>
+  </main>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/canvas.min.js"></script>
-    <script src="assets/js/infectedpeoplechart.js"></script>
-    <script src="assets/js/materialize.js"></script>
-    <script src="assets/js/plugin.js"></script>
-    <script>
-      window.onscroll = scroll1;
-      function scroll1() {
-        var toTop = document.getElementById("scrollTop");
-        window.scrollY > 500
-          ? (toTop.style.display = "Block")
-          : (toTop.style.display = "none");
-      }
-      function toTop() {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }
-    </script>
-  </body>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/materialize.js"></script>
+  <script src="assets/js/coronaCounter.js"></script>
+  <script src="assets/js/canvas.min.js"></script>
+  <script src="assets/js/infectedpeoplechart.js"></script>
+  <script src="assets/js/plugin.js"></script>
+  <script>
+    window.onscroll = scroll1;
+
+    function scroll1() {
+      var toTop = document.getElementById("scrollTop");
+      window.scrollY > 500 ?
+        (toTop.style.display = "Block") :
+        (toTop.style.display = "none");
+    }
+
+    function toTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+  </script>
+</body>
+
 </html>
