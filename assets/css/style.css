@@ -62,8 +62,7 @@ header li :hover a :active {
 }
 
 .customContainer {
-  margin-left: 4rem;
-  margin-right: 4rem;
+  margin: 4rem;
 }
 
 .footerLink a {
