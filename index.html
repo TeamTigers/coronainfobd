@@ -49,6 +49,9 @@
                 <a href="#case_study" class="scroll">Case study</a>
               </li>
               <li>
+                <a href="#charts" class="scroll">Charts</a>
+              </li>
+              <li>
                 <a href="#hotline" class="scroll">Hotline</a>
               </li>
             </ul>
@@ -59,13 +62,15 @@
         <li><a href="#home">Home</a></li>
         <li><a href="#summary">Summary</a></li>
         <li><a href="#case_study">Case study</a></li>
+        <li><a href="#charts">Charts</a></li>
         <li><a href="#hotline">Hotline</a></li>
       </ul>
     </header>
     <main>
       <div class="fixed-action-btn">
         <a
-          class="btn-floating btn-large blue-grey darken-4 tooltipped"
+          class="btn-floating btn-medium blue-grey darken-4 tooltipped"
+          data-position="left"
           data-tooltip="Top"
           id="scrollTop"
           onclick="toTop()"
@@ -281,7 +286,7 @@
         <div class="row">
           <h3 class="center-align">Charts</h3>
           <div class="col s12 l6 m6">
-            <div class="card">
+            <div class="card round">
               <div class="card-content">
                 <div
                   id="infectionWithDate"
@@ -291,8 +296,13 @@
             </div>
           </div>
           <div class="col s12 l6 m6">
-            <div class="card">
-              <div class="card-content"></div>
+            <div class="card round">
+              <div class="card-content">
+                <div
+                  id="deathWithDate"
+                  style="height: 370px; max-width: 920px; margin: 0px auto;"
+                ></div>
+              </div>
             </div>
           </div>
         </div>
@@ -347,7 +357,7 @@
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/canvas.min.js"></script>
-    <script src="assets/js/chart.js"></script>
+    <script src="assets/js/infectedpeoplechart.js"></script>
     <script src="assets/js/materialize.js"></script>
     <script src="assets/js/plugin.js"></script>
     <script>
