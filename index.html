@@ -3,8 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="CoronaInfoBD 2020" />
+    <meta
+      property="og:description"
+      content="An application to get updated with corona virus affected in Bangladesh"
+    />
     <title>CoronaInfoBD</title>
-    <link rel="icon" href="assets/img/cadetkid.png" />
+    <link rel="icon" href="assets/img/logo.png" />
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
@@ -51,8 +56,8 @@
         </nav>
       </div>
       <ul class="sidenav" id="mobile-nav">
-        <li><a href="#summary">Summary</a></li>
         <li><a href="#home">Home</a></li>
+        <li><a href="#summary">Summary</a></li>
         <li><a href="#case_study">Case study</a></li>
         <li><a href="#hotline">Hotline</a></li>
       </ul>
@@ -60,7 +65,8 @@
     <main>
       <div class="fixed-action-btn">
         <a
-          class="btn-floating btn-large blue-grey darken-4"
+          class="btn-floating btn-large blue-grey darken-4 tooltipped"
+          data-tooltip="Top"
           id="scrollTop"
           onclick="toTop()"
           style="display: none;"
@@ -146,58 +152,54 @@
         </div>
         <div class="row">
           <div class="col s12 m12 l12">
-            <ul class="collapsible round">
-              <li>
-                <div class="collapsible-header round">
-                  <i class="material-icons">expand_more</i>MORE INFO
-                </div>
-                <div class="collapsible-body round">
-                  <table class="centered">
-                    <thead>
-                      <tr>
-                        <th>Total Cases</th>
-                        <th>Active Cases</th>
-                        <th>Deaths</th>
-                        <th>Recovered</th>
-                        <th>Male</th>
-                        <th>Female</th>
-                        <th>Children</th>
-                        <th>Itali</th>
-                        <th>Kuwait</th>
-                        <th>Germany</th>
-                        <th>Unknown</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <!-- total case -->
-                        <td>18</td>
-                        <!-- active case -->
-                        <td>14</td>
-                        <!-- death -->
-                        <td>1</td>
-                        <!-- recovered -->
-                        <td>3</td>
-                        <!-- male -->
-                        <td>8</td>
-                        <!-- female -->
-                        <td>4</td>
-                        <!-- children -->
-                        <td>2</td>
-                        <!-- itali -->
-                        <td>7</td>
-                        <!-- kuwait -->
-                        <td>1</td>
-                        <!-- germany -->
-                        <td>1</td>
-                        <!-- unknown -->
-                        <td>4</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </li>
-            </ul>
+            <div class="card round">
+              <div class="card-content">
+                <h5 class="center-align">More info</h5>
+                <table class="centered responsive-table">
+                  <thead>
+                    <tr>
+                      <th>Total Cases</th>
+                      <th>Active Cases</th>
+                      <th>Deaths</th>
+                      <th>Recovered</th>
+                      <th>Male</th>
+                      <th>Female</th>
+                      <th>Children</th>
+                      <th class="red-text text-darken-1">Itali</th>
+                      <th class="amber-text text-darken-1">Kuwait</th>
+                      <th class="amber-text text-darken-1">Germany</th>
+                      <th>Unknown</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <!-- total case -->
+                      <td>18</td>
+                      <!-- active case -->
+                      <td>14</td>
+                      <!-- death -->
+                      <td>1</td>
+                      <!-- recovered -->
+                      <td>3</td>
+                      <!-- male -->
+                      <td>8</td>
+                      <!-- female -->
+                      <td>4</td>
+                      <!-- children -->
+                      <td>2</td>
+                      <!-- itali -->
+                      <td>7</td>
+                      <!-- kuwait -->
+                      <td>1</td>
+                      <!-- germany -->
+                      <td>1</td>
+                      <!-- unknown -->
+                      <td>4</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </div>
       </div>
