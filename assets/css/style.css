@@ -234,3 +234,7 @@ ul.side-nav .collapsible-header {
   text-align: justify;
   text-justify: inter-word;
 }
+
+.progress {
+  margin: 0px;
+}

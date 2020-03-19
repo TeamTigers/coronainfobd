@@ -20,7 +20,7 @@
 <body>
   <header>
     <div class="navbar-fixed">
-      <nav class="nav-extended nav-fixed navTheme darken-2 z-depth-1">
+      <nav class="nav-extended nav-fixed navTheme darken-2 z-depth-0">
         <div class="nav-wrapper">
           <a class="brand-logo" id="cpa-logo"><i class="material-icons" id="logo-icon">ac_unit</i>CoronaInfoBD</a>
           <a href="#" class="sidenav-trigger" data-target="mobile-nav">
@@ -53,8 +53,11 @@
       <li><a href="#charts">Charts</a></li>
       <li><a href="#hotline">Hotline</a></li>
     </ul>
+    <div class="progress pink lighten-4">
+      <div class="indeterminate yellow darken-4"></div>
+    </div>
   </header>
-  <main>
+  <main id="elemets">
     <div class="fixed-action-btn">
       <a class="btn-floating btn-medium blue-grey darken-4 tooltipped" data-position="left" data-tooltip="Top"
         id="scrollTop" onclick="toTop()" style="display: none;">
@@ -80,7 +83,8 @@
                   <b class="red-text">○</b> Use mask, gloves and sanitizer
                 </p>
                 <p>
-                  <b class="red-text">○</b> Social distancing measures can help delay and slow the spread of the disease and save lives.
+                  <b class="red-text">○</b> Social distancing measures can help delay and slow the spread of the disease
+                  and save lives.
                 </p>
               </div>
             </div>
@@ -105,7 +109,7 @@
         <div class="col s12 m4 l4">
           <div class="card round center-align hoverable">
             <div class="card-content">
-              <h1 class="deathCard" id="numberOfDeaths">1</h1>
+              <h1 class="deathCard" id="numberOfDeaths"></h1>
               <h6>Deaths</h6>
             </div>
           </div>
@@ -113,7 +117,7 @@
         <div class="col s12 m4 l4">
           <div class="card round center-align hoverable">
             <div class="card-content">
-              <h1 class="recoveryCard" id="numberOfRecovery">3</h1>
+              <h1 class="recoveryCard" id="numberOfRecovery"></h1>
               <h6>Recovered</h6>
             </div>
           </div>
@@ -339,9 +343,10 @@
   </main>
 
   <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/materialize.js"></script>
+  <script src="assets/js/coronaCounter.js"></script>
   <script src="assets/js/canvas.min.js"></script>
   <script src="assets/js/infectedpeoplechart.js"></script>
-  <script src="assets/js/materialize.js"></script>
   <script src="assets/js/plugin.js"></script>
   <script>
     window.onscroll = scroll1;
