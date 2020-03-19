@@ -1,5 +1,4 @@
 $foregroundColor: #0288d1;
-$backgroundColor: #0288d1;
 
 // html {
 //   scroll-behavior: smooth;
@@ -14,6 +13,7 @@ header {
   li :hover {
     color: #ffffff;
     a :active {
+      font-family: "Pacifico";
       font-weight: bolder;
       color: #ffffff;
     }
