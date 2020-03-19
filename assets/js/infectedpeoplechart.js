@@ -45,7 +45,7 @@ window.onload = function() {
         type: "line",
         xValueFormatString: "DD MMM",
         color: "#b71c1c",
-        dataPoints: [{ x: new Date(2020, 03, 8), y: 70 }]
+        dataPoints: [{ x: new Date(2020, 03, 18), y: 70 }]
       }
     ]
   });
