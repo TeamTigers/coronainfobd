@@ -25,7 +25,7 @@ h3 {
 }
 
 #cpa-logo {
-  font-family: "El Messiri", sans-serif;
+  font-family: "Google Sans", sans-serif;
   font-size: 25px;
   margin-top: 2px;
   margin-left: 10px;
@@ -48,7 +48,7 @@ h3 {
 }
 
 .recoveryCard {
-  color: #2e7d32;
+  color: #339138;
   display: inline;
 }
 
@@ -217,3 +217,20 @@ ul.side-nav .collapsible-header {
   }
 }
 /*# sourceMappingURL=style.css.map */
+
+.navTheme {
+  background-color: #03A892;
+}
+
+.contextTextTheme {
+  color: #03A892;
+}
+
+.gsans {
+  font-family: "Google Sans", sans-serif;
+}
+
+.suggestion {
+  text-align: justify;
+  text-justify: inter-word;
+}
