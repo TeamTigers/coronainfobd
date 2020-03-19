@@ -1,5 +1,12 @@
 $(function() {
     let baseApi = 'https://coronavirus-19-api.herokuapp.com';
+
+    // TODO: Need to find/build a real API for this case
+    let foreignResidents = {
+        "italy" : 7,
+        "kuwait": 1,
+        "germany": 1 
+    };
     hideElementsTillResponse();
     
     // Communication with API
@@ -8,7 +15,7 @@ $(function() {
     }).done(function(response) {
        showToast('Welcome');
        console.log(response);
-       constructData(response.cases, response.deaths, response.recovered);
+       constructData(response.cases, response.deaths, response.recovered, response.active, response.todayCases, foreignResidents);
        $("main").show();
     }).fail(function() {
         
@@ -28,8 +35,21 @@ function showToast(message) {
     });
 }
 
-function constructData(x, y, z) {
-    $('#numberOfConfirmedCases').text(x);
-    $('#numberOfDeaths').text(y);
-    $('#numberOfRecovery').text(z);
+function constructData(confirmed, dead, recovered, active, today, fR) {
+    $('#numberOfConfirmedCases').text(confirmed);
+    $('#numberOfDeaths').text(dead);
+    $('#numberOfRecovery').text(recovered);
+
+    // table data constructor
+    $('#td_total').text(confirmed);
+    $('#td_active').text(active);
+    $('#td_cases_today').text(today);
+    $('#td_deaths').text(dead);
+    $('#td_recovered').text(recovered);
+
+    // TODO: Need to find/build a real API for this case
+    $('#italy').text(fR.italy);
+    $('#kuwait').text(fR.kuwait);
+    $('#germany').text(fR.germany);
+    $('#unknown').text(confirmed - (fR.italy + fR.germany + fR.kuwait));
 }
