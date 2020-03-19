@@ -12,6 +12,7 @@ $(document).ready(function() {
   $(".dropdown-trigger").dropdown();
   $(".tabs").tabs();
   $(".slider").slider();
+  $(".collapsible").collapsible();
 
   var scrollLink = $(".scroll");
 
