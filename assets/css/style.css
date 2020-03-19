@@ -13,6 +13,30 @@ header li :hover a :active {
   color: #ffffff;
 }
 
+.onmouseCase :hover h6 {
+  color: #0288d1;
+  font-weight: bold;
+}
+
+.onmouseDeath :hover h6 {
+  color: #e53935;
+  font-weight: bold;
+}
+
+.onmouseRecovery :hover h6 {
+  color: #2e7d32;
+  font-weight: bold;
+}
+
+.tContributor {
+  color: #0288d1;
+  font-weight: bold;
+}
+
+.tPosition {
+  margin-bottom: 1rem;
+}
+
 #cpa-logo {
   font-family: "Google Sans", sans-serif;
   font-size: 25px;

@@ -21,6 +21,42 @@ header {
   }
 }
 
+.onmouseCase {
+  :hover {
+    h6 {
+      color: $foregroundColor;
+      font-weight: bold;
+    }
+  }
+}
+
+.onmouseDeath {
+  :hover {
+    h6 {
+      color: #e53935;
+      font-weight: bold;
+    }
+  }
+}
+
+.onmouseRecovery {
+  :hover {
+    h6 {
+      color: #2e7d32;
+      font-weight: bold;
+    }
+  }
+}
+
+.tContributor {
+  color: $foregroundColor;
+  font-weight: bold;
+}
+
+.tPosition {
+  margin-bottom: 1rem;
+}
+
 #cpa-logo {
   font-family: "Google Sans", sans-serif;
   font-size: 25px;
