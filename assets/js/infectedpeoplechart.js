@@ -31,7 +31,7 @@ window.onload = function() {
   var chart2 = new CanvasJS.Chart("deathWithDate", {
     animationEnabled: true,
     title: {
-      text: "Number of death with date"
+      text: "Age of death with date"
     },
     axisX: {
       valueFormatString: "DD MMM"
