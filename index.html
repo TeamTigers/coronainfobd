@@ -43,6 +43,9 @@
               <li>
                 <a href="#case_study" class="scroll">Case study</a>
               </li>
+              <li>
+                <a href="#hotline" class="scroll">Hotline</a>
+              </li>
             </ul>
           </div>
         </nav>
@@ -51,15 +54,19 @@
         <li><a href="#summary">Summary</a></li>
         <li><a href="#home">Home</a></li>
         <li><a href="#case_study">Case study</a></li>
+        <li><a href="#hotline">Hotline</a></li>
       </ul>
     </header>
     <main>
-      <a
-        class="btn-floating btn-large waves-effect waves-light red"
-        id="toTop"
-        onclick="abcd()"
-        ><i class="material-icons">add</i></a
-      >
+      <div class="fixed-action-btn">
+        <a
+          class="btn-floating btn-large blue-grey darken-4"
+          id="scrollTop"
+          onclick="toTop()"
+        >
+          <i class="large material-icons">arrow_upward</i>
+        </a>
+      </div>
       <div id="home">
         <div class="row">
           <div class="slider">
@@ -147,7 +154,7 @@
               <img
                 src="assets/img/CoronaInfo.PNG"
                 alt="coronavirus"
-                responsive-img
+                class="responsive-img"
               />
               <figcaption class="center-align">
                 Fig.1 - Mind map of cases
@@ -198,6 +205,41 @@
           </div>
         </div>
       </div>
+
+      <div class="customContainer" id="hotline">
+        <div class="row">
+          <h3 class="center-align">Hotline</h3>
+          <div class="col s12 m6 l6 center-align">
+            <ul class="collection">
+              <li class="collection-item">16306</li>
+              <li class="collection-item">333</li>
+              <li class="collection-item">01401184551</li>
+              <li class="collection-item">01401184554</li>
+              <li class="collection-item">01401184555</li>
+              <li class="collection-item">01401184556</li>
+              <li class="collection-item">01401184559</li>
+              <li class="collection-item">01401184560</li>
+              <li class="collection-item">01401184563</li>
+              <li class="collection-item">01401184568</li>
+              <li class="collection-item">01927711784</li>
+              <li class="collection-item">01927711785</li>
+              <li class="collection-item">01937000011</li>
+              <li class="collection-item">01937110011</li>
+            </ul>
+          </div>
+          <div class="col s12 l6 m6">
+            The Institute of Epidemiology, Disease Control and Research (IEDCR)
+            today increased the hotline numbers to report any suspected cases of
+            coronavirus to 12 from four, after three cases were confirmed in
+            Bangladesh on Sunday. Sources at the IEDCR also said that, if
+            contacted and according to necessity, their special medical teams
+            would visit suspected coronavirus patients' homes and collect
+            samples for testing. According to the IEDCR, the hotline numbers
+            were increased as the coronavirus alert level has been raised to
+            three from one.
+          </div>
+        </div>
+      </div>
     </main>
 
     <script src="assets/js/jquery.min.js"></script>
@@ -205,15 +247,13 @@
     <script src="assets/js/plugin.js"></script>
     <script>
       window.onscroll = scroll1;
-
       function scroll1() {
-        var toTop = document.getElementById("toTop");
+        var toTop = document.getElementById("scrollTop");
         window.scrollY > 500
           ? (toTop.style.display = "Block")
           : (toTop.style.display = "none");
       }
-
-      function abcd() {
+      function toTop() {
         window.scrollTo({ top: 0, behavior: "smooth" });
       }
     </script>
