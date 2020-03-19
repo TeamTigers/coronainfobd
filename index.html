@@ -122,7 +122,7 @@
 
       <!-- summary card -->
 
-      <div class="container" id="summary">
+      <div class="customContainer" id="summary">
         <div class="row">
           <h3 class="center-align">Summary of COVID-19 in Bangladesh</h3>
           <div class="col s12 m4 l4">
@@ -275,6 +275,31 @@
         </div>
       </div>
 
+      <!-- charts -->
+
+      <div class="customContainer" id="charts">
+        <div class="row">
+          <h3 class="center-align">Charts</h3>
+          <div class="col s12 l6 m6">
+            <div class="card">
+              <div class="card-content">
+                <div
+                  id="infectionWithDate"
+                  style="height: 370px; max-width: 920px; margin: 0px auto;"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 l6 m6">
+            <div class="card">
+              <div class="card-content"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- hotline numbers -->
+
       <div class="customContainer" id="hotline">
         <div class="row">
           <h3 class="center-align">Hotline</h3>
@@ -321,6 +346,8 @@
     </main>
 
     <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/canvas.min.js"></script>
+    <script src="assets/js/chart.js"></script>
     <script src="assets/js/materialize.js"></script>
     <script src="assets/js/plugin.js"></script>
     <script>
