@@ -85,6 +85,12 @@ header {
   margin: 4rem;
 }
 
+.homeContainer {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 1rem;
+}
+
 h3 {
   margin-bottom: 2rem;
 }
@@ -115,6 +121,11 @@ h3 {
   display: inline;
 }
 
+.homeImg {
+  height: 200;
+  max-width: 250;
+}
+
 .deathCard {
   color: #e53935;
   display: inline;
@@ -129,20 +140,9 @@ h3 {
   border-radius: 20px;
 }
 
-.tabs .tab a {
-  color: rgba(110, 161, 238, 0.7);
-}
-
-.tabs .tab a:focus,
-.tabs .tab a:focus.active {
-  background-color: rgba(178, 200, 246, 0.2);
-  outline: 0;
-}
-
-.tabs .tab a.active,
-.tabs .tab a:hover {
-  background-color: transparent;
-  color: #6e85ee;
+.suggestion {
+  line-height: 200%;
+  font-weight: 500;
 }
 
 /*=================================================================================
@@ -223,9 +223,35 @@ ul.side-nav .collapsible-header {
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   /* STYLES GO HERE */
   #cpa-logo {
+    font-size: 1.2rem;
+  }
+
+  #logo-icon {
+    font-size: 1.2rem;
+  }
+
+  .customContainer {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+}
+@media only screen and (min-device-width: 482px) and (max-device-width: 767px) {
+  /* STYLES GO HERE */
+  #cpa-logo {
+    font-size: 3rem;
+    margin-left: 2px;
+  }
+
+  #logo-icon {
     display: none;
   }
+
   .customContainer {
+    margin-left: 0rem;
+    margin-right: 0rem;
+  }
+
+  .homeContainer {
     margin-left: 0rem;
     margin-right: 0rem;
   }
@@ -235,8 +261,11 @@ ul.side-nav .collapsible-header {
   .customContainer {
     margin-left: 0rem;
     margin-right: 0rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  }
+
+  .homeContainer {
+    margin: 0rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
   }
 }
