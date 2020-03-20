@@ -49,6 +49,10 @@ header li :hover a :active {
   color: #03a892;
 }
 
+.headerText {
+  font-size: 2rem;
+}
+
 .progressbarTheme {
   color: #026b5d;
 }
@@ -248,6 +252,9 @@ ul.side-nav .collapsible-header {
   .homeContainer {
     margin-left: 0rem;
     margin-right: 0rem;
+  }
+  #headerText {
+    font-size: 0.5rem;
   }
 }
 
