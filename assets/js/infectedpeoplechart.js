@@ -17,12 +17,12 @@ window.onload = function() {
         xValueFormatString: "DD MMM",
         color: "#0288d1",
         dataPoints: [
-          { x: new Date(2020, 03, 8), y: 3 },
-          { x: new Date(2020, 03, 14), y: 2 },
-          { x: new Date(2020, 03, 16), y: 3 },
-          { x: new Date(2020, 03, 17), y: 2 },
-          { x: new Date(2020, 03, 18), y: 4 },
-          { x: new Date(2020, 03, 19), y: 4 }
+          { x: new Date(2020, 02, 8), y: 3 },
+          { x: new Date(2020, 02, 14), y: 2 },
+          { x: new Date(2020, 02, 16), y: 3 },
+          { x: new Date(2020, 02, 17), y: 2 },
+          { x: new Date(2020, 02, 18), y: 4 },
+          { x: new Date(2020, 02, 19), y: 4 }
         ]
       }
     ]
@@ -45,7 +45,7 @@ window.onload = function() {
         type: "line",
         xValueFormatString: "DD MMM",
         color: "#b71c1c",
-        dataPoints: [{ x: new Date(2020, 03, 18), y: 70 }]
+        dataPoints: [{ x: new Date(2020, 02, 18), y: 70 }]
       }
     ]
   });
