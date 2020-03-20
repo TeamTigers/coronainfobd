@@ -133,6 +133,18 @@ h3 {
   margin: 0px;
 }
 
+.count {
+  font-size: 4rem;
+}
+
+.collapsible-header {
+  font-weight: 500;
+}
+
+ul .faqList {
+  margin-left: 2rem;
+}
+
 /*=================================================================================
         Header
     ====================================================================================*/
@@ -252,9 +264,6 @@ ul.side-nav .collapsible-header {
   .homeContainer {
     margin-left: 0rem;
     margin-right: 0rem;
-  }
-  #headerText {
-    font-size: 0.5rem;
   }
 }
 

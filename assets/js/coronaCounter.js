@@ -13,7 +13,6 @@ $(function() {
   $.get(baseApi.concat("/countries/bangladesh"), function() {})
     .done(function(response) {
       showToast("Welcome");
-      console.log(response);
       constructData(
         response.cases,
         response.deaths,
@@ -23,6 +22,7 @@ $(function() {
         foreignResidents
       );
       $("main").show();
+      numberCounter();
     })
     .fail(function() {})
     .always(function() {
@@ -32,6 +32,13 @@ $(function() {
 
 function hideElementsTillResponse() {
   $("main").hide();
+}
+
+function numberCounter() {
+  $(".count").counterUp({
+    delay: 10,
+    time: 700
+  });
 }
 
 function showToast(message) {
