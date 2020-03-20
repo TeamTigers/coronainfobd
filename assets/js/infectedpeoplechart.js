@@ -22,7 +22,8 @@ window.onload = function() {
           { x: new Date(2020, 02, 16), y: 3 },
           { x: new Date(2020, 02, 17), y: 2 },
           { x: new Date(2020, 02, 18), y: 4 },
-          { x: new Date(2020, 02, 19), y: 4 }
+          { x: new Date(2020, 02, 19), y: 4 },
+          { x: new Date(2020, 02, 20), y: 2 }
         ]
       }
     ]
