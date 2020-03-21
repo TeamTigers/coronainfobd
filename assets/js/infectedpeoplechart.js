@@ -5,6 +5,7 @@ window.onload = function() {
       text: "Number of infection with date"
     },
     axisX: {
+      title: "Date",
       valueFormatString: "DD MMM"
     },
     axisY: {
@@ -33,20 +34,24 @@ window.onload = function() {
   var chart2 = new CanvasJS.Chart("deathWithDate", {
     animationEnabled: true,
     title: {
-      text: "Age of death with date"
+      text: "Death age with time"
     },
     axisX: {
+      title: "Date",
       valueFormatString: "DD MMM"
     },
     axisY: {
-      title: "Age",
-      includeZero: false
+      title: "Age"
     },
     data: [
       {
-        type: "line",
+        type: "scatter",
         xValueFormatString: "DD MMM",
         color: "#b71c1c",
+        toolTipContent:
+          '<span style="color:#4F81BC "><b>{name}</b></span><br/><b> Date:</b> {x} <br/><b> Age:</b></span> {y} yrs',
+        name: "Age of Dead People",
+        showInLegend: true,
         dataPoints: [
           { x: new Date(2020, 02, 18), y: 70 },
           { x: new Date(2020, 02, 21), y: 73 }
