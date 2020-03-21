@@ -23,7 +23,8 @@ window.onload = function() {
           { x: new Date(2020, 02, 17), y: 2 },
           { x: new Date(2020, 02, 18), y: 4 },
           { x: new Date(2020, 02, 19), y: 4 },
-          { x: new Date(2020, 02, 20), y: 2 }
+          { x: new Date(2020, 02, 20), y: 2 },
+          { x: new Date(2020, 02, 21), y: 4 }
         ]
       }
     ]
@@ -46,7 +47,10 @@ window.onload = function() {
         type: "line",
         xValueFormatString: "DD MMM",
         color: "#b71c1c",
-        dataPoints: [{ x: new Date(2020, 02, 18), y: 70 }]
+        dataPoints: [
+          { x: new Date(2020, 02, 18), y: 70 },
+          { x: new Date(2020, 02, 21), y: 70 }
+        ]
       }
     ]
   });
