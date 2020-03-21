@@ -2,12 +2,12 @@
 
 **Contents**
 
-- [What is CoronaInfoBD?](#what-is-coronainfobd?)
-- [How it will help us?](#how-it-will-help-us?)
-- [What are the features it is providing us?](#what-are-the-features-it-is-providing-us?)
-- [Is it responsive?](#is-it-responsive?)
-- [I have a question. Where should I ask?](#i-have-a-question.-where-should-i-ask?)
-- [Can I contribute here?](#can-i-contribute-in-this-project?)
+  - [What is CoronaInfoBD?](#what-is-coronainfobd)
+  - [How it will help us?](#how-it-will-help-us)
+  - [What are the features it is providing us?](#what-are-the-features-it-is-providing-us)
+  - [Is it responsive?](#is-it-responsive)
+  - [I have a question. Where should I ask?](#i-have-a-question-where-should-i-ask)
+  - [Can I contribute in this project?](#can-i-contribute-in-this-project)
 
 ## What is CoronaInfoBD?
 
