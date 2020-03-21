@@ -49,7 +49,7 @@ window.onload = function() {
         color: "#b71c1c",
         dataPoints: [
           { x: new Date(2020, 02, 18), y: 70 },
-          { x: new Date(2020, 02, 21), y: 70 }
+          { x: new Date(2020, 02, 21), y: 73 }
         ]
       }
     ]
