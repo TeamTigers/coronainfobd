@@ -13,6 +13,10 @@ header li :hover a :active {
   color: #ffffff;
 }
 
+main {
+  display: none;
+}
+
 .onmouseCase :hover h6 {
   color: #0288d1;
   font-weight: bold;
@@ -80,7 +84,8 @@ h3 {
 }
 
 .title {
-  color: #0288d1;
+  color: #02a892;
+  font-weight: bold;
 }
 
 .navTheme {
@@ -143,6 +148,14 @@ h3 {
 
 ul .faqList {
   margin-left: 2rem;
+}
+
+.collection-item {
+  font-weight: bold;
+}
+
+.collection-item a {
+  text-decoration: underline;
 }
 
 /*=================================================================================

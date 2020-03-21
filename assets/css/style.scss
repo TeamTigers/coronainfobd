@@ -1,4 +1,5 @@
 $foregroundColor: #0288d1;
+
 $secondayColor: #02a892; // html {
 //   scroll-behavior: smooth;
 // }
@@ -17,6 +18,10 @@ header {
       color: #ffffff;
     }
   }
+}
+
+main {
+  display: none;
 }
 
 .onmouseCase {
@@ -98,7 +103,8 @@ h3 {
 }
 
 .title {
-  color: $foregroundColor;
+  color: $secondayColor;
+  font-weight: bold;
 }
 
 .navTheme {
@@ -162,6 +168,13 @@ h3 {
 ul {
   .faqList {
     margin-left: 2rem;
+  }
+}
+
+.collection-item {
+  font-weight: bold;
+  a {
+    text-decoration: underline;
   }
 }
 
