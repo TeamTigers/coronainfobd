@@ -1,4 +1,4 @@
-window.onload = function() {
+window.onload = function () {
   var chart = new CanvasJS.Chart("infectionWithDate", {
     animationEnabled: true,
     title: {
@@ -25,7 +25,8 @@ window.onload = function() {
           { x: new Date(2020, 02, 18), y: 4 },
           { x: new Date(2020, 02, 19), y: 4 },
           { x: new Date(2020, 02, 20), y: 2 },
-          { x: new Date(2020, 02, 21), y: 4 }
+          { x: new Date(2020, 02, 21), y: 4 },
+          { x: new Date(2020, 02, 22), y: 3 }
         ]
       }
     ]
