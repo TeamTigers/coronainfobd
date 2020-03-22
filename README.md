@@ -28,6 +28,7 @@ As it provides real data and visual mapping of spreading COVID-19, mass people w
 - **Hotline** numbers that are provided from _IEDCR_. You can easily call those number in your emergency by tapping on the numbers.
 
 - **FAQ**, Frequently Asked Questions. Questions that most of the people ask about corona virus. We tried to answer some of the questions according to _WHO_.
+- **Day/Night Mode** as most of the people prefer night mode, so we made sure to have a day/night mode in our application.
 
 ## Is it responsive?
 
