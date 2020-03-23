@@ -1,728 +1,908 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="CoronaInfoBD  2020" />
+    <meta
+      property="og:description"
+      content="An application to get updated with corona virus affected in Bangladesh"
+    />
+    <title>CoronaInfoBD</title>
+    <link rel="icon" href="assets/img/logo.png" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=El+Messiri&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/materializecss.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/darkMood.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:title" content="CoronaInfoBD  2020" />
-  <meta property="og:description" content="An application to get updated with corona virus affected in Bangladesh" />
-  <title>CoronaInfoBD</title>
-  <link rel="icon" href="assets/img/logo.png" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=El+Messiri&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="assets/css/materializecss.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/darkMood.css" />
-</head>
-
-<body>
-  <header>
-    <div class="navbar-fixed">
-      <nav class="nav-extended nav-fixed navTheme darken-2 z-depth-0">
-        <div class="nav-wrapper">
-          <a class="brand-logo gsans" id="cpa-logo"><i class="material-icons" id="logo-icon">ac_unit</i>CoronaInfoBD</a>
-          <a href="#" class="sidenav-trigger" data-target="mobile-nav">
-            <i class="material-icons">menu</i>
-          </a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li class="active">
-              <a href="#home" class="scroll">Home</a>
-            </li>
-            <li>
-              <a href="#summary" class="scroll">Summary</a>
-            </li>
-            <li>
-              <a href="#case_study" class="scroll">Case study</a>
-            </li>
-            <li>
-              <a href="#charts" class="scroll">Charts</a>
-            </li>
-            <li>
-              <a href="#hotline" class="scroll">Hotline</a>
-            </li>
-            <li>
-              <a href="#faq" class="scroll">FAQ</a>
-            </li>
-            <li>
-              <a href="#team" class="scroll">Team</a>
-            </li>
-            <li>
-              <a href="#" onclick="darkMood()" class="tooltipped" ata-position="bottom"
-                data-tooltip="Toggle Day/Night"><i class="material-icons blue-grey-text text-lighten-4"
-                  id="moodIcon">brightness_7</i></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    <ul class="sidenav" id="mobile-nav">
-      <li>
-        <a href="#" onclick="darkMood()">Day/Night mode<i class="material-icons blue-grey-text text-lighten-4 right"
-            id="moodIcon">brightness_7</i></a>
-      </li>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#summary">Summary</a></li>
-      <li><a href="#case_study">Case study</a></li>
-      <li><a href="#charts">Charts</a></li>
-      <li><a href="#hotline">Hotline</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#team">Team</a></li>
-    </ul>
-    <div class="progress contextTextTheme">
-      <div class="indeterminate progressbarTheme"></div>
-    </div>
-  </header>
-  <main id="elemets">
-    <div class="fixed-action-btn">
-      <a class="btn-floating btn-medium blue-grey darken-4 tooltipped" data-position="left" data-tooltip="Top"
-        id="scrollTop" onclick="toTop()">
-        <i class="large material-icons">arrow_upward</i>
-      </a>
-    </div>
-    <div class="homeContainer" id="home">
-      <div class="col s12 m12 l12">
-        <div class="card round">
-          <div class="card-content">
-            <div class="row">
-              <div class="col s12 l6 m6">
-                <div class="card-image left-align">
-                  <img src="assets/img/health.svg" alt="health" class="responsive-img homeImg" />
+  <body>
+    <header>
+      <div class="navbar-fixed">
+        <nav class="nav-extended nav-fixed navTheme darken-2 z-depth-0">
+          <div class="nav-wrapper">
+            <a class="brand-logo gsans" id="cpa-logo"
+              ><i class="material-icons" id="logo-icon">ac_unit</i
+              >CoronaInfoBD</a
+            >
+            <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+              <i class="material-icons">menu</i>
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li class="active">
+                <a href="#home" class="scroll">Home</a>
+              </li>
+              <li>
+                <a href="#summary" class="scroll">Summary</a>
+              </li>
+              <li>
+                <a href="#case_study" class="scroll">Case study</a>
+              </li>
+              <li>
+                <a href="#charts" class="scroll">Charts</a>
+              </li>
+              <li>
+                <a href="#hotline" class="scroll">Hotline</a>
+              </li>
+              <li>
+                <a href="#faq" class="scroll">FAQ</a>
+              </li>
+              <li>
+                <a href="#team" class="scroll">Team</a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="darkMood()"
+                  class="tooltipped"
+                  ata-position="bottom"
+                  data-tooltip="Toggle Day/Night"
+                  ><i
+                    class="material-icons blue-grey-text text-lighten-4"
+                    id="moodIcon"
+                    >brightness_7</i
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <ul class="sidenav" id="mobile-nav">
+        <li>
+          <a href="#" onclick="darkMood()"
+            >Day/Night mode<i
+              class="material-icons blue-grey-text text-lighten-4 right"
+              id="moodIcon"
+              >brightness_7</i
+            ></a
+          >
+        </li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#case_study">Case study</a></li>
+        <li><a href="#charts">Charts</a></li>
+        <li><a href="#hotline">Hotline</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#team">Team</a></li>
+      </ul>
+      <div class="progress contextTextTheme">
+        <div class="indeterminate progressbarTheme"></div>
+      </div>
+    </header>
+    <main id="elemets">
+      <div class="fixed-action-btn">
+        <a
+          class="btn-floating btn-medium blue-grey darken-4 tooltipped"
+          data-position="left"
+          data-tooltip="Top"
+          id="scrollTop"
+          onclick="toTop()"
+        >
+          <i class="large material-icons">arrow_upward</i>
+        </a>
+      </div>
+      <div class="homeContainer" id="home">
+        <div class="col s12 m12 l12">
+          <div class="card round">
+            <div class="card-content">
+              <div class="row">
+                <div class="col s12 l6 m6">
+                  <div class="card-image left-align">
+                    <img
+                      src="assets/img/health.svg"
+                      alt="health"
+                      class="responsive-img homeImg"
+                    />
+                  </div>
+                </div>
+                <div class="col s12 l6 m6">
+                  <p class="suggestion">
+                    <b class="red-text">○</b> Stay home, stay safe
+                  </p>
+                  <p class="suggestion">
+                    <b class="red-text">○</b> Keep yourself and your family stay
+                    sanitized
+                  </p>
+                  <p class="suggestion">
+                    <b class="red-text">○</b> Use mask, gloves and hand
+                    sanitizer
+                  </p>
+                  <p class="suggestion">
+                    <b class="red-text">○</b> Social distancing measures can
+                    help delay and slow the spread of the disease and save
+                    lives.
+                  </p>
+                  <p class="suggestion">
+                    <b class="red-text">○</b> Don't be panic, don't believe
+                    elaborate hoax. Stay up to date with the information from
+                    trusted source.
+                  </p>
+                  <p class="suggestion">
+                    <b class="red-text">○</b> If you feel sick and have any
+                    syndrome of
+                    <span class="red-text text-darken-3">Corona Virus</span>,
+                    please call
+                    <b class="text-light-blue text-darken-3">IEDCR</b> for
+                    checkup through the
+                    <a href="#hotline" class="scroll">hotline numbers</a> they
+                    provided.
+                  </p>
                 </div>
               </div>
-              <div class="col s12 l6 m6">
-                <p class="suggestion">
-                  <b class="red-text">○</b> Stay home, stay safe
-                </p>
-                <p class="suggestion">
-                  <b class="red-text">○</b> Keep yourself and your family stay
-                  sanitized
-                </p>
-                <p class="suggestion">
-                  <b class="red-text">○</b> Use mask, gloves and hand
-                  sanitizer
-                </p>
-                <p class="suggestion">
-                  <b class="red-text">○</b> Social distancing measures can
-                  help delay and slow the spread of the disease and save
-                  lives.
-                </p>
-                <p class="suggestion">
-                  <b class="red-text">○</b> Don't be panic, don't believe
-                  elaborate hoax. Stay up to date with the information from
-                  trusted source.
-                </p>
-                <p class="suggestion">
-                  <b class="red-text">○</b> If you feel sick and have any
-                  syndrome of
-                  <span class="red-text text-darken-3">Corona Virus</span>,
-                  please call
-                  <b class="text-light-blue text-darken-3">IEDCR</b> for
-                  checkup through the
-                  <a href="#hotline" class="scroll">hotline numbers</a> they
-                  provided.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- summary card -->
-
-    <div class="customContainer" id="summary">
-      <div class="row">
-        <h4 class="center-align gsans text-blue-grey text-darken-1 headerText">
-          Summary of COVID-19 in Bangladesh
-        </h4>
-        <div class="col s12 m4 l4">
-          <div class="card round center-align hoverable onmouseCase">
-            <div class="card-content">
-              <span class="caseCard count" id="numberOfConfirmedCases"></span>
-              <h6>Coronavirus cases</h6>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m4 l4">
-          <div class="card round center-align hoverable onmouseDeath">
-            <div class="card-content">
-              <span class="deathCard count" id="numberOfDeaths"></span>
-              <h6>Deaths</h6>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m4 l4">
-          <div class="card round center-align hoverable onmouseRecovery">
-            <div class="card-content">
-              <span class="recoveryCard count" id="numberOfRecovery"></span>
-              <h6>Recovered</h6>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="row">
-        <div class="col s12 m12 l12">
-          <div class="card round">
-            <div class="card-content">
-              <h5 class="center-align gsans text-blue-grey text-darken-1">
-                More info
-              </h5>
-              <table class="centered responsive-table">
-                <thead>
-                  <tr>
-                    <th>Total Cases</th>
-                    <th>Active Cases</th>
-                    <th>Cases Today</th>
-                    <th>Deaths</th>
-                    <th>Recovered</th>
+      <!-- summary card -->
 
-                    <th class="red-text text-darken-1">Italy</th>
-                    <th class="amber-text text-darken-1">Kuwait</th>
-                    <th class="amber-text text-darken-1">Germany</th>
-                    <th>Unknown</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <!-- total case -->
-                    <td id="td_total"></td>
-                    <!-- active case -->
-                    <td id="td_active"></td>
-                    <!-- today case -->
-                    <td id="td_cases_today"></td>
-                    <!-- death -->
-                    <td id="td_deaths"></td>
-                    <!-- recovered -->
-                    <td id="td_recovered"></td>
-                    <!-- italy -->
-                    <td id="italy"></td>
-                    <!-- kuwait -->
-                    <td id="kuwait"></td>
-                    <!-- germany -->
-                    <td id="germany"></td>
-                    <!-- unknown -->
-                    <td id="unknown"></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- image -->
-    <div class="customContainer" id="case_study">
-      <div class="row">
-        <h4 class="center-align gsans text-blue-grey text-darken-1 headerText">
-          Case study
-        </h4>
-        <div class="col s12 l4 m4">
-          <figure>
-            <img src="assets/img/CoronaInfo.PNG" alt="coronavirus" class="responsive-img" />
-            <figcaption class="center-align red-text">
-              Fig.1 - Mind map of cases
-            </figcaption>
-          </figure>
-        </div>
-        <div class="col s12 l8 m8">
-          <ul class="collection">
-            <li class="collection-item">
-              <span class="title gsans">8th march, 2020</span>
-              <p class="gsans">
-                First time 3 patients. 2 were Italy-returnees. Third one was
-                the wife one of them (They returned home after their
-                treatment)
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">14th march, 2020</span>
-              <p class="gsans">
-                Health Minister Zahid Maleque said 2 more corona virus cases
-                were detected (Italy-1, Germany-1)
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">16th march, 2020</span>
-              <p class="gsans">
-                3 more detected positive of COVID-19 from the same family. (1
-                Female, 2 Child)
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">17th march, 2020</span>
-              <p class="gsans">
-                2 more from that same family whom were detected on 16th march,
-                2020 (Italy-1, 1 affected by USA Expatriate. That Expatriate
-                already went back to USA)
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">18th march, 2020</span>
-              <p class="gsans">
-                4 new person detected corona positive (2 returnees of Italy(1
-                male), 1 from Kuwait, another one is affected by an old corona
-                patient) (Total: 3 man, 1 woman). A 70 years old person who
-                tested positive died because of corona virus. First case of
-                death because of corona virus.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">19th march, 2020</span>
-              <p class="gsans">
-                4 person detected corona positive. 2 of them are men age of 65
-                years and 32 years. 1 woman of age 22 years. They were
-                affected by their relative who came from Italy. Last one was
-                30 years old male who was in the Isolation procedure in
-                Chuadanga Sadar Hospital and came from Italy.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">20th march, 2020</span>
-              <p class="gsans">
-                2 new person detected corona positive. One is male and another
-                one is female. They had come touch with the person who
-                returned from Italy.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">21th march, 2020</span>
-              <p class="gsans">
-                4 new person detected corona positive. A 73 years old patient
-                who tested positive died. This is the second case of death
-                because of corona virus.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">22nd march, 2020</span>
-              <p class="gsans">
-                3 new person detected corona positive. Two of them came from
-                different countries and another one is affected by an expatriate.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">23rd march, 2020</span>
-              <p class="gsans">
-                6 new person detected corona positive.Two of them are nurse and
-                one is a doctor. One person is died because of corona cirus.
-                Two of them was affected by corona patient.
-                This is the 3rd case of Death because of corona virus.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- charts -->
-
-    <div class="customContainer" id="charts">
-      <div class="row">
-        <h4 class="center-align gsans text-blue-grey text-darken-1 headerText">
-          Charts
-        </h4>
-        <div class="col s12 l6 m6">
-          <div class="card round">
-            <div class="card-content">
-              <div class="chart" id="infectionWithDate" style="height: 376px; max-width: 920px; margin: 0px auto;">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 l6 m6">
-          <div class="card round">
-            <div class="card-content">
-              <div class="chart" id="deathWithDate" style="height: 376px; max-width: 920px; margin: 0px auto;"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- hotline numbers -->
-
-    <div class="customContainer" id="hotline">
-      <div class="row">
-        <h4 class="center-align gsans text-blue-grey text-darken-1 headerText">
-          Hotline
-        </h4>
-        <div class="col s12 m6 l6 center-align">
-          <ul class="collection with-header">
-            <li class="collection-header">
-              <h5 class="title gsans">Numbers</h5>
-              <span>Tap on the number to make phone call</span>
-            </li>
-            <li class="collection-item">
-              <a href="tel:333">333</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:16263">16263</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:01401184551">01401184551</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:01401184554">01401184554</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:01401184555">01401184555</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:01401184556">01401184556</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:01401184559">01401184559</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:01401184560">01401184560</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:01401184563">01401184563</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:01401184568">01401184568</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:01927711784">01927711784</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:01927711785">01927711785</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:01937000011">01937000011</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:01937110011">01937110011</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col s12 l6 m6">
-          <p style="line-height: 200%;">
-            <a href="https://www.iedcr.org/" target="_blank">The Institute of Epidemiology, Disease Control and Research
-              (IEDCR)</a>
-            increased the hotline numbers to report any suspected cases of
-            coronavirus to 12 from four, after three cases were confirmed in
-            Bangladesh on Sunday. Sources at the IEDCR also said that, if
-            contacted and according to necessity, their special medical teams
-            would visit suspected coronavirus patients' homes and collect
-            samples for testing. According to the IEDCR, the hotline numbers
-            were increased as the coronavirus alert level has been raised to
-            three from one.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- about corona -->
-
-    <div class="customContainer" id="faq">
-      <div class="row">
-        <h4 class="center-align gsans text-blue-grey text-darken-1 headerText">
-          FAQ
-        </h4>
-        <div class="col s12 m12 l12">
-          <ul class="collapsible round">
-            <li>
-              <div class="collapsible-header round gsans">
-                <i class="material-icons">expand_more</i>
-                What is a Coronavirus?
-              </div>
-              <div class="collapsible-body">
-                <span class="gsans">Coronaviruses are a large family of viruses which may cause
-                  illness in animals or humans. In humans, several
-                  coronaviruses are known to cause respiratory infections
-                  ranging from the common cold to more severe diseases such as
-                  Middle East Respiratory Syndrome (MERS) and Severe Acute
-                  Respiratory Syndrome (SARS). The most recently discovered
-                  coronavirus causes coronavirus disease COVID-19.</span>
-              </div>
-            </li>
-            <li>
-              <div class="collapsible-header round gsans">
-                <i class="material-icons">expand_more</i>What is COVID-19?
-              </div>
-              <div class="collapsible-body">
-                <span class="gsans">COVID-19 is the infectious disease caused by the most
-                  recently discovered coronavirus. This new virus and disease
-                  were unknown before the outbreak began in Wuhan, China, in
-                  December 2019.
-                </span>
-              </div>
-            </li>
-            <li>
-              <div class="collapsible-header round gsans">
-                <i class="material-icons">expand_more</i>What are the symptoms
-                of COVID-19?
-              </div>
-              <div class="collapsible-body">
-                <span class="gsans">
-                  The most common symptoms of COVID-19 are fever, tiredness,
-                  and dry cough. Some patients may have aches and pains, nasal
-                  congestion, runny nose, sore throat or diarrhea. These
-                  symptoms are usually mild and begin gradually. Some people
-                  become infected but don’t develop any symptoms and don't
-                  feel unwell. Most people (about 80%) recover from the
-                  disease without needing special treatment. Around 1 out of
-                  every 6 people who gets COVID-19 becomes seriously ill and
-                  develops difficulty breathing. Older people, and those with
-                  underlying medical problems like high blood pressure, heart
-                  problems or diabetes, are more likely to develop serious
-                  illness. People with fever, cough and difficulty breathing
-                  should seek medical attention.</span>
-              </div>
-            </li>
-            <li>
-              <div class="collapsible-header round gsans">
-                <i class="material-icons">expand_more</i>How does COVID-19
-                spread?
-              </div>
-              <div class="collapsible-body">
-                <span class="gsans">
-                  People can catch COVID-19 from others who have the virus.
-                  The disease can spread from person to person through small
-                  droplets from the nose or mouth which are spread when a
-                  person with COVID-19 coughs or exhales. These droplets land
-                  on objects and surfaces around the person. Other people then
-                  catch COVID-19 by touching these objects or surfaces, then
-                  touching their eyes, nose or mouth. People can also catch
-                  COVID-19 if they breathe in droplets from a person with
-                  COVID-19 who coughs out or exhales droplets. This is why it
-                  is important to stay more than 1 meter (3 feet) away from a
-                  person who is sick. WHO is assessing ongoing research on the
-                  ways COVID-19 is spread and will continue to share updated
-                  findings.
-                </span>
-              </div>
-            </li>
-            <li>
-              <div class="collapsible-header round gsans">
-                <i class="material-icons">expand_more</i>What can I do to
-                protect myself from coronavirus?
-              </div>
-              <div class="collapsible-body">
-                <span class="gsans">
-                  You can reduce your chances of being infected or spreading
-                  COVID-19 by taking some simple precautions: <br />
-                  <ul class="faqList">
-                    <li>
-                      <b class="red-text">○</b> Regularly and thoroughly clean
-                      your hands with an alcohol-based hand rub or wash them
-                      with soap and water. Why? Washing your hands with soap
-                      and water or using alcohol-based hand rub kills viruses
-                      that may be on your hands.
-                    </li>
-                    <li>
-                      <b class="red-text">○</b> Maintain at least 1 metre (3
-                      feet) distance between yourself and anyone who is
-                      coughing or sneezing.
-                    </li>
-                    <li>
-                      <b class="red-text">○</b> Avoid touching eyes, nose and
-                      mouth.
-                    </li>
-                    <li>
-                      <b class="red-text">○</b> Make sure you, and the people
-                      around you, follow good respiratory hygiene. This means
-                      covering your mouth and nose with your bent elbow or
-                      tissue when you cough or sneeze. Then dispose of the
-                      used tissue immediately.
-                    </li>
-                    <li>
-                      <b class="red-text">○</b> Stay home if you feel unwell.
-                      If you have a fever, cough and difficulty breathing,
-                      seek medical attention and call in advance. Follow the
-                      directions of your local health authority.
-                    </li>
-                    <li>
-                      <b class="red-text">○</b> Keep up to date on the latest
-                      COVID-19 hotspots (cities or local areas where COVID-19
-                      is spreading widely). If possible, avoid traveling to
-                      places – especially if you are an older person or have
-                      diabetes, heart or lung disease.
-                    </li>
-                  </ul>
-                </span>
-              </div>
-            </li>
-            <li>
-              <div class="collapsible-header round gsans">
-                <i class="material-icons">expand_more</i>
-                Can I catch COVID-19 from my pet?
-              </div>
-              <div class="collapsible-body">
-                <span class="gsans">While there has been one instance of a dog being infected
-                  in Hong Kong, to date, there is no evidence that a dog, cat
-                  or any pet can transmit COVID-19. COVID-19 is mainly spread
-                  through droplets produced when an infected person coughs,
-                  sneezes, or speaks. To protect yourself, clean your hands
-                  frequently and thoroughly.
-                </span>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- team -->
-    <div class="customContainer" id="team">
-      <h4 class="center-align gsans text-blue-grey text-darken-1 headerText">
-        Team
-      </h4>
-      <div class="row">
-        <div class="col s12 l3 m3">
-          <div class="card round center-align">
-            <div class="card-content">
-              <div class="center-align">
-                <img class="responsive-img" style="border-radius: 50%;" src="assets/img/anwar.jpg" alt="sir"
-                  height="200" width="200" />
-              </div>
-              <h6 class="center-align tContributor gsans">Md Anwar Hossen</h6>
-              <span class="center-align tPosition gsans">Mentor</span>
-              <div>
-                <a href="https://www.facebook.com/mdanwarhossenemon11" target="_blank"><i class="fa fa-facebook-square"
-                    style="font-size: 20px; color: rgb(0, 122, 204);"></i><span class="ml-1"></span></a>
-                <a href="https://github.com/mahemon" target="_blank" style="padding-left: 1em;"><i class="fa fa-github"
-                    style="font-size: 20px; color: black;"></i><span class="ml-1"></span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 l3 m3">
-          <div class="card round center-align">
-            <div class="card-content">
-              <div class="center-align">
-                <img class="responsive-img" style="border-radius: 50%;" src="assets/img/shunjid.jpg" alt="sir"
-                  height="200" width="200" />
-              </div>
-              <h6 class="center-align tContributor gsans">
-                Shunjid Rahman Showrov
-              </h6>
-              <span class="center-align tPosition gsans">Student</span>
-              <div>
-                <a href="https://www.facebook.com/shunjid" target="_blank"><i class="fa fa-facebook-square"
-                    style="font-size: 20px; color: rgb(0, 122, 204);"></i><span class="ml-1"></span></a>
-                <a href="https://github.com/shunjid" target="_blank" style="padding-left: 1em;"><i class="fa fa-github"
-                    style="font-size: 20px; color: black;"></i><span class="ml-1"></span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 l3 m3">
-          <div class="card round center-align">
-            <div class="card-content">
-              <div class="center-align">
-                <img class="responsive-img" style="border-radius: 50%;" src="assets/img/zubu.jpg" alt="sir" height="200"
-                  width="200" />
-              </div>
-              <h6 class="center-align tContributor gsans">Zubayer Himel</h6>
-              <span class="center-align tPosition gsans">Student</span>
-              <div>
-                <a href="https://www.facebook.com/zubayerhimel0" target="_blank"><i class="fa fa-facebook-square"
-                    style="font-size: 20px; color: rgb(0, 122, 204);"></i><span class="ml-1"></span></a>
-                <a href="https://github.com/zubayerhimel" target="_blank" style="padding-left: 1em;"><i
-                    class="fa fa-github" style="font-size: 20px; color: black;"></i><span class="ml-1"></span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 l3 m3">
-          <div class="card round center-align">
-            <div class="card-content">
-              <div class="center-align">
-                <img class="responsive-img" style="border-radius: 50%;" src="assets/img/fahad.jpg" alt="sir"
-                  height="200" width="200" />
-              </div>
-              <h6 class="center-align tContributor gsans">
-                Shah Fahad Hossain
-              </h6>
-              <span class="center-align tPosition gsans">Student</span>
-              <div>
-                <a href="https://www.facebook.com/shahfahad.hossain" target="_blank"><i class="fa fa-facebook-square"
-                    style="font-size: 20px; color: rgb(0, 122, 204);"></i><span class="ml-1"></span></a>
-                <a href="https://github.com/Fahad1997" target="_blank" style="padding-left: 1em;"><i
-                    class="fa fa-github" style="font-size: 20px; color: black;"></i><span class="ml-1"></span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- footer -->
-
-    <footer class="page-footer blue-grey darken-3">
-      <div class="container">
+      <div class="customContainer" id="summary">
         <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text https://github.com/TeamTigers/coronainfobd.git">
-              CoronaInfoBD Team
-            </h5>
-            <p class="grey-text text-lighten-4 https://github.com/TeamTigers/coronainfobd.git">
-              It is a voluntary act aimed at mass awareness. All content used
-              here is open to everyone. For any kind of queries you can
-              <a href="mailto:teamtigers256@gmail.com">Email</a> us or create
-              an issue in
-              <a href="https://github.com/TeamTigers/coronainfobd/issues" target="_blank">Github</a>
-            </p>
-            <br />
-            <h6 class="whtie-text gsans">Initiative taken by:</h6>
-            <p class="grey-text text-lighten-4 gsans">
-              Department of Software Engineering <br />
-              Daffodil International University
-            </p>
+          <h4
+            class="center-align gsans text-blue-grey text-darken-1 headerText"
+          >
+            Summary of COVID-19 in Bangladesh
+          </h4>
+          <div class="col s12 m4 l4">
+            <div class="card round center-align hoverable onmouseCase">
+              <div class="card-content">
+                <span class="caseCard count" id="numberOfConfirmedCases"></span>
+                <h6>Coronavirus cases</h6>
+              </div>
+            </div>
           </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text ">Important Links</h5>
-            <ul>
-              <li>
-                <a href="https://daffodilvarsity.edu.bd/article/corona" target="_blank">Activiy of DIU against
-                  Corona</a>
+          <div class="col s12 m4 l4">
+            <div class="card round center-align hoverable onmouseDeath">
+              <div class="card-content">
+                <span class="deathCard count" id="numberOfDeaths"></span>
+                <h6>Deaths</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4 l4">
+            <div class="card round center-align hoverable onmouseRecovery">
+              <div class="card-content">
+                <span class="recoveryCard count" id="numberOfRecovery"></span>
+                <h6>Recovered</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12 m12 l12">
+            <div class="card round">
+              <div class="card-content">
+                <h5 class="center-align gsans text-blue-grey text-darken-1">
+                  More info
+                </h5>
+                <table class="centered responsive-table">
+                  <thead>
+                    <tr>
+                      <th>Total Cases</th>
+                      <th>Active Cases</th>
+                      <th>Cases Today</th>
+                      <th>Deaths</th>
+                      <th>Recovered</th>
+
+                      <th class="red-text text-darken-1">Italy</th>
+                      <th class="amber-text text-darken-1">Kuwait</th>
+                      <th class="amber-text text-darken-1">Germany</th>
+                      <th>Unknown</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <!-- total case -->
+                      <td id="td_total"></td>
+                      <!-- active case -->
+                      <td id="td_active"></td>
+                      <!-- today case -->
+                      <td id="td_cases_today"></td>
+                      <!-- death -->
+                      <td id="td_deaths"></td>
+                      <!-- recovered -->
+                      <td id="td_recovered"></td>
+                      <!-- italy -->
+                      <td id="italy"></td>
+                      <!-- kuwait -->
+                      <td id="kuwait"></td>
+                      <!-- germany -->
+                      <td id="germany"></td>
+                      <!-- unknown -->
+                      <td id="unknown"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- image -->
+      <div class="customContainer" id="case_study">
+        <div class="row">
+          <h4
+            class="center-align gsans text-blue-grey text-darken-1 headerText"
+          >
+            Case study
+          </h4>
+          <div class="col s12 l4 m4">
+            <figure>
+              <img
+                src="assets/img/CoronaInfo.PNG"
+                alt="coronavirus"
+                class="responsive-img"
+              />
+              <figcaption class="center-align red-text">
+                Fig.1 - Mind map of cases
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col s12 l8 m8">
+            <ul class="collection">
+              <li class="collection-item">
+                <span class="title gsans">8th march, 2020</span>
+                <p class="gsans">
+                  First time 3 patients. 2 were Italy-returnees. Third one was
+                  the wife one of them (They returned home after their
+                  treatment)
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">14th march, 2020</span>
+                <p class="gsans">
+                  Health Minister Zahid Maleque said 2 more corona virus cases
+                  were detected (Italy-1, Germany-1)
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">16th march, 2020</span>
+                <p class="gsans">
+                  3 more detected positive of COVID-19 from the same family. (1
+                  Female, 2 Child)
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">17th march, 2020</span>
+                <p class="gsans">
+                  2 more from that same family whom were detected on 16th march,
+                  2020 (Italy-1, 1 affected by USA Expatriate. That Expatriate
+                  already went back to USA)
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">18th march, 2020</span>
+                <p class="gsans">
+                  4 new person detected corona positive (2 returnees of Italy(1
+                  male), 1 from Kuwait, another one is affected by an old corona
+                  patient) (Total: 3 man, 1 woman). A 70 years old person who
+                  tested positive died because of corona virus. First case of
+                  death because of corona virus.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">19th march, 2020</span>
+                <p class="gsans">
+                  4 person detected corona positive. 2 of them are men age of 65
+                  years and 32 years. 1 woman of age 22 years. They were
+                  affected by their relative who came from Italy. Last one was
+                  30 years old male who was in the Isolation procedure in
+                  Chuadanga Sadar Hospital and came from Italy.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">20th march, 2020</span>
+                <p class="gsans">
+                  2 new person detected corona positive. One is male and another
+                  one is female. They had come touch with the person who
+                  returned from Italy.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">21th march, 2020</span>
+                <p class="gsans">
+                  4 new person detected corona positive. A 73 years old patient
+                  who tested positive died. This is the second case of death
+                  because of corona virus.
+                </p>
               </li>
             </ul>
           </div>
         </div>
-        <script type="text/javascript"
-          src="https://www.freevisitorcounters.com/auth.php?id=9b69540a475623abc41cf3bd65d75afbcc1a25da"></script>
-        <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/652237/t/5"></script>
       </div>
-      <div class="footer-copyright">
-        <div class="container">
-          © 2020 Copyright TeamTigers
-          <a class="grey-text text-lighten-4 right" href="https://github.com/teamtigers" target="_blank">TeamTigers</a>
+
+      <!-- charts -->
+
+      <div class="customContainer" id="charts">
+        <div class="row">
+          <h4
+            class="center-align gsans text-blue-grey text-darken-1 headerText"
+          >
+            Charts
+          </h4>
+          <div class="col s12 l6 m6">
+            <div class="card round">
+              <div class="card-content">
+                <div
+                  class="chart"
+                  id="infectionWithDate"
+                  style="height: 376px; max-width: 920px; margin: 0px auto;"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 l6 m6">
+            <div class="card round">
+              <div class="card-content">
+                <div
+                  class="chart"
+                  id="deathWithDate"
+                  style="height: 376px; max-width: 920px; margin: 0px auto;"
+                ></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </footer>
-  </main>
 
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/materialize.js"></script>
-  <script src="assets/js/coronaCounter.js"></script>
-  <script src="assets/js/canvas.min.js"></script>
-  <script src="assets/js/infectedpeoplechart.js"></script>
-  <script src="assets/js/plugin.js"></script>
-  <script src="assets/js/darkMood.js"></script>
+      <!-- hotline numbers -->
 
-  <script>
-    window.onscroll = scroll1;
-    function scroll1() {
-      var toTop = document.getElementById("scrollTop");
-      window.scrollY > 500
-        ? (toTop.style.display = "Block")
-        : (toTop.style.display = "none");
-    }
-    function toTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-    }
-  </script>
-</body>
+      <div class="customContainer" id="hotline">
+        <div class="row">
+          <h4
+            class="center-align gsans text-blue-grey text-darken-1 headerText"
+          >
+            Hotline
+          </h4>
+          <div class="col s12 m6 l6 center-align">
+            <ul class="collection with-header">
+              <li class="collection-header">
+                <h5 class="title gsans">Numbers</h5>
+                <span>Tap on the number to make phone call</span>
+              </li>
+              <li class="collection-item">
+                <a href="tel:333">333</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:16263">16263</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:01401184551">01401184551</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:01401184554">01401184554</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:01401184555">01401184555</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:01401184556">01401184556</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:01401184559">01401184559</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:01401184560">01401184560</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:01401184563">01401184563</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:01401184568">01401184568</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:01927711784">01927711784</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:01927711785">01927711785</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:01937000011">01937000011</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:01937110011">01937110011</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col s12 l6 m6">
+            <p style="line-height: 200%;">
+              <a href="https://www.iedcr.org/" target="_blank"
+                >The Institute of Epidemiology, Disease Control and Research
+                (IEDCR)</a
+              >
+              increased the hotline numbers to report any suspected cases of
+              coronavirus to 12 from four, after three cases were confirmed in
+              Bangladesh on Sunday. Sources at the IEDCR also said that, if
+              contacted and according to necessity, their special medical teams
+              would visit suspected coronavirus patients' homes and collect
+              samples for testing. According to the IEDCR, the hotline numbers
+              were increased as the coronavirus alert level has been raised to
+              three from one.
+            </p>
+          </div>
+        </div>
+      </div>
 
+      <!-- about corona -->
+
+      <div class="customContainer" id="faq">
+        <div class="row">
+          <h4
+            class="center-align gsans text-blue-grey text-darken-1 headerText"
+          >
+            FAQ
+          </h4>
+          <div class="col s12 m12 l12">
+            <ul class="collapsible round">
+              <li>
+                <div class="collapsible-header round gsans">
+                  <i class="material-icons">expand_more</i>
+                  What is a Coronavirus?
+                </div>
+                <div class="collapsible-body">
+                  <span class="gsans"
+                    >Coronaviruses are a large family of viruses which may cause
+                    illness in animals or humans. In humans, several
+                    coronaviruses are known to cause respiratory infections
+                    ranging from the common cold to more severe diseases such as
+                    Middle East Respiratory Syndrome (MERS) and Severe Acute
+                    Respiratory Syndrome (SARS). The most recently discovered
+                    coronavirus causes coronavirus disease COVID-19.</span
+                  >
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header round gsans">
+                  <i class="material-icons">expand_more</i>What is COVID-19?
+                </div>
+                <div class="collapsible-body">
+                  <span class="gsans"
+                    >COVID-19 is the infectious disease caused by the most
+                    recently discovered coronavirus. This new virus and disease
+                    were unknown before the outbreak began in Wuhan, China, in
+                    December 2019.
+                  </span>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header round gsans">
+                  <i class="material-icons">expand_more</i>What are the symptoms
+                  of COVID-19?
+                </div>
+                <div class="collapsible-body">
+                  <span class="gsans">
+                    The most common symptoms of COVID-19 are fever, tiredness,
+                    and dry cough. Some patients may have aches and pains, nasal
+                    congestion, runny nose, sore throat or diarrhea. These
+                    symptoms are usually mild and begin gradually. Some people
+                    become infected but don’t develop any symptoms and don't
+                    feel unwell. Most people (about 80%) recover from the
+                    disease without needing special treatment. Around 1 out of
+                    every 6 people who gets COVID-19 becomes seriously ill and
+                    develops difficulty breathing. Older people, and those with
+                    underlying medical problems like high blood pressure, heart
+                    problems or diabetes, are more likely to develop serious
+                    illness. People with fever, cough and difficulty breathing
+                    should seek medical attention.</span
+                  >
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header round gsans">
+                  <i class="material-icons">expand_more</i>How does COVID-19
+                  spread?
+                </div>
+                <div class="collapsible-body">
+                  <span class="gsans">
+                    People can catch COVID-19 from others who have the virus.
+                    The disease can spread from person to person through small
+                    droplets from the nose or mouth which are spread when a
+                    person with COVID-19 coughs or exhales. These droplets land
+                    on objects and surfaces around the person. Other people then
+                    catch COVID-19 by touching these objects or surfaces, then
+                    touching their eyes, nose or mouth. People can also catch
+                    COVID-19 if they breathe in droplets from a person with
+                    COVID-19 who coughs out or exhales droplets. This is why it
+                    is important to stay more than 1 meter (3 feet) away from a
+                    person who is sick. WHO is assessing ongoing research on the
+                    ways COVID-19 is spread and will continue to share updated
+                    findings.
+                  </span>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header round gsans">
+                  <i class="material-icons">expand_more</i>What can I do to
+                  protect myself from coronavirus?
+                </div>
+                <div class="collapsible-body">
+                  <span class="gsans">
+                    You can reduce your chances of being infected or spreading
+                    COVID-19 by taking some simple precautions: <br />
+                    <ul class="faqList">
+                      <li>
+                        <b class="red-text">○</b> Regularly and thoroughly clean
+                        your hands with an alcohol-based hand rub or wash them
+                        with soap and water. Why? Washing your hands with soap
+                        and water or using alcohol-based hand rub kills viruses
+                        that may be on your hands.
+                      </li>
+                      <li>
+                        <b class="red-text">○</b> Maintain at least 1 metre (3
+                        feet) distance between yourself and anyone who is
+                        coughing or sneezing.
+                      </li>
+                      <li>
+                        <b class="red-text">○</b> Avoid touching eyes, nose and
+                        mouth.
+                      </li>
+                      <li>
+                        <b class="red-text">○</b> Make sure you, and the people
+                        around you, follow good respiratory hygiene. This means
+                        covering your mouth and nose with your bent elbow or
+                        tissue when you cough or sneeze. Then dispose of the
+                        used tissue immediately.
+                      </li>
+                      <li>
+                        <b class="red-text">○</b> Stay home if you feel unwell.
+                        If you have a fever, cough and difficulty breathing,
+                        seek medical attention and call in advance. Follow the
+                        directions of your local health authority.
+                      </li>
+                      <li>
+                        <b class="red-text">○</b> Keep up to date on the latest
+                        COVID-19 hotspots (cities or local areas where COVID-19
+                        is spreading widely). If possible, avoid traveling to
+                        places – especially if you are an older person or have
+                        diabetes, heart or lung disease.
+                      </li>
+                    </ul>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header round gsans">
+                  <i class="material-icons">expand_more</i>
+                  Can I catch COVID-19 from my pet?
+                </div>
+                <div class="collapsible-body">
+                  <span class="gsans"
+                    >While there has been one instance of a dog being infected
+                    in Hong Kong, to date, there is no evidence that a dog, cat
+                    or any pet can transmit COVID-19. COVID-19 is mainly spread
+                    through droplets produced when an infected person coughs,
+                    sneezes, or speaks. To protect yourself, clean your hands
+                    frequently and thoroughly.
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- team -->
+      <div class="customContainer" id="team">
+        <h4 class="center-align gsans text-blue-grey text-darken-1 headerText">
+          Team
+        </h4>
+        <div class="row">
+          <div class="col s12 l3 m3">
+            <div class="card round center-align">
+              <div class="card-content">
+                <div class="center-align">
+                  <img
+                    class="responsive-img"
+                    style="border-radius: 50%;"
+                    src="assets/img/anwar.jpg"
+                    alt="sir"
+                    height="200"
+                    width="200"
+                  />
+                </div>
+                <h6 class="center-align tContributor gsans">Md Anwar Hossen</h6>
+                <span class="center-align tPosition gsans">Mentor</span>
+                <div>
+                  <a
+                    href="https://www.facebook.com/mdanwarhossenemon11"
+                    target="_blank"
+                    ><i
+                      class="fa fa-facebook-square"
+                      style="font-size: 20px; color: rgb(0, 122, 204);"
+                    ></i
+                    ><span class="ml-1"></span
+                  ></a>
+                  <a
+                    href="https://github.com/mahemon"
+                    target="_blank"
+                    style="padding-left: 1em;"
+                    ><i
+                      class="fa fa-github"
+                      style="font-size: 20px; color: black;"
+                    ></i
+                    ><span class="ml-1"></span
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 l3 m3">
+            <div class="card round center-align">
+              <div class="card-content">
+                <div class="center-align">
+                  <img
+                    class="responsive-img"
+                    style="border-radius: 50%;"
+                    src="assets/img/shunjid.jpg"
+                    alt="sir"
+                    height="200"
+                    width="200"
+                  />
+                </div>
+                <h6 class="center-align tContributor gsans">
+                  Shunjid Rahman Showrov
+                </h6>
+                <span class="center-align tPosition gsans">Student</span>
+                <div>
+                  <a href="https://www.facebook.com/shunjid" target="_blank"
+                    ><i
+                      class="fa fa-facebook-square"
+                      style="font-size: 20px; color: rgb(0, 122, 204);"
+                    ></i
+                    ><span class="ml-1"></span
+                  ></a>
+                  <a
+                    href="https://github.com/shunjid"
+                    target="_blank"
+                    style="padding-left: 1em;"
+                    ><i
+                      class="fa fa-github"
+                      style="font-size: 20px; color: black;"
+                    ></i
+                    ><span class="ml-1"></span
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 l3 m3">
+            <div class="card round center-align">
+              <div class="card-content">
+                <div class="center-align">
+                  <img
+                    class="responsive-img"
+                    style="border-radius: 50%;"
+                    src="assets/img/zubu.jpg"
+                    alt="sir"
+                    height="200"
+                    width="200"
+                  />
+                </div>
+                <h6 class="center-align tContributor gsans">Zubayer Himel</h6>
+                <span class="center-align tPosition gsans">Student</span>
+                <div>
+                  <a
+                    href="https://www.facebook.com/zubayerhimel0"
+                    target="_blank"
+                    ><i
+                      class="fa fa-facebook-square"
+                      style="font-size: 20px; color: rgb(0, 122, 204);"
+                    ></i
+                    ><span class="ml-1"></span
+                  ></a>
+                  <a
+                    href="https://github.com/zubayerhimel"
+                    target="_blank"
+                    style="padding-left: 1em;"
+                    ><i
+                      class="fa fa-github"
+                      style="font-size: 20px; color: black;"
+                    ></i
+                    ><span class="ml-1"></span
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 l3 m3">
+            <div class="card round center-align">
+              <div class="card-content">
+                <div class="center-align">
+                  <img
+                    class="responsive-img"
+                    style="border-radius: 50%;"
+                    src="assets/img/fahad.jpg"
+                    alt="sir"
+                    height="200"
+                    width="200"
+                  />
+                </div>
+                <h6 class="center-align tContributor gsans">
+                  Shah Fahad Hossain
+                </h6>
+                <span class="center-align tPosition gsans">Student</span>
+                <div>
+                  <a
+                    href="https://www.facebook.com/shahfahad.hossain"
+                    target="_blank"
+                    ><i
+                      class="fa fa-facebook-square"
+                      style="font-size: 20px; color: rgb(0, 122, 204);"
+                    ></i
+                    ><span class="ml-1"></span
+                  ></a>
+                  <a
+                    href="https://github.com/Fahad1997"
+                    target="_blank"
+                    style="padding-left: 1em;"
+                    ><i
+                      class="fa fa-github"
+                      style="font-size: 20px; color: black;"
+                    ></i
+                    ><span class="ml-1"></span
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer -->
+
+      <footer class="page-footer blue-grey darken-3">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5
+                class="white-text https://github.com/TeamTigers/coronainfobd.git"
+              >
+                CoronaInfoBD Team
+              </h5>
+              <p
+                class="grey-text text-lighten-4 https://github.com/TeamTigers/coronainfobd.git"
+              >
+                It is a voluntary act aimed at mass awareness. All content used
+                here is open to everyone. For any kind of queries you can
+                <a href="mailto:teamtigers256@gmail.com">Email</a> us or create
+                an issue in
+                <a
+                  href="https://github.com/TeamTigers/coronainfobd/issues"
+                  target="_blank"
+                  >Github</a
+                >
+              </p>
+              <br />
+              <h6 class="whtie-text gsans">Initiative taken by:</h6>
+              <p class="grey-text text-lighten-4 gsans">
+                Department of Software Engineering <br />
+                Daffodil International University
+              </p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text ">Important Links</h5>
+              <ul>
+                <li>
+                  <a
+                    href="https://daffodilvarsity.edu.bd/article/corona"
+                    target="_blank"
+                    >Activiy of DIU against Corona</a
+                  >
+                </li>
+                <li>
+                  <h6 class="left-align shareBtn">
+                    Sharewith your friends
+                  </h6>
+                  <!-- AddToAny BEGIN -->
+                  <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                    <a class="a2a_button_facebook"></a>
+                    <a class="a2a_button_twitter"></a>
+                    <a class="a2a_button_linkedin"></a>
+                    <a class="a2a_button_email"></a>
+                    <a class="a2a_button_telegram"></a>
+                    <a class="a2a_button_pinterest"></a>
+                    <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                  </div>
+                  <script
+                    async
+                    src="https://static.addtoany.com/menu/page.js"
+                  ></script>
+                  <!-- AddToAny END -->
+                </li>
+              </ul>
+            </div>
+          </div>
+          <script
+            type="text/javascript"
+            src="https://www.freevisitorcounters.com/auth.php?id=9b69540a475623abc41cf3bd65d75afbcc1a25da"
+          ></script>
+          <script
+            type="text/javascript"
+            src="https://www.freevisitorcounters.com/en/home/counter/652237/t/5"
+          ></script>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+            © 2020 Copyright TeamTigers
+            <a
+              class="grey-text text-lighten-4 right"
+              href="https://github.com/teamtigers"
+              target="_blank"
+              >TeamTigers</a
+            >
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/materialize.js"></script>
+    <script src="assets/js/coronaCounter.js"></script>
+    <script src="assets/js/canvas.min.js"></script>
+    <script src="assets/js/infectedpeoplechart.js"></script>
+    <script src="assets/js/plugin.js"></script>
+    <script src="assets/js/darkMood.js"></script>
+
+    <script>
+      window.onscroll = scroll1;
+      function scroll1() {
+        var toTop = document.getElementById("scrollTop");
+        window.scrollY > 500
+          ? (toTop.style.display = "Block")
+          : (toTop.style.display = "none");
+      }
+      function toTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+        });
+      }
+    </script>
+  </body>
 </html>
