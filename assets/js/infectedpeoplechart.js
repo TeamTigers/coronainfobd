@@ -26,7 +26,8 @@ window.onload = function () {
           { x: new Date(2020, 02, 19), y: 4 },
           { x: new Date(2020, 02, 20), y: 2 },
           { x: new Date(2020, 02, 21), y: 4 },
-          { x: new Date(2020, 02, 22), y: 3 }
+          { x: new Date(2020, 02, 22), y: 3 },
+          { x: new Date(2020, 02, 23), y: 6 }
         ]
       }
     ]
@@ -55,7 +56,8 @@ window.onload = function () {
         showInLegend: true,
         dataPoints: [
           { x: new Date(2020, 02, 18), y: 70 },
-          { x: new Date(2020, 02, 21), y: 73 }
+          { x: new Date(2020, 02, 21), y: 73 },
+          { x: new Date(2020, 02, 23), y: 60 }
         ]
       }
     ]
