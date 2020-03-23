@@ -1,17 +1,20 @@
-$(function() {
+$(function () {
   let baseApi = "https://coronavirus-19-api.herokuapp.com";
 
   // TODO: Need to find/build a real API for this case
   let foreignResidents = {
     italy: 8,
+    usa: 2,
+    india: 1,
+    bahrain: 1,
     kuwait: 1,
     germany: 1
   };
   hideElementsTillResponse();
 
   // Communication with API
-  $.get(baseApi.concat("/countries/bangladesh"), function() {})
-    .done(function(response) {
+  $.get(baseApi.concat("/countries/bangladesh"), function () { })
+    .done(function (response) {
       showToast("Welcome");
       constructData(
         response.cases,
@@ -23,8 +26,8 @@ $(function() {
       );
       $("main").show();
     })
-    .fail(function() {})
-    .always(function() {
+    .fail(function () { })
+    .always(function () {
       $(".progress").hide();
       numberCounter();
     });
@@ -40,7 +43,7 @@ function numberCounter() {
   //   time: 700
   // });
 
-  $(".count").each(function() {
+  $(".count").each(function () {
     $(this)
       .prop("Counter", 0)
       .animate(
@@ -50,7 +53,7 @@ function numberCounter() {
         {
           duration: 3000,
           easing: "swing",
-          step: function(now) {
+          step: function (now) {
             $(this).text(Math.ceil(now));
           }
         }
@@ -79,7 +82,10 @@ function constructData(confirmed, dead, recovered, active, today, fR) {
 
   // TODO: Need to find/build a real API for this case
   $("#italy").text(fR.italy);
+  $("#usa").text(fR.usa);
+  $("#india").text(fR.india);
+  $("#bahrain").text(fR.bahrain);
   $("#kuwait").text(fR.kuwait);
   $("#germany").text(fR.germany);
-  $("#unknown").text(confirmed - (fR.italy + fR.germany + fR.kuwait));
+  $("#unknown").text(confirmed - (fR.italy + fR.usa + fR.india + fR.bahrain + fR.germany + fR.kuwait));
 }
