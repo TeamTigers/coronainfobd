@@ -8,6 +8,7 @@
   - [Is it responsive?](#is-it-responsive)
   - [I have a question. Where should I ask?](#i-have-a-question-where-should-i-ask)
   - [Can I contribute in this project?](#can-i-contribute-in-this-project)
+  - [License and copyright](#license-and-copyright)
 
 ## What is CoronaInfoBD?
 
@@ -45,3 +46,8 @@ Of course you can. It is an open source project. If you want to contribute with 
 - Fork the repository in your github account.
 - Clone it in your local and do the changes you want.
 - Make a PR with proper documentation of what you did as they say _Lack of proper documentation is becoming a problem for acceptence_ :wink:
+
+## License and copyright
+
+© TeamTigers Licensed under the [GPL License](LICENSE) 
+
