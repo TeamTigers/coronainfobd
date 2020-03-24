@@ -59,7 +59,7 @@ window.onload = function () {
           { x: new Date(2020, 02, 18), y: 70 },
           { x: new Date(2020, 02, 21), y: 73 },
           { x: new Date(2020, 02, 23), y: 60 },
-          { x: new Date(2020, 02, 24), y: 70 }
+          { x: new Date(2020, 02, 24), y: 75 }
         ]
       }
     ]
