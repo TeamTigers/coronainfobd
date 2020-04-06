@@ -2,15 +2,15 @@ window.onload = function () {
   var chart = new CanvasJS.Chart("infectionWithDate", {
     animationEnabled: true,
     title: {
-      text: "Number of infection with date"
+      text: "Number of infection with time",
     },
     axisX: {
       title: "Date",
-      valueFormatString: "DD MMM"
+      valueFormatString: "DD MMM",
     },
     axisY: {
       title: "Number of People",
-      includeZero: false
+      includeZero: false,
     },
     data: [
       {
@@ -37,46 +37,44 @@ window.onload = function () {
           { x: new Date(2020, 03, 2), y: 2 },
           { x: new Date(2020, 03, 3), y: 5 },
           { x: new Date(2020, 03, 4), y: 9 },
-          { x: new Date(2020, 03, 5), y: 18 }
-        ]
-      }
-    ]
+          { x: new Date(2020, 03, 5), y: 18 },
+        ],
+      },
+    ],
   });
 
   var chart2 = new CanvasJS.Chart("deathWithDate", {
     animationEnabled: true,
     title: {
-      text: "Death age with time"
+      text: "Number of death with time",
+      color: "#de4536",
+    },
+    axisY: {
+      title: "Number of death",
     },
     axisX: {
       title: "Date",
-      valueFormatString: "DD MMM"
-    },
-    axisY: {
-      title: "Age"
+      valueFormatString: "DD MMM",
     },
     data: [
       {
-        type: "scatter",
+        yValueFormatString: "#,Death ### ",
         xValueFormatString: "DD MMM",
-        color: "#b71c1c",
-        toolTipContent:
-          '<span style="color:#4F81BC "><b>{name}</b></span><br/><b> Date:</b> {x} <br/><b> Age:</b></span> {y} yrs',
-        name: "Age of Dead People",
-        showInLegend: true,
+        type: "spline",
+        color: "#de4536",
         dataPoints: [
-          { x: new Date(2020, 02, 18), y: 70 },
-          { x: new Date(2020, 02, 21), y: 73 },
-          { x: new Date(2020, 02, 23), y: 60 },
-          { x: new Date(2020, 02, 24), y: 75 },
-          { x: new Date(2020, 02, 25), y: 65 },
-          { x: new Date(2020, 03, 01), y: 70 },
-          { x: new Date(2020, 03, 04), y: 68 },
-          { x: new Date(2020, 03, 04), y: 90 },
-          { x: new Date(2020, 03, 05), y: 55 }
-        ]
-      }
-    ]
+          { x: new Date(2020, 02, 18), y: 1 },
+          { x: new Date(2020, 02, 21), y: 1 },
+          { x: new Date(2020, 02, 23), y: 1 },
+          { x: new Date(2020, 02, 24), y: 1 },
+          { x: new Date(2020, 02, 25), y: 1 },
+          { x: new Date(2020, 03, 1), y: 1 },
+          { x: new Date(2020, 03, 4), y: 2 },
+          { x: new Date(2020, 03, 5), y: 1 },
+          { x: new Date(2020, 03, 6), y: 3 },
+        ],
+      },
+    ],
   });
 
   chart.render();
