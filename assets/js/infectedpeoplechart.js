@@ -38,6 +38,7 @@ window.onload = function () {
           { x: new Date(2020, 03, 3), y: 5 },
           { x: new Date(2020, 03, 4), y: 9 },
           { x: new Date(2020, 03, 5), y: 18 },
+          { x: new Date(2020, 03, 6), y: 35 },
         ],
       },
     ],
@@ -51,6 +52,7 @@ window.onload = function () {
     },
     axisY: {
       title: "Number of death",
+      includeZero: false,
     },
     axisX: {
       title: "Date",
