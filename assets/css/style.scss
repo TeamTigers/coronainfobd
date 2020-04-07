@@ -24,6 +24,15 @@ main {
   display: none;
 }
 
+.onmouseTest {
+  :hover {
+    h6 {
+      color: #353591;
+      font-weight: bold;
+    }
+  }
+}
+
 .onmouseCase {
   :hover {
     h6 {
@@ -129,14 +138,18 @@ h3 {
   margin-right: 6px;
 }
 
-.caseCard {
-  color: $foregroundColor;
-  display: inline;
-}
-
 .homeImg {
   height: 200;
   max-width: 250;
+}
+
+.testCard {
+  color: #353591;
+}
+
+.caseCard {
+  color: $foregroundColor;
+  display: inline;
 }
 
 .deathCard {

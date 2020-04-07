@@ -17,6 +17,11 @@ main {
   display: none;
 }
 
+.onmouseTest :hover h6 {
+  color: #353591;
+  font-weight: bold;
+}
+
 .onmouseCase :hover h6 {
   color: #0288d1;
   font-weight: bold;
@@ -110,14 +115,18 @@ h3 {
   margin-right: 6px;
 }
 
-.caseCard {
-  color: #0288d1;
-  display: inline;
-}
-
 .homeImg {
   height: 200;
   max-width: 250;
+}
+
+.testCard {
+  color: #353591;
+}
+
+.caseCard {
+  color: #0288d1;
+  display: inline;
 }
 
 .deathCard {
