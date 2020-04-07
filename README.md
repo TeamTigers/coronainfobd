@@ -1,4 +1,4 @@
-# Welcome to CoronaInfoBD
+# Welcome to CoronaInfoBD :wave:
 
 **Contents**
 
@@ -29,6 +29,7 @@ As it provides real data and visual mapping of spreading COVID-19, mass people w
 - **Hotline** numbers that are provided from _IEDCR_. You can easily call those number in your emergency by tapping on the numbers.
 
 - **FAQ**, Frequently Asked Questions. Questions that most of the people ask about corona virus. We tried to answer some of the questions according to _WHO_.
+- **Advice for public**, some graphical images from WHO to rise awareness among mass public.
 - **Day/Night Mode** as most of the people prefer night mode, so we made sure to have a day/night mode in our application.
 
 ## Is it responsive?
@@ -50,4 +51,6 @@ Of course you can. It is an open source project. If you want to contribute with 
 ## License and copyright
 
 © TeamTigers Licensed under the [GPL License](LICENSE) 
+
+### If you happen to like our work please give a star :star: on the repository.
 
