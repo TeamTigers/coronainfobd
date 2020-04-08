@@ -1,4 +1,6 @@
 window.onload = function () {
+  // Infected people chart with time
+
   var chart = new CanvasJS.Chart("infectionWithDate", {
     animationEnabled: true,
     title: {
@@ -39,11 +41,14 @@ window.onload = function () {
           { x: new Date(2020, 03, 4), y: 9 },
           { x: new Date(2020, 03, 5), y: 18 },
           { x: new Date(2020, 03, 6), y: 35 },
-          { x: new Date(2020, 03, 7), y: 41 }
+          { x: new Date(2020, 03, 7), y: 41 },
+          { x: new Date(2020, 03, 8), y: 54 },
         ],
       },
     ],
   });
+
+  // Dead people chart with time
 
   var chart2 = new CanvasJS.Chart("deathWithDate", {
     animationEnabled: true,
@@ -76,6 +81,7 @@ window.onload = function () {
           { x: new Date(2020, 03, 5), y: 1 },
           { x: new Date(2020, 03, 6), y: 3 },
           { x: new Date(2020, 03, 7), y: 5 },
+          { x: new Date(2020, 03, 8), y: 3 },
         ],
       },
     ],
