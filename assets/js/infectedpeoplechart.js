@@ -2,6 +2,7 @@ window.onload = function () {
   // Infected people chart with time
 
   var chart = new CanvasJS.Chart("infectionWithDate", {
+    exportEnabled: true,
     animationEnabled: true,
     title: {
       text: "Number of infection with time",
@@ -51,6 +52,7 @@ window.onload = function () {
   // Dead people chart with time
 
   var chart2 = new CanvasJS.Chart("deathWithDate", {
+    exportEnabled: true,
     animationEnabled: true,
     title: {
       text: "Number of death with time",
@@ -87,6 +89,48 @@ window.onload = function () {
     ],
   });
 
+  // var chart3 = new CanvasJS.Chart("infectedAge", {
+  //   exportEnabled: true,
+  //   animationEnabled: true,
+  //   title: {
+  //     text: "Affected People Age Range",
+  //   },
+  //   legend: {
+  //     cursor: "pointer",
+  //     itemclick: explodePie,
+  //   },
+  //   data: [
+  //     {
+  //       type: "pie",
+  //       showInLegend: true,
+  //       toolTipContent: "{name}: <strong>{y}</strong>",
+  //       indexLabel: "{name} - {y}",
+  //       dataPoints: [
+  //         { y: 5, name: "61-Upper", exploded: true },
+  //         { y: 7, name: "51-60" },
+  //         { y: 9, name: "41-50" },
+  //         { y: 5, name: "31-40" },
+  //         { y: 10, name: "21-30" },
+  //         { y: 4, name: "11-20" },
+  //         { y: 1, name: "10-lower" },
+  //       ],
+  //     },
+  //   ],
+  // });
+
   chart.render();
   chart2.render();
+  // chart3.render();
 };
+
+// function explodePie(e) {
+//   if (
+//     typeof e.dataSeries.dataPoints[e.dataPointIndex].exploded === "undefined" ||
+//     !e.dataSeries.dataPoints[e.dataPointIndex].exploded
+//   ) {
+//     e.dataSeries.dataPoints[e.dataPointIndex].exploded = true;
+//   } else {
+//     e.dataSeries.dataPoints[e.dataPointIndex].exploded = false;
+//   }
+//   e.chart.render();
+// }
