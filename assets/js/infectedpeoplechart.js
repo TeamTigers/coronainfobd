@@ -44,6 +44,7 @@ window.onload = function () {
           { x: new Date(2020, 03, 6), y: 35 },
           { x: new Date(2020, 03, 7), y: 41 },
           { x: new Date(2020, 03, 8), y: 54 },
+          { x: new Date(2020, 03, 9), y: 112 }
         ],
       },
     ],
@@ -84,6 +85,7 @@ window.onload = function () {
           { x: new Date(2020, 03, 6), y: 3 },
           { x: new Date(2020, 03, 7), y: 5 },
           { x: new Date(2020, 03, 8), y: 3 },
+          { x: new Date(2020, 03, 9), y: 1 }
         ],
       },
     ],
