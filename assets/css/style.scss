@@ -132,6 +132,16 @@ h3 {
   background-color: #03a892;
 }
 
+.bannerSvg {
+  max-width: 6rem;
+  max-height: 6rem;
+}
+
+.countName {
+  color: rgba(3, 16, 46, 0.726);
+  font-weight: 800;
+}
+
 .brand-logo {
   font-family: "El Messiri", sans-serif;
   font-size: 25px;
@@ -184,6 +194,10 @@ h3 {
 
 .count {
   font-size: 4rem;
+}
+
+.countNumber {
+  font-size: 2.5rem;
 }
 
 .collapsible-header {
