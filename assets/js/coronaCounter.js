@@ -11,7 +11,6 @@ $(function () {
     germany: 1,
   };
   hideElementsTillResponse();
-
   // Communication with API
   $.get(baseApi.concat("/countries/bangladesh"), function () {})
     .done(function (response) {
