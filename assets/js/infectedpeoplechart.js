@@ -45,6 +45,7 @@ window.onload = function () {
           { x: new Date(2020, 03, 7), y: 41 },
           { x: new Date(2020, 03, 8), y: 54 },
           { x: new Date(2020, 03, 9), y: 112 },
+          { x: new Date(2020, 03, 10), y: 94 }
         ],
       },
     ],
@@ -86,6 +87,7 @@ window.onload = function () {
           { x: new Date(2020, 03, 7), y: 5 },
           { x: new Date(2020, 03, 8), y: 3 },
           { x: new Date(2020, 03, 9), y: 1 },
+          { x: new Date(2020, 03, 10), y: 6 }
         ],
       },
     ],
@@ -139,14 +141,14 @@ window.onload = function () {
         type: "bar",
         axisYType: "secondary",
         dataPoints: [
-          { y: 196, label: "Dhaka City" },
+          { y: 233, label: "Dhaka City" },
           { y: 13, label: "Dhaka(District)" },
           { y: 2, label: "Gazipur" },
           { y: 3, label: "Jamalpur" },
           { y: 1, label: "Kishoreganj" },
           { y: 11, label: "Madaripur" },
           { y: 3, label: "Manikganj" },
-          { y: 59, label: "Naraynganj" },
+          { y: 75, label: "Naraynganj" },
           { y: 4, label: "Narshingdi" },
           { y: 1, label: "Rajbari" },
           { y: 2, label: "Tangail" },
