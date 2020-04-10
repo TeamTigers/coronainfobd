@@ -112,7 +112,7 @@ window.onload = function () {
         toolTipContent: "{name}: <strong>{y}</strong>",
         indexLabel: "{name} - {y}",
         dataPoints: [
-          { y: 298, name: "Dhaka", exploded: true },
+          { y: 351, name: "Dhaka", exploded: true },
           { y: 14, name: "Chattagram" },
           { y: 11, name: "Rangpur" },
           { y: 4, name: "Mymensingh" },
