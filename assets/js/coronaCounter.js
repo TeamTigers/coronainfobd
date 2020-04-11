@@ -26,7 +26,9 @@ $(function () {
       );
       $("main").show();
     })
-    .fail(function () {})
+    .fail(function () {
+      showToast("Something went wrong!");
+    })
     .always(function () {
       $(".progress").hide();
       numberCounter();

@@ -127,6 +127,12 @@ h3 {
   color: #ffffff;
 }
 
+.special {
+  width: auto;
+  height: 150rem;
+  overflow-y: scroll;
+}
+
 #logo-icon {
   margin-top: -3px;
   margin-right: 6px;
