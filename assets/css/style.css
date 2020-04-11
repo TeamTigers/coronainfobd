@@ -127,7 +127,7 @@ h3 {
   color: #ffffff;
 }
 
-.special {
+.scrollable {
   width: auto;
   height: 150rem;
   overflow-y: scroll;
