@@ -21,7 +21,9 @@ $(function () {
         response.recovered,
         response.active,
         response.todayCases,
+        response.todayDeaths,
         response.totalTests,
+        response.critical,
         foreignResidents
       );
       $("main").show();
@@ -76,7 +78,9 @@ function constructData(
   recovered,
   active,
   today_case,
+  today_death,
   total_tests,
+  critical,
   fR
 ) {
   $("#numberOfTests").text(total_tests);
@@ -88,8 +92,8 @@ function constructData(
   $("#td_total").text(confirmed);
   $("#td_active").text(active);
   $("#td_cases_today").text(today_case);
-  $("#td_deaths").text(dead);
-  $("#td_recovered").text(recovered);
+  $("#td_deaths").text(today_death);
+  $("#td_critical").text(critical);
 
   // TODO: Need to find/build a real API for this case
   $("#italy").text(fR.italy);

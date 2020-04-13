@@ -15,91 +15,135 @@
 
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:image" content="assets/img/svg/title.png" />
+    <meta property="og:title" content="CoronaInfoBD  2020" />
+    <meta
+      property="og:description"
+      content="An application to get updated with corona virus affected in Bangladesh"
+    />
+    <title>CoronaInfoBD</title>
+    <link rel="icon" href="assets/img/svg/title.png" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=El+Messiri&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Google+Sans"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/materializecss.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/darkMood.css" />
+  </head>
 
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta property="og:image" content="assets/img/svg/title.png" />
-  <meta property="og:title" content="CoronaInfoBD  2020" />
-  <meta property="og:description" content="An application to get updated with corona virus affected in Bangladesh" />
-  <title>CoronaInfoBD</title>
-  <link rel="icon" href="assets/img/svg/title.png" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=El+Messiri&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="assets/css/materializecss.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="stylesheet" href="assets/css/darkMood.css" />
-</head>
-
-<body>
-  <header>
-    <div class="navbar-fixed">
-      <nav class="nav-extended nav-fixed navTheme darken-2 z-depth-0">
-        <div class="nav-wrapper">
-          <a class="brand-logo gsans" id="cpa-logo"><i class="material-icons" id="logo-icon">ac_unit</i>CoronaInfoBD</a>
-          <a href="#" class="sidenav-trigger" data-target="mobile-nav">
-            <i class="material-icons">menu</i>
-          </a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li class="active">
-              <a href="#home" class="scroll">Home</a>
-            </li>
-            <li>
-              <a href="#case_study" class="scroll">Case study</a>
-            </li>
-            <li>
-              <a href="#charts" class="scroll">Charts</a>
-            </li>
-            <li>
-              <a href="#map" class="scroll">Map</a>
-            </li>
-            <li>
-              <a href="#hotline" class="scroll">Hotline</a>
-            </li>
-            <li>
-              <a href="#faq" class="scroll">FAQ</a>
-            </li>
-            <li>
-              <a href="#advice-for-public" class="scroll">Advice for public</a>
-            </li>
-            <li>
-              <a href="#" onclick="darkMood()" class="tooltipped" ata-position="bottom"
-                data-tooltip="Toggle Day/Night"><i class="material-icons blue-grey-text text-lighten-4"
-                  id="moodIcon">brightness_7</i></a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </div>
-    <ul class="sidenav" id="mobile-nav">
-      <li>
-        <a href="#" onclick="darkMood()">Day/Night mode<i class="material-icons blue-grey-text text-lighten-4 right"
-            id="moodIcon">brightness_7</i></a>
-      </li>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#case_study">Case study</a></li>
-      <li><a href="#charts">Charts</a></li>
-      <li><a href="#map">Map</a></li>
-      <li><a href="#hotline">Hotline</a></li>
-      <li><a href="#faq">FAQ</a></li>
-      <li><a href="#advice-for-public">Advice for public</a></li>
-    </ul>
-    <div class="progress contextTextTheme">
-      <div class="indeterminate progressbarTheme"></div>
-    </div>
-  </header>
-  <main id="elemets">
-    <div class="fixed-action-btn">
-      <a class="btn-floating btn-medium blue-grey darken-4 tooltipped" data-position="left" data-tooltip="Top"
-        id="scrollTop" onclick="toTop()">
-        <i class="large material-icons">arrow_upward</i>
-      </a>
-    </div>
-    <!-- <div class="homeContainer" id="home">
+  <body>
+    <header>
+      <div class="navbar-fixed">
+        <nav class="nav-extended nav-fixed navTheme darken-2 z-depth-0">
+          <div class="nav-wrapper">
+            <a class="brand-logo gsans" id="cpa-logo"
+              ><i class="material-icons" id="logo-icon">ac_unit</i
+              >CoronaInfoBD</a
+            >
+            <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+              <i class="material-icons">menu</i>
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li class="active">
+                <a href="#home" class="scroll">Home</a>
+              </li>
+              <li>
+                <a href="#case_study" class="scroll">Case study</a>
+              </li>
+              <li>
+                <a href="#charts" class="scroll">Charts</a>
+              </li>
+              <li>
+                <a href="#map" class="scroll">Map</a>
+              </li>
+              <li>
+                <a href="#hotline" class="scroll">Hotline</a>
+              </li>
+              <li>
+                <a href="#faq" class="scroll">FAQ</a>
+              </li>
+              <li>
+                <a href="#advice-for-public" class="scroll"
+                  >Advice for public</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  onclick="darkMood()"
+                  class="tooltipped"
+                  ata-position="bottom"
+                  data-tooltip="Toggle Day/Night"
+                  ><i
+                    class="material-icons blue-grey-text text-lighten-4"
+                    id="moodIcon"
+                    >brightness_7</i
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <ul class="sidenav" id="mobile-nav">
+        <li>
+          <a href="#" onclick="darkMood()"
+            >Day/Night mode<i
+              class="material-icons blue-grey-text text-lighten-4 right"
+              id="moodIcon"
+              >brightness_7</i
+            ></a
+          >
+        </li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#case_study">Case study</a></li>
+        <li><a href="#charts">Charts</a></li>
+        <li><a href="#map">Map</a></li>
+        <li><a href="#hotline">Hotline</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#advice-for-public">Advice for public</a></li>
+      </ul>
+      <div class="progress contextTextTheme">
+        <div class="indeterminate progressbarTheme"></div>
+      </div>
+    </header>
+    <main id="elemets">
+      <div class="fixed-action-btn">
+        <a
+          class="btn-floating btn-medium blue-grey darken-4 tooltipped"
+          data-position="left"
+          data-tooltip="Top"
+          id="scrollTop"
+          onclick="toTop()"
+        >
+          <i class="large material-icons">arrow_upward</i>
+        </a>
+      </div>
+      <!-- <div class="homeContainer" id="home">
         <div class="col s12 m12 l12">
           <div class="card round">
             <div class="card-content">
@@ -152,1038 +196,1348 @@
         </div>
       </div> -->
 
-    <!-- summary card -->
-    <div class="customContainer" id="home">
-      <div class="row">
-        <h4 class="center-align gsans text-blue-grey text-darken-1 headerText">
-          COVID-19 in World
-        </h4>
-        <div class="col s12 m4 l4">
-          <div class="card round center-align">
-            <div class="card-content">
-              <div class="row">
-                <div class="col s12 m6 l6">
-                  <img class="responsive-img bannerSvg" src="assets/img/svg/infected.svg" alt="infected" />
-                </div>
-                <div class="col s12 m6 l6">
-                  <span class="countNumber count gsans" style="color: rgb(0, 122, 204);"
-                    id="worldInfected">1771549</span><br />
-                  <span class="countName gsans">Coronavirus cases</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m4 l4">
-          <div class="card round center-align">
-            <div class="card-content">
-              <div class="row">
-                <div class="col s12 m6 l6">
-                  <img class="responsive-img bannerSvg" src="assets/img/svg/death.svg" alt="death" />
-                </div>
-                <div class="col s12 m6 l6">
-                  <span class="countNumber count gsans" style="color: rgba(235, 34, 44, 0.89);"
-                    id="worldDeath">108333</span><br />
-                  <span class="countName gsans">Deaths</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m4 l4">
-          <div class="card round center-align">
-            <div class="card-content">
-              <div class="row">
-                <div class="col s12 m6 l6">
-                  <img class="responsive-img bannerSvg" src="assets/img/svg/recovered.svg" alt="recovered" />
-                </div>
-                <div class="col s12 m6 l6">
-                  <span class="countNumber count gsans" style="color: rgb(7, 219, 95);"
-                    id="worldRecovered">401482</span><br />
-                  <span class="countName gsans">Recovered</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="customContainer">
-      <div class="row">
-        <h4 class="center-align gsans text-blue-grey text-darken-1 headerText">
-          COVID-19 in Bangladesh
-        </h4>
-        <div class="col s12 m6 l3">
-          <div class="card round center-align hoverable onmouseTest">
-            <div class="card-content">
-              <span class="testCard count gsans" id="numberOfTests"></span>
-              <h6>Total Tests</h6>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m6 l3">
-          <div class="card round center-align hoverable onmouseCase">
-            <div class="card-content">
-              <span class="caseCard count gsans" id="numberOfConfirmedCases"></span>
-              <h6>Coronavirus positive</h6>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m6 l3">
-          <div class="card round center-align hoverable onmouseDeath">
-            <div class="card-content">
-              <span class="deathCard count gsans" id="numberOfDeaths"></span>
-              <h6>Deaths</h6>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m6 l3">
-          <div class="card round center-align hoverable onmouseRecovery">
-            <div class="card-content">
-              <span class="recoveryCard count gsans" id="numberOfRecovery"></span>
-              <h6>Recovered</h6>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col s12 m12 l12">
-          <div class="card round">
-            <div class="card-content">
-              <h5 class="center-align gsans text-blue-grey text-darken-1">
-                More info
-              </h5>
-              <table class="centered responsive-table">
-                <thead>
-                  <tr>
-                    <th>Total Cases</th>
-                    <th>Active Cases</th>
-                    <th>Cases Today</th>
-                    <th>Deaths</th>
-                    <th>Recovered</th>
-
-                    <th class="red-text text-darken-1">Italy</th>
-                    <th class="amber-text text-darken-1">USA</th>
-                    <th class="amber-text text-darken-1">India</th>
-                    <th class="amber-text text-darken-1">Bahrain</th>
-                    <th class="amber-text text-darken-1">Kuwait</th>
-                    <th class="amber-text text-darken-1">Germany</th>
-                    <th>Unknown</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <!-- total case -->
-                    <td id="td_total"></td>
-                    <!-- active case -->
-                    <td id="td_active"></td>
-                    <!-- today case -->
-                    <td id="td_cases_today"></td>
-                    <!-- death -->
-                    <td id="td_deaths"></td>
-                    <!-- recovered -->
-                    <td id="td_recovered"></td>
-                    <!-- italy -->
-                    <td id="italy"></td>
-                    <!-- usa -->
-                    <td id="usa"></td>
-                    <!-- india -->
-                    <td id="india"></td>
-                    <!-- bahrain -->
-                    <td id="bahrain"></td>
-                    <!-- kuwait -->
-                    <td id="kuwait"></td>
-                    <!-- germany -->
-                    <td id="germany"></td>
-                    <!-- unknown -->
-                    <td id="unknown"></td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- case study -->
-    <div class="customContainer" id="case_study">
-      <div class="row">
-        <h4 class="center-align gsans text-blue-grey text-darken-1 headerText">
-          Case study
-        </h4>
-        <div class="col s12 l4 m6">
-          <figure>
-            <img src="assets/img/CoronaInfo.PNG" alt="coronavirus" class="responsive-img" />
-            <figcaption class="center-align red-text">
-              Fig.1 - Mind map of cases. Due to logarithmic growth of COVID-19
-              we are unable to provide details information of every positive
-              case.
-            </figcaption>
-          </figure>
-        </div>
-        <div class="col s12 l8 m8 scrollable">
-          <ul class="collection round">
-            <li class="collection-item">
-              <span class="title gsans">8th march, 2020</span>
-              <p class="gsans">
-                First time 3 patients. 2 were Italy-returnees. Third one was
-                the wife one of them (They returned home after their
-                treatment)
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">14th march, 2020</span>
-              <p class="gsans">
-                Health Minister Zahid Maleque said 2 more corona virus cases
-                were detected (Italy-1, Germany-1)
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">16th march, 2020</span>
-              <p class="gsans">
-                3 more detected positive of COVID-19 from the same family. (1
-                Female, 2 Child)
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">17th march, 2020</span>
-              <p class="gsans">
-                2 more from that same family whom were detected on 16th march,
-                2020 (Italy-1, 1 affected by USA Expatriate. That Expatriate
-                already went back to USA)
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">18th march, 2020</span>
-              <p class="gsans">
-                4 new person detected corona positive (2 returnees of Italy(1
-                male), 1 from Kuwait, another one is affected by an old corona
-                patient) (Total: 3 man, 1 woman). A 70 years old person who
-                tested positive died because of corona virus. First case of
-                death because of corona virus.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">19th march, 2020</span>
-              <p class="gsans">
-                4 person detected corona positive. 2 of them are men age of 65
-                years and 32 years. 1 woman of age 22 years. They were
-                affected by their relative who came from Italy. Last one was
-                30 years old male who was in the Isolation procedure in
-                Chuadanga Sadar Hospital and came from Italy.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">20th march, 2020</span>
-              <p class="gsans">
-                2 new person detected corona positive. One is male and another
-                one is female. They had come touch with the person who
-                returned from Italy.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">21th march, 2020</span>
-              <p class="gsans">
-                4 new person detected corona positive. A 73 years old patient
-                who tested positive died. This is the second case of death
-                because of corona virus.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">22nd march, 2020</span>
-              <p class="gsans">
-                3 new person detected corona positive. Two of them came from
-                abroad and one is affected by a corona patient.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">23rd march, 2020</span>
-              <p class="gsans">
-                6 new person detected corona positive. A 60 years old patient
-                who tested positive died.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">24th march, 2020</span>
-              <p class="gsans">
-                6 new person detected corona positive. A 75 years old patient
-                who tested positive has died.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">26th march, 2020</span>
-              <p class="gsans">
-                5 new person detected corona positive. All of them are male. 3
-                of them affected by their relatives. Total number of corona
-                virus affected people is 44.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">27th march, 2020</span>
-              <p class="gsans">
-                4 new person detected corona positive. 2 of them are doctor
-                affected by a corona patient. Total number of corona virus
-                affected people is 48.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">30th march, 2020</span>
-              <p class="gsans">
-                1 new person detected corona positive. 4 people are recovered.
-                1 of them are 80 years old and 2 of them are 60+. Total number
-                of corona virus affected people is 49.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">31st march, 2020</span>
-              <p class="gsans">
-                2 new person detected corona positive. 1 came from soudi
-                arabia and another one is affected by a corona patient. Total
-                number of corona virus affected people is 51.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">1st april, 2020</span>
-              <p class="gsans">
-                3 new person detected corona positive. 1 has died. Total
-                number of corona virus affected people is 54.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">2nd april, 2020</span>
-              <p class="gsans">
-                2 new person detected corona positive. Both of them are male.
-                Total number of corona virus affected people is 56.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">3rd april, 2020</span>
-              <p class="gsans">
-                5 new person detected corona positive. Total number of corona
-                virus affected people is 61.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">4th april, 2020</span>
-              <p class="gsans">
-                9 new person detected corona positive. 1 has died and his age
-                was 90 years. Total number of corona virus affected people is
-                70.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">5th april, 2020</span>
-              <p class="gsans">
-                18 new person detected corona positive. 1 has died and his age
-                was 55 years. Total number of corona virus affected people is
-                88.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">6th april, 2020</span>
-              <p class="gsans">
-                35 new person detected corona positive. 3 have died. Total
-                number of corona virus affected people is 123.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">7th april, 2020</span>
-              <p class="gsans">
-                41 new person detected corona positive. 5 have died. Total
-                number of corona virus affected people is 164.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">8th april, 2020</span>
-              <p class="gsans">
-                54 new person detected corona positive. 3 have died. Total
-                number of corona virus affected people is 218.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">9th april, 2020</span>
-              <p class="gsans">
-                112 new person detected corona positive. 1 has died. Total
-                number of corona virus affected people is 330.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">10th april, 2020</span>
-              <p class="gsans">
-                94 new person detected corona positive. 6 have died. 5 of them
-                are male and another one is female. Total number of corona
-                virus affected people is 424.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">11th april, 2020</span>
-              <p class="gsans">
-                58 new person detected corona positive. 3 has died. Total
-                number of corona virus affected people is 482.
-              </p>
-            </li>
-            <li class="collection-item">
-              <span class="title gsans">12th april, 2020</span>
-              <p class="gsans">
-                139 new person detected corona positive. 4 has died. Total
-                number of corona virus affected people is 621.
-              </p>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <!-- charts -->
-
-    <div class="customContainer" id="charts">
-      <div class="row">
-        <h4 class="center-align gsans text-blue-grey text-darken-1 headerText">
-          Charts
-        </h4>
-        <div class="col s12 l6 m6">
-          <div class="card round">
-            <div class="card-content">
-              <div class="chart" id="infectionWithDate" style="height: 376px; max-width: 920px; margin: 0px auto;">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 l6 m6">
-          <div class="card round">
-            <div class="card-content">
-              <div class="chart center-align" id="deathWithDate"
-                style="height: 376px; max-width: 920px; margin: 0px auto;"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 l6 m6">
-          <div class="card round">
-            <div class="card-content">
-              <div class="chart" id="infectedDistrict" style="height: 380px; width: 100%; margin: 0px auto;"></div>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 l6 m6">
-          <div class="card round">
-            <div class="card-content">
-              <div class="chart" id="infectedArea" style="height: 380px; max-width: 920px; margin: 0px auto;"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- hospital map -->
-    <div class="customContainer" id="map">
-      <div class="row">
-        <h4 class="center-align gsans text-blue-grey text-darken-1 headerText">
-          Map of Hospitals
-        </h4>
-        <div class="center-align gsans">
-          <span>Here you can find the location of hospitals of Bangladesh where
-            COVID-19 can be cured</span>
-        </div>
-
-        <div class="card round">
-          <div class="card-content">
-            <iframe
-              src="https://www.google.com/maps/d/embed?mid=1BGB9GSWxC1t6yZkA8tdRSXhmzzJ-dlg1&ll=23.646783737681258%2C90.4487993265625&z=8"
-              width="100%" height="650"></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- hotline numbers -->
-
-    <div class="customContainer" id="hotline">
-      <div class="row">
-        <h4 class="center-align gsans text-blue-grey text-darken-1 headerText">
-          Hotline
-        </h4>
-        <div class="col s12 m6 l6 center-align">
-          <ul class="collection with-header">
-            <li class="collection-header">
-              <h5 class="title gsans">Numbers</h5>
-              <span>Tap on the number to make phone call</span>
-            </li>
-            <li class="collection-item">
-              <a href="tel:333">333</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:16263">16263</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:01401184551">01401184551</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:01401184554">01401184554</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:01401184555">01401184555</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:01401184556">01401184556</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:01401184559">01401184559</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:01401184560">01401184560</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:01401184563">01401184563</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:01401184568">01401184568</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:01927711784">01927711784</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:01927711785">01927711785</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:01937000011">01937000011</a>
-            </li>
-            <li class="collection-item">
-              <a href="tel:01937110011">01937110011</a>
-            </li>
-          </ul>
-        </div>
-        <div class="col s12 l6 m6">
-          <p style="line-height: 200%;">
-            <a href="https://www.iedcr.org/" target="_blank">The Institute of Epidemiology, Disease Control and Research
-              (IEDCR)</a>
-            increased the hotline numbers to report any suspected cases of
-            coronavirus to 12 from four, after three cases were confirmed in
-            Bangladesh on Sunday. Sources at the IEDCR also said that, if
-            contacted and according to necessity, their special medical teams
-            would visit suspected coronavirus patients' homes and collect
-            samples for testing. According to the IEDCR, the hotline numbers
-            were increased as the coronavirus alert level has been raised to
-            three from one.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- about corona -->
-
-    <div class="customContainer" id="faq">
-      <div class="row">
-        <h4 class="center-align gsans text-blue-grey text-darken-1 headerText">
-          FAQ
-        </h4>
-        <div class="col s12 m12 l12">
-          <ul class="collapsible round">
-            <li>
-              <div class="collapsible-header round gsans">
-                <i class="material-icons">expand_more</i>
-                What is a Coronavirus?
-              </div>
-              <div class="collapsible-body">
-                <span class="gsans">Coronaviruses are a large family of viruses which may cause
-                  illness in animals or humans. In humans, several
-                  coronaviruses are known to cause respiratory infections
-                  ranging from the common cold to more severe diseases such as
-                  Middle East Respiratory Syndrome (MERS) and Severe Acute
-                  Respiratory Syndrome (SARS). The most recently discovered
-                  coronavirus causes coronavirus disease COVID-19.</span>
-                <a class="right"
-                  href="https://www.who.int/news-room/q-a-detail/q-a-coronaviruses#:~:text=symptoms">*Original
-                  content</a>
-              </div>
-            </li>
-            <li>
-              <div class="collapsible-header round gsans">
-                <i class="material-icons">expand_more</i>What is COVID-19?
-              </div>
-              <div class="collapsible-body">
-                <span class="gsans">COVID-19 is the infectious disease caused by the most
-                  recently discovered coronavirus. This new virus and disease
-                  were unknown before the outbreak began in Wuhan, China, in
-                  December 2019.
-                </span>
-                <a class="right"
-                  href="https://www.who.int/news-room/q-a-detail/q-a-coronaviruses#:~:text=symptoms">*Original
-                  content</a>
-              </div>
-            </li>
-            <li>
-              <div class="collapsible-header round gsans">
-                <i class="material-icons">expand_more</i>What are the symptoms
-                of COVID-19?
-              </div>
-              <div class="collapsible-body">
-                <span class="gsans">
-                  The most common symptoms of COVID-19 are fever, tiredness,
-                  and dry cough. Some patients may have aches and pains, nasal
-                  congestion, runny nose, sore throat or diarrhea. These
-                  symptoms are usually mild and begin gradually. Some people
-                  become infected but don’t develop any symptoms and don't
-                  feel unwell. Most people (about 80%) recover from the
-                  disease without needing special treatment. Around 1 out of
-                  every 6 people who gets COVID-19 becomes seriously ill and
-                  develops difficulty breathing. Older people, and those with
-                  underlying medical problems like high blood pressure, heart
-                  problems or diabetes, are more likely to develop serious
-                  illness. People with fever, cough and difficulty breathing
-                  should seek medical attention.</span>
-                <a class="right"
-                  href="https://www.who.int/news-room/q-a-detail/q-a-coronaviruses#:~:text=symptoms">*Original
-                  content</a>
-              </div>
-            </li>
-            <li>
-              <div class="collapsible-header round gsans">
-                <i class="material-icons">expand_more</i>How does COVID-19
-                spread?
-              </div>
-              <div class="collapsible-body">
-                <span class="gsans">
-                  People can catch COVID-19 from others who have the virus.
-                  The disease can spread from person to person through small
-                  droplets from the nose or mouth which are spread when a
-                  person with COVID-19 coughs or exhales. These droplets land
-                  on objects and surfaces around the person. Other people then
-                  catch COVID-19 by touching these objects or surfaces, then
-                  touching their eyes, nose or mouth. People can also catch
-                  COVID-19 if they breathe in droplets from a person with
-                  COVID-19 who coughs out or exhales droplets. This is why it
-                  is important to stay more than 1 meter (3 feet) away from a
-                  person who is sick. WHO is assessing ongoing research on the
-                  ways COVID-19 is spread and will continue to share updated
-                  findings.
-                </span>
-                <a class="right"
-                  href="https://www.who.int/news-room/q-a-detail/q-a-coronaviruses#:~:text=symptoms">*Original
-                  content</a>
-              </div>
-            </li>
-            <li>
-              <div class="collapsible-header round gsans">
-                <i class="material-icons">expand_more</i>What can I do to
-                protect myself from coronavirus?
-              </div>
-              <div class="collapsible-body">
-                <span class="gsans">
-                  You can reduce your chances of being infected or spreading
-                  COVID-19 by taking some simple precautions: <br />
-                  <ul class="faqList">
-                    <li>
-                      <b class="red-text">○</b> Regularly and thoroughly clean
-                      your hands with an alcohol-based hand rub or wash them
-                      with soap and water. Why? Washing your hands with soap
-                      and water or using alcohol-based hand rub kills viruses
-                      that may be on your hands.
-                    </li>
-                    <li>
-                      <b class="red-text">○</b> Maintain at least 1 metre (3
-                      feet) distance between yourself and anyone who is
-                      coughing or sneezing.
-                    </li>
-                    <li>
-                      <b class="red-text">○</b> Avoid touching eyes, nose and
-                      mouth.
-                    </li>
-                    <li>
-                      <b class="red-text">○</b> Make sure you, and the people
-                      around you, follow good respiratory hygiene. This means
-                      covering your mouth and nose with your bent elbow or
-                      tissue when you cough or sneeze. Then dispose of the
-                      used tissue immediately.
-                    </li>
-                    <li>
-                      <b class="red-text">○</b> Stay home if you feel unwell.
-                      If you have a fever, cough and difficulty breathing,
-                      seek medical attention and call in advance. Follow the
-                      directions of your local health authority.
-                    </li>
-                    <li>
-                      <b class="red-text">○</b> Keep up to date on the latest
-                      COVID-19 hotspots (cities or local areas where COVID-19
-                      is spreading widely). If possible, avoid traveling to
-                      places – especially if you are an older person or have
-                      diabetes, heart or lung disease.
-                    </li>
-                    <a class="right"
-                      href="https://www.who.int/news-room/q-a-detail/q-a-coronaviruses#:~:text=symptoms">*Original
-                      content</a>
-                  </ul>
-                </span>
-              </div>
-            </li>
-            <li>
-              <div class="collapsible-header round gsans">
-                <i class="material-icons">expand_more</i>
-                Can I catch COVID-19 from my pet?
-              </div>
-              <div class="collapsible-body">
-                <span class="gsans">While there has been one instance of a dog being infected
-                  in Hong Kong, to date, there is no evidence that a dog, cat
-                  or any pet can transmit COVID-19. COVID-19 is mainly spread
-                  through droplets produced when an infected person coughs,
-                  sneezes, or speaks. To protect yourself, clean your hands
-                  frequently and thoroughly.
-                </span>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="customContainer" id="advice-for-public">
-      <h4 class="center-align gsans text-blue-grey text-darken-1 headerText">
-        Advice for public
-      </h4>
-      <div class="row">
-        <h5 class="subTitle">Ask WHO</h5>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/ask_who/handshaking.png" target="_blank"><img
-              src="assets/img/advice/ask_who/handshaking.png" class="responsive-img" alt="handshaking" /></a>
-        </div>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/ask_who/safe-greetings.png">
-            <img src="assets/img/advice/ask_who/safe-greetings.png" class="responsive-img" alt="safe_greetings" /></a>
-        </div>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/ask_who/wearing-gloves.png"><img src="assets/img/advice/ask_who/wearing-gloves.png"
-              class="responsive-img" alt="wearing-gloves" /></a>
-        </div>
-      </div>
-
-      <div class="row">
-        <h5 class="subTitle">Be ready for coronavirus</h5>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/be_ready/be-kind-to-address-fear.jpg"><img
-              src="assets/img/advice/be_ready/be-kind-to-address-fear.jpg" class="responsive-img"
-              alt="be-kind-to-address-fear" /></a>
-        </div>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/be_ready/be-kind-to-address-stigma.jpg"><img
-              src="assets/img/advice/be_ready/be-kind-to-address-stigma.jpg" class="responsive-img"
-              alt="be-kind-to-address-stigma" /></a>
-        </div>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/be_ready/be-kind-to-support.jpg"><img
-              src="assets/img/advice/be_ready/be-kind-to-support.jpg" class="responsive-img"
-              alt="be-kind-to-support" /></a>
-        </div>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/be_ready/be-ready-social-1.jpg"><img
-              src="assets/img/advice/be_ready/be-ready-social-1.jpg" class="responsive-img"
-              alt="be-ready-social-1" /></a>
-        </div>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/be_ready/be-ready-social-2.jpg"><img
-              src="assets/img/advice/be_ready/be-ready-social-2.jpg" class="responsive-img"
-              alt="be-ready-social-2" /></a>
-        </div>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/be_ready/be-ready-social-3.jpg"><img
-              src="assets/img/advice/be_ready/be-ready-social-3.jpg" class="responsive-img"
-              alt="be-ready-social-3" /></a>
-        </div>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/be_ready/be-safe.jpg"><img src="assets/img/advice/be_ready/be-safe.jpg"
-              class="responsive-img" alt="be-safe" /></a>
-        </div>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/be_ready/be-smart-if-you-develop.jpg"><img
-              src="assets/img/advice/be_ready/be-smart-if-you-develop.jpg" class="responsive-img"
-              alt="be-smart-if-you-develop" /></a>
-        </div>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/be_ready/be-smart-inform.jpg"><img
-              src="assets/img/advice/be_ready/be-smart-inform.jpg" class="responsive-img" alt="be-smart-inform" /></a>
-        </div>
-      </div>
-
-      <div class="row">
-        <h5 class="subTitle">
-          Protect yourself and others from getting sick
-        </h5>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/protect-yourself/blue-1.png">
-            <img src="assets/img/advice/protect-yourself/blue-1.png" class="responsive-img" alt="blue-1" />
-          </a>
-        </div>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/protect-yourself/blue-2.png">
-            <img src="assets/img/advice/protect-yourself/blue-2.png" class="responsive-img" alt="blue-2" />
-          </a>
-        </div>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/protect-yourself/blue-3.png">
-            <img src="assets/img/advice/protect-yourself/blue-3.png" class="responsive-img" alt="blue-3" />
-          </a>
-        </div>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/protect-yourself/blue-4.png">
-            <img src="assets/img/advice/protect-yourself/blue-4.png" class="responsive-img" alt="blue-4" />
-          </a>
-        </div>
-      </div>
-
-      <div class="row">
-        <h5 class="subTitle">COVID-19 Home care</h5>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/home-care/home-care-caregivers-a4-covid.png">
-            <img src="assets/img/advice/home-care/home-care-caregivers-a4-covid.png" class="responsive-img"
-              alt="home-care-caregivers-a4-covid" />
-          </a>
-        </div>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/home-care/home-care-ill-people-a4-covid.png">
-            <img src="assets/img/advice/home-care/home-care-ill-people-a4-covid.png" class="responsive-img"
-              alt="home-care-ill-people-a4-covid" />
-          </a>
-        </div>
-
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/home-care/home-care-everyone-a4-covid.png">
-            <img src="assets/img/advice/home-care/home-care-everyone-a4-covid.png" class="responsive-img"
-              alt="home-care-everyone-a4-covid" />
-          </a>
-        </div>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/home-care/home-care-everyone-square-covid.png">
-            <img src="assets/img/advice/home-care/home-care-everyone-square-covid.png" class="responsive-img"
-              alt="home-care-everyone-square-covid" />
-          </a>
-        </div>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/home-care/home-care-caregivers-square-covid.png">
-            <img src="assets/img/advice/home-care/home-care-caregivers-square-covid.png" class="responsive-img"
-              alt="home-care-caregivers-square-covid" />
-          </a>
-        </div>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/home-care/home-care-ill-people-square-covid.png">
-            <img src="assets/img/advice/home-care/home-care-ill-people-square-covid.png" class="responsive-img"
-              alt="home-care-ill-people-square-covid" />
-          </a>
-        </div>
-      </div>
-
-      <div class="row">
-        <h5 class="subTitle">When and how to wear mask</h5>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/wear-mask/masks-1.png">
-            <img src="assets/img/advice/wear-mask/masks-1.png" class="responsive-img" alt="masks-1" />
-          </a>
-        </div>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/wear-mask/masks-2.png">
-            <img src="assets/img/advice/wear-mask/masks-2.png" class="responsive-img" alt="masks-2" />
-          </a>
-        </div>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/wear-mask/masks-3.png">
-            <img src="assets/img/advice/wear-mask/masks-3.png" class="responsive-img" alt="masks-3" />
-          </a>
-        </div>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/wear-mask/masks-4.png">
-            <img src="assets/img/advice/wear-mask/masks-4.png" class="responsive-img" alt="masks-4" />
-          </a>
-        </div>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/wear-mask/masks-5.png">
-            <img src="assets/img/advice/wear-mask/masks-5.png" class="responsive-img" alt="masks-5" />
-          </a>
-        </div>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/wear-mask/masks-6.png">
-            <img src="assets/img/advice/wear-mask/masks-6.png" class="responsive-img" alt="masks-6" />
-          </a>
-        </div>
-        <div class="col s12 m3 l4">
-          <a href="assets/img/advice/wear-mask/masks-7.png">
-            <img src="assets/img/advice/wear-mask/masks-7.png" class="responsive-img" alt="masks-7" />
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- team -->
-    <div class="customContainer" id="team">
-      <h4 class="center-align gsans text-blue-grey text-darken-1 headerText">
-        Team
-      </h4>
-      <div class="row">
-        <div class="col s12 l3 m3">
-          <div class="card round center-align">
-            <div class="card-content">
-              <div class="center-align">
-                <img class="responsive-img" style="border-radius: 50%;" src="assets/img/anwar.jpg" alt="sir"
-                  height="200" width="200" />
-              </div>
-              <h6 class="center-align tContributor gsans">Md Anwar Hossen</h6>
-              <span class="center-align tPosition gsans">Mentor</span>
-              <div>
-                <a href="https://www.facebook.com/mdanwarhossenemon11" target="_blank"><i class="fa fa-facebook-square"
-                    style="font-size: 20px; color: rgb(0, 122, 204);"></i><span class="ml-1"></span></a>
-                <a href="https://github.com/mahemon" target="_blank" style="padding-left: 1em;"><i class="fa fa-github"
-                    style="font-size: 20px; color: black;"></i><span class="ml-1"></span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 l3 m3">
-          <div class="card round center-align">
-            <div class="card-content">
-              <div class="center-align">
-                <img class="responsive-img" style="border-radius: 50%;" src="assets/img/shunjid.jpg" alt="sir"
-                  height="200" width="200" />
-              </div>
-              <h6 class="center-align tContributor gsans">
-                Shunjid Rahman Showrov
-              </h6>
-              <span class="center-align tPosition gsans">Student</span>
-              <div>
-                <a href="https://www.facebook.com/shunjid" target="_blank"><i class="fa fa-facebook-square"
-                    style="font-size: 20px; color: rgb(0, 122, 204);"></i><span class="ml-1"></span></a>
-                <a href="https://github.com/shunjid" target="_blank" style="padding-left: 1em;"><i class="fa fa-github"
-                    style="font-size: 20px; color: black;"></i><span class="ml-1"></span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 l3 m3">
-          <div class="card round center-align">
-            <div class="card-content">
-              <div class="center-align">
-                <img class="responsive-img" style="border-radius: 50%;" src="assets/img/zubu.jpg" alt="sir" height="200"
-                  width="200" />
-              </div>
-              <h6 class="center-align tContributor gsans">Zubayer Himel</h6>
-              <span class="center-align tPosition gsans">Student</span>
-              <div>
-                <a href="https://www.facebook.com/zubayerhimel0" target="_blank"><i class="fa fa-facebook-square"
-                    style="font-size: 20px; color: rgb(0, 122, 204);"></i><span class="ml-1"></span></a>
-                <a href="https://github.com/zubayerhimel" target="_blank" style="padding-left: 1em;"><i
-                    class="fa fa-github" style="font-size: 20px; color: black;"></i><span class="ml-1"></span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 l3 m3">
-          <div class="card round center-align">
-            <div class="card-content">
-              <div class="center-align">
-                <img class="responsive-img" style="border-radius: 50%;" src="assets/img/fahad.jpg" alt="sir"
-                  height="200" width="200" />
-              </div>
-              <h6 class="center-align tContributor gsans">
-                Shah Fahad Hossain
-              </h6>
-              <span class="center-align tPosition gsans">Student</span>
-              <div>
-                <a href="https://www.facebook.com/shahfahad.hossain" target="_blank"><i class="fa fa-facebook-square"
-                    style="font-size: 20px; color: rgb(0, 122, 204);"></i><span class="ml-1"></span></a>
-                <a href="https://github.com/Fahad1997" target="_blank" style="padding-left: 1em;"><i
-                    class="fa fa-github" style="font-size: 20px; color: black;"></i><span class="ml-1"></span></a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- footer -->
-
-    <footer class="page-footer blue-grey darken-3">
-      <div class="container">
+      <!-- summary card -->
+      <div class="customContainer" id="home">
         <div class="row">
-          <div class="col l6 s12">
-            <h5 class="white-text https://github.com/TeamTigers/coronainfobd.git">
-              CoronaInfoBD Team
-            </h5>
-            <p class="grey-text text-lighten-4 https://github.com/TeamTigers/coronainfobd.git">
-              It is a voluntary act aimed at mass awareness. All content used
-              here is open to everyone. For any kind of queries you can
-              <a href="mailto:teamtigers256@gmail.com">Email</a> us or create
-              an issue in
-              <a href="https://github.com/TeamTigers/coronainfobd/issues" target="_blank">Github</a>
-            </p>
-            <br />
-            <h6 class="whtie-text gsans">Initiative taken by:</h6>
-            <p class="grey-text text-lighten-4 gsans">
-              Department of Software Engineering <br />
-              Daffodil International University
-            </p>
-          </div>
-          <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Important Links</h5>
-            <ul>
-              <li>
-                <a href="https://daffodilvarsity.edu.bd/article/corona" target="_blank">Activiy of DIU against
-                  Corona</a>
-              </li>
-              <li>
-                <h6 class="left-align shareBtn">
-                  Share with your friends
-                </h6>
-                <!-- AddToAny BEGIN -->
-                <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-                  <a class="a2a_button_facebook"></a>
-                  <a class="a2a_button_facebook_messenger"></a>
-                  <a class="a2a_button_twitter"></a>
-                  <a class="a2a_button_linkedin"></a>
-                  <a class="a2a_button_email"></a>
-                  <a class="a2a_button_telegram"></a>
-                  <a class="a2a_button_pinterest"></a>
-                  <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+          <h4
+            class="center-align gsans text-blue-grey text-darken-1 headerText"
+          >
+            COVID-19 in World
+          </h4>
+          <div class="col s12 m4 l4">
+            <div class="card round center-align">
+              <div class="card-content">
+                <div class="row">
+                  <div class="col s12 m6 l6">
+                    <img
+                      class="responsive-img bannerSvg"
+                      src="assets/img/svg/infected.svg"
+                      alt="infected"
+                    />
+                  </div>
+                  <div class="col s12 m6 l6">
+                    <span
+                      class="countNumber count gsans"
+                      style="color: rgb(0, 122, 204);"
+                      id="worldInfected"
+                      >1771549</span
+                    ><br />
+                    <span class="countName gsans">Coronavirus cases</span>
+                  </div>
                 </div>
-                <script async src="https://static.addtoany.com/menu/page.js"></script>
-                <!-- AddToAny END -->
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4 l4">
+            <div class="card round center-align">
+              <div class="card-content">
+                <div class="row">
+                  <div class="col s12 m6 l6">
+                    <img
+                      class="responsive-img bannerSvg"
+                      src="assets/img/svg/death.svg"
+                      alt="death"
+                    />
+                  </div>
+                  <div class="col s12 m6 l6">
+                    <span
+                      class="countNumber count gsans"
+                      style="color: rgba(235, 34, 44, 0.89);"
+                      id="worldDeath"
+                      >108333</span
+                    ><br />
+                    <span class="countName gsans">Deaths</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m4 l4">
+            <div class="card round center-align">
+              <div class="card-content">
+                <div class="row">
+                  <div class="col s12 m6 l6">
+                    <img
+                      class="responsive-img bannerSvg"
+                      src="assets/img/svg/recovered.svg"
+                      alt="recovered"
+                    />
+                  </div>
+                  <div class="col s12 m6 l6">
+                    <span
+                      class="countNumber count gsans"
+                      style="color: rgb(7, 219, 95);"
+                      id="worldRecovered"
+                      >401482</span
+                    ><br />
+                    <span class="countName gsans">Recovered</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="customContainer">
+        <div class="row">
+          <h4
+            class="center-align gsans text-blue-grey text-darken-1 headerText"
+          >
+            COVID-19 in Bangladesh
+          </h4>
+          <div class="col s12 m6 l3">
+            <div class="card round center-align hoverable onmouseTest">
+              <div class="card-content">
+                <span class="testCard count gsans" id="numberOfTests"></span>
+                <h6>Total Tests</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l3">
+            <div class="card round center-align hoverable onmouseCase">
+              <div class="card-content">
+                <span
+                  class="caseCard count gsans"
+                  id="numberOfConfirmedCases"
+                ></span>
+                <h6>Coronavirus positive</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l3">
+            <div class="card round center-align hoverable onmouseDeath">
+              <div class="card-content">
+                <span class="deathCard count gsans" id="numberOfDeaths"></span>
+                <h6>Deaths</h6>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 m6 l3">
+            <div class="card round center-align hoverable onmouseRecovery">
+              <div class="card-content">
+                <span
+                  class="recoveryCard count gsans"
+                  id="numberOfRecovery"
+                ></span>
+                <h6>Recovered</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12 m12 l12">
+            <div class="card round">
+              <div class="card-content">
+                <h5 class="center-align gsans text-blue-grey text-darken-1">
+                  More info
+                </h5>
+                <table class="centered responsive-table">
+                  <thead>
+                    <tr>
+                      <th>Total Cases</th>
+                      <th>Active Cases</th>
+                      <th>Today Cases</th>
+                      <th>Today Deaths</th>
+                      <th>Critical</th>
+
+                      <th class="red-text text-darken-1">Italy</th>
+                      <th class="amber-text text-darken-1">USA</th>
+                      <th class="amber-text text-darken-1">India</th>
+                      <th class="amber-text text-darken-1">Bahrain</th>
+                      <th class="amber-text text-darken-1">Kuwait</th>
+                      <th class="amber-text text-darken-1">Germany</th>
+                      <th>Unknown</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <!-- total case -->
+                      <td id="td_total"></td>
+                      <!-- active case -->
+                      <td id="td_active"></td>
+                      <!-- today case -->
+                      <td id="td_cases_today"></td>
+                      <!-- today death -->
+                      <td id="td_deaths"></td>
+                      <!-- critical -->
+                      <td id="td_critical"></td>
+                      <!-- italy -->
+                      <td id="italy"></td>
+                      <!-- usa -->
+                      <td id="usa"></td>
+                      <!-- india -->
+                      <td id="india"></td>
+                      <!-- bahrain -->
+                      <td id="bahrain"></td>
+                      <!-- kuwait -->
+                      <td id="kuwait"></td>
+                      <!-- germany -->
+                      <td id="germany"></td>
+                      <!-- unknown -->
+                      <td id="unknown"></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- case study -->
+      <div class="customContainer" id="case_study">
+        <div class="row">
+          <h4
+            class="center-align gsans text-blue-grey text-darken-1 headerText"
+          >
+            Case study
+          </h4>
+          <div class="col s12 l4 m6">
+            <figure>
+              <img
+                src="assets/img/CoronaInfo.PNG"
+                alt="coronavirus"
+                class="responsive-img"
+              />
+              <figcaption class="center-align red-text">
+                Fig.1 - Mind map of cases. Due to logarithmic growth of COVID-19
+                we are unable to provide details information of every positive
+                case.
+              </figcaption>
+            </figure>
+          </div>
+          <div class="col s12 l8 m8 scrollable">
+            <ul class="collection round">
+              <li class="collection-item">
+                <span class="title gsans">8th march, 2020</span>
+                <p class="gsans">
+                  First time 3 patients. 2 were Italy-returnees. Third one was
+                  the wife one of them (They returned home after their
+                  treatment)
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">14th march, 2020</span>
+                <p class="gsans">
+                  Health Minister Zahid Maleque said 2 more corona virus cases
+                  were detected (Italy-1, Germany-1)
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">16th march, 2020</span>
+                <p class="gsans">
+                  3 more detected positive of COVID-19 from the same family. (1
+                  Female, 2 Child)
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">17th march, 2020</span>
+                <p class="gsans">
+                  2 more from that same family whom were detected on 16th march,
+                  2020 (Italy-1, 1 affected by USA Expatriate. That Expatriate
+                  already went back to USA)
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">18th march, 2020</span>
+                <p class="gsans">
+                  4 new person detected corona positive (2 returnees of Italy(1
+                  male), 1 from Kuwait, another one is affected by an old corona
+                  patient) (Total: 3 man, 1 woman). A 70 years old person who
+                  tested positive died because of corona virus. First case of
+                  death because of corona virus.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">19th march, 2020</span>
+                <p class="gsans">
+                  4 person detected corona positive. 2 of them are men age of 65
+                  years and 32 years. 1 woman of age 22 years. They were
+                  affected by their relative who came from Italy. Last one was
+                  30 years old male who was in the Isolation procedure in
+                  Chuadanga Sadar Hospital and came from Italy.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">20th march, 2020</span>
+                <p class="gsans">
+                  2 new person detected corona positive. One is male and another
+                  one is female. They had come touch with the person who
+                  returned from Italy.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">21th march, 2020</span>
+                <p class="gsans">
+                  4 new person detected corona positive. A 73 years old patient
+                  who tested positive died. This is the second case of death
+                  because of corona virus.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">22nd march, 2020</span>
+                <p class="gsans">
+                  3 new person detected corona positive. Two of them came from
+                  abroad and one is affected by a corona patient.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">23rd march, 2020</span>
+                <p class="gsans">
+                  6 new person detected corona positive. A 60 years old patient
+                  who tested positive died.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">24th march, 2020</span>
+                <p class="gsans">
+                  6 new person detected corona positive. A 75 years old patient
+                  who tested positive has died.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">26th march, 2020</span>
+                <p class="gsans">
+                  5 new person detected corona positive. All of them are male. 3
+                  of them affected by their relatives. Total number of corona
+                  virus affected people is 44.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">27th march, 2020</span>
+                <p class="gsans">
+                  4 new person detected corona positive. 2 of them are doctor
+                  affected by a corona patient. Total number of corona virus
+                  affected people is 48.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">30th march, 2020</span>
+                <p class="gsans">
+                  1 new person detected corona positive. 4 people are recovered.
+                  1 of them are 80 years old and 2 of them are 60+. Total number
+                  of corona virus affected people is 49.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">31st march, 2020</span>
+                <p class="gsans">
+                  2 new person detected corona positive. 1 came from soudi
+                  arabia and another one is affected by a corona patient. Total
+                  number of corona virus affected people is 51.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">1st april, 2020</span>
+                <p class="gsans">
+                  3 new person detected corona positive. 1 has died. Total
+                  number of corona virus affected people is 54.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">2nd april, 2020</span>
+                <p class="gsans">
+                  2 new person detected corona positive. Both of them are male.
+                  Total number of corona virus affected people is 56.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">3rd april, 2020</span>
+                <p class="gsans">
+                  5 new person detected corona positive. Total number of corona
+                  virus affected people is 61.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">4th april, 2020</span>
+                <p class="gsans">
+                  9 new person detected corona positive. 1 has died and his age
+                  was 90 years. Total number of corona virus affected people is
+                  70.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">5th april, 2020</span>
+                <p class="gsans">
+                  18 new person detected corona positive. 1 has died and his age
+                  was 55 years. Total number of corona virus affected people is
+                  88.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">6th april, 2020</span>
+                <p class="gsans">
+                  35 new person detected corona positive. 3 have died. Total
+                  number of corona virus affected people is 123.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">7th april, 2020</span>
+                <p class="gsans">
+                  41 new person detected corona positive. 5 have died. Total
+                  number of corona virus affected people is 164.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">8th april, 2020</span>
+                <p class="gsans">
+                  54 new person detected corona positive. 3 have died. Total
+                  number of corona virus affected people is 218.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">9th april, 2020</span>
+                <p class="gsans">
+                  112 new person detected corona positive. 1 has died. Total
+                  number of corona virus affected people is 330.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">10th april, 2020</span>
+                <p class="gsans">
+                  94 new person detected corona positive. 6 have died. 5 of them
+                  are male and another one is female. Total number of corona
+                  virus affected people is 424.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">11th april, 2020</span>
+                <p class="gsans">
+                  58 new person detected corona positive. 3 has died. Total
+                  number of corona virus affected people is 482.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">12th april, 2020</span>
+                <p class="gsans">
+                  139 new person detected corona positive. 4 has died. Total
+                  number of corona virus affected people is 621.
+                </p>
+              </li>
+              <li class="collection-item">
+                <span class="title gsans">13th april, 2020</span>
+                <p class="gsans">
+                  182 new person detected corona positive. 5 has died. Total
+                  number of corona virus affected people is 803.
+                </p>
               </li>
             </ul>
           </div>
         </div>
-        <script type="text/javascript"
-          src="https://www.freevisitorcounters.com/auth.php?id=9b69540a475623abc41cf3bd65d75afbcc1a25da"></script>
-        <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/652237/t/5"></script>
       </div>
-      <div class="footer-copyright">
-        <div class="container">
-          © 2020 Copyright TeamTigers
-          <a class="grey-text text-lighten-4 right" href="https://github.com/teamtigers" target="_blank">TeamTigers</a>
+
+      <!-- charts -->
+
+      <div class="customContainer" id="charts">
+        <div class="row">
+          <h4
+            class="center-align gsans text-blue-grey text-darken-1 headerText"
+          >
+            Charts
+          </h4>
+          <div class="col s12 l6 m6">
+            <div class="card round">
+              <div class="card-content">
+                <div
+                  class="chart"
+                  id="infectionWithDate"
+                  style="height: 376px; max-width: 920px; margin: 0px auto;"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 l6 m6">
+            <div class="card round">
+              <div class="card-content">
+                <div
+                  class="chart center-align"
+                  id="deathWithDate"
+                  style="height: 376px; max-width: 920px; margin: 0px auto;"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 l6 m6">
+            <div class="card round">
+              <div class="card-content">
+                <div
+                  class="chart"
+                  id="infectedDistrict"
+                  style="height: 380px; width: 100%; margin: 0px auto;"
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 l6 m6">
+            <div class="card round">
+              <div class="card-content">
+                <div
+                  class="chart"
+                  id="infectedArea"
+                  style="height: 380px; max-width: 920px; margin: 0px auto;"
+                ></div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </footer>
-  </main>
 
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="assets/js/materialize.js"></script>
-  <script src="assets/js/coronaCounter.js"></script>
-  <script src="assets/js/canvas.min.js"></script>
-  <script src="assets/js/infectedpeoplechart.js"></script>
-  <script src="assets/js/plugin.js"></script>
-  <script src="assets/js/darkMood.js"></script>
+      <!-- hospital map -->
+      <div class="customContainer" id="map">
+        <div class="row">
+          <h4
+            class="center-align gsans text-blue-grey text-darken-1 headerText"
+          >
+            Map of Hospitals
+          </h4>
+          <div class="center-align gsans">
+            <span
+              >Here you can find the location of hospitals of Bangladesh where
+              COVID-19 can be cured</span
+            >
+          </div>
 
-  <script>
-    window.onscroll = scroll1;
-    function scroll1() {
-      var toTop = document.getElementById("scrollTop");
-      window.scrollY > 500
-        ? (toTop.style.display = "Block")
-        : (toTop.style.display = "none");
-    }
-    function toTop() {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }
-  </script>
-</body>
+          <div class="card round">
+            <div class="card-content">
+              <iframe
+                src="https://www.google.com/maps/d/embed?mid=1BGB9GSWxC1t6yZkA8tdRSXhmzzJ-dlg1&ll=23.646783737681258%2C90.4487993265625&z=8"
+                width="100%"
+                height="650"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <!-- hotline numbers -->
+
+      <div class="customContainer" id="hotline">
+        <div class="row">
+          <h4
+            class="center-align gsans text-blue-grey text-darken-1 headerText"
+          >
+            Hotline
+          </h4>
+          <div class="col s12 m6 l6 center-align">
+            <ul class="collection with-header">
+              <li class="collection-header">
+                <h5 class="title gsans">Numbers</h5>
+                <span>Tap on the number to make phone call</span>
+              </li>
+              <li class="collection-item">
+                <a href="tel:333">333</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:16263">16263</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:01401184551">01401184551</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:01401184554">01401184554</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:01401184555">01401184555</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:01401184556">01401184556</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:01401184559">01401184559</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:01401184560">01401184560</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:01401184563">01401184563</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:01401184568">01401184568</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:01927711784">01927711784</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:01927711785">01927711785</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:01937000011">01937000011</a>
+              </li>
+              <li class="collection-item">
+                <a href="tel:01937110011">01937110011</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col s12 l6 m6">
+            <p style="line-height: 200%;">
+              <a href="https://www.iedcr.org/" target="_blank"
+                >The Institute of Epidemiology, Disease Control and Research
+                (IEDCR)</a
+              >
+              increased the hotline numbers to report any suspected cases of
+              coronavirus to 12 from four, after three cases were confirmed in
+              Bangladesh on Sunday. Sources at the IEDCR also said that, if
+              contacted and according to necessity, their special medical teams
+              would visit suspected coronavirus patients' homes and collect
+              samples for testing. According to the IEDCR, the hotline numbers
+              were increased as the coronavirus alert level has been raised to
+              three from one.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- about corona -->
+
+      <div class="customContainer" id="faq">
+        <div class="row">
+          <h4
+            class="center-align gsans text-blue-grey text-darken-1 headerText"
+          >
+            FAQ
+          </h4>
+          <div class="col s12 m12 l12">
+            <ul class="collapsible round">
+              <li>
+                <div class="collapsible-header round gsans">
+                  <i class="material-icons">expand_more</i>
+                  What is a Coronavirus?
+                </div>
+                <div class="collapsible-body">
+                  <span class="gsans"
+                    >Coronaviruses are a large family of viruses which may cause
+                    illness in animals or humans. In humans, several
+                    coronaviruses are known to cause respiratory infections
+                    ranging from the common cold to more severe diseases such as
+                    Middle East Respiratory Syndrome (MERS) and Severe Acute
+                    Respiratory Syndrome (SARS). The most recently discovered
+                    coronavirus causes coronavirus disease COVID-19.</span
+                  >
+                  <a
+                    class="right"
+                    href="https://www.who.int/news-room/q-a-detail/q-a-coronaviruses#:~:text=symptoms"
+                    >*Original content</a
+                  >
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header round gsans">
+                  <i class="material-icons">expand_more</i>What is COVID-19?
+                </div>
+                <div class="collapsible-body">
+                  <span class="gsans"
+                    >COVID-19 is the infectious disease caused by the most
+                    recently discovered coronavirus. This new virus and disease
+                    were unknown before the outbreak began in Wuhan, China, in
+                    December 2019.
+                  </span>
+                  <a
+                    class="right"
+                    href="https://www.who.int/news-room/q-a-detail/q-a-coronaviruses#:~:text=symptoms"
+                    >*Original content</a
+                  >
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header round gsans">
+                  <i class="material-icons">expand_more</i>What are the symptoms
+                  of COVID-19?
+                </div>
+                <div class="collapsible-body">
+                  <span class="gsans">
+                    The most common symptoms of COVID-19 are fever, tiredness,
+                    and dry cough. Some patients may have aches and pains, nasal
+                    congestion, runny nose, sore throat or diarrhea. These
+                    symptoms are usually mild and begin gradually. Some people
+                    become infected but don’t develop any symptoms and don't
+                    feel unwell. Most people (about 80%) recover from the
+                    disease without needing special treatment. Around 1 out of
+                    every 6 people who gets COVID-19 becomes seriously ill and
+                    develops difficulty breathing. Older people, and those with
+                    underlying medical problems like high blood pressure, heart
+                    problems or diabetes, are more likely to develop serious
+                    illness. People with fever, cough and difficulty breathing
+                    should seek medical attention.</span
+                  >
+                  <a
+                    class="right"
+                    href="https://www.who.int/news-room/q-a-detail/q-a-coronaviruses#:~:text=symptoms"
+                    >*Original content</a
+                  >
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header round gsans">
+                  <i class="material-icons">expand_more</i>How does COVID-19
+                  spread?
+                </div>
+                <div class="collapsible-body">
+                  <span class="gsans">
+                    People can catch COVID-19 from others who have the virus.
+                    The disease can spread from person to person through small
+                    droplets from the nose or mouth which are spread when a
+                    person with COVID-19 coughs or exhales. These droplets land
+                    on objects and surfaces around the person. Other people then
+                    catch COVID-19 by touching these objects or surfaces, then
+                    touching their eyes, nose or mouth. People can also catch
+                    COVID-19 if they breathe in droplets from a person with
+                    COVID-19 who coughs out or exhales droplets. This is why it
+                    is important to stay more than 1 meter (3 feet) away from a
+                    person who is sick. WHO is assessing ongoing research on the
+                    ways COVID-19 is spread and will continue to share updated
+                    findings.
+                  </span>
+                  <a
+                    class="right"
+                    href="https://www.who.int/news-room/q-a-detail/q-a-coronaviruses#:~:text=symptoms"
+                    >*Original content</a
+                  >
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header round gsans">
+                  <i class="material-icons">expand_more</i>What can I do to
+                  protect myself from coronavirus?
+                </div>
+                <div class="collapsible-body">
+                  <span class="gsans">
+                    You can reduce your chances of being infected or spreading
+                    COVID-19 by taking some simple precautions: <br />
+                    <ul class="faqList">
+                      <li>
+                        <b class="red-text">○</b> Regularly and thoroughly clean
+                        your hands with an alcohol-based hand rub or wash them
+                        with soap and water. Why? Washing your hands with soap
+                        and water or using alcohol-based hand rub kills viruses
+                        that may be on your hands.
+                      </li>
+                      <li>
+                        <b class="red-text">○</b> Maintain at least 1 metre (3
+                        feet) distance between yourself and anyone who is
+                        coughing or sneezing.
+                      </li>
+                      <li>
+                        <b class="red-text">○</b> Avoid touching eyes, nose and
+                        mouth.
+                      </li>
+                      <li>
+                        <b class="red-text">○</b> Make sure you, and the people
+                        around you, follow good respiratory hygiene. This means
+                        covering your mouth and nose with your bent elbow or
+                        tissue when you cough or sneeze. Then dispose of the
+                        used tissue immediately.
+                      </li>
+                      <li>
+                        <b class="red-text">○</b> Stay home if you feel unwell.
+                        If you have a fever, cough and difficulty breathing,
+                        seek medical attention and call in advance. Follow the
+                        directions of your local health authority.
+                      </li>
+                      <li>
+                        <b class="red-text">○</b> Keep up to date on the latest
+                        COVID-19 hotspots (cities or local areas where COVID-19
+                        is spreading widely). If possible, avoid traveling to
+                        places – especially if you are an older person or have
+                        diabetes, heart or lung disease.
+                      </li>
+                      <a
+                        class="right"
+                        href="https://www.who.int/news-room/q-a-detail/q-a-coronaviruses#:~:text=symptoms"
+                        >*Original content</a
+                      >
+                    </ul>
+                  </span>
+                </div>
+              </li>
+              <li>
+                <div class="collapsible-header round gsans">
+                  <i class="material-icons">expand_more</i>
+                  Can I catch COVID-19 from my pet?
+                </div>
+                <div class="collapsible-body">
+                  <span class="gsans"
+                    >While there has been one instance of a dog being infected
+                    in Hong Kong, to date, there is no evidence that a dog, cat
+                    or any pet can transmit COVID-19. COVID-19 is mainly spread
+                    through droplets produced when an infected person coughs,
+                    sneezes, or speaks. To protect yourself, clean your hands
+                    frequently and thoroughly.
+                  </span>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="customContainer" id="advice-for-public">
+        <h4 class="center-align gsans text-blue-grey text-darken-1 headerText">
+          Advice for public
+        </h4>
+        <div class="row">
+          <h5 class="subTitle">Ask WHO</h5>
+          <div class="col s12 m3 l4">
+            <a href="assets/img/advice/ask_who/handshaking.png" target="_blank"
+              ><img
+                src="assets/img/advice/ask_who/handshaking.png"
+                class="responsive-img"
+                alt="handshaking"
+            /></a>
+          </div>
+          <div class="col s12 m3 l4">
+            <a href="assets/img/advice/ask_who/safe-greetings.png">
+              <img
+                src="assets/img/advice/ask_who/safe-greetings.png"
+                class="responsive-img"
+                alt="safe_greetings"
+            /></a>
+          </div>
+          <div class="col s12 m3 l4">
+            <a href="assets/img/advice/ask_who/wearing-gloves.png"
+              ><img
+                src="assets/img/advice/ask_who/wearing-gloves.png"
+                class="responsive-img"
+                alt="wearing-gloves"
+            /></a>
+          </div>
+        </div>
+
+        <div class="row">
+          <h5 class="subTitle">Be ready for coronavirus</h5>
+          <div class="col s12 m3 l4">
+            <a href="assets/img/advice/be_ready/be-kind-to-address-fear.jpg"
+              ><img
+                src="assets/img/advice/be_ready/be-kind-to-address-fear.jpg"
+                class="responsive-img"
+                alt="be-kind-to-address-fear"
+            /></a>
+          </div>
+          <div class="col s12 m3 l4">
+            <a href="assets/img/advice/be_ready/be-kind-to-address-stigma.jpg"
+              ><img
+                src="assets/img/advice/be_ready/be-kind-to-address-stigma.jpg"
+                class="responsive-img"
+                alt="be-kind-to-address-stigma"
+            /></a>
+          </div>
+          <div class="col s12 m3 l4">
+            <a href="assets/img/advice/be_ready/be-kind-to-support.jpg"
+              ><img
+                src="assets/img/advice/be_ready/be-kind-to-support.jpg"
+                class="responsive-img"
+                alt="be-kind-to-support"
+            /></a>
+          </div>
+          <div class="col s12 m3 l4">
+            <a href="assets/img/advice/be_ready/be-ready-social-1.jpg"
+              ><img
+                src="assets/img/advice/be_ready/be-ready-social-1.jpg"
+                class="responsive-img"
+                alt="be-ready-social-1"
+            /></a>
+          </div>
+          <div class="col s12 m3 l4">
+            <a href="assets/img/advice/be_ready/be-ready-social-2.jpg"
+              ><img
+                src="assets/img/advice/be_ready/be-ready-social-2.jpg"
+                class="responsive-img"
+                alt="be-ready-social-2"
+            /></a>
+          </div>
+          <div class="col s12 m3 l4">
+            <a href="assets/img/advice/be_ready/be-ready-social-3.jpg"
+              ><img
+                src="assets/img/advice/be_ready/be-ready-social-3.jpg"
+                class="responsive-img"
+                alt="be-ready-social-3"
+            /></a>
+          </div>
+          <div class="col s12 m3 l4">
+            <a href="assets/img/advice/be_ready/be-safe.jpg"
+              ><img
+                src="assets/img/advice/be_ready/be-safe.jpg"
+                class="responsive-img"
+                alt="be-safe"
+            /></a>
+          </div>
+          <div class="col s12 m3 l4">
+            <a href="assets/img/advice/be_ready/be-smart-if-you-develop.jpg"
+              ><img
+                src="assets/img/advice/be_ready/be-smart-if-you-develop.jpg"
+                class="responsive-img"
+                alt="be-smart-if-you-develop"
+            /></a>
+          </div>
+          <div class="col s12 m3 l4">
+            <a href="assets/img/advice/be_ready/be-smart-inform.jpg"
+              ><img
+                src="assets/img/advice/be_ready/be-smart-inform.jpg"
+                class="responsive-img"
+                alt="be-smart-inform"
+            /></a>
+          </div>
+        </div>
+
+        <div class="row">
+          <h5 class="subTitle">
+            Protect yourself and others from getting sick
+          </h5>
+          <div class="col s12 m3 l4">
+            <a href="assets/img/advice/protect-yourself/blue-1.png">
+              <img
+                src="assets/img/advice/protect-yourself/blue-1.png"
+                class="responsive-img"
+                alt="blue-1"
+              />
+            </a>
+          </div>
+          <div class="col s12 m3 l4">
+            <a href="assets/img/advice/protect-yourself/blue-2.png">
+              <img
+                src="assets/img/advice/protect-yourself/blue-2.png"
+                class="responsive-img"
+                alt="blue-2"
+              />
+            </a>
+          </div>
+          <div class="col s12 m3 l4">
+            <a href="assets/img/advice/protect-yourself/blue-3.png">
+              <img
+                src="assets/img/advice/protect-yourself/blue-3.png"
+                class="responsive-img"
+                alt="blue-3"
+              />
+            </a>
+          </div>
+          <div class="col s12 m3 l4">
+            <a href="assets/img/advice/protect-yourself/blue-4.png">
+              <img
+                src="assets/img/advice/protect-yourself/blue-4.png"
+                class="responsive-img"
+                alt="blue-4"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="row">
+          <h5 class="subTitle">COVID-19 Home care</h5>
+          <div class="col s12 m3 l4">
+            <a
+              href="assets/img/advice/home-care/home-care-caregivers-a4-covid.png"
+            >
+              <img
+                src="assets/img/advice/home-care/home-care-caregivers-a4-covid.png"
+                class="responsive-img"
+                alt="home-care-caregivers-a4-covid"
+              />
+            </a>
+          </div>
+          <div class="col s12 m3 l4">
+            <a
+              href="assets/img/advice/home-care/home-care-ill-people-a4-covid.png"
+            >
+              <img
+                src="assets/img/advice/home-care/home-care-ill-people-a4-covid.png"
+                class="responsive-img"
+                alt="home-care-ill-people-a4-covid"
+              />
+            </a>
+          </div>
+
+          <div class="col s12 m3 l4">
+            <a
+              href="assets/img/advice/home-care/home-care-everyone-a4-covid.png"
+            >
+              <img
+                src="assets/img/advice/home-care/home-care-everyone-a4-covid.png"
+                class="responsive-img"
+                alt="home-care-everyone-a4-covid"
+              />
+            </a>
+          </div>
+          <div class="col s12 m3 l4">
+            <a
+              href="assets/img/advice/home-care/home-care-everyone-square-covid.png"
+            >
+              <img
+                src="assets/img/advice/home-care/home-care-everyone-square-covid.png"
+                class="responsive-img"
+                alt="home-care-everyone-square-covid"
+              />
+            </a>
+          </div>
+          <div class="col s12 m3 l4">
+            <a
+              href="assets/img/advice/home-care/home-care-caregivers-square-covid.png"
+            >
+              <img
+                src="assets/img/advice/home-care/home-care-caregivers-square-covid.png"
+                class="responsive-img"
+                alt="home-care-caregivers-square-covid"
+              />
+            </a>
+          </div>
+          <div class="col s12 m3 l4">
+            <a
+              href="assets/img/advice/home-care/home-care-ill-people-square-covid.png"
+            >
+              <img
+                src="assets/img/advice/home-care/home-care-ill-people-square-covid.png"
+                class="responsive-img"
+                alt="home-care-ill-people-square-covid"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="row">
+          <h5 class="subTitle">When and how to wear mask</h5>
+          <div class="col s12 m3 l4">
+            <a href="assets/img/advice/wear-mask/masks-1.png">
+              <img
+                src="assets/img/advice/wear-mask/masks-1.png"
+                class="responsive-img"
+                alt="masks-1"
+              />
+            </a>
+          </div>
+          <div class="col s12 m3 l4">
+            <a href="assets/img/advice/wear-mask/masks-2.png">
+              <img
+                src="assets/img/advice/wear-mask/masks-2.png"
+                class="responsive-img"
+                alt="masks-2"
+              />
+            </a>
+          </div>
+          <div class="col s12 m3 l4">
+            <a href="assets/img/advice/wear-mask/masks-3.png">
+              <img
+                src="assets/img/advice/wear-mask/masks-3.png"
+                class="responsive-img"
+                alt="masks-3"
+              />
+            </a>
+          </div>
+          <div class="col s12 m3 l4">
+            <a href="assets/img/advice/wear-mask/masks-4.png">
+              <img
+                src="assets/img/advice/wear-mask/masks-4.png"
+                class="responsive-img"
+                alt="masks-4"
+              />
+            </a>
+          </div>
+          <div class="col s12 m3 l4">
+            <a href="assets/img/advice/wear-mask/masks-5.png">
+              <img
+                src="assets/img/advice/wear-mask/masks-5.png"
+                class="responsive-img"
+                alt="masks-5"
+              />
+            </a>
+          </div>
+          <div class="col s12 m3 l4">
+            <a href="assets/img/advice/wear-mask/masks-6.png">
+              <img
+                src="assets/img/advice/wear-mask/masks-6.png"
+                class="responsive-img"
+                alt="masks-6"
+              />
+            </a>
+          </div>
+          <div class="col s12 m3 l4">
+            <a href="assets/img/advice/wear-mask/masks-7.png">
+              <img
+                src="assets/img/advice/wear-mask/masks-7.png"
+                class="responsive-img"
+                alt="masks-7"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- team -->
+      <div class="customContainer" id="team">
+        <h4 class="center-align gsans text-blue-grey text-darken-1 headerText">
+          Team
+        </h4>
+        <div class="row">
+          <div class="col s12 l3 m3">
+            <div class="card round center-align">
+              <div class="card-content">
+                <div class="center-align">
+                  <img
+                    class="responsive-img"
+                    style="border-radius: 50%;"
+                    src="assets/img/anwar.jpg"
+                    alt="sir"
+                    height="200"
+                    width="200"
+                  />
+                </div>
+                <h6 class="center-align tContributor gsans">Md Anwar Hossen</h6>
+                <span class="center-align tPosition gsans">Mentor</span>
+                <div>
+                  <a
+                    href="https://www.facebook.com/mdanwarhossenemon11"
+                    target="_blank"
+                    ><i
+                      class="fa fa-facebook-square"
+                      style="font-size: 20px; color: rgb(0, 122, 204);"
+                    ></i
+                    ><span class="ml-1"></span
+                  ></a>
+                  <a
+                    href="https://github.com/mahemon"
+                    target="_blank"
+                    style="padding-left: 1em;"
+                    ><i
+                      class="fa fa-github"
+                      style="font-size: 20px; color: black;"
+                    ></i
+                    ><span class="ml-1"></span
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 l3 m3">
+            <div class="card round center-align">
+              <div class="card-content">
+                <div class="center-align">
+                  <img
+                    class="responsive-img"
+                    style="border-radius: 50%;"
+                    src="assets/img/shunjid.jpg"
+                    alt="sir"
+                    height="200"
+                    width="200"
+                  />
+                </div>
+                <h6 class="center-align tContributor gsans">
+                  Shunjid Rahman Showrov
+                </h6>
+                <span class="center-align tPosition gsans">Student</span>
+                <div>
+                  <a href="https://www.facebook.com/shunjid" target="_blank"
+                    ><i
+                      class="fa fa-facebook-square"
+                      style="font-size: 20px; color: rgb(0, 122, 204);"
+                    ></i
+                    ><span class="ml-1"></span
+                  ></a>
+                  <a
+                    href="https://github.com/shunjid"
+                    target="_blank"
+                    style="padding-left: 1em;"
+                    ><i
+                      class="fa fa-github"
+                      style="font-size: 20px; color: black;"
+                    ></i
+                    ><span class="ml-1"></span
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 l3 m3">
+            <div class="card round center-align">
+              <div class="card-content">
+                <div class="center-align">
+                  <img
+                    class="responsive-img"
+                    style="border-radius: 50%;"
+                    src="assets/img/zubu.jpg"
+                    alt="sir"
+                    height="200"
+                    width="200"
+                  />
+                </div>
+                <h6 class="center-align tContributor gsans">Zubayer Himel</h6>
+                <span class="center-align tPosition gsans">Student</span>
+                <div>
+                  <a
+                    href="https://www.facebook.com/zubayerhimel0"
+                    target="_blank"
+                    ><i
+                      class="fa fa-facebook-square"
+                      style="font-size: 20px; color: rgb(0, 122, 204);"
+                    ></i
+                    ><span class="ml-1"></span
+                  ></a>
+                  <a
+                    href="https://github.com/zubayerhimel"
+                    target="_blank"
+                    style="padding-left: 1em;"
+                    ><i
+                      class="fa fa-github"
+                      style="font-size: 20px; color: black;"
+                    ></i
+                    ><span class="ml-1"></span
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col s12 l3 m3">
+            <div class="card round center-align">
+              <div class="card-content">
+                <div class="center-align">
+                  <img
+                    class="responsive-img"
+                    style="border-radius: 50%;"
+                    src="assets/img/fahad.jpg"
+                    alt="sir"
+                    height="200"
+                    width="200"
+                  />
+                </div>
+                <h6 class="center-align tContributor gsans">
+                  Shah Fahad Hossain
+                </h6>
+                <span class="center-align tPosition gsans">Student</span>
+                <div>
+                  <a
+                    href="https://www.facebook.com/shahfahad.hossain"
+                    target="_blank"
+                    ><i
+                      class="fa fa-facebook-square"
+                      style="font-size: 20px; color: rgb(0, 122, 204);"
+                    ></i
+                    ><span class="ml-1"></span
+                  ></a>
+                  <a
+                    href="https://github.com/Fahad1997"
+                    target="_blank"
+                    style="padding-left: 1em;"
+                    ><i
+                      class="fa fa-github"
+                      style="font-size: 20px; color: black;"
+                    ></i
+                    ><span class="ml-1"></span
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer -->
+
+      <footer class="page-footer blue-grey darken-3">
+        <div class="container">
+          <div class="row">
+            <div class="col l6 s12">
+              <h5
+                class="white-text https://github.com/TeamTigers/coronainfobd.git"
+              >
+                CoronaInfoBD Team
+              </h5>
+              <p
+                class="grey-text text-lighten-4 https://github.com/TeamTigers/coronainfobd.git"
+              >
+                It is a voluntary act aimed at mass awareness. All content used
+                here is open to everyone. For any kind of queries you can
+                <a href="mailto:teamtigers256@gmail.com">Email</a> us or create
+                an issue in
+                <a
+                  href="https://github.com/TeamTigers/coronainfobd/issues"
+                  target="_blank"
+                  >Github</a
+                >
+              </p>
+              <br />
+              <h6 class="whtie-text gsans">Initiative taken by:</h6>
+              <p class="grey-text text-lighten-4 gsans">
+                Department of Software Engineering <br />
+                Daffodil International University
+              </p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+              <h5 class="white-text">Important Links</h5>
+              <ul>
+                <li>
+                  <a
+                    href="https://daffodilvarsity.edu.bd/article/corona"
+                    target="_blank"
+                    >Activiy of DIU against Corona</a
+                  >
+                </li>
+                <li>
+                  <h6 class="left-align shareBtn">
+                    Share with your friends
+                  </h6>
+                  <!-- AddToAny BEGIN -->
+                  <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                    <a class="a2a_button_facebook"></a>
+                    <a class="a2a_button_facebook_messenger"></a>
+                    <a class="a2a_button_twitter"></a>
+                    <a class="a2a_button_linkedin"></a>
+                    <a class="a2a_button_email"></a>
+                    <a class="a2a_button_telegram"></a>
+                    <a class="a2a_button_pinterest"></a>
+                    <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
+                  </div>
+                  <script
+                    async
+                    src="https://static.addtoany.com/menu/page.js"
+                  ></script>
+                  <!-- AddToAny END -->
+                </li>
+              </ul>
+            </div>
+          </div>
+          <script
+            type="text/javascript"
+            src="https://www.freevisitorcounters.com/auth.php?id=9b69540a475623abc41cf3bd65d75afbcc1a25da"
+          ></script>
+          <script
+            type="text/javascript"
+            src="https://www.freevisitorcounters.com/en/home/counter/652237/t/5"
+          ></script>
+        </div>
+        <div class="footer-copyright">
+          <div class="container">
+            © 2020 Copyright TeamTigers
+            <a
+              class="grey-text text-lighten-4 right"
+              href="https://github.com/teamtigers"
+              target="_blank"
+              >TeamTigers</a
+            >
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/materialize.js"></script>
+    <script src="assets/js/coronaCounter.js"></script>
+    <script src="assets/js/canvas.min.js"></script>
+    <script src="assets/js/infectedpeoplechart.js"></script>
+    <script src="assets/js/plugin.js"></script>
+    <script src="assets/js/darkMood.js"></script>
+
+    <script>
+      window.onscroll = scroll1;
+      function scroll1() {
+        var toTop = document.getElementById("scrollTop");
+        window.scrollY > 500
+          ? (toTop.style.display = "Block")
+          : (toTop.style.display = "none");
+      }
+      function toTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+    </script>
+  </body>
 </html>
