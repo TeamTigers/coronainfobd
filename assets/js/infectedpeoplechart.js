@@ -5,7 +5,7 @@ window.onload = function () {
     exportEnabled: true,
     animationEnabled: true,
     title: {
-      text: "Number of infection with time",
+      text: "COVID-19 positive cases in time",
     },
     axisX: {
       title: "Date",
@@ -60,7 +60,7 @@ window.onload = function () {
     exportEnabled: true,
     animationEnabled: true,
     title: {
-      text: "Number of death with time",
+      text: "COVID-19 death cases in time",
       color: "#de4536",
     },
     axisY: {
@@ -130,59 +130,29 @@ window.onload = function () {
     ],
   });
 
-  var chart4 = new CanvasJS.Chart("infectedArea", {
+  var chart4 = new CanvasJS.Chart("info_percent", {
+    theme: "light1",
+    exportFileName: "Doughnut Chart",
     exportEnabled: true,
     animationEnabled: true,
-    theme: "light2", // "light1", "light2", "dark1", "dark2"
     title: {
-      text: "Infected people in District/City",
+      text: "COVID-19 summary in percentage",
     },
-    axisX: {
-      interval: 1,
-    },
-    axisY: {
-      title: "No. of case",
+    legend: {
+      cursor: "pointer",
+      itemclick: explodePie,
     },
     data: [
       {
-        type: "bar",
-        axisYType: "secondary",
+        type: "doughnut",
+        innerRadius: 90,
+        showInLegend: true,
+        toolTipContent: "<b>{name}</b>: {y} (#percent%)",
+        indexLabel: "{name} - #percent%",
         dataPoints: [
-          { y: 313, label: "Dhaka City" },
-          { y: 22, label: "Dhaka(District)" },
-          { y: 23, label: "Gazipur" },
-          { y: 10, label: "Kishoreganj" },
-          { y: 19, label: "Madaripur" },
-          { y: 5, label: "Manikganj" },
-          { y: 107, label: "Naraynganj" },
-          { y: 14, label: "Munshiganj" },
-          { y: 4, label: "Narshingdi" },
-          { y: 6, label: "Rajbari" },
-          { y: 2, label: "Tangail" },
-          { y: 1, label: "Shariotpur" },
-          { y: 3, label: "Gpalganj" },
-          { y: 12, label: "Chattagram" },
-          { y: 1, label: "Cox's bazar" },
-          { y: 9, label: "Cumilla" },
-          { y: 6, label: "B.Baria" },
-          { y: 6, label: "Chandpur" },
-          { y: 1, label: "Laksmipur" },
-          { y: 1, label: "Moulovi bazar" },
-          { y: 1, label: "Hobiganj" },
-          { y: 1, label: "Sylhet" },
-          { y: 2, label: "Rangpur" },
-          { y: 6, label: "Gaibandha" },
-          { y: 3, label: "Nilphamari" },
-          { y: 1, label: "Lalmonirhat" },
-          { y: 3, label: "Thakurgaon" },
-          { y: 1, label: "Chuadanga" },
-          { y: 5, label: "Mymensingh" },
-          { y: 2, label: "Sherpur" },
-          { y: 6, label: "Jamalpur" },
-          { y: 1, label: "Netrokona" },
-          { y: 3, label: "Barguna" },
-          { y: 1, label: "Potuakhali" },
-          { y: 3, label: "Jhalokathi" },
+          { y: 803, name: "Coronavirus cases" },
+          { y: 39, name: "Deaths" },
+          { y: 42, name: "Recovered" },
         ],
       },
     ],
@@ -191,64 +161,57 @@ window.onload = function () {
   // var chart4 = new CanvasJS.Chart("infectedArea", {
   //   exportEnabled: true,
   //   animationEnabled: true,
+  //   theme: "light2", // "light1", "light2", "dark1", "dark2"
   //   title: {
   //     text: "Infected people in District/City",
   //   },
+  //   axisX: {
+  //     interval: 1,
+  //   },
   //   axisY: {
-  //     title: "No. of cases",
-  //   },
-  //   legend: {
-  //     cursor: "pointer",
-  //     itemclick: toggleDataSeries,
-  //   },
-  //   toolTip: {
-  //     shared: true,
-  //     content: toolTipFormatter,
+  //     title: "No. of case",
   //   },
   //   data: [
   //     {
   //       type: "bar",
-  //       showInLegend: true,
-  //       name: "Gold",
-  //       color: "gold",
+  //       axisYType: "secondary",
+  //       color: "#01579b",
   //       dataPoints: [
-  //         { y: 243, label: "Italy" },
-  //         { y: 236, label: "China" },
-  //         { y: 243, label: "France" },
-  //         { y: 273, label: "Great Britain" },
-  //         { y: 269, label: "Germany" },
-  //         { y: 196, label: "Russia" },
-  //         { y: 1118, label: "USA" },
-  //       ],
-  //     },
-  //     {
-  //       type: "bar",
-  //       showInLegend: true,
-  //       name: "Silver",
-  //       color: "silver",
-  //       dataPoints: [
-  //         { y: 212, label: "Italy" },
-  //         { y: 186, label: "China" },
-  //         { y: 272, label: "France" },
-  //         { y: 299, label: "Great Britain" },
-  //         { y: 270, label: "Germany" },
-  //         { y: 165, label: "Russia" },
-  //         { y: 896, label: "USA" },
-  //       ],
-  //     },
-  //     {
-  //       type: "bar",
-  //       showInLegend: true,
-  //       name: "Bronze",
-  //       color: "#A57164",
-  //       dataPoints: [
-  //         { y: 236, label: "Italy" },
-  //         { y: 172, label: "China" },
-  //         { y: 309, label: "France" },
-  //         { y: 302, label: "Great Britain" },
-  //         { y: 285, label: "Germany" },
-  //         { y: 188, label: "Russia" },
-  //         { y: 788, label: "USA" },
+  //         { y: 313, label: "Dhaka City" },
+  //         { y: 22, label: "Dhaka(District)" },
+  //         { y: 23, label: "Gazipur" },
+  //         { y: 10, label: "Kishoreganj" },
+  //         { y: 19, label: "Madaripur" },
+  //         { y: 5, label: "Manikganj" },
+  //         { y: 107, label: "Naraynganj" },
+  //         { y: 14, label: "Munshiganj" },
+  //         { y: 4, label: "Narshingdi" },
+  //         { y: 6, label: "Rajbari" },
+  //         { y: 2, label: "Tangail" },
+  //         { y: 1, label: "Shariotpur" },
+  //         { y: 3, label: "Gpalganj" },
+  //         { y: 12, label: "Chattagram" },
+  //         { y: 1, label: "Cox's bazar" },
+  //         { y: 9, label: "Cumilla" },
+  //         { y: 6, label: "B.Baria" },
+  //         { y: 6, label: "Chandpur" },
+  //         { y: 1, label: "Laksmipur" },
+  //         { y: 1, label: "Moulovi bazar" },
+  //         { y: 1, label: "Hobiganj" },
+  //         { y: 1, label: "Sylhet" },
+  //         { y: 2, label: "Rangpur" },
+  //         { y: 6, label: "Gaibandha" },
+  //         { y: 3, label: "Nilphamari" },
+  //         { y: 1, label: "Lalmonirhat" },
+  //         { y: 3, label: "Thakurgaon" },
+  //         { y: 1, label: "Chuadanga" },
+  //         { y: 5, label: "Mymensingh" },
+  //         { y: 2, label: "Sherpur" },
+  //         { y: 6, label: "Jamalpur" },
+  //         { y: 1, label: "Netrokona" },
+  //         { y: 3, label: "Barguna" },
+  //         { y: 1, label: "Potuakhali" },
+  //         { y: 3, label: "Jhalokathi" },
   //       ],
   //     },
   //   ],
@@ -271,37 +234,3 @@ function explodePie(e) {
   }
   e.chart4.render();
 }
-
-// function toolTipFormatter(e) {
-//   var str = "";
-//   var total = 0;
-//   var str3;
-//   var str2;
-//   for (var i = 0; i < e.entries.length; i++) {
-//     var str1 =
-//       '<span style= "color:' +
-//       e.entries[i].dataSeries.color +
-//       '">' +
-//       e.entries[i].dataSeries.name +
-//       "</span>: <strong>" +
-//       e.entries[i].dataPoint.y +
-//       "</strong> <br/>";
-//     total = e.entries[i].dataPoint.y + total;
-//     str = str.concat(str1);
-//   }
-//   str2 = "<strong>" + e.entries[0].dataPoint.label + "</strong> <br/>";
-//   str3 =
-//     '<span style = "color:Tomato">Total: </span><strong>' +
-//     total +
-//     "</strong><br/>";
-//   return str2.concat(str).concat(str3);
-// }
-
-// function toggleDataSeries(e) {
-//   if (typeof e.dataSeries.visible === "undefined" || e.dataSeries.visible) {
-//     e.dataSeries.visible = false;
-//   } else {
-//     e.dataSeries.visible = true;
-//   }
-//   chart4.render();
-// }
