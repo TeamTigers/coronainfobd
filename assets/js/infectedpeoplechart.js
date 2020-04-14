@@ -2,6 +2,7 @@ window.onload = function () {
   // covid progress chart with time
 
   var stack_chart = new CanvasJS.Chart("covid_progress", {
+    exportEnabled: true,
     animationEnabled: true,
     title: {
       text: "COVID-19 timeline in Bangladesh",
