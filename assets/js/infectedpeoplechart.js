@@ -109,24 +109,22 @@ window.onload = function () {
     title: {
       text: "Infected People in Division",
     },
-    legend: {
-      cursor: "pointer",
-      itemclick: explodePie,
+    axisY: {
+      title: "COVID-19 Positive",
     },
     data: [
       {
-        type: "pie",
-        showInLegend: true,
-        toolTipContent: "{name}: <strong>{y}</strong>",
-        indexLabel: "{name} - {y}",
+        type: "column",
+        toolTipContent: "<b>{label}</b>: {y}",
+        indexLabel: "{y}",
         dataPoints: [
-          { y: 529, name: "Dhaka", exploded: true },
-          { y: 35, name: "Chattagram" },
-          { y: 15, name: "Rangpur" },
-          { y: 14, name: "Mymensingh" },
-          { y: 3, name: "Sylhet" },
-          { y: 7, name: "Barishal" },
-          { y: 1, name: "Khulna" },
+          { y: 529, label: "Dhaka" },
+          { y: 35, label: "Chattagram" },
+          { y: 15, label: "Rangpur" },
+          { y: 14, label: "Mymensingh" },
+          { y: 3, label: "Sylhet" },
+          { y: 7, label: "Barishal" },
+          { y: 1, label: "Khulna" },
         ],
       },
     ],
@@ -138,7 +136,7 @@ window.onload = function () {
     exportEnabled: true,
     animationEnabled: true,
     title: {
-      text: "COVID-19 summary in percentage",
+      text: "Summary Percent(%) in BD",
     },
     legend: {
       cursor: "pointer",
