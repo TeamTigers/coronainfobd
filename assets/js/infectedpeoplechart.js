@@ -1,7 +1,7 @@
 window.onload = function () {
   // Infected people chart with time (line chart)
 
-  var chart = new CanvasJS.Chart("infectionWithDate", {
+  var infected_chart = new CanvasJS.Chart("infectionWithDate", {
     exportEnabled: true,
     animationEnabled: true,
     title: {
@@ -49,6 +49,7 @@ window.onload = function () {
           { x: new Date(2020, 03, 11), y: 58 },
           { x: new Date(2020, 03, 12), y: 139 },
           { x: new Date(2020, 03, 13), y: 182 },
+          { x: new Date(2020, 03, 14), y: 209 },
         ],
       },
     ],
@@ -56,7 +57,7 @@ window.onload = function () {
 
   // Dead people chart with time (spline chart)
 
-  var chart2 = new CanvasJS.Chart("deathWithDate", {
+  var death_chart = new CanvasJS.Chart("deathWithDate", {
     exportEnabled: true,
     animationEnabled: true,
     title: {
@@ -93,7 +94,8 @@ window.onload = function () {
           { x: new Date(2020, 03, 10), y: 6 },
           { x: new Date(2020, 03, 11), y: 3 },
           { x: new Date(2020, 03, 12), y: 4 },
-          { x: new Date(2020, 03, 12), y: 5 },
+          { x: new Date(2020, 03, 13), y: 5 },
+          { x: new Date(2020, 03, 14), y: 7 },
         ],
       },
     ],
@@ -101,7 +103,7 @@ window.onload = function () {
 
   // Infected disctrict (pie chart)
 
-  var chart3 = new CanvasJS.Chart("infectedDistrict", {
+  var district_chart = new CanvasJS.Chart("infectedDistrict", {
     exportEnabled: true,
     animationEnabled: true,
     title: {
@@ -130,7 +132,7 @@ window.onload = function () {
     ],
   });
 
-  var chart4 = new CanvasJS.Chart("info_percent", {
+  var percent_chart = new CanvasJS.Chart("info_percent", {
     theme: "light1",
     exportFileName: "Doughnut Chart",
     exportEnabled: true,
@@ -150,8 +152,8 @@ window.onload = function () {
         toolTipContent: "<b>{name}</b>: {y} (#percent%)",
         indexLabel: "{name} - #percent%",
         dataPoints: [
-          { y: 803, name: "Coronavirus cases" },
-          { y: 39, name: "Deaths" },
+          { y: 1012, name: "Coronavirus cases" },
+          { y: 46, name: "Deaths" },
           { y: 42, name: "Recovered" },
         ],
       },
@@ -217,10 +219,10 @@ window.onload = function () {
   //   ],
   // });
 
-  chart.render();
-  chart2.render();
-  chart3.render();
-  chart4.render();
+  infected_chart.render();
+  death_chart.render();
+  district_chart.render();
+  percent_chart.render();
 };
 
 function explodePie(e) {

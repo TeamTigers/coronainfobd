@@ -54,7 +54,7 @@ main {
 .onmouseRecovery {
   :hover {
     h6 {
-      color: #2e7d32;
+      color: rgb(7, 219, 95);
       font-weight: bold;
     }
   }
@@ -62,7 +62,7 @@ main {
 
 .chart-style {
   height: 376px;
-  max-width: 920px;
+  width: 100%;
   margin: 0px auto;
 }
 
@@ -187,7 +187,7 @@ h3 {
 }
 
 .recoveryCard {
-  color: #2e7d32;
+  color: rgb(7, 219, 95);
   display: inline;
 }
 
