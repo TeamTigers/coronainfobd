@@ -39,8 +39,7 @@ main {
 
 .chart-style {
   height: 376px;
-  width: 100%;
-  margin: 0px auto;
+  width: auto;
 }
 
 .tContributor {
