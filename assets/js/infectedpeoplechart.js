@@ -1,29 +1,33 @@
 window.onload = function () {
   // covid progress chart with time
+
   var stack_chart = new CanvasJS.Chart("covid_progress", {
     animationEnabled: true,
     title: {
       text: "COVID-19 timeline in Bangladesh",
     },
+    axisX: {
+      valueFormatString: "DD MMM",
+    },
     axisY: {
       title: "Number of People",
-      includeZero: false,
     },
-    axisX: {
-      title: "Timelapse after first positive case",
-      valueFormatString: "DD MMM",
+    legend: {
+      verticalAlign: "top",
+      horizontalAlign: "right",
+      dockInsidePlotArea: true,
     },
     toolTip: {
       shared: true,
     },
     data: [
       {
-        type: "stackedArea",
+        name: "Infected",
         showInLegend: true,
-        xValueFormatString: "DD MMM",
-        toolTipContent:
-          '<span style="color:#4F81BC"><strong>{name}: </strong></span> {y}',
-        name: "Corona positive",
+        legendMarkerType: "circle",
+        type: "area",
+        color: "#64b5f6",
+        markerSize: 0,
         dataPoints: [
           { x: new Date(2020, 2, 8), y: 3 },
           { x: new Date(2020, 2, 9), y: 3 },
@@ -66,12 +70,12 @@ window.onload = function () {
         ],
       },
       {
-        type: "stackedArea",
-        name: "Death",
-        xValueFormatString: "DD MMM",
-        toolTipContent:
-          '<span style="color:#C0504E"><strong>{name}: </strong></span> {y}',
+        name: "Deaths",
         showInLegend: true,
+        legendMarkerType: "circle",
+        type: "area",
+        color: "#d50000",
+        markerSize: 0,
         dataPoints: [
           { x: new Date(2020, 2, 8), y: 0 },
           { x: new Date(2020, 2, 9), y: 0 },
@@ -114,12 +118,12 @@ window.onload = function () {
         ],
       },
       {
-        type: "stackedArea",
         name: "Recovered",
-        xValueFormatString: "DD MMM",
-        toolTipContent:
-          '<span style="color:#C0504E"><strong>{name}: </strong></span> {y}<br><b>Date:<b> {x}',
         showInLegend: true,
+        legendMarkerType: "circle",
+        type: "area",
+        color: "#43a047",
+        markerSize: 0,
         dataPoints: [
           { x: new Date(2020, 2, 8), y: 0 },
           { x: new Date(2020, 2, 9), y: 0 },
@@ -183,7 +187,7 @@ window.onload = function () {
     },
     data: [
       {
-        type: "line",
+        type: "spline",
         xValueFormatString: "DD MMM",
         color: "#0288d1",
         dataPoints: [
