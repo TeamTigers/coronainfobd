@@ -258,3 +258,30 @@ function setDeath_chart(covid_Deaths_Daily) {
   death_chart.render();
 } 
 
+// Infected people chart with time (line chart)
+function setInfected_chart(covid_Positive_Daily) {
+  var infected_chart = new CanvasJS.Chart("infectionWithDate", {
+    exportEnabled: true,
+    animationEnabled: true,
+    title: {
+      text: "COVID-19 positive cases in time",
+    },
+    axisX: {
+      title: "Date",
+      valueFormatString: "DD MMM",
+    },
+    axisY: {
+      title: "Number of People",
+      includeZero: false,
+    },
+    data: [
+      {
+        type: "spline",
+        xValueFormatString: "DD MMM",
+        color: "#0288d1",
+        dataPoints: covid_Positive_Daily,
+      },
+    ],
+  });
+  infected_chart.render();
+}
