@@ -1,16 +1,33 @@
 $(function () {
   let baseApi = "https://coronavirus-19-api.herokuapp.com";
-
-  // TODO: Need to find/build a real API for this case
-  let foreignResidents = {
-    italy: 8,
-    usa: 2,
-    india: 1,
-    bahrain: 1,
-    kuwait: 1,
-    germany: 1,
-  };
   hideElementsTillResponse();
+
+  $.get(baseApi.concat("/countries/world"), function () {})
+  .done(function (response) {
+    setContentsOverWorldCard(response);
+  })
+  .fail(function () {
+    showToast("Something went wrong!");
+  })
+  .always(function () {
+    fetchBangladeshiData(baseApi);
+  });
+});
+
+function hideElementsTillResponse() {
+  $("main").hide();
+}
+
+function setContentsOverWorldCard(data) {
+  $("#worldInfected").text(data.cases),
+  $("#worldDeath").text(data.deaths),
+  $("#worldRecovered").text(data.recovered);
+}
+
+function fetchBangladeshiData(baseApi) {
+  // TODO: Need to find/build a real API for this case
+  let foreignResidents = { italy: 8, usa: 2, india: 1, bahrain: 1, kuwait: 1, germany: 1, };
+  
   // Communication with API
   $.get(baseApi.concat("/countries/bangladesh"), function () {})
     .done(function (response) {
@@ -35,10 +52,6 @@ $(function () {
       $(".progress").hide();
       numberCounter();
     });
-});
-
-function hideElementsTillResponse() {
-  $("main").hide();
 }
 
 function numberCounter() {
