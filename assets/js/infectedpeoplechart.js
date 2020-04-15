@@ -60,14 +60,14 @@ window.onload = function () {
     .fail(function () {
       showToast("Something went wrong!");
     })
-    .always(function(){
+    .always(function () {
       showChartsAfterResponse();
     });
-    
 
   // Infected disctrict (pie chart)
 
   let district_chart = new CanvasJS.Chart("infectedDistrict", {
+    theme: "light2",
     exportEnabled: true,
     animationEnabled: true,
     title: {
@@ -127,6 +127,8 @@ function setCovid_progress(
   covid_Recovered_Array
 ) {
   let stack_chart = new CanvasJS.Chart("covid_progress", {
+    theme: "light2",
+    zoomEnabled: true,
     exportEnabled: true,
     animationEnabled: true,
     title: {
@@ -150,7 +152,7 @@ function setCovid_progress(
       {
         name: "Infected",
         showInLegend: true,
-        legendMarkerType: "circle",
+        legendMarkerType: "square",
         type: "line",
         color: "#0d47a1",
         markerSize: 0,
@@ -182,7 +184,7 @@ function setCovid_progress(
 // percent_chart
 function setPercent_chart(toal_Positive, total_Deaths, total_Recovered) {
   let percent_chart = new CanvasJS.Chart("info_percent", {
-    theme: "light1",
+    theme: "light2",
     exportFileName: "Doughnut Chart",
     exportEnabled: true,
     animationEnabled: true,
@@ -214,6 +216,7 @@ function setPercent_chart(toal_Positive, total_Deaths, total_Recovered) {
 // Dead people chart with time (spline chart)
 function setDeath_chart(covid_Deaths_Daily) {
   let death_chart = new CanvasJS.Chart("deathWithDate", {
+    theme: "light2",
     exportEnabled: true,
     animationEnabled: true,
     title: {
@@ -244,6 +247,7 @@ function setDeath_chart(covid_Deaths_Daily) {
 // Infected people chart with time (line chart)
 function setInfected_chart(covid_Positive_Daily) {
   let infected_chart = new CanvasJS.Chart("infectionWithDate", {
+    theme: "light2",
     exportEnabled: true,
     animationEnabled: true,
     title: {
@@ -260,6 +264,7 @@ function setInfected_chart(covid_Positive_Daily) {
     data: [
       {
         type: "column",
+
         xValueFormatString: "DD MMM",
         color: "#0288d1",
         dataPoints: covid_Positive_Daily,
