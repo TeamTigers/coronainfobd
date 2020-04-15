@@ -48,6 +48,15 @@ Of course you can. It is an open source project. If you want to contribute with 
 - Clone it in your local and do the changes you want.
 - Make a PR with proper documentation of what you did as they say _Lack of proper documentation is becoming a problem for acceptence_ :wink:
 
+## Contributor
+
+Contributors who have worked/ working hard to keep this application up to date are - 
+
+- [Shunjid Rahman Showrov](https://github.com/shunjid)
+- [Shah Fahad Hossen](https://github.com/fahad1997)
+- [Jinnatul Islam Morol](https://github.com/jinnatul)
+- [Zubayer Himel](https://github.com/zubayerhimel)
+
 ## License and copyright
 
 © TeamTigers Licensed under the [GPL License](LICENSE) 
