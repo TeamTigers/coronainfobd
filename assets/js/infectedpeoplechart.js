@@ -227,3 +227,34 @@ function setPercent_chart(toal_Positive, total_Deaths, total_Recovered) {
   });
   percent_chart.render();
 }
+
+// Dead people chart with time (spline chart)
+function setDeath_chart(covid_Deaths_Daily) {
+  var death_chart = new CanvasJS.Chart("deathWithDate", {
+    exportEnabled: true,
+    animationEnabled: true,
+    title: {
+      text: "COVID-19 death cases in time",
+      color: "#de4536",
+    },
+    axisY: {
+      title: "Number of death",
+      includeZero: false,
+    },
+    axisX: {
+      title: "Date",
+      valueFormatString: "DD MMM",
+    },
+    data: [
+      {
+        yValueFormatString: "#,Death ### ",
+        xValueFormatString: "DD MMM",
+        type: "spline",
+        color: "#de4536",
+        dataPoints: covid_Deaths_Daily,
+      },
+    ],
+  });
+  death_chart.render();
+} 
+
