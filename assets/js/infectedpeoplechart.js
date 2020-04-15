@@ -1,4 +1,41 @@
 window.onload = function () {
+
+  let apiURL = "https://pomber.github.io/covid19/timeseries.json";
+  
+  let covid_Infected_Array = [];
+  let covid_Deaths_Array = [];
+  let covid_Recovered_Array = [];
+  let covid_Deaths_Daily = [];
+  let covid_Positive_Daily = [];
+
+  $.get(apiURL, function() {})
+    .done(function(res) {
+      let sizeResponse = res["Bangladesh"].length;
+      for (let index = 46; index < sizeResponse; index++) {
+        // Area chart Data
+        covid_Infected_Array.push({ x: new Date(res["Bangladesh"][index]["date"]), y: res["Bangladesh"][index]["confirmed"]});
+        covid_Deaths_Array.push({ x: new Date(res["Bangladesh"][index]["date"]), y: res["Bangladesh"][index]["deaths"]});
+        covid_Recovered_Array.push({ x: new Date(res["Bangladesh"][index]["date"]), y: res["Bangladesh"][index]["recovered"]});
+
+        // Daily deaths & positive cases
+        let death_Diff = res["Bangladesh"][index]["deaths"] - res["Bangladesh"][index - 1]["deaths"];
+        covid_Deaths_Daily.push({ x: new Date(res["Bangladesh"][index]["date"]), y: death_Diff });
+
+        let positive_Diff = res["Bangladesh"][index]["confirmed"] - res["Bangladesh"][index - 1]["confirmed"];
+        covid_Positive_Daily.push({ x: new Date(res["Bangladesh"][index]["date"]), y: positive_Diff });
+      }
+      setCovid_progress(covid_Infected_Array, covid_Deaths_Array, covid_Recovered_Array);
+      setPercent_chart(
+        res["Bangladesh"][sizeResponse - 1]["confirmed"], 
+        res["Bangladesh"][sizeResponse - 1]["deaths"], 
+        res["Bangladesh"][sizeResponse - 1]["recovered"]);
+      setDeath_chart(covid_Deaths_Daily);
+      setInfected_chart(covid_Positive_Daily);
+    })
+    .fail(function () {
+      showToast("Something went wrong!");
+    })
+    
   // covid progress chart with time
 
   var stack_chart = new CanvasJS.Chart("covid_progress", {
