@@ -7,6 +7,8 @@ window.onload = function () {
   let covid_Deaths_Daily = [];
   let covid_Positive_Daily = [];
 
+  hideChartsTillResponse();
+
   $.get(apiURL, function () {})
     .done(function (res) {
       let sizeResponse = res["Bangladesh"].length;
@@ -57,11 +59,15 @@ window.onload = function () {
     })
     .fail(function () {
       showToast("Something went wrong!");
+    })
+    .always(function(){
+      showChartsAfterResponse();
     });
+    
 
   // Infected disctrict (pie chart)
 
-  var district_chart = new CanvasJS.Chart("infectedDistrict", {
+  let district_chart = new CanvasJS.Chart("infectedDistrict", {
     exportEnabled: true,
     animationEnabled: true,
     title: {
@@ -92,6 +98,16 @@ window.onload = function () {
   district_chart.render();
 };
 
+function hideChartsTillResponse() {
+  $("#analyticsPreloader").show();
+  $("#analyticsContent").hide();
+}
+
+function showChartsAfterResponse() {
+  $("#analyticsPreloader").hide();
+  $("#analyticsContent").show();
+}
+
 function explodePie(e) {
   if (
     typeof e.dataSeries.dataPoints[e.dataPointIndex].exploded === "undefined" ||
@@ -110,7 +126,7 @@ function setCovid_progress(
   covid_Deaths_Array,
   covid_Recovered_Array
 ) {
-  var stack_chart = new CanvasJS.Chart("covid_progress", {
+  let stack_chart = new CanvasJS.Chart("covid_progress", {
     exportEnabled: true,
     animationEnabled: true,
     title: {
@@ -165,7 +181,7 @@ function setCovid_progress(
 
 // percent_chart
 function setPercent_chart(toal_Positive, total_Deaths, total_Recovered) {
-  var percent_chart = new CanvasJS.Chart("info_percent", {
+  let percent_chart = new CanvasJS.Chart("info_percent", {
     theme: "light1",
     exportFileName: "Doughnut Chart",
     exportEnabled: true,
@@ -197,7 +213,7 @@ function setPercent_chart(toal_Positive, total_Deaths, total_Recovered) {
 
 // Dead people chart with time (spline chart)
 function setDeath_chart(covid_Deaths_Daily) {
-  var death_chart = new CanvasJS.Chart("deathWithDate", {
+  let death_chart = new CanvasJS.Chart("deathWithDate", {
     exportEnabled: true,
     animationEnabled: true,
     title: {
@@ -227,7 +243,7 @@ function setDeath_chart(covid_Deaths_Daily) {
 
 // Infected people chart with time (line chart)
 function setInfected_chart(covid_Positive_Daily) {
-  var infected_chart = new CanvasJS.Chart("infectionWithDate", {
+  let infected_chart = new CanvasJS.Chart("infectionWithDate", {
     exportEnabled: true,
     animationEnabled: true,
     title: {
