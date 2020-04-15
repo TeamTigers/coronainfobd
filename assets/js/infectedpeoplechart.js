@@ -194,4 +194,36 @@ function setCovid_progress(covid_Infected_Array, covid_Deaths_Array, covid_Recov
     ],
   });
   stack_chart.render();
+} 
+
+// percent_chart
+function setPercent_chart(toal_Positive, total_Deaths, total_Recovered) {
+  var percent_chart = new CanvasJS.Chart("info_percent", {
+    theme: "light1",
+    exportFileName: "Doughnut Chart",
+    exportEnabled: true,
+    animationEnabled: true,
+    title: {
+      text: "Summary Percent(%) in BD",
+    },
+    legend: {
+      cursor: "pointer",
+      itemclick: explodePie,
+    },
+    data: [
+      {
+        type: "doughnut",
+        innerRadius: 90,
+        showInLegend: true,
+        toolTipContent: "<b>{name}</b>: {y} (#percent%)",
+        indexLabel: "{name} - #percent%",
+        dataPoints: [
+          { y: toal_Positive, name: "Coronavirus cases" },
+          { y: total_Deaths, name: "Deaths" },
+          { y: total_Recovered, name: "Recovered" },
+        ],
+      },
+    ],
+  });
+  percent_chart.render();
 }
