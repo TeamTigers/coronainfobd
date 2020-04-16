@@ -17,6 +17,10 @@ main {
   display: none;
 }
 
+table th {
+  color: #26c6da;
+}
+
 .onmouseTest :hover h6 {
   color: #5151a5;
   font-weight: bold;
