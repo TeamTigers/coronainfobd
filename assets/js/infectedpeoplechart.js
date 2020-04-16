@@ -134,6 +134,11 @@ function setCovid_progress(
     title: {
       text: "COVID-19 timeline in Bangladesh",
     },
+    subtitles: [
+      {
+        text: "Try zooming and panning!",
+      },
+    ],
     axisX: {
       valueFormatString: "DD MMM",
     },
