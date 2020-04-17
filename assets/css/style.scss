@@ -20,7 +20,7 @@ header {
   }
 }
 
-main {
+#elements {
   display: none;
 }
 
@@ -66,6 +66,18 @@ table {
   }
 }
 
+.description {
+  margin-top: 2rem;
+  line-height: 2rem;
+  text-align: justify;
+}
+
+.virusImg {
+  float: left;
+  width: 200px;
+  height: 150px;
+}
+
 .chart-style {
   height: 400px;
   width: 100%;
@@ -91,6 +103,33 @@ table {
   color: #03a892;
 }
 
+.tabs {
+  display: flex;
+  justify-content: center;
+}
+
+.tabs .tab a {
+  color: #03a892af;
+}
+
+.tabs .tab a:focus,
+.tabs .tab a:focus.active {
+  background-color: transparent;
+  outline: 0;
+}
+
+.tabs .tab a.active,
+.tabs .tab a:hover {
+  background-color: transparent;
+  color: $secondayColor;
+}
+
+.tabs {
+  .indicator {
+    background-color: $secondayColor;
+  }
+}
+
 .headerText {
   font-size: 2rem;
 }
@@ -108,7 +147,10 @@ table {
 }
 
 .customContainer {
-  margin: 4rem;
+  margin-top: 2rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-bottom: 4rem;
 }
 
 .homeContainer {
