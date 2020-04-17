@@ -49,11 +49,6 @@ window.onload = function () {
         covid_Deaths_Array,
         covid_Recovered_Array
       );
-      setPercent_chart(
-        res["Bangladesh"][sizeResponse - 1]["confirmed"],
-        res["Bangladesh"][sizeResponse - 1]["deaths"],
-        res["Bangladesh"][sizeResponse - 1]["recovered"]
-      );
       setDeath_chart(covid_Deaths_Daily);
       setInfected_chart(covid_Positive_Daily);
     })
@@ -64,7 +59,7 @@ window.onload = function () {
       showChartsAfterResponse();
     });
 
-  // Infected disctrict (pie chart)
+  // Infected disctrict (column chart)
 
   let district_chart = new CanvasJS.Chart("infectedDistrict", {
     theme: "light2",
@@ -81,13 +76,14 @@ window.onload = function () {
         type: "column",
         toolTipContent: "<b>{label}</b>: {y}",
         indexLabel: "{y}",
+        startAngle: 25,
         dataPoints: [
-          { y: 820, label: "Dhaka" },
-          { y: 50, label: "Chattagram" },
-          { y: 19, label: "Rangpur" },
-          { y: 21, label: "Mymensingh" },
-          { y: 6, label: "Sylhet" },
-          { y: 16, label: "Barishal" },
+          { y: 1381, label: "Dhaka" },
+          { y: 69, label: "Chattagram" },
+          { y: 36, label: "Rangpur" },
+          { y: 32, label: "Mymensingh" },
+          { y: 25, label: "Barishal" },
+          { y: 7, label: "Sylhet" },
           { y: 3, label: "Khulna" },
           { y: 3, label: "Rajshahi" },
         ],
@@ -117,7 +113,7 @@ function explodePie(e) {
   } else {
     e.dataSeries.dataPoints[e.dataPointIndex].exploded = false;
   }
-  e.chart4.render();
+  e.percent_chart.render();
 }
 
 // covid_progress
@@ -145,19 +141,20 @@ function setCovid_progress(
     axisY: {
       title: "Number of People",
     },
-    legend: {
-      verticalAlign: "top",
-      horizontalAlign: "right",
-      dockInsidePlotArea: true,
-    },
     toolTip: {
       shared: true,
+    },
+    legend: {
+      cursor: "pointer",
+      verticalAlign: "top",
+      horizontalAlign: "center",
+      dockInsidePlotArea: true,
+      itemclick: toogleDataSeries,
     },
     data: [
       {
         name: "Infected",
         showInLegend: true,
-        legendMarkerType: "square",
         type: "line",
         color: "#2664c2",
         markerSize: 0,
@@ -183,40 +180,47 @@ function setCovid_progress(
       },
     ],
   });
+
   stack_chart.render();
+
+  function toogleDataSeries(e) {
+    if (typeof e.dataSeries.visible === "undefined" || e.dataSeries.visible) {
+      e.dataSeries.visible = false;
+    } else {
+      e.dataSeries.visible = true;
+    }
+    stack_chart.render();
+  }
 }
 
 // percent_chart
-function setPercent_chart(toal_Positive, total_Deaths, total_Recovered) {
-  let percent_chart = new CanvasJS.Chart("info_percent", {
-    theme: "light2",
-    exportFileName: "Doughnut Chart",
-    exportEnabled: true,
-    animationEnabled: true,
-    title: {
-      text: "Summary Percent(%) in BD",
+
+let percent_chart = new CanvasJS.Chart("info_percent", {
+  theme: "light2",
+  exportEnabled: true,
+  animationEnabled: true,
+  title: {
+    text: "Quarantine information of BD",
+  },
+  legend: {
+    cursor: "pointer",
+    itemclick: explodePie,
+  },
+  data: [
+    {
+      type: "pie",
+      startAngle: 240,
+      showInLegend: true,
+      indexLabel: "{name} - #percent%",
+      toolTipContent: "<b>{name}:</b> {y} (#percent%)",
+      dataPoints: [
+        { y: 66505, name: "Released from quarantine" },
+        { y: 36574, name: "In quarantine" },
+      ],
     },
-    legend: {
-      cursor: "pointer",
-      itemclick: explodePie,
-    },
-    data: [
-      {
-        type: "doughnut",
-        innerRadius: 90,
-        showInLegend: true,
-        toolTipContent: "<b>{name}</b>: {y} (#percent%)",
-        indexLabel: "{name} - #percent%",
-        dataPoints: [
-          { y: toal_Positive, name: "Coronavirus cases" },
-          { y: total_Deaths, name: "Deaths" },
-          { y: total_Recovered, name: "Recovered" },
-        ],
-      },
-    ],
-  });
-  percent_chart.render();
-}
+  ],
+});
+percent_chart.render();
 
 // Dead people chart with time (spline chart)
 function setDeath_chart(covid_Deaths_Daily) {
