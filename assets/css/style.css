@@ -42,15 +42,14 @@ table th {
 }
 
 .description {
-  margin-top: 2rem;
+  margin: 1rem;
   line-height: 2rem;
   text-align: justify;
 }
 
 .virusImg {
-  margin-right: 3rem;
-  margin-bottom: 3rem;
-  float: left;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
   width: 200px;
   height: 150px;
 }
