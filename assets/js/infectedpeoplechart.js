@@ -9,7 +9,7 @@ window.onload = function () {
 
   hideChartsTillResponse();
 
-  $.get(apiURL, function () {})
+  $.get(apiURL, function () { })
     .done(function (res) {
       let sizeResponse = res["Bangladesh"].length;
       for (let index = 46; index < sizeResponse; index++) {
@@ -78,14 +78,14 @@ window.onload = function () {
         indexLabel: "{y}",
         startAngle: 25,
         dataPoints: [
-          { y: 1381, label: "Dhaka" },
-          { y: 69, label: "Chattagram" },
-          { y: 36, label: "Rangpur" },
-          { y: 32, label: "Mymensingh" },
-          { y: 25, label: "Barishal" },
+          { y: 1370, label: "Dhaka" },
+          { y: 92, label: "Chattagram" },
+          { y: 37, label: "Rangpur" },
+          { y: 42, label: "Mymensingh" },
           { y: 7, label: "Sylhet" },
-          { y: 3, label: "Khulna" },
-          { y: 3, label: "Rajshahi" },
+          { y: 31, label: "Barishal" },
+          { y: 4, label: "Khulna" },
+          { y: 8, label: "Rajshahi" },
         ],
       },
     ],
