@@ -13,7 +13,7 @@ header li :hover a :active {
   color: #ffffff;
 }
 
-#elements {
+main {
   display: none;
 }
 
@@ -63,7 +63,6 @@ table th {
 
 .subTitle {
   font-family: "Google Sans", sans-serif;
-  color: #424242;
   margin-left: 1rem;
   margin-bottom: 1.5rem;
 }

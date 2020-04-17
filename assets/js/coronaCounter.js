@@ -26,14 +26,14 @@ function setContentsOverWorldCard(data) {
 
 function fetchBangladeshiData(baseApi) {
   // TODO: Need to find/build a real API for this case
-  let foreignResidents = {
-    italy: 8,
-    usa: 2,
-    india: 1,
-    bahrain: 1,
-    kuwait: 1,
-    germany: 1,
-  };
+  // let foreignResidents = {
+  //   italy: 8,
+  //   usa: 2,
+  //   india: 1,
+  //   bahrain: 1,
+  //   kuwait: 1,
+  //   germany: 1,
+  // };
 
   // Communication with API
   $.get(baseApi.concat("/countries/bangladesh"), function () {})
@@ -50,8 +50,8 @@ function fetchBangladeshiData(baseApi) {
         response.critical,
         response.testsPerOneMillion,
         response.casesPerOneMillion,
-        response.deathsPerOneMillion,
-        foreignResidents
+        response.deathsPerOneMillion
+        // foreignResidents
       );
       $("main").show();
     })
