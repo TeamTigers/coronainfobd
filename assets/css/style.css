@@ -78,15 +78,6 @@ table th {
   color: #03a892;
 }
 
-.tabs {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
 .tabs .tab a {
   color: #03a892af;
 }

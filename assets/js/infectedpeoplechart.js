@@ -9,7 +9,7 @@ window.onload = function () {
 
   hideChartsTillResponse();
 
-  $.get(apiURL, function () { })
+  $.get(apiURL, function () {})
     .done(function (res) {
       let sizeResponse = res["Bangladesh"].length;
       for (let index = 46; index < sizeResponse; index++) {
@@ -82,10 +82,10 @@ window.onload = function () {
           { y: 92, label: "Chattagram" },
           { y: 37, label: "Rangpur" },
           { y: 42, label: "Mymensingh" },
-          { y: 7, label: "Sylhet" },
           { y: 31, label: "Barishal" },
-          { y: 4, label: "Khulna" },
           { y: 8, label: "Rajshahi" },
+          { y: 7, label: "Sylhet" },
+          { y: 6, label: "Khulna" },
         ],
       },
     ],
