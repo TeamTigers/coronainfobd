@@ -269,10 +269,9 @@
                     <tr>
                       <th>Total Cases</th>
                       <th>Active Cases</th>
-                      <th>Tests in last 24 hours</th>
-                      <th>Cases in last 24 hours</th>
-                      <th>Deaths in last 24 hours</th>
-                      <th>Recovered in last 24 hours</th>
+                      <th>Today Cases</th>
+                      <th>Today Deaths</th>
+                      <th>Critical</th>
                       <th>Tests Per One Million</th>
                       <th>Cases Per One Million</th>
                       <th>Deaths Per One Million</th>
@@ -284,14 +283,12 @@
                       <td id="td_total"></td>
                       <!-- active case -->
                       <td id="td_active"></td>
-                      <!-- today tests -->
-                      <td id="td_tests"></td>
                       <!-- today case -->
                       <td id="td_cases_today"></td>
                       <!-- today death -->
                       <td id="td_deaths"></td>
-                      <!-- recovered -->
-                      <td id="td_recovered"></td>
+                      <!-- critical -->
+                      <td id="td_critical"></td>
                       <!-- test_per_one_m -->
                       <td id="test_per_one_m"></td>
                       <!-- case_per_one_m -->
@@ -379,28 +376,28 @@
               </div>
             </div>
           </div>
-          <div class="col s12 l6 m12">
+          <div class="col s12 l6 m6">
             <div class="card round">
               <div class="card-content">
                 <div class="chart chart-style" id="infectionWithDate"></div>
               </div>
             </div>
           </div>
-          <div class="col s12 l6 m12">
+          <div class="col s12 l6 m6">
             <div class="card round">
               <div class="card-content">
                 <div class="chart chart-style" id="deathWithDate"></div>
               </div>
             </div>
           </div>
-          <div class="col s12 l6 m12">
+          <div class="col s12 l6 m6">
             <div class="card round">
               <div class="card-content">
                 <div class="chart chart-style" id="infectedDistrict"></div>
               </div>
             </div>
           </div>
-          <div class="col s12 l6 m12">
+          <div class="col s12 l6 m6">
             <div class="card round">
               <div class="card-content">
                 <div class="chart chart-style" id="info_percent"></div>

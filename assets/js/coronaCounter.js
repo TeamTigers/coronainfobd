@@ -59,22 +59,6 @@ function fetchBangladeshiData(baseApi) {
       showToast("Something went wrong!");
     })
     .always(function () {
-      moreInfoAPI();
-    });
-}
-
-function moreInfoAPI() {
-  $.get("https://fludeathbd.com/coronabd/api/latest", function () {})
-    .done(function (response) {
-      $("#td_cases_today").text(response.confirmed_last);
-      $("#td_deaths").text(response.death_last);
-      $("#td_recovered").text(response.recover_last);
-      $("#td_tests").text(response.test_last);
-    })
-    .fail(function () {
-      showToast("Something went wrong!");
-    })
-    .always(function () {
       $(".progress").hide();
       numberCounter();
     });
@@ -111,9 +95,6 @@ function showToast(message) {
   });
 }
 
-let prevTests = 0,
-  newTests = 0;
-
 function constructData(
   confirmed,
   dead,
@@ -135,6 +116,8 @@ function constructData(
   // table data constructor
   $("#td_total").text(confirmed);
   $("#td_active").text(active);
+  $("#td_cases_today").text(today_case);
+  $("#td_deaths").text(today_death);
   $("#td_critical").text(critical);
   $("#test_per_one_m").text(test_per_one_m);
   $("#case_per_one_m").text(case_per_one_m);
