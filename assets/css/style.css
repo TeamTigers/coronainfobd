@@ -18,7 +18,7 @@ main {
 }
 
 table th {
-  color: #26c6da;
+  color: #2692da;
 }
 
 .onmouseTest :hover h6 {
@@ -39,6 +39,43 @@ table th {
 .onmouseRecovery :hover h6 {
   color: #07db5f;
   font-weight: bold;
+}
+
+#cpa-logo {
+  font-family: "Google Sans", sans-serif;
+  font-size: 25px;
+  margin-top: 2px;
+  margin-left: 10px;
+  color: #ffffff;
+}
+
+.contextTextTheme {
+  color: #03a892;
+}
+
+.progressbarTheme {
+  color: #026b5d;
+}
+
+#scrollTop {
+  display: none;
+}
+
+.headerText {
+  font-size: 2rem;
+}
+
+.customContainer {
+  margin-top: 2rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-bottom: 4rem;
+}
+
+.homeContainer {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-top: 1rem;
 }
 
 .description {
@@ -66,18 +103,6 @@ table th {
   margin-bottom: 1.5rem;
 }
 
-#cpa-logo {
-  font-family: "Google Sans", sans-serif;
-  font-size: 25px;
-  margin-top: 2px;
-  margin-left: 10px;
-  color: #ffffff;
-}
-
-.contextTextTheme {
-  color: #03a892;
-}
-
 .tabs .tab a {
   color: #03a892af;
 }
@@ -98,33 +123,8 @@ table th {
   background-color: #02a892;
 }
 
-.headerText {
-  font-size: 2rem;
-}
-
-.progressbarTheme {
-  color: #026b5d;
-}
-
-#scrollTop {
-  display: none;
-}
-
 .gsans {
   font-family: "Google Sans", sans-serif;
-}
-
-.customContainer {
-  margin-top: 2rem;
-  margin-left: 4rem;
-  margin-right: 4rem;
-  margin-bottom: 4rem;
-}
-
-.homeContainer {
-  margin-left: 4rem;
-  margin-right: 4rem;
-  margin-top: 1rem;
 }
 
 h3 {
@@ -223,94 +223,6 @@ ul .faqList {
 
 .collection-item a {
   text-decoration: underline;
-}
-
-/*=================================================================================
-        Header
-    ====================================================================================*/
-/*----------------------------------------
-        Page Header
-    ------------------------------------------*/
-h1.logo-wrapper {
-  margin: 0px 0px;
-}
-
-h1 span.logo-text {
-  display: none;
-}
-
-header .brand-logo {
-  margin: 1px 0px;
-  padding: 0 20px;
-}
-
-header .brand-logo img {
-  width: 172px;
-}
-
-.menu-sidebar-collapse {
-  margin: 0 10px;
-}
-
-.menu-sidebar-collapse i {
-  line-height: 36px !important;
-}
-
-@media only screen and (max-width: 992px) {
-  nav .nav-wrapper {
-    text-align: center;
-  }
-  nav .nav-wrapper a.page-title {
-    font-size: 36px;
-  }
-}
-
-/*=================================================================================
-        Sidebar
-    ====================================================================================*/
-/*----------------------------------------
-        Sidebar Main Menu 
-    ------------------------------------------*/
-nav ul li.no-hover:hover {
-  background: none;
-}
-
-ul.side-nav.leftside-navigation {
-  top: 64px;
-}
-
-@media only screen and (max-width: 992px) {
-  ul.side-nav.leftside-navigation {
-    top: 56px;
-  }
-}
-
-ul.side-nav.leftside-navigation hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #e0e0e0;
-  margin: 1em 0;
-  padding: 0;
-}
-
-.side-nav a {
-  line-height: 42px;
-  height: 42px;
-}
-
-ul.side-nav li {
-  padding: 0;
-}
-
-ul.side-nav .collapsible-header {
-  margin: 0;
-}
-
-.sidebar-collapse {
-  position: absolute;
-  left: -170px;
-  top: -45px;
 }
 
 /* Smartphones (portrait and landscape) ----------- */
