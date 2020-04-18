@@ -104,18 +104,6 @@ function showChartsAfterResponse() {
   $("#analyticsContent").show();
 }
 
-function explodePie(e) {
-  if (
-    typeof e.dataSeries.dataPoints[e.dataPointIndex].exploded === "undefined" ||
-    !e.dataSeries.dataPoints[e.dataPointIndex].exploded
-  ) {
-    e.dataSeries.dataPoints[e.dataPointIndex].exploded = true;
-  } else {
-    e.dataSeries.dataPoints[e.dataPointIndex].exploded = false;
-  }
-  e.percent_chart.render();
-}
-
 // covid_progress
 function setCovid_progress(
   covid_Infected_Array,
@@ -204,7 +192,6 @@ let percent_chart = new CanvasJS.Chart("info_percent", {
   },
   legend: {
     cursor: "pointer",
-    itemclick: explodePie,
   },
   data: [
     {
