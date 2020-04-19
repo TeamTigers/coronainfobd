@@ -201,8 +201,8 @@ let percent_chart = new CanvasJS.Chart("info_percent", {
       indexLabel: "{name} - #percent%",
       toolTipContent: "<b>{name}:</b> {y} (#percent%)",
       dataPoints: [
-        { y: 66505, name: "Released from quarantine" },
-        { y: 36574, name: "In quarantine" },
+        { y: 71393, name: "Released from quarantine" },
+        { y: 48371, name: "In quarantine" },
       ],
     },
   ],
