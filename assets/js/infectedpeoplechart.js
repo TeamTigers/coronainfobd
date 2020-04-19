@@ -9,7 +9,7 @@ window.onload = function () {
 
   hideChartsTillResponse();
 
-  $.get(apiURL, function () { })
+  $.get(apiURL, function () {})
     .done(function (res) {
       let sizeResponse = res["Bangladesh"].length;
       for (let index = 46; index < sizeResponse; index++) {
@@ -78,12 +78,12 @@ window.onload = function () {
         indexLabel: "{y}",
         startAngle: 25,
         dataPoints: [
-          { y: 1606, label: "Dhaka" },
-          { y: 97, label: "Chattagram" },
-          { y: 44, label: "Rangpur" },
-          { y: 59, label: "Mymensingh" },
-          { y: 36, label: "Barishal" },
-          { y: 8, label: "Rajshahi" },
+          { y: 1869, label: "Dhaka" },
+          { y: 105, label: "Chattagram" },
+          { y: 66, label: "Mymensingh" },
+          { y: 47, label: "Rangpur" },
+          { y: 41, label: "Barishal" },
+          { y: 9, label: "Rajshahi" },
           { y: 7, label: "Sylhet" },
           { y: 6, label: "Khulna" },
         ],
@@ -181,7 +181,7 @@ function setCovid_progress(
   }
 }
 
-// percent_chart
+// quarantine pie chart
 
 let percent_chart = new CanvasJS.Chart("info_percent", {
   theme: "light2",
@@ -209,7 +209,7 @@ let percent_chart = new CanvasJS.Chart("info_percent", {
 });
 percent_chart.render();
 
-// Dead people chart with time (spline chart)
+// Dead people chart with time (column chart)
 function setDeath_chart(covid_Deaths_Daily) {
   let death_chart = new CanvasJS.Chart("deathWithDate", {
     theme: "light2",
@@ -240,7 +240,7 @@ function setDeath_chart(covid_Deaths_Daily) {
   death_chart.render();
 }
 
-// Infected people chart with time (line chart)
+// Infected people chart with time (column chart)
 function setInfected_chart(covid_Positive_Daily) {
   let infected_chart = new CanvasJS.Chart("infectionWithDate", {
     theme: "light2",
@@ -254,7 +254,7 @@ function setInfected_chart(covid_Positive_Daily) {
       valueFormatString: "DD MMM",
     },
     axisY: {
-      title: "Number of People",
+      title: "Number of people",
       includeZero: false,
     },
     data: [

@@ -179,7 +179,12 @@ h3 {
 
 .scrollable {
   width: auto;
-  height: 150rem;
+  height: 172rem;
+  overflow-y: scroll;
+}
+.scrollableTable {
+  width: auto;
+  height: 50rem;
   overflow-y: scroll;
 }
 

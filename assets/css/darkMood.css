@@ -1,6 +1,10 @@
 .dark {
   background-color: #263238;
-  color: rgba(255, 253, 253, 0.678);
+  color: rgba(255, 253, 253, 0.705);
+}
+
+.dark input {
+  color: white;
 }
 
 .dark .card {

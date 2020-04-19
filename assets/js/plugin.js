@@ -5,6 +5,13 @@ $(function () {
   $(".slider").slider();
   $(".collapsible").collapsible();
 
+  $("#search").on("keyup", function () {
+    var value = $(this).val().toLowerCase();
+    $("#locationTotal tr").filter(function () {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+    });
+  });
+
   var scrollLink = $(".scroll");
 
   // Smooth scrolling

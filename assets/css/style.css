@@ -159,6 +159,12 @@ h3 {
   overflow-y: scroll;
 }
 
+.scrollableTable {
+  width: auto;
+  height: 50rem;
+  overflow-y: scroll;
+}
+
 #logo-icon {
   margin-bottom: -9px;
   margin-right: 6px;
