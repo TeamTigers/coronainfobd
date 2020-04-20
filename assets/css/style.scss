@@ -27,6 +27,11 @@ main {
 table {
   th {
     color: #2692da;
+    position: sticky;
+    top:0;
+    z-index:1;
+    border-top:0;
+    background: #ffffff;
   }
 }
 
