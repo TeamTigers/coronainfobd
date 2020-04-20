@@ -1,21 +1,39 @@
 $(function () {
   let apiUrl = "https://corona.lmao.ninja/v2/historical/bangladesh?";
+  
+  // EXP : Can be scaled days: More or, less
+  // TODO: Change the function's @secondDate 
   let query = `lastdays=${differenceFromMarch14()}`;
 
   $.get(apiUrl.concat(query), function () {}).done(function (response) {
+    let formattedList = [];
     let timeseries = response.timeline;
+    
+    // CONVERT: Keys of the response.timeline Object to an array
+    // as well as values too
     let dates = Object.keys(timeseries.cases);
     let affectedList = Object.values(timeseries.cases);
-    let formattedList = [];
+    
 
+    /*
+    ** EXP : Zingchart's required format => 
+           [
+               ["date(YYYY-MM-DD)", affectedPeople],
+               ["date(YYYY-MM-DD)", affectedPeople],
+               ["date(YYYY-MM-DD)", affectedPeople],
+           ]
+    */
     dates.forEach(function (eachDate, index) {
-      formattedList.push([filterDate(eachDate), affectedList[index]]);
+      // difference returns how many people were affected (today - yesterday)
+      const newlyAffected = affectedList[index]-affectedList[index-1]; 
+
+      formattedList.push([filterDate(eachDate), newlyAffected]);
     });
 
     zingchart.loadModules("calendar", function () {
       zingchart.render({
-        id: "affectedHeatMap",
-        data: constructAffectedHeatmap(formattedList),
+        id: "affectedHeatMap",  // id attribute of the division of chart
+        data: constructAffectedHeatmap(formattedList, 3, 5),
         height: 400,
         width: "100%",
       });
@@ -42,7 +60,7 @@ function filterDate(date) {
   return expectedDate;
 }
 
-function constructAffectedHeatmap(affectedHeatmapData) {
+function constructAffectedHeatmap(affectedHeatmapData, monthStart, monthEnd) {
   console.log(affectedHeatmapData);
   
   return (myConfig = {
@@ -52,8 +70,8 @@ function constructAffectedHeatmap(affectedHeatmapData) {
         text: "2020",
         visible: false,
       },
-      startMonth: 4,
-      endMonth: 5,
+      startMonth: monthStart,
+      endMonth: monthEnd,
       palette: ["none", "#f32160"],
       month: {
         item: {
