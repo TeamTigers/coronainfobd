@@ -15,288 +15,733 @@
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta property="og:image" content="assets/img/svg/title.png" />
-    <meta property="og:title" content="CoronaInfoBD  2020" />
-    <meta
-      property="og:description"
-      content="An application to get updated with corona virus affected in Bangladesh"
-    />
-    <title>CoronaInfoBD</title>
-    <link rel="icon" href="assets/img/svg/title.png" />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=El+Messiri&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Pacifico&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Google+Sans"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/materializecss.css" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/darkMood.css" />
-  </head>
 
-  <body>
-    <header>
-      <div class="navbar-fixed">
-        <nav class="nav-extended nav-fixed navTheme darken-2 z-depth-0">
-          <div class="nav-wrapper">
-            <a class="brand-logo gsans" id="cpa-logo" href="index.html"
-              ><i class="material-icons" id="logo-icon">ac_unit</i
-              >CoronaInfoBD</a
-            >
-            <a href="#" class="sidenav-trigger" data-target="mobile-nav">
-              <i class="material-icons">menu</i>
-            </a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-              <li class="active">
-                <a href="index.html">Home</a>
-              </li>
-              <li>
-                <a href="about_corona.html">About corona</a>
-              </li>
-              <li>
-                <a href="hotline.html">Emergency</a>
-              </li>
-              <li>
-                <a href="faq.html">FAQ</a>
-              </li>
-              <li>
-                <a href="advice_for_public.html">Advice for public</a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  onclick="darkMood()"
-                  class="tooltipped"
-                  ata-position="bottom"
-                  data-tooltip="Toggle Day/Night"
-                  ><i
-                    class="material-icons blue-grey-text text-lighten-4"
-                    id="moodIcon"
-                    >brightness_7</i
-                  ></a
-                >
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-      <ul class="sidenav" id="mobile-nav">
-        <li>
-          <a href="#" onclick="darkMood()"
-            >Day/Night mode<i
-              class="material-icons blue-grey-text text-lighten-4 right"
-              id="moodIcon"
-              >brightness_7</i
-            ></a
-          >
-        </li>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about_corona.html">About corona</a></li>
-        <li><a href="hotline.html">Emergency</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="advice_for_public.html">Advice for public</a></li>
-      </ul>
-      <div class="progress contextTextTheme">
-        <div class="indeterminate progressbarTheme"></div>
-      </div>
-    </header>
-    <main id="elemets">
-      <div class="fixed-action-btn">
-        <a
-          class="btn-floating btn-medium blue-grey darken-4 tooltipped"
-          data-position="left"
-          data-tooltip="Top"
-          id="scrollTop"
-          onclick="toTop()"
-        >
-          <i class="large material-icons">arrow_upward</i>
-        </a>
-      </div>
-      <!-- World summary card -->
-      <div class="customContainer">
-        <div class="row">
-          <h4
-            class="center-align gsans text-blue-grey text-darken-1 headerText"
-          >
-            COVID-19 in World
-          </h4>
-          <div class="col s12 m6 l4">
-            <div class="card round center-align">
-              <div class="card-content">
-                <div class="row">
-                  <div class="col s12 m6 l6">
-                    <img
-                      class="responsive-img bannerSvg"
-                      src="assets/img/svg/infected.svg"
-                      alt="infected"
-                    />
-                  </div>
-                  <div class="col s12 m6 l6">
-                    <span
-                      class="countNumber count gsans"
-                      style="color: rgb(0, 122, 204);"
-                      id="worldInfected"
-                      >1771549</span
-                    ><br />
-                    <span class="countName gsans">Coronavirus cases</span>
-                  </div>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta property="og:image" content="assets/img/svg/title.png" />
+  <meta property="og:title" content="CoronaInfoBD  2020" />
+  <meta property="og:description" content="An application to get updated with corona virus affected in Bangladesh" />
+  <title>CoronaInfoBD</title>
+  <link rel="icon" href="assets/img/svg/title.png" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=El+Messiri&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/materializecss.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/darkMood.css" />
+  <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="navbar-fixed">
+      <nav class="nav-extended nav-fixed navTheme darken-2 z-depth-0">
+        <div class="nav-wrapper">
+          <a class="brand-logo gsans" id="cpa-logo" href="index.html"><i class="material-icons"
+              id="logo-icon">ac_unit</i>CoronaInfoBD</a>
+          <a href="#" class="sidenav-trigger" data-target="mobile-nav">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li class="active">
+              <a href="index.html">Home</a>
+            </li>
+            <li>
+              <a href="about_corona.html">About corona</a>
+            </li>
+            <li>
+              <a href="hotline.html">Emergency</a>
+            </li>
+            <li>
+              <a href="faq.html">FAQ</a>
+            </li>
+            <li>
+              <a href="advice_for_public.html">Advice for public</a>
+            </li>
+            <li>
+              <a href="#" onclick="darkMood()" class="tooltipped" ata-position="bottom"
+                data-tooltip="Toggle Day/Night"><i class="material-icons blue-grey-text text-lighten-4"
+                  id="moodIcon">brightness_7</i></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <ul class="sidenav" id="mobile-nav">
+      <li>
+        <a href="#" onclick="darkMood()">Day/Night mode<i class="material-icons blue-grey-text text-lighten-4 right"
+            id="moodIcon">brightness_7</i></a>
+      </li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about_corona.html">About corona</a></li>
+      <li><a href="hotline.html">Emergency</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="advice_for_public.html">Advice for public</a></li>
+    </ul>
+    <div class="progress contextTextTheme">
+      <div class="indeterminate progressbarTheme"></div>
+    </div>
+  </header>
+  <main id="elemets">
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-medium blue-grey darken-4 tooltipped" data-position="left" data-tooltip="Top"
+        id="scrollTop" onclick="toTop()">
+        <i class="large material-icons">arrow_upward</i>
+      </a>
+    </div>
+    <!-- World summary card -->
+    <div class="customContainer">
+      <div class="row">
+        <h4 class="center-align gsans text-blue-grey text-darken-1 headerText">
+          COVID-19 in World
+        </h4>
+        <div class="col s12 m6 l4">
+          <div class="card round center-align">
+            <div class="card-content">
+              <div class="row">
+                <div class="col s12 m6 l6">
+                  <img class="responsive-img bannerSvg" src="assets/img/svg/infected.svg" alt="infected" />
                 </div>
-              </div>
-            </div>
-          </div>
-          <div class="col s12 m6 l4">
-            <div class="card round center-align">
-              <div class="card-content">
-                <div class="row">
-                  <div class="col s12 m6 l6">
-                    <img
-                      class="responsive-img bannerSvg"
-                      src="assets/img/svg/death.svg"
-                      alt="death"
-                    />
-                  </div>
-                  <div class="col s12 m6 l6">
-                    <span
-                      class="countNumber count gsans"
-                      style="color: rgba(235, 34, 44, 0.89);"
-                      id="worldDeath"
-                      >108333</span
-                    ><br />
-                    <span class="countName gsans">Deaths</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col s12 m6 l4">
-            <div class="card round center-align">
-              <div class="card-content">
-                <div class="row">
-                  <div class="col s12 m6 l6">
-                    <img
-                      class="responsive-img bannerSvg"
-                      src="assets/img/svg/recovered.svg"
-                      alt="recovered"
-                    />
-                  </div>
-                  <div class="col s12 m6 l6">
-                    <span
-                      class="countNumber count gsans"
-                      style="color: rgb(7, 219, 95);"
-                      id="worldRecovered"
-                      >401482</span
-                    ><br />
-                    <span class="countName gsans">Recovered</span>
-                  </div>
+                <div class="col s12 m6 l6">
+                  <span class="countNumber count gsans" style="color: rgb(0, 122, 204);"
+                    id="worldInfected">1771549</span><br />
+                  <span class="countName gsans">Coronavirus cases</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- Bangladesh summary card -->
-        <div class="row">
-          <h4
-            class="center-align gsans text-blue-grey text-darken-1 headerText"
-          >
-            COVID-19 in Bangladesh
-          </h4>
-          <div class="col s12 m6 l3">
-            <div class="card round center-align hoverable onmouseTest">
-              <div class="card-content">
-                <span class="testCard count gsans" id="numberOfTests"></span>
-                <h6 class="gsans">Total Tests</h6>
-              </div>
-            </div>
-          </div>
-          <div class="col s12 m6 l3">
-            <div class="card round center-align hoverable onmouseCase">
-              <div class="card-content">
-                <span
-                  class="caseCard count gsans"
-                  id="numberOfConfirmedCases"
-                ></span>
-                <h6 class="gsans">Coronavirus positive</h6>
-              </div>
-            </div>
-          </div>
-          <div class="col s12 m6 l3">
-            <div class="card round center-align hoverable onmouseDeath">
-              <div class="card-content">
-                <span class="deathCard count gsans" id="numberOfDeaths"></span>
-                <h6 class="gsans">Deaths</h6>
-              </div>
-            </div>
-          </div>
-          <div class="col s12 m6 l3">
-            <div class="card round center-align hoverable onmouseRecovery">
-              <div class="card-content">
-                <span
-                  class="recoveryCard count gsans"
-                  id="numberOfRecovery"
-                ></span>
-                <h6 class="gsans">Recovered</h6>
+        <div class="col s12 m6 l4">
+          <div class="card round center-align">
+            <div class="card-content">
+              <div class="row">
+                <div class="col s12 m6 l6">
+                  <img class="responsive-img bannerSvg" src="assets/img/svg/death.svg" alt="death" />
+                </div>
+                <div class="col s12 m6 l6">
+                  <span class="countNumber count gsans" style="color: rgba(235, 34, 44, 0.89);"
+                    id="worldDeath">108333</span><br />
+                  <span class="countName gsans">Deaths</span>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="col s12 m6 l4">
+          <div class="card round center-align">
+            <div class="card-content">
+              <div class="row">
+                <div class="col s12 m6 l6">
+                  <img class="responsive-img bannerSvg" src="assets/img/svg/recovered.svg" alt="recovered" />
+                </div>
+                <div class="col s12 m6 l6">
+                  <span class="countNumber count gsans" style="color: rgb(7, 219, 95);"
+                    id="worldRecovered">401482</span><br />
+                  <span class="countName gsans">Recovered</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-        <!-- More info table -->
-        <div class="row">
-          <div class="col s12 m12 l12">
-            <div class="card round">
-              <div class="card-content">
-                <h5 class="center-align gsans text-blue-grey text-darken-1">
-                  More info
-                </h5>
-                <table class="centered responsive-table">
+      <!-- Bangladesh summary card -->
+      <div class="row">
+        <h4 class="center-align gsans text-blue-grey text-darken-1 headerText">
+          COVID-19 in Bangladesh
+        </h4>
+        <div class="col s12 m6 l3">
+          <div class="card round center-align hoverable onmouseTest">
+            <div class="card-content">
+              <span class="testCard count gsans" id="numberOfTests"></span>
+              <h6 class="gsans">Total Tests</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l3">
+          <div class="card round center-align hoverable onmouseCase">
+            <div class="card-content">
+              <span class="caseCard count gsans" id="numberOfConfirmedCases"></span>
+              <h6 class="gsans">Coronavirus positive</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l3">
+          <div class="card round center-align hoverable onmouseDeath">
+            <div class="card-content">
+              <span class="deathCard count gsans" id="numberOfDeaths"></span>
+              <h6 class="gsans">Deaths</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m6 l3">
+          <div class="card round center-align hoverable onmouseRecovery">
+            <div class="card-content">
+              <span class="recoveryCard count gsans" id="numberOfRecovery"></span>
+              <h6 class="gsans">Recovered</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- More info table -->
+      <div class="row">
+        <div class="col s12 m12 l12">
+          <div class="card round">
+            <div class="card-content">
+              <h5 class="center-align gsans text-blue-grey text-darken-1">
+                More info
+              </h5>
+              <table class="centered responsive-table">
+                <thead>
+                  <tr>
+                    <th>Total Cases</th>
+                    <th>Active Cases</th>
+                    <th>Cases in last 24 hours</th>
+                    <th>Deaths in last 24 hours</th>
+                    <th>Critical</th>
+                    <th>Tests Per One Million</th>
+                    <th>Cases Per One Million</th>
+                    <th>Deaths Per One Million</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <!-- total case -->
+                    <td id="td_total"></td>
+                    <!-- active case -->
+                    <td id="td_active"></td>
+                    <!-- today case -->
+                    <td id="td_cases_today"></td>
+                    <!-- today death -->
+                    <td id="td_deaths"></td>
+                    <!-- critical -->
+                    <td id="td_critical"></td>
+                    <!-- test_per_one_m -->
+                    <td id="test_per_one_m"></td>
+                    <!-- case_per_one_m -->
+                    <td id="case_per_one_m"></td>
+                    <!-- death_per_one_m -->
+                    <td id="death_per_one_m"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- analysis -->
+    <div class="customContainer" id="analysis">
+      <div class="card hoverable">
+        <div class="card-content">
+          <div class="row">
+            <div class="col s12">
+              <div id='affectedHeatMap'></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="customContainer">
+      <div class="row">
+        <h4 class="center-align gsans text-blue-grey text-darken-1 headerText">
+          Confirmed cases in Dhaka city
+        </h4>
+        <div class="card round">
+          <div class="card-content">
+            <div class="row">
+              <div class="input-field col s12 m4 l4">
+                <input id="search" type="text" autocomplete="off" />
+                <label for="arealsearch">Search for a location...</label>
+              </div>
+              <span class="right">Updated: 19/04/2020</span>
+              <div class="col s12 m12 l12 scrollableTable">
+                <table>
                   <thead>
                     <tr>
-                      <th>Total Cases</th>
-                      <th>Active Cases</th>
-                      <th>Cases in last 24 hours</th>
-                      <th>Deaths in last 24 hours</th>
-                      <th>Critical</th>
-                      <th>Tests Per One Million</th>
-                      <th>Cases Per One Million</th>
-                      <th>Deaths Per One Million</th>
+                      <th>Location</th>
+                      <th>Total</th>
                     </tr>
                   </thead>
-                  <tbody>
+                  <tbody id="locationTotal">
                     <tr>
-                      <!-- total case -->
-                      <td id="td_total"></td>
-                      <!-- active case -->
-                      <td id="td_active"></td>
-                      <!-- today case -->
-                      <td id="td_cases_today"></td>
-                      <!-- today death -->
-                      <td id="td_deaths"></td>
-                      <!-- critical -->
-                      <td id="td_critical"></td>
-                      <!-- test_per_one_m -->
-                      <td id="test_per_one_m"></td>
-                      <!-- case_per_one_m -->
-                      <td id="case_per_one_m"></td>
-                      <!-- death_per_one_m -->
-                      <td id="death_per_one_m"></td>
+                      <td>Adabor</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>Agargaon</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>Armanitola</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Ashkona</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Azimpur</td>
+                      <td>13</td>
+                    </tr>
+                    <tr>
+                      <td>Babu Bazar</td>
+                      <td>11</td>
+                    </tr>
+                    <tr>
+                      <td>Badda</td>
+                      <td>8</td>
+                    </tr>
+                    <tr>
+                      <td>Baily Road</td>
+                      <td>3</td>
+                    </tr>
+                    <tr>
+                      <td>Banani</td>
+                      <td>8</td>
+                    </tr>
+                    <tr>
+                      <td>Bangshal</td>
+                      <td>16</td>
+                    </tr>
+                    <tr>
+                      <td>Banianagar</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Basabo</td>
+                      <td>17</td>
+                    </tr>
+                    <tr>
+                      <td>Bashundhora</td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td>Begunbari</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Begum Bazar</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Begum Bazar</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Beribadh</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Bokshi Bazar</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Bosila</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Buet Area</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Buet Area</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Cantonment</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Central Road</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Chankharpool</td>
+                      <td>7</td>
+                    </tr>
+                    <tr>
+                      <td>Chawk Bazar</td>
+                      <td>12</td>
+                    </tr>
+                    <tr>
+                      <td>Dhakkeshori</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Demra</td>
+                      <td>3</td>
+                    </tr>
+                    <tr>
+                      <td>Demra</td>
+                      <td>3</td>
+                    </tr>
+                    <tr>
+                      <td>Dhanmondi</td>
+                      <td>21</td>
+                    </tr>
+                    <tr>
+                      <td>Dholaikhal</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Doyaganj</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Eskaton</td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td>Faridabagh</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Farmgate</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Gendaria</td>
+                      <td>16</td>
+                    </tr>
+                    <tr>
+                      <td>Goran</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Gopibag</td>
+                      <td>3</td>
+                    </tr>
+                    <tr>
+                      <td>Green Road</td>
+                      <td>10</td>
+                    </tr>
+                    <tr>
+                      <td>Gulistan</td>
+                      <td>3</td>
+                    </tr>
+                    <tr>
+                      <td>Gulshan</td>
+                      <td>14</td>
+                    </tr>
+                    <tr>
+                      <td>Hatir jhil</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Hatirpool</td>
+                      <td>3</td>
+                    </tr>
+                    <tr>
+                      <td>Hazaribagh</td>
+                      <td>16</td>
+                    </tr>
+                    <tr>
+                      <td>Islampur</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>Jailgate</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>Jatrabari</td>
+                      <td>25</td>
+                    </tr>
+                    <tr>
+                      <td>Jigatala</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>Jurain</td>
+                      <td>3</td>
+                    </tr>
+                    <tr>
+                      <td>Kallyanpur</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>Kamrangir Char</td>
+                      <td>4</td>
+                    </tr>
+                    <tr>
+                      <td>Kazi para</td>
+                      <td>3</td>
+                    </tr>
+                    <tr>
+                      <td>Kawran Bazar</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Kochukhet</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Khilgaon</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>Khilkhet</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Koltabazar</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Kodomtoli</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>Kotowali</td>
+                      <td>4</td>
+                    </tr>
+                    <tr>
+                      <td>Kuril</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Lalbagh</td>
+                      <td>23</td>
+                    </tr>
+                    <tr>
+                      <td>Laxmibazar</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>Malitola</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Malibagh</td>
+                      <td>4</td>
+                    </tr>
+                    <tr>
+                      <td>Manikdi</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Matuail</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Mirhajaribagh</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>Mirpur-1</td>
+                      <td>8</td>
+                    </tr>
+                    <tr>
+                      <td>Mirpur-6</td>
+                      <td>3</td>
+                    </tr>
+                    <tr>
+                      <td>Mirpur-10</td>
+                      <td>7</td>
+                    </tr>
+                    <tr>
+                      <td>Mirpur-11</td>
+                      <td>13</td>
+                    </tr>
+                    <tr>
+                      <td>Mirpur-12</td>
+                      <td>11</td>
+                    </tr>
+                    <tr>
+                      <td>Mirpur-13</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>Mirpur-14</td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td>Mitford</td>
+                      <td>26</td>
+                    </tr>
+                    <tr>
+                      <td>Mogbazar</td>
+                      <td>11</td>
+                    </tr>
+                    <tr>
+                      <td>Mohakhali</td>
+                      <td>12</td>
+                    </tr>
+                    <tr>
+                      <td>Mohonpur</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Mohammadpur</td>
+                      <td>34</td>
+                    </tr>
+                    <tr>
+                      <td>Motijeel</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Mugda</td>
+                      <td>3</td>
+                    </tr>
+                    <tr>
+                      <td>Nawabpur</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Nawabganj</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>Narinda</td>
+                      <td>3</td>
+                    </tr>
+                    <tr>
+                      <td>Nakhalpara</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>Neemtoli</td>
+                      <td>4</td>
+                    </tr>
+                    <tr>
+                      <td>Nikunja</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Pirerbagh</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>Purana Paltan</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>Rajarbagh</td>
+                      <td>13</td>
+                    </tr>
+                    <tr>
+                      <td>Rampura</td>
+                      <td>4</td>
+                    </tr>
+                    <tr>
+                      <td>Ramna</td>
+                      <td>5</td>
+                    </tr>
+                    <tr>
+                      <td>Rayerbagh</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Raja Bazar</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Rayerbazar</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Sabujbagh</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>Sadarghat</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Sayedabad</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Science Lab</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Shah Ali Bagh</td>
+                      <td>2</td>
+                    </tr>
+                    <tr>
+                      <td>Shahbag</td>
+                      <td>6</td>
+                    </tr>
+                    <tr>
+                      <td>Shakharibazar</td>
+                      <td>10</td>
+                    </tr>
+                    <tr>
+                      <td>Shantibagh</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Shampur</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Shantinagar</td>
+                      <td>8</td>
+                    </tr>
+                    <tr>
+                      <td>Shaymoli</td>
+                      <td>7</td>
+                    </tr>
+                    <tr>
+                      <td>Shewrapara</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Shekher Tek</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Showari Ghat</td>
+                      <td>3</td>
+                    </tr>
+                    <tr>
+                      <td>Siddheshwari</td>
+                      <td>3</td>
+                    </tr>
+                    <tr>
+                      <td>Sonir akhra</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Sutrapur</td>
+                      <td>9</td>
+                    </tr>
+                    <tr>
+                      <td>Tejgaon</td>
+                      <td>16</td>
+                    </tr>
+                    <tr>
+                      <td>Tezturi Bazar</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Tolarbag</td>
+                      <td>19</td>
+                    </tr>
+                    <tr>
+                      <td>Urdu Road</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Uttara</td>
+                      <td>23</td>
+                    </tr>
+                    <tr>
+                      <td>Vatara</td>
+                      <td>1</td>
+                    </tr>
+                    <tr>
+                      <td>Wari</td>
+                      <td>28</td>
                     </tr>
                   </tbody>
                 </table>
@@ -305,1017 +750,379 @@
           </div>
         </div>
       </div>
+    </div>
 
-      <!-- charts -->
-
-      <div class="customContainer" id="charts">
-        <!-- SUB: Chart Preloader -->
-        <div class="center-align" id="analyticsPreloader">
-          <div class="preloader-wrapper small active">
-            <div class="spinner-layer spinner-blue">
-              <div class="circle-clipper left">
-                <div class="circle"></div>
+    <!-- case study -->
+    <div class="customContainer">
+      <div class="row">
+        <h4 class="center-align gsans text-blue-grey text-darken-1 headerText">
+          Case study
+        </h4>
+        <div class="card round">
+          <div class="card-content">
+            <div class="row">
+              <div class="col s12 l4 m6">
+                <figure>
+                  <img src="assets/img/CoronaInfo.PNG" alt="coronavirus" class="responsive-img" />
+                  <figcaption class="center-align red-text">
+                    Fig.1 - Mind map of cases. Due to logarithmic growth of
+                    COVID-19 we are unable to provide details information of
+                    every positive case.
+                  </figcaption>
+                </figure>
               </div>
-              <div class="gap-patch">
-                <div class="circle"></div>
-              </div>
-              <div class="circle-clipper right">
-                <div class="circle"></div>
-              </div>
-            </div>
-
-            <div class="spinner-layer spinner-red">
-              <div class="circle-clipper left">
-                <div class="circle"></div>
-              </div>
-              <div class="gap-patch">
-                <div class="circle"></div>
-              </div>
-              <div class="circle-clipper right">
-                <div class="circle"></div>
-              </div>
-            </div>
-
-            <div class="spinner-layer spinner-yellow">
-              <div class="circle-clipper left">
-                <div class="circle"></div>
-              </div>
-              <div class="gap-patch">
-                <div class="circle"></div>
-              </div>
-              <div class="circle-clipper right">
-                <div class="circle"></div>
-              </div>
-            </div>
-
-            <div class="spinner-layer spinner-green">
-              <div class="circle-clipper left">
-                <div class="circle"></div>
-              </div>
-              <div class="gap-patch">
-                <div class="circle"></div>
-              </div>
-              <div class="circle-clipper right">
-                <div class="circle"></div>
-              </div>
-            </div>
-          </div>
-          <p>Fetching analytics</p>
-        </div>
-
-        <!-- SUB: Chart Contents -->
-        <div class="row" id="analyticsContent">
-          <h4
-            class="center-align gsans text-blue-grey text-darken-1 headerText"
-          >
-            Charts
-          </h4>
-
-          <div class="col s12 m12 l12">
-            <div class="card round">
-              <div class="card-content">
-                <div class="chart chart-style" id="covid_progress"></div>
-              </div>
-            </div>
-          </div>
-          <div class="col s12 l6 m6">
-            <div class="card round">
-              <div class="card-content">
-                <div class="chart chart-style" id="infectionWithDate"></div>
-              </div>
-            </div>
-          </div>
-          <div class="col s12 l6 m6">
-            <div class="card round">
-              <div class="card-content">
-                <div class="chart chart-style" id="deathWithDate"></div>
-              </div>
-            </div>
-          </div>
-          <div class="col s12 l6 m6">
-            <div class="card round">
-              <div class="card-content">
-                <div class="chart chart-style" id="infectedDistrict"></div>
-              </div>
-            </div>
-          </div>
-          <div class="col s12 l6 m6">
-            <div class="card round">
-              <div class="card-content">
-                <div class="chart chart-style" id="info_percent"></div>
+              <div class="col s12 l8 m8 scrollable">
+                <ul class="collection round">
+                  <li class="collection-item">
+                    <span class="title gsans">8th march, 2020</span>
+                    <p class="gsans">
+                      First time 3 patients. 2 were Italy-returnees. Third one
+                      was the wife one of them (They returned home after their
+                      treatment)
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">14th march, 2020</span>
+                    <p class="gsans">
+                      Health Minister Zahid Maleque said 2 more corona virus
+                      cases were detected (Italy-1, Germany-1)
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">16th march, 2020</span>
+                    <p class="gsans">
+                      3 more detected positive of COVID-19 from the same
+                      family. (1 Female, 2 Child)
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">17th march, 2020</span>
+                    <p class="gsans">
+                      2 more from that same family whom were detected on 16th
+                      march, 2020 (Italy-1, 1 affected by USA Expatriate. That
+                      Expatriate already went back to USA)
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">18th march, 2020</span>
+                    <p class="gsans">
+                      4 new person detected corona positive (2 returnees of
+                      Italy(1 male), 1 from Kuwait, another one is affected by
+                      an old corona patient) (Total: 3 man, 1 woman). A 70
+                      years old person who tested positive died because of
+                      corona virus. First case of death because of corona
+                      virus.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">19th march, 2020</span>
+                    <p class="gsans">
+                      4 person detected corona positive. 2 of them are men age
+                      of 65 years and 32 years. 1 woman of age 22 years. They
+                      were affected by their relative who came from Italy.
+                      Last one was 30 years old male who was in the Isolation
+                      procedure in Chuadanga Sadar Hospital and came from
+                      Italy.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">20th march, 2020</span>
+                    <p class="gsans">
+                      2 new person detected corona positive. One is male and
+                      another one is female. They had come touch with the
+                      person who returned from Italy.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">21th march, 2020</span>
+                    <p class="gsans">
+                      4 new person detected corona positive. A 73 years old
+                      patient who tested positive died. This is the second
+                      case of death because of corona virus.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">22nd march, 2020</span>
+                    <p class="gsans">
+                      3 new person detected corona positive. Two of them came
+                      from abroad and one is affected by a corona patient.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">23rd march, 2020</span>
+                    <p class="gsans">
+                      6 new person detected corona positive. A 60 years old
+                      patient who tested positive died.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">24th march, 2020</span>
+                    <p class="gsans">
+                      6 new person detected corona positive. A 75 years old
+                      patient who tested positive has died.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">26th march, 2020</span>
+                    <p class="gsans">
+                      5 new person detected corona positive. All of them are
+                      male. 3 of them affected by their relatives. Total
+                      number of corona virus affected people is 44.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">27th march, 2020</span>
+                    <p class="gsans">
+                      4 new person detected corona positive. 2 of them are
+                      doctor affected by a corona patient. Total number of
+                      corona virus affected people is 48.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">30th march, 2020</span>
+                    <p class="gsans">
+                      1 new person detected corona positive. 4 people are
+                      recovered. 1 of them are 80 years old and 2 of them are
+                      60+. Total number of corona virus affected people is 49.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">31st march, 2020</span>
+                    <p class="gsans">
+                      2 new person detected corona positive. 1 came from soudi
+                      arabia and another one is affected by a corona patient.
+                      Total number of corona virus affected people is 51.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">1st april, 2020</span>
+                    <p class="gsans">
+                      3 new person detected corona positive. 1 has died. Total
+                      number of corona virus affected people is 54.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">2nd april, 2020</span>
+                    <p class="gsans">
+                      2 new person detected corona positive. Both of them are
+                      male. Total number of corona virus affected people is
+                      56.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">3rd april, 2020</span>
+                    <p class="gsans">
+                      5 new person detected corona positive. Total number of
+                      corona virus affected people is 61.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">4th april, 2020</span>
+                    <p class="gsans">
+                      9 new person detected corona positive. 1 has died and
+                      his age was 90 years. Total number of corona virus
+                      affected people is 70.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">5th april, 2020</span>
+                    <p class="gsans">
+                      18 new person detected corona positive. 1 has died and
+                      his age was 55 years. Total number of corona virus
+                      affected people is 88.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">6th april, 2020</span>
+                    <p class="gsans">
+                      35 new person detected corona positive. 3 have died.
+                      Total number of corona virus affected people is 123.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">7th april, 2020</span>
+                    <p class="gsans">
+                      41 new person detected corona positive. 5 have died.
+                      Total number of corona virus affected people is 164.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">8th april, 2020</span>
+                    <p class="gsans">
+                      54 new person detected corona positive. 3 have died.
+                      Total number of corona virus affected people is 218.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">9th april, 2020</span>
+                    <p class="gsans">
+                      112 new person detected corona positive. 1 has died.
+                      Total number of corona virus affected people is 330.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">10th april, 2020</span>
+                    <p class="gsans">
+                      94 new person detected corona positive. 6 have died. 5
+                      of them are male and another one is female. Total number
+                      of corona virus affected people is 424.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">11th april, 2020</span>
+                    <p class="gsans">
+                      58 new person detected corona positive. 3 have died.
+                      Total number of corona virus affected people is 482.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">12th april, 2020</span>
+                    <p class="gsans">
+                      139 new person detected corona positive. 4 have died.
+                      Total number of corona virus affected people is 621.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">13th april, 2020</span>
+                    <p class="gsans">
+                      182 new person detected corona positive. 5 have died.
+                      Total number of corona virus affected people is 803.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">14th april, 2020</span>
+                    <p class="gsans">
+                      209 new person detected corona positive. 7 have died.
+                      Total number of corona virus affected people is 1012.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">15th april, 2020</span>
+                    <p class="gsans">
+                      219 new person detected corona positive. 4 have died.
+                      Total number of corona virus affected people is 1231.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">16th april, 2020</span>
+                    <p class="gsans">
+                      341 new person detected corona positive. 10 have died.
+                      Total number of corona virus affected people is 1231.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">17th april, 2020</span>
+                    <p class="gsans">
+                      266 new person detected corona positive. 15 have died.
+                      Total number of corona virus affected people is 1838.
+                    </p>
+                  </li>
+                  <li class="collection-item">
+                    <span class="title gsans">18th april, 2020</span>
+                    <p class="gsans">
+                      306 new person detected corona positive. 9 have died.
+                      Total number of corona virus affected people is 2144.
+                    </p>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="customContainer">
+    <!-- footer -->
+
+    <footer class="page-footer blue-grey darken-3">
+      <div class="container">
         <div class="row">
-          <h4
-            class="center-align gsans text-blue-grey text-darken-1 headerText"
-          >
-            Confirmed cases in Dhaka city
-          </h4>
-          <div class="card round">
-            <div class="card-content">
-              <div class="row">
-                <div class="input-field col s12 m4 l4">
-                  <input id="search" type="text" autocomplete="off" />
-                  <label for="arealsearch">Search for a location...</label>
+          <div class="col l6 s12">
+            <h5 class="white-text https://github.com/TeamTigers/coronainfobd.git">
+              CoronaInfoBD Team
+            </h5>
+            <p class="grey-text text-lighten-4">
+              It is a voluntary act aimed at mass awareness. All content used
+              here is open to everyone. For any kind of queries you can
+              <a href="mailto:teamtigers256@gmail.com">Email</a> us or create
+              an
+              <a href="https://github.com/TeamTigers/coronainfobd/issues" target="_blank">issue</a>
+              in github. If you like our work please give a star in our
+              <a href="https://github.com/TeamTigers/coronainfobd" target="_blank">repository.</a>
+            </p>
+            <br />
+            <h6 class="whtie-text gsans">Initiative taken by:</h6>
+            <p class="grey-text text-lighten-4 gsans">
+              Department of Software Engineering <br />
+              Daffodil International University
+            </p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <h5 class="white-text">Important Links</h5>
+            <ul>
+              <li>
+                <a href="https://daffodilvarsity.edu.bd/article/corona" target="_blank">Activiy of DIU against
+                  Corona</a>
+              </li>
+              <li>
+                <h6 class="left-align shareBtn">
+                  Share with your friends
+                </h6>
+                <!-- AddToAny BEGIN -->
+                <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
+                  <a class="a2a_button_facebook"></a>
+                  <a class="a2a_button_facebook_messenger"></a>
+                  <a class="a2a_button_twitter"></a>
+                  <a class="a2a_button_linkedin"></a>
+                  <a class="a2a_button_email"></a>
+                  <a class="a2a_button_telegram"></a>
+                  <a class="a2a_button_pinterest"></a>
+                  <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
                 </div>
-                <span class="right">Updated: 19/04/2020</span>
-                <div class="col s12 m12 l12 scrollableTable">
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>Location</th>
-                        <th>Total</th>
-                      </tr>
-                    </thead>
-                    <tbody id="locationTotal">
-                      <tr>
-                        <td>Adabor</td>
-                        <td>5</td>
-                      </tr>
-                      <tr>
-                        <td>Agargaon</td>
-                        <td>5</td>
-                      </tr>
-                      <tr>
-                        <td>Armanitola</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Ashkona</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Azimpur</td>
-                        <td>13</td>
-                      </tr>
-                      <tr>
-                        <td>Babu Bazar</td>
-                        <td>11</td>
-                      </tr>
-                      <tr>
-                        <td>Badda</td>
-                        <td>8</td>
-                      </tr>
-                      <tr>
-                        <td>Baily Road</td>
-                        <td>3</td>
-                      </tr>
-                      <tr>
-                        <td>Banani</td>
-                        <td>8</td>
-                      </tr>
-                      <tr>
-                        <td>Bangshal</td>
-                        <td>16</td>
-                      </tr>
-                      <tr>
-                        <td>Banianagar</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Basabo</td>
-                        <td>17</td>
-                      </tr>
-                      <tr>
-                        <td>Bashundhora</td>
-                        <td>6</td>
-                      </tr>
-                      <tr>
-                        <td>Begunbari</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Begum Bazar</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Begum Bazar</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Beribadh</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Bokshi Bazar</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Bosila</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Buet Area</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Buet Area</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Cantonment</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Central Road</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Chankharpool</td>
-                        <td>7</td>
-                      </tr>
-                      <tr>
-                        <td>Chawk Bazar</td>
-                        <td>12</td>
-                      </tr>
-                      <tr>
-                        <td>Dhakkeshori</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Demra</td>
-                        <td>3</td>
-                      </tr>
-                      <tr>
-                        <td>Demra</td>
-                        <td>3</td>
-                      </tr>
-                      <tr>
-                        <td>Dhanmondi</td>
-                        <td>21</td>
-                      </tr>
-                      <tr>
-                        <td>Dholaikhal</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Doyaganj</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Eskaton</td>
-                        <td>6</td>
-                      </tr>
-                      <tr>
-                        <td>Faridabagh</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Farmgate</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Gendaria</td>
-                        <td>16</td>
-                      </tr>
-                      <tr>
-                        <td>Goran</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Gopibag</td>
-                        <td>3</td>
-                      </tr>
-                      <tr>
-                        <td>Green Road</td>
-                        <td>10</td>
-                      </tr>
-                      <tr>
-                        <td>Gulistan</td>
-                        <td>3</td>
-                      </tr>
-                      <tr>
-                        <td>Gulshan</td>
-                        <td>14</td>
-                      </tr>
-                      <tr>
-                        <td>Hatir jhil</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Hatirpool</td>
-                        <td>3</td>
-                      </tr>
-                      <tr>
-                        <td>Hazaribagh</td>
-                        <td>16</td>
-                      </tr>
-                      <tr>
-                        <td>Islampur</td>
-                        <td>2</td>
-                      </tr>
-                      <tr>
-                        <td>Jailgate</td>
-                        <td>2</td>
-                      </tr>
-                      <tr>
-                        <td>Jatrabari</td>
-                        <td>25</td>
-                      </tr>
-                      <tr>
-                        <td>Jigatala</td>
-                        <td>5</td>
-                      </tr>
-                      <tr>
-                        <td>Jurain</td>
-                        <td>3</td>
-                      </tr>
-                      <tr>
-                        <td>Kallyanpur</td>
-                        <td>2</td>
-                      </tr>
-                      <tr>
-                        <td>Kamrangir Char</td>
-                        <td>4</td>
-                      </tr>
-                      <tr>
-                        <td>Kazi para</td>
-                        <td>3</td>
-                      </tr>
-                      <tr>
-                        <td>Kawran Bazar</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Kochukhet</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Khilgaon</td>
-                        <td>2</td>
-                      </tr>
-                      <tr>
-                        <td>Khilkhet</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Koltabazar</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Kodomtoli</td>
-                        <td>2</td>
-                      </tr>
-                      <tr>
-                        <td>Kotowali</td>
-                        <td>4</td>
-                      </tr>
-                      <tr>
-                        <td>Kuril</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Lalbagh</td>
-                        <td>23</td>
-                      </tr>
-                      <tr>
-                        <td>Laxmibazar</td>
-                        <td>5</td>
-                      </tr>
-                      <tr>
-                        <td>Malitola</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Malibagh</td>
-                        <td>4</td>
-                      </tr>
-                      <tr>
-                        <td>Manikdi</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Matuail</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Mirhajaribagh</td>
-                        <td>2</td>
-                      </tr>
-                      <tr>
-                        <td>Mirpur-1</td>
-                        <td>8</td>
-                      </tr>
-                      <tr>
-                        <td>Mirpur-6</td>
-                        <td>3</td>
-                      </tr>
-                      <tr>
-                        <td>Mirpur-10</td>
-                        <td>7</td>
-                      </tr>
-                      <tr>
-                        <td>Mirpur-11</td>
-                        <td>13</td>
-                      </tr>
-                      <tr>
-                        <td>Mirpur-12</td>
-                        <td>11</td>
-                      </tr>
-                      <tr>
-                        <td>Mirpur-13</td>
-                        <td>2</td>
-                      </tr>
-                      <tr>
-                        <td>Mirpur-14</td>
-                        <td>6</td>
-                      </tr>
-                      <tr>
-                        <td>Mitford</td>
-                        <td>26</td>
-                      </tr>
-                      <tr>
-                        <td>Mogbazar</td>
-                        <td>11</td>
-                      </tr>
-                      <tr>
-                        <td>Mohakhali</td>
-                        <td>12</td>
-                      </tr>
-                      <tr>
-                        <td>Mohonpur</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Mohammadpur</td>
-                        <td>34</td>
-                      </tr>
-                      <tr>
-                        <td>Motijeel</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Mugda</td>
-                        <td>3</td>
-                      </tr>
-                      <tr>
-                        <td>Nawabpur</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Nawabganj</td>
-                        <td>2</td>
-                      </tr>
-                      <tr>
-                        <td>Narinda</td>
-                        <td>3</td>
-                      </tr>
-                      <tr>
-                        <td>Nakhalpara</td>
-                        <td>5</td>
-                      </tr>
-                      <tr>
-                        <td>Neemtoli</td>
-                        <td>4</td>
-                      </tr>
-                      <tr>
-                        <td>Nikunja</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Pirerbagh</td>
-                        <td>2</td>
-                      </tr>
-                      <tr>
-                        <td>Purana Paltan</td>
-                        <td>2</td>
-                      </tr>
-                      <tr>
-                        <td>Rajarbagh</td>
-                        <td>13</td>
-                      </tr>
-                      <tr>
-                        <td>Rampura</td>
-                        <td>4</td>
-                      </tr>
-                      <tr>
-                        <td>Ramna</td>
-                        <td>5</td>
-                      </tr>
-                      <tr>
-                        <td>Rayerbagh</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Raja Bazar</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Rayerbazar</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Sabujbagh</td>
-                        <td>2</td>
-                      </tr>
-                      <tr>
-                        <td>Sadarghat</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Sayedabad</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Science Lab</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Shah Ali Bagh</td>
-                        <td>2</td>
-                      </tr>
-                      <tr>
-                        <td>Shahbag</td>
-                        <td>6</td>
-                      </tr>
-                      <tr>
-                        <td>Shakharibazar</td>
-                        <td>10</td>
-                      </tr>
-                      <tr>
-                        <td>Shantibagh</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Shampur</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Shantinagar</td>
-                        <td>8</td>
-                      </tr>
-                      <tr>
-                        <td>Shaymoli</td>
-                        <td>7</td>
-                      </tr>
-                      <tr>
-                        <td>Shewrapara</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Shekher Tek</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Showari Ghat</td>
-                        <td>3</td>
-                      </tr>
-                      <tr>
-                        <td>Siddheshwari</td>
-                        <td>3</td>
-                      </tr>
-                      <tr>
-                        <td>Sonir akhra</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Sutrapur</td>
-                        <td>9</td>
-                      </tr>
-                      <tr>
-                        <td>Tejgaon</td>
-                        <td>16</td>
-                      </tr>
-                      <tr>
-                        <td>Tezturi Bazar</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Tolarbag</td>
-                        <td>19</td>
-                      </tr>
-                      <tr>
-                        <td>Urdu Road</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Uttara</td>
-                        <td>23</td>
-                      </tr>
-                      <tr>
-                        <td>Vatara</td>
-                        <td>1</td>
-                      </tr>
-                      <tr>
-                        <td>Wari</td>
-                        <td>28</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
+                <script async src="https://static.addtoany.com/menu/page.js"></script>
+                <!-- AddToAny END -->
+              </li>
+            </ul>
           </div>
         </div>
+        <script type="text/javascript"
+          src="https://www.freevisitorcounters.com/auth.php?id=9b69540a475623abc41cf3bd65d75afbcc1a25da"></script>
+        <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/652237/t/5"></script>
       </div>
-
-      <!-- case study -->
-      <div class="customContainer">
-        <div class="row">
-          <h4
-            class="center-align gsans text-blue-grey text-darken-1 headerText"
-          >
-            Case study
-          </h4>
-          <div class="card round">
-            <div class="card-content">
-              <div class="row">
-                <div class="col s12 l4 m6">
-                  <figure>
-                    <img
-                      src="assets/img/CoronaInfo.PNG"
-                      alt="coronavirus"
-                      class="responsive-img"
-                    />
-                    <figcaption class="center-align red-text">
-                      Fig.1 - Mind map of cases. Due to logarithmic growth of
-                      COVID-19 we are unable to provide details information of
-                      every positive case.
-                    </figcaption>
-                  </figure>
-                </div>
-                <div class="col s12 l8 m8 scrollable">
-                  <ul class="collection round">
-                    <li class="collection-item">
-                      <span class="title gsans">8th march, 2020</span>
-                      <p class="gsans">
-                        First time 3 patients. 2 were Italy-returnees. Third one
-                        was the wife one of them (They returned home after their
-                        treatment)
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">14th march, 2020</span>
-                      <p class="gsans">
-                        Health Minister Zahid Maleque said 2 more corona virus
-                        cases were detected (Italy-1, Germany-1)
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">16th march, 2020</span>
-                      <p class="gsans">
-                        3 more detected positive of COVID-19 from the same
-                        family. (1 Female, 2 Child)
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">17th march, 2020</span>
-                      <p class="gsans">
-                        2 more from that same family whom were detected on 16th
-                        march, 2020 (Italy-1, 1 affected by USA Expatriate. That
-                        Expatriate already went back to USA)
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">18th march, 2020</span>
-                      <p class="gsans">
-                        4 new person detected corona positive (2 returnees of
-                        Italy(1 male), 1 from Kuwait, another one is affected by
-                        an old corona patient) (Total: 3 man, 1 woman). A 70
-                        years old person who tested positive died because of
-                        corona virus. First case of death because of corona
-                        virus.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">19th march, 2020</span>
-                      <p class="gsans">
-                        4 person detected corona positive. 2 of them are men age
-                        of 65 years and 32 years. 1 woman of age 22 years. They
-                        were affected by their relative who came from Italy.
-                        Last one was 30 years old male who was in the Isolation
-                        procedure in Chuadanga Sadar Hospital and came from
-                        Italy.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">20th march, 2020</span>
-                      <p class="gsans">
-                        2 new person detected corona positive. One is male and
-                        another one is female. They had come touch with the
-                        person who returned from Italy.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">21th march, 2020</span>
-                      <p class="gsans">
-                        4 new person detected corona positive. A 73 years old
-                        patient who tested positive died. This is the second
-                        case of death because of corona virus.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">22nd march, 2020</span>
-                      <p class="gsans">
-                        3 new person detected corona positive. Two of them came
-                        from abroad and one is affected by a corona patient.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">23rd march, 2020</span>
-                      <p class="gsans">
-                        6 new person detected corona positive. A 60 years old
-                        patient who tested positive died.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">24th march, 2020</span>
-                      <p class="gsans">
-                        6 new person detected corona positive. A 75 years old
-                        patient who tested positive has died.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">26th march, 2020</span>
-                      <p class="gsans">
-                        5 new person detected corona positive. All of them are
-                        male. 3 of them affected by their relatives. Total
-                        number of corona virus affected people is 44.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">27th march, 2020</span>
-                      <p class="gsans">
-                        4 new person detected corona positive. 2 of them are
-                        doctor affected by a corona patient. Total number of
-                        corona virus affected people is 48.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">30th march, 2020</span>
-                      <p class="gsans">
-                        1 new person detected corona positive. 4 people are
-                        recovered. 1 of them are 80 years old and 2 of them are
-                        60+. Total number of corona virus affected people is 49.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">31st march, 2020</span>
-                      <p class="gsans">
-                        2 new person detected corona positive. 1 came from soudi
-                        arabia and another one is affected by a corona patient.
-                        Total number of corona virus affected people is 51.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">1st april, 2020</span>
-                      <p class="gsans">
-                        3 new person detected corona positive. 1 has died. Total
-                        number of corona virus affected people is 54.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">2nd april, 2020</span>
-                      <p class="gsans">
-                        2 new person detected corona positive. Both of them are
-                        male. Total number of corona virus affected people is
-                        56.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">3rd april, 2020</span>
-                      <p class="gsans">
-                        5 new person detected corona positive. Total number of
-                        corona virus affected people is 61.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">4th april, 2020</span>
-                      <p class="gsans">
-                        9 new person detected corona positive. 1 has died and
-                        his age was 90 years. Total number of corona virus
-                        affected people is 70.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">5th april, 2020</span>
-                      <p class="gsans">
-                        18 new person detected corona positive. 1 has died and
-                        his age was 55 years. Total number of corona virus
-                        affected people is 88.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">6th april, 2020</span>
-                      <p class="gsans">
-                        35 new person detected corona positive. 3 have died.
-                        Total number of corona virus affected people is 123.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">7th april, 2020</span>
-                      <p class="gsans">
-                        41 new person detected corona positive. 5 have died.
-                        Total number of corona virus affected people is 164.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">8th april, 2020</span>
-                      <p class="gsans">
-                        54 new person detected corona positive. 3 have died.
-                        Total number of corona virus affected people is 218.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">9th april, 2020</span>
-                      <p class="gsans">
-                        112 new person detected corona positive. 1 has died.
-                        Total number of corona virus affected people is 330.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">10th april, 2020</span>
-                      <p class="gsans">
-                        94 new person detected corona positive. 6 have died. 5
-                        of them are male and another one is female. Total number
-                        of corona virus affected people is 424.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">11th april, 2020</span>
-                      <p class="gsans">
-                        58 new person detected corona positive. 3 have died.
-                        Total number of corona virus affected people is 482.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">12th april, 2020</span>
-                      <p class="gsans">
-                        139 new person detected corona positive. 4 have died.
-                        Total number of corona virus affected people is 621.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">13th april, 2020</span>
-                      <p class="gsans">
-                        182 new person detected corona positive. 5 have died.
-                        Total number of corona virus affected people is 803.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">14th april, 2020</span>
-                      <p class="gsans">
-                        209 new person detected corona positive. 7 have died.
-                        Total number of corona virus affected people is 1012.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">15th april, 2020</span>
-                      <p class="gsans">
-                        219 new person detected corona positive. 4 have died.
-                        Total number of corona virus affected people is 1231.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">16th april, 2020</span>
-                      <p class="gsans">
-                        341 new person detected corona positive. 10 have died.
-                        Total number of corona virus affected people is 1231.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">17th april, 2020</span>
-                      <p class="gsans">
-                        266 new person detected corona positive. 15 have died.
-                        Total number of corona virus affected people is 1838.
-                      </p>
-                    </li>
-                    <li class="collection-item">
-                      <span class="title gsans">18th april, 2020</span>
-                      <p class="gsans">
-                        306 new person detected corona positive. 9 have died.
-                        Total number of corona virus affected people is 2144.
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- footer -->
-
-      <footer class="page-footer blue-grey darken-3">
+      <div class="footer-copyright">
         <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-              <h5
-                class="white-text https://github.com/TeamTigers/coronainfobd.git"
-              >
-                CoronaInfoBD Team
-              </h5>
-              <p class="grey-text text-lighten-4">
-                It is a voluntary act aimed at mass awareness. All content used
-                here is open to everyone. For any kind of queries you can
-                <a href="mailto:teamtigers256@gmail.com">Email</a> us or create
-                an
-                <a
-                  href="https://github.com/TeamTigers/coronainfobd/issues"
-                  target="_blank"
-                  >issue</a
-                >
-                in github. If you like our work please give a star in our
-                <a
-                  href="https://github.com/TeamTigers/coronainfobd"
-                  target="_blank"
-                  >repository.</a
-                >
-              </p>
-              <br />
-              <h6 class="whtie-text gsans">Initiative taken by:</h6>
-              <p class="grey-text text-lighten-4 gsans">
-                Department of Software Engineering <br />
-                Daffodil International University
-              </p>
-            </div>
-            <div class="col l4 offset-l2 s12">
-              <h5 class="white-text">Important Links</h5>
-              <ul>
-                <li>
-                  <a
-                    href="https://daffodilvarsity.edu.bd/article/corona"
-                    target="_blank"
-                    >Activiy of DIU against Corona</a
-                  >
-                </li>
-                <li>
-                  <h6 class="left-align shareBtn">
-                    Share with your friends
-                  </h6>
-                  <!-- AddToAny BEGIN -->
-                  <div class="a2a_kit a2a_kit_size_32 a2a_default_style">
-                    <a class="a2a_button_facebook"></a>
-                    <a class="a2a_button_facebook_messenger"></a>
-                    <a class="a2a_button_twitter"></a>
-                    <a class="a2a_button_linkedin"></a>
-                    <a class="a2a_button_email"></a>
-                    <a class="a2a_button_telegram"></a>
-                    <a class="a2a_button_pinterest"></a>
-                    <a class="a2a_dd" href="https://www.addtoany.com/share"></a>
-                  </div>
-                  <script
-                    async
-                    src="https://static.addtoany.com/menu/page.js"
-                  ></script>
-                  <!-- AddToAny END -->
-                </li>
-              </ul>
-            </div>
-          </div>
-          <script
-            type="text/javascript"
-            src="https://www.freevisitorcounters.com/auth.php?id=9b69540a475623abc41cf3bd65d75afbcc1a25da"
-          ></script>
-          <script
-            type="text/javascript"
-            src="https://www.freevisitorcounters.com/en/home/counter/652237/t/5"
-          ></script>
+          © 2020 Copyright TeamTigers
+          <a class="grey-text text-lighten-4 right" href="https://github.com/teamtigers" target="_blank">TeamTigers</a>
         </div>
-        <div class="footer-copyright">
-          <div class="container">
-            © 2020 Copyright TeamTigers
-            <a
-              class="grey-text text-lighten-4 right"
-              href="https://github.com/teamtigers"
-              target="_blank"
-              >TeamTigers</a
-            >
-          </div>
-        </div>
-      </footer>
-    </main>
+      </div>
+    </footer>
+  </main>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="assets/js/canvas.min.js"></script>
-    <script src="assets/js/coronaCounter.js"></script>
-    <script src="assets/js/infectedpeoplechart.js"></script>
-    <script src="assets/js/plugin.js"></script>
-    <script src="assets/js/darkMood.js"></script>
+  
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="assets/js/coronaCounter.js"></script>
+  <script src="assets/js/chart-constructor.js"></script>
+  <script src="assets/js/plugin.js"></script>
+  <script src="assets/js/darkMood.js"></script>
 
-    <script>
-      window.onscroll = scroll1;
+  <script>
+    window.onscroll = scroll1;
 
-      function scroll1() {
-        var toTop = document.getElementById("scrollTop");
-        window.scrollY > 500
-          ? (toTop.style.display = "Block")
-          : (toTop.style.display = "none");
-      }
+    function scroll1() {
+      var toTop = document.getElementById("scrollTop");
+      window.scrollY > 500 ?
+        (toTop.style.display = "Block") :
+        (toTop.style.display = "none");
+    }
 
-      function toTop() {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      }
-    </script>
-  </body>
+    function toTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+      });
+    }
+  </script>
+</body>
+
 </html>
