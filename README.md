@@ -1,18 +1,8 @@
 # Welcome to CoronaInfoBD :wave:
 
-**Contents**
-
-  - [What is CoronaInfoBD?](#what-is-coronainfobd)
-  - [How it will help us?](#how-it-will-help-us)
-  - [What are the features it is providing us?](#what-are-the-features-it-is-providing-us)
-  - [Is it responsive?](#is-it-responsive)
-  - [I have a question. Where should I ask?](#i-have-a-question-where-should-i-ask)
-  - [Can I contribute in this project?](#can-i-contribute-in-this-project)
-  - [License and copyright](#license-and-copyright)
-
 ## What is CoronaInfoBD?
 
-CoronaInfoBD is a web site which tracks the COVID-19 affect of Bangladesh. This site provides the total number of affected people, deaths, recovered patients, active cases and so on. It also provides some other features which includes visual mapping of how COVID-19 is spreading, statistical charts of infected number of people over time, dead people age over time, hotline number and many more.
+CoronaInfoBD is a web site which tracks the COVID-19 affect of Bangladesh. This site provides the total number of affected people, deaths, recovered patients, active cases and so on. It also provides some other features which includes visual mapping of how COVID-19 is spreading, statistical charts of infected number of people over time, deaths and recovered number of people over time, hotline number and many more.
 
 ## How it will help us?
 
@@ -20,16 +10,18 @@ As it provides real data and visual mapping of spreading COVID-19, mass people w
 
 ## What are the features it is providing us?
 
-- **Summary of COVID-19**, which includes total number of infected people, deaths, number of recovered patients, number of active cases, current day cases, source of infected peoples.
+- **Summary of COVID-19**, which includes total number of infected people, deaths, number of recovered patients of World and Bangladesh. Also it provides number of active cases, new cases and deaths of last 24 hours, tests, cases, deaths per one million.
 
 - **Case study**, where you will have a proper mind of all cases till now and the description of how many people were affected and which date they were affected.
 
-- **Charts**, there are two charts. One is line chart which indicates number of affected people over time and another one is scatter chart which indicates the age of the died people and when they died.
+- **Charts**, here it provides two type of charts, calendar chart and are chart which visualize the time series of affected, deaths and recovered people. 
 
-- **Hotline** numbers that are provided from _IEDCR_. You can easily call those number in your emergency by tapping on the numbers.
+- **Hotline** numbers that are provided from _IEDCR_. You can easily call those number in your emergency by tapping on the numbers. Also there is a map where you find the location of the hospitals of Bangladesh where COVID-19 can be cured.
 
 - **FAQ**, Frequently Asked Questions. Questions that most of the people ask about corona virus. We tried to answer some of the questions according to _WHO_.
+  
 - **Advice for public**, some graphical images from WHO to rise awareness among mass public.
+  
 - **Day/Night Mode** as most of the people prefer night mode, so we made sure to have a day/night mode in our application.
 
 ## Is it responsive?
@@ -52,10 +44,10 @@ Of course you can. It is an open source project. If you want to contribute with 
 
 Contributors who have worked/ working hard to keep this application up to date are - 
 
-- [Shunjid Rahman Showrov](https://github.com/shunjid)
-- [Shah Fahad Hossen](https://github.com/fahad1997)
-- [Jinnatul Islam Morol](https://github.com/jinnatul)
-- [Zubayer Himel](https://github.com/zubayerhimel)
+- [Shunjid Rahman Showrov](https://www.facebook.com/shunjid)
+- [Shah Fahad Hossen](https://www.facebook.com/shahfahad.hossain)
+- [Jinnatul Islam Morol](https://www.facebook.com/mdjinnatul.islam)
+- [Zubayer Himel](https://www.facebook.com/zubayerhimel0)
 
 ## License and copyright
 
