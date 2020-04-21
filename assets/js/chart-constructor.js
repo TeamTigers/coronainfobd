@@ -34,29 +34,29 @@ $(function () {
       formattedRecoveredList.push([filterDate(eachDate), newlyRecovered]);
     });
 
-    
-    let arrayMaxIndex = function(array) {
-        return array.indexOf(Math.max.apply(null, array));
+
+    let arrayMaxIndex = function (array) {
+      return array.indexOf(Math.max.apply(null, array));
     };
 
-    let newlyAffectedList = formattedAffectedList.map(function(eachData){
-        return eachData[1];
+    let newlyAffectedList = formattedAffectedList.map(function (eachData) {
+      return eachData[1];
     });
-    
-    let newlyRecoveredList = formattedRecoveredList.map(function(eachData){
-        return eachData[1];
+
+    let newlyRecoveredList = formattedRecoveredList.map(function (eachData) {
+      return eachData[1];
     });
-    
+
     let entiredDeathList = Object.values(timeseries.deaths);
     let newlyDeathsList = entiredDeathList.map(function (eachDeath, index) {
-      return (entiredDeathList[index] - entiredDeathList[index -1]) || 0;
+      return (entiredDeathList[index] - entiredDeathList[index - 1]) || 0;
     });
 
-    let formattedDateLevelsForLineChart = dates.map(function(eachDate){
-        const dateString = new Date(eachDate.concat('20').split("/")).toDateString();
-        const convertedDateArray = dateString.split(' ');
+    let formattedDateLevelsForLineChart = dates.map(function (eachDate) {
+      const dateString = new Date(eachDate.concat('20').split("/")).toDateString();
+      const convertedDateArray = dateString.split(' ');
 
-        return convertedDateArray[1].concat(" ").concat(convertedDateArray[2]);  // Mar 07, Apr 03 ...
+      return convertedDateArray[1].concat("<br>").concat(convertedDateArray[2]); // Mar 07, Apr 03 ...
     });
 
     console.log(formattedDateLevelsForLineChart);
@@ -70,10 +70,17 @@ $(function () {
     // Render trditional line chart
 
     zingchart.render({
-        id: 'affectedSeries',
-        data: singleLineChartGenerator(formattedDateLevelsForLineChart, newlyAffectedList, 'Newly affected'),
-        height: 300,
-        width: "100%",
+      id: 'affectedSeries',
+      data: singleLineChartGenerator(formattedDateLevelsForLineChart, newlyAffectedList, 'Newly affected'),
+      height: 300,
+      width: "100%",
+    });
+
+    zingchart.render({
+      id: 'rdSeries',
+      data: multiLineChartGenerator(formattedDateLevelsForLineChart, newlyRecoveredList, newlyDeathsList),
+      height: 300,
+      width: "100%",
     });
 
     // Load calendar and render charts
@@ -84,14 +91,14 @@ $(function () {
           formattedAffectedList,
           3,
           5,
-          ["none", "#f32160",],
+          ["none", "#f32160", ],
           "Newly affected",
           "#f32160",
           "Max Affected",
           newlyAffectedList[arrayMaxIndex(newlyAffectedList)],
           "#f32160",
           filterDate(dates[arrayMaxIndex(newlyAffectedList)])
-          ),
+        ),
         height: 400,
         width: "100%",
       });
@@ -99,16 +106,16 @@ $(function () {
       zingchart.render({
         id: "recoveredHeatMap",
         data: heatMapGenerator(
-            formattedRecoveredList,
-            3,
-            5,
-            ["none", "#2bbd7e",],
-            "Newly recovered",
-            "#2bbd7e",
-            "Max Recovered",
-            newlyRecoveredList[arrayMaxIndex(newlyRecoveredList)],
-            "#2bbd7e",
-            filterDate(dates[arrayMaxIndex(newlyRecoveredList)]),
+          formattedRecoveredList,
+          3,
+          5,
+          ["none", "#2bbd7e", ],
+          "Newly recovered",
+          "#2bbd7e",
+          "Max Recovered",
+          newlyRecoveredList[arrayMaxIndex(newlyRecoveredList)],
+          "#2bbd7e",
+          filterDate(dates[arrayMaxIndex(newlyRecoveredList)])
         ),
         height: 400,
         width: "100%",
@@ -117,12 +124,11 @@ $(function () {
   });
 
 
-  $("input").change(function() {
-    if($(this).is(":checked")) {
-        switchToModernCharts();
-    }
-    else {
-        switchToTraditionalCharts();
+  $("input").change(function () {
+    if ($(this).is(":checked")) {
+      switchToModernCharts();
+    } else {
+      switchToTraditionalCharts();
     }
   });
 
@@ -130,13 +136,13 @@ $(function () {
 });
 
 function switchToModernCharts() {
-    $('#modernCharts').fadeIn();
-    $('#traditionalCharts').fadeOut();
+  $('#modernCharts').fadeIn();
+  $('#traditionalCharts').fadeOut();
 }
 
 function switchToTraditionalCharts() {
-    $('#modernCharts').fadeOut();
-    $('#traditionalCharts').fadeIn();
+  $('#modernCharts').fadeOut();
+  $('#traditionalCharts').fadeIn();
 }
 
 function differenceFromMarch8() {
@@ -196,8 +202,7 @@ function heatMapGenerator(
       },
       values: heatMapData,
     },
-    labels: [
-      {
+    labels: [{
         //Lefthand Label (container portion)
         borderColor: leftBoxMiddleLevelColor,
         borderRadius: 10,
@@ -305,112 +310,238 @@ function heatMapGenerator(
 }
 
 function singleLineChartGenerator(formattedDate, data, labelText) {
-    return {
-        "globals":{
-          "font-family": "Google Sans"
+  return {
+    "globals": {
+      "font-family": "Google Sans"
+    },
+    "graphset": [{
+      "type": "area",
+      "background-color": "#fff",
+      "utc": true,
+      "plotarea": {
+        "margin-top": "10%",
+        "margin-right": "dynamic",
+        "margin-bottom": "dynamic",
+        "margin-left": "dynamic",
+        "adjust-layout": true
+      },
+      "labels": [{
+        "text": `${labelText}: %plot-0-value`,
+        "default-value": "0",
+        "color": "#fc8d62",
+        "x": "30%",
+        "y": 50,
+        "width": 200,
+        "text-align": "left",
+        "bold": 0,
+        "font-size": "14px",
+        "font-weight": "bold"
+      }],
+      "scale-x": {
+        "label": {
+          "text": "Date Range",
+          "font-size": "14px",
+          "font-weight": "normal",
+          "offset-x": "10%",
+          "font-angle": 360
         },
-        "graphset": [
-            {
-                "type": "area",
-                "background-color": "#fff",
-                "utc": true,
-                "plotarea": {
-                    "margin-top":"10%",
-                    "margin-right":"dynamic",
-                    "margin-bottom":"dynamic",
-                    "margin-left":"dynamic",
-                    "adjust-layout":true
-                },
-                "labels": [
-                    {
-                        "text": `${labelText}: %plot-0-value`,
-                        "default-value": "0",
-                        "color": "#fc8d62",
-                        "x": "50%",
-                        "y": 50,
-                        "width": 200,
-                        "text-align": "left",
-                        "bold": 0,
-                        "font-size": "14px",
-                        "font-weight": "bold"
-                    }
-                ],
-                "scale-x": {
-                    "label": {
-                        "text":"Date Range",
-                        "font-size": "14px",
-                        "font-weight": "normal",
-                        "offset-x": "10%",
-                        "font-angle": 360
-                    },
-                    "item": {
-                        "text-align": "center",
-                        "font-color": "#05636c"
-                    },
-                    "zooming": 1,
-                    "max-labels": 12,
-                    "labels": formattedDate,
-                    "max-items": 12,
-                    "items-overlap": true,
-                    "guide": {
-                        "line-width": "0px"
-                    },
-                    "tick": {
-                        "line-width": "2px"
-                    },
-                },
-                "crosshair-x": {
-                    "line-color":"#fff",
-                    "line-width":1,
-                    "plot-label": {
-                        "visible": false
-                    }
-                },
-                "scale-y": {
-                    "values": `0:${Math.max(...data)}:${Math.min(...data) + 2}`,
-                    "item": {
-                        "font-color": "#05636c",
-                        "font-weight": "normal"
-                    },
-                    "label":{
-                      "text":"Metrics",
-                      "font-size":"14px"
-                    },
-                    "guide": {
-                        "line-width": "0px",
-                        "alpha": 0.2,
-                        "line-style": "dashed"
-                    }
-                },
-                "plot": {
-                    "line-width": 2,
-                    "marker": {
-                        "size": 1,
-                        "visible": false
-                    },
-                    "tooltip": {
-                        "font-family": "Google Sans",
-                        "font-size": "15px",
-                        "text": `${labelText} %v on %data-days`,
-                        "text-align": "left",
-                        "border-radius":5,
-                        "padding":10
-                    }
-                },
-                "series": [
-                    {
-                        "values": data,
-                        "data-days": formattedDate,
-                        "line-color": "#fc8d62",
-                        "aspect": "spline",
-                        "background-color": "#fc8d62",
-                        "alpha-area": ".3",
-                        "font-family": "Roboto",
-                        "font-size": "14px",
-                        "text": "found"
-                    },
-                ]
-            }
-        ]
-    };
+        "item": {
+          "text-align": "center",
+          "font-color": "#05636c"
+        },
+        "zooming": 1,
+        "max-labels": 12,
+        "labels": formattedDate,
+        "max-items": 12,
+        "items-overlap": true,
+        "guide": {
+          "line-width": "0px"
+        },
+        "tick": {
+          "line-width": "2px"
+        },
+      },
+      "crosshair-x": {
+        "line-color": "#fff",
+        "line-width": 1,
+        "plot-label": {
+          "visible": false
+        }
+      },
+      "scale-y": {
+        "values": `0:${Math.max(...data)}:${Math.min(...data) + 2}`,
+        "item": {
+          "font-color": "#05636c",
+          "font-weight": "normal"
+        },
+        "label": {
+          "text": "Metrics",
+          "font-size": "14px"
+        },
+        "guide": {
+          "line-width": "0px",
+          "alpha": 0.2,
+          "line-style": "dashed"
+        }
+      },
+      "plot": {
+        "line-width": 2,
+        "marker": {
+          "size": 1,
+          "visible": false
+        },
+        "tooltip": {
+          "font-family": "Google Sans",
+          "font-size": "15px",
+          "text": `${labelText} %v on %data-days`,
+          "text-align": "left",
+          "border-radius": 5,
+          "padding": 10
+        }
+      },
+      "series": [{
+        "values": data,
+        "data-days": formattedDate,
+        "line-color": "#fc8d62",
+        "aspect": "spline",
+        "background-color": "#fc8d62",
+        "alpha-area": ".3",
+        "font-family": "Google Sans",
+        "font-size": "14px",
+        "text": "found"
+      }, ]
+    }]
+  };
+}
+
+
+function multiLineChartGenerator(formattedDate, recoverdData, deathData) {
+  return {
+    "globals": {
+      "font-family": "Google Sans"
+    },
+    "graphset": [{
+      "type": "area",
+      "background-color": "#fff",
+      "utc": true,
+      "plotarea": {
+        "margin-top": "10%",
+        "margin-right": "dynamic",
+        "margin-bottom": "dynamic",
+        "margin-left": "dynamic",
+        "adjust-layout": true
+      },
+      "labels": [
+        {
+          "text": `Death: %plot-1-value`,
+          "default-value": "0",
+          "color": "#ff5252",
+          "x": "30%",
+          "y": 50,
+          "width": 200,
+          "text-align": "left",
+          "bold": 0,
+          "font-size": "14px",
+          "font-weight": "bold"
+        },
+        {
+          "text": `Recovered: %plot-0-value`,
+          "default-value": "0",
+          "color": "#2979ff",
+          "x": "30%",
+          "y": 70,
+          "width": 200,
+          "text-align": "left",
+          "bold": 0,
+          "font-size": "14px",
+          "font-weight": "bold"
+        }
+      ],
+      "scale-x": {
+        "label": {
+          "text": "Date Range",
+          "font-size": "14px",
+          "font-weight": "normal",
+          "offset-x": "10%",
+          "font-angle": 360
+        },
+        "item": {
+          "text-align": "center",
+          "font-color": "#05636c"
+        },
+        "zooming": 1,
+        "max-labels": 12,
+        "labels": formattedDate,
+        "max-items": 12,
+        "items-overlap": true,
+        "guide": {
+          "line-width": "0px"
+        },
+        "tick": {
+          "line-width": "2px"
+        },
+      },
+      "crosshair-x": {
+        "line-color": "#fff",
+        "line-width": 1,
+        "plot-label": {
+          "visible": false
+        }
+      },
+      "scale-y": {
+        "values": `0:${Math.max(Math.max(...recoverdData), Math.max(...deathData))}:${Math.min(...recoverdData) + 1}`,
+        "item": {
+          "font-color": "#05636c",
+          "font-weight": "normal"
+        },
+        "label": {
+          "text": "Metrics",
+          "font-size": "14px"
+        },
+        "guide": {
+          "line-width": "0px",
+          "alpha": 0.2,
+          "line-style": "dashed"
+        }
+      },
+      "plot": {
+        "line-width": 2,
+        "marker": {
+          "size": 1,
+          "visible": false
+        },
+        "tooltip": {
+          "font-family": "Google Sans",
+          "font-size": "15px",
+          "text": `Found %v on %data-days`,
+          "text-align": "left",
+          "border-radius": 5,
+          "padding": 10
+        }
+      },
+      "series": [{
+          "values": recoverdData,
+          "data-days": formattedDate,
+          "line-color": "#2979ff",
+          "aspect": "spline",
+          "background-color": "#2979ff",
+          "alpha-area": ".3",
+          "font-family": "Google Sans",
+          "font-size": "14px",
+          "text": "recovered"
+        },
+        {
+          "values": deathData,
+          "data-days": formattedDate,
+          "line-color": "#ff5252",
+          "aspect": "spline",
+          "background-color": "#ff5252",
+          "alpha-area": ".3",
+          "font-family": "Google Sans",
+          "font-size": "14px",
+          "text": "dead"
+        },
+      ]
+    }]
+  };
 }
