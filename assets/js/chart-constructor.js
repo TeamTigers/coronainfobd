@@ -216,7 +216,7 @@ function heatMapGenerator(
         //Lefthand Label (top portion)
         text: leftBoxTopLabel,
         fontFamily: "Google Sans",
-        fontSize: 16,
+        fontSize: 13,
         fontColor: "#212121",
         textAlign: "center",
         x: "10%",
@@ -251,7 +251,7 @@ function heatMapGenerator(
         //Rightside Label (top portion)
         text: rightBoxTopLabel,
         fontFamily: "Google Sans",
-        fontSize: 16,
+        fontSize: 13,
         fontColor: "#212121",
         textAlign: "center",
         x: "54%",
@@ -286,6 +286,7 @@ function heatMapGenerator(
     tooltip: {
       //Lefthand Label (bottom portion)
       text: "%data-day",
+      defaultValue: "Hover mouse/Tap",
       backgroundColor: "none",
       borderColor: "none",
       fontFamily: "Google Sans",

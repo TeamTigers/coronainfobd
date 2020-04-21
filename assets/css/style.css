@@ -286,4 +286,10 @@ ul .faqList {
 hr {
   border-top: 1px dashed teal;
 }
+
+@media only screen and (max-width: 600px) {
+  #chartIconButton {
+    display: none;
+  }
+}
 /*# sourceMappingURL=style.css.map */
