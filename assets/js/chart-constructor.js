@@ -59,12 +59,6 @@ $(function () {
       return convertedDateArray[1].concat("<br>").concat(convertedDateArray[2]); // Mar 07, Apr 03 ...
     });
 
-    console.log(formattedDateLevelsForLineChart);
-    console.log(newlyAffectedList);
-    console.log(newlyRecoveredList);
-    console.log(newlyDeathsList);
-
-
 
     // SECTION: CHART RENDERING
     // Render trditional line chart

@@ -33,6 +33,16 @@
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="assets/css/darkMood.css" />
   <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164180702-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-164180702-1');
+</script>
+
 </head>
 
 <body>
@@ -237,10 +247,10 @@
 
     <!-- analysis -->
     <div class="customContainer" id="analysis">
-      <div class="card round hoverable">
+      <h4 class="center-align">Data Visualization</h5>
+      <div class="card round">
         <div class="card-content">
-          <h4 class="center-align"><a id="chartIconButton" class="btn-floating btn-large waves-effect waves-light white z-depth-0"><i class="material-icons blue-text text-darken-2">bar_chart</i></a> Data Visualization</h5>
-          <hr/><br>
+          <br>
           <div class="row">
             <div class="col l12 s12 right-align">  
               <div class="switch">
@@ -257,11 +267,11 @@
           <div id="modernCharts">
             <div class="row">
               <div class="col l6 s12">
-                <h6><a class="btn-floating btn-small waves-effect waves-light white z-depth-0"><i class="material-icons pink-text text-darken-1">track_changes</i></a> Affected timeseries</h6>
+                <h6 class="center-align">Affected timeseries</h6>
                 <div id="affectedHeatMap"></div>
               </div>
               <div class="col l6 s12">
-                <h6><a class="btn-floating btn-small waves-effect waves-light white z-depth-0"><i class="material-icons green-text text-darken-1">eco</i></a> Recovered timeseries</h6>
+                <h6 class="center-align">Recovered timeseries</h6>
                 <div id="recoveredHeatMap"></div>
               </div>
             </div>
@@ -270,12 +280,12 @@
           <div id="traditionalCharts">
             <div class="row">
               <div class="col l6 s12">
-                <h5>Newly Affected</h5>
+                <h6 class="center-align">Newly Affected</h6>
                 <div id="affectedSeries"></div>
               </div>
               
               <div class="col l6 s12">
-                <h5>Death-Recovered</h5>
+                <h6 class="center-align">Death-Recovered</h6>
                 <div id="rdSeries"></div>
               </div>
             </div>
@@ -292,11 +302,12 @@
         <div class="card round">
           <div class="card-content">
             <div class="row">
+              <h6 class="center-align"><b>Total affected area in dhaka city:</b> <span class="orange-text text-darken-4" id="affectedAreaNumber"></span></h6>
               <div class="input-field col s12 m4 l4">
                 <input id="search" type="text" autocomplete="off" />
                 <label for="arealsearch">Search for a location...</label>
               </div>
-              <span class="right">Updated: 19/04/2020</span>
+              <span class="right">Updated: 20/04/2020</span>
               <div class="col s12 m12 l12 scrollableTable">
                 <div id="dhakaCityInfo"></div>
               </div>
@@ -639,8 +650,6 @@
             </ul>
           </div>
         </div>
-        <a href='https://www.symptoma.ee/et/info/covid-19#info'>COVID-19</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=9b69540a475623abc41cf3bd65d75afbcc1a25da'></script>
-        <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/652237/t/5"></script>
       </div>
       <div class="footer-copyright">
         <div class="container">
@@ -657,7 +666,7 @@
   <script src="assets/js/minified/chart-constructor.min.js"></script>
   <script src="assets/js/minified/plugin.min.js"></script>
   <script src="assets/js/minified/darkMood.min.js"></script>
-  <script src="assets/js/dhakaCity.js"></script>
+  <script src="assets/js/minified/dhaka-city.min.js"></script>
 
   <script>
     window.onscroll = scroll1;

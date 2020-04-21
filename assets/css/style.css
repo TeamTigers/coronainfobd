@@ -97,10 +97,8 @@ table th {
   height: 150px;
 }
 
-.chart-style {
-  height: 400px;
-  width: 100%;
-  margin: 0px auto;
+#affectedAreaNumber {
+  font-weight: bold;
 }
 
 .subTitle {
@@ -280,16 +278,6 @@ ul .faqList {
     margin: 0rem;
     margin-left: 0rem;
     margin-right: 0rem;
-  }
-}
-
-hr {
-  border-top: 1px dashed teal;
-}
-
-@media only screen and (max-width: 600px) {
-  #chartIconButton {
-    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */
