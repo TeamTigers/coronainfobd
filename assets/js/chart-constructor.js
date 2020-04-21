@@ -151,7 +151,8 @@ function heatMapGenerator(
     labels: [
       {
         //Lefthand Label (container portion)
-        borderColor: "gray",
+        borderColor: leftBoxMiddleLevelColor,
+        borderRadius: 10,
         borderWidth: 2,
         x: "8%",
         y: "60%",
@@ -161,6 +162,8 @@ function heatMapGenerator(
       {
         //Lefthand Label (top portion)
         text: leftBoxTopLabel,
+        fontFamily: "Google Sans",
+        fontSize: 16,
         fontColor: "#212121",
         textAlign: "center",
         x: "10%",
@@ -182,7 +185,8 @@ function heatMapGenerator(
 
       {
         //Rightside Label (container portion)
-        borderColor: "black",
+        borderColor: rightBoxMiddleLevelColor,
+        borderRadius: 10,
         borderWidth: 2,
         x: "52%",
         y: "60%",
@@ -192,6 +196,8 @@ function heatMapGenerator(
       {
         //Rightside Label (top portion)
         text: rightBoxTopLabel,
+        fontFamily: "Google Sans",
+        fontSize: 16,
         fontColor: "#212121",
         textAlign: "center",
         x: "54%",
@@ -212,6 +218,8 @@ function heatMapGenerator(
       {
         //Rightside Label (bottom portion)
         text: rightBoxBottomLevel,
+        fontFamily: "Google Sans",
+        fontSize: 13,
         fontColor: "#212121",
         padding: 2,
         textAlign: "center",
@@ -227,7 +235,7 @@ function heatMapGenerator(
       backgroundColor: "none",
       borderColor: "none",
       fontFamily: "Google Sans",
-      fontSize: 12,
+      fontSize: 13,
       fontColor: "#212121",
       padding: 2,
       //textAlign: 'center',
