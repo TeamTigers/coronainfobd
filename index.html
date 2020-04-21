@@ -244,7 +244,7 @@
               <div class="switch">
                 <label>
                   Traditional
-                  <input type="checkbox" checked>
+                  <input type="checkbox" checked />
                   <span class="lever"></span>
                   Modern
                 </label>
@@ -256,25 +256,31 @@
             <div class="row">
               <div class="col l6 s12">
                 <h4>Affected timeseries</h4>
-                <div id='affectedHeatMap'></div>
+                <div id="affectedHeatMap"></div>
               </div>
               <div class="col l6 s12">
                 <h4>Recovered timeseries</h4>
-                <div id='recoveredHeatMap'></div>
+                <div id="recoveredHeatMap"></div>
               </div>
             </div>
           </div>
 
           <div id="traditionalCharts">
-            <div class="col l12 s12">
-                <h4>Timeseries</h4>
-                <div id='fullTimeSeriesLine'></div>
+            <div class="row">
+              <div class="col l6 s12">
+                <h4>Newly Affected</h4>
+                <div id="affectedSeries"></div>
               </div>
+              
+              <div class="col l6 s12">
+                <h4>Newly Affected</h4>
+                <div id="rdSeries"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
 
     <div class="customContainer">
       <div class="row">
@@ -1125,7 +1131,6 @@
     </footer>
   </main>
 
-  
   <script src="assets/js/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src="assets/js/coronaCounter.js"></script>

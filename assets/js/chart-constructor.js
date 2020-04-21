@@ -35,7 +35,6 @@ $(function () {
     });
 
     
-    
     let arrayMaxIndex = function(array) {
         return array.indexOf(Math.max.apply(null, array));
     };
@@ -47,12 +46,33 @@ $(function () {
     let newlyRecoveredList = formattedRecoveredList.map(function(eachData){
         return eachData[1];
     });
+    
+    let entiredDeathList = Object.values(timeseries.deaths);
+    let newlyDeathsList = entiredDeathList.map(function (eachDeath, index) {
+      return (entiredDeathList[index] - entiredDeathList[index -1]) || 0;
+    });
 
+    let formattedDateLevelsForLineChart = dates.map(function(eachDate){
+        const dateString = new Date(eachDate.concat('20').split("/")).toDateString();
+        const convertedDateArray = dateString.split(' ');
+
+        return convertedDateArray[1].concat(" ").concat(convertedDateArray[2]);  // Mar 07, Apr 03 ...
+    });
+
+    console.log(formattedDateLevelsForLineChart);
+    console.log(newlyAffectedList);
+    console.log(newlyRecoveredList);
+    console.log(newlyDeathsList);
+
+
+
+    // SECTION: CHART RENDERING
     // Render trditional line chart
+
     zingchart.render({
-        id: 'fullTimeSeriesLine',
-        data: lineChartGenerator(),
-        height: 500,
+        id: 'affectedSeries',
+        data: singleLineChartGenerator(formattedDateLevelsForLineChart, newlyAffectedList, 'Newly affected'),
+        height: 300,
         width: "100%",
     });
 
@@ -284,7 +304,7 @@ function heatMapGenerator(
   };
 }
 
-function lineChartGenerator() {
+function singleLineChartGenerator(formattedDate, data, labelText) {
     return {
         "globals":{
           "font-family": "Google Sans"
@@ -294,15 +314,6 @@ function lineChartGenerator() {
                 "type": "area",
                 "background-color": "#fff",
                 "utc": true,
-                "title": {
-                    "y": "15px",
-                    "text": "Website Traffic Metrics",
-                    "background-color": "none",
-                    "font-color": "#05636c",
-                    "font-size": "24px",
-                    "height": "25px",
-                    "adjust-layout":true
-                },
                 "plotarea": {
                     "margin-top":"10%",
                     "margin-right":"dynamic",
@@ -312,36 +323,12 @@ function lineChartGenerator() {
                 },
                 "labels": [
                     {
-                        "text": "Visitors: %plot-2-value",
-                        "default-value": "",
-                        "color": "#8da0cb",
-                        "x": "20%",
-                        "y": 50,
-                        "width": 120,
-                        "text-align": "left",
-                        "bold": 0,
-                        "font-size": "14px",
-                        "font-weight": "bold"
-                    },
-                    {
-                        "text": "Clicks: %plot-1-value",
-                        "default-value": "",
-                        "color": "#66c2a5",
-                        "x": "45%",
-                        "y": 50,
-                        "width": 120,
-                        "text-align": "left",
-                        "bold": 0,
-                        "font-size": "14px",
-                        "font-weight": "bold"
-                    },
-                    {
-                        "text": "Returns: %plot-0-value",
-                        "default-value": "",
+                        "text": `${labelText}: %plot-0-value`,
+                        "default-value": "0",
                         "color": "#fc8d62",
-                        "x": "70%",
+                        "x": "50%",
                         "y": 50,
-                        "width": 120,
+                        "width": 200,
                         "text-align": "left",
                         "bold": 0,
                         "font-size": "14px",
@@ -362,20 +349,7 @@ function lineChartGenerator() {
                     },
                     "zooming": 1,
                     "max-labels": 12,
-                    "labels": [
-                        "Sept<br>19",
-                        "Sept<br>20",
-                        "Sept<br>21",
-                        "Sept<br>22",
-                        "Sept<br>23",
-                        "Sept<br>24",
-                        "Sept<br>25",
-                        "Sept<br>26",
-                        "Sept<br>27",
-                        "Sept<br>28",
-                        "Sept<br>29",
-                        "Sept<br>30"
-                    ],
+                    "labels": formattedDate,
                     "max-items": 12,
                     "items-overlap": true,
                     "guide": {
@@ -393,7 +367,7 @@ function lineChartGenerator() {
                     }
                 },
                 "scale-y": {
-                    "values": "0:2500:500",
+                    "values": `0:${Math.max(...data)}:${Math.min(...data) + 2}`,
                     "item": {
                         "font-color": "#05636c",
                         "font-weight": "normal"
@@ -415,9 +389,9 @@ function lineChartGenerator() {
                         "visible": false
                     },
                     "tooltip": {
-                        "font-family": "Roboto",
+                        "font-family": "Google Sans",
                         "font-size": "15px",
-                        "text": "There were %v %t on %data-days",
+                        "text": `${labelText} %v on %data-days`,
                         "text-align": "left",
                         "border-radius":5,
                         "padding":10
@@ -425,116 +399,16 @@ function lineChartGenerator() {
                 },
                 "series": [
                     {
-                        "values": [
-                            1204,
-                            1179,
-                            1146,
-                            1182,
-                            1058,
-                            1086,
-                            1141,
-                            1105,
-                            1202,
-                            992,
-                            373,
-                            466
-                        ],
-                        "data-days": [
-                            "Sept 19",
-                            "Sept 20",
-                            "Sept 21",
-                            "Sept 22",
-                            "Sept 23",
-                            "Sept 24",
-                            "Sept 25",
-                            "Sept 26",
-                            "Sept 27",
-                            "Sept 28",
-                            "Sept 29",
-                            "Sept 30"
-                        ],
+                        "values": data,
+                        "data-days": formattedDate,
                         "line-color": "#fc8d62",
                         "aspect": "spline",
                         "background-color": "#fc8d62",
                         "alpha-area": ".3",
                         "font-family": "Roboto",
                         "font-size": "14px",
-                        "text": "returns"
+                        "text": "found"
                     },
-                    {
-                        "values": [
-                            1625,
-                            1683,
-                            1659,
-                            1761,
-                            1904,
-                            1819,
-                            1631,
-                            1592,
-                            1498,
-                            1594,
-                            1782,
-                            1644
-                        ],
-                        "data-days": [
-                            "Sept 19",
-                            "Sept 20",
-                            "Sept 21",
-                            "Sept 22",
-                            "Sept 23",
-                            "Sept 24",
-                            "Sept 25",
-                            "Sept 26",
-                            "Sept 27",
-                            "Sept 28",
-                            "Sept 29",
-                            "Sept 30"
-                        ],
-                        "line-color": "#66c2a5",
-                        "background-color": "#66c2a5",
-                        "alpha-area": ".3",
-                        "text": "clicks",
-                        "aspect": "spline",
-                        "font-family": "Roboto",
-                        "font-size": "14px"
-                    },
-                    {
-                        "values": [
-                            314,
-                            1395,
-                            1292,
-                            1259,
-                            1269,
-                            1132,
-                            1012,
-                            1082,
-                            1116,
-                            1039,
-                            1132,
-                            1227
-                        ],
-                        "data-days": [
-                            "Sept 19",
-                            "Sept 20",
-                            "Sept 21",
-                            "Sept 22",
-                            "Sept 23",
-                            "Sept 24",
-                            "Sept 25",
-                            "Sept 26",
-                            "Sept 27",
-                            "Sept 28",
-                            "Sept 29",
-                            "Sept 30"
-                        ],
-                        "line-color": "#8da0cb",
-                        "background-color": "#8da0cb",
-                        "aspect": "spline",
-                        "alpha-area": "0.2",
-                        "text": "visitors",
-                        "font-family": "Roboto",
-                        "font-size": "14px"
-                    }
                 ]
             }
         ]
