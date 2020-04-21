@@ -123,7 +123,7 @@ $(function () {
     });
   });
 
-
+  // Material Switch Controller
   $("input").change(function () {
     if ($(this).is(":checked")) {
       switchToModernCharts();
@@ -131,7 +131,7 @@ $(function () {
       switchToTraditionalCharts();
     }
   });
-
+  // Initialliy load modern chart
   switchToModernCharts();
 });
 
