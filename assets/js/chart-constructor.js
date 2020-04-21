@@ -27,30 +27,27 @@ $(function () {
         dates.forEach(function (eachDate, index) {
             // difference returns how many people were affected (today - yesterday)
             // NaN to Zero => || 0
-            const newlyAffected = affectedList[index] - affectedList[index - 1] || 0;
+            let newlyAffected = affectedList[index] - affectedList[index - 1] || 0;
             formattedAffectedList.push([filterDate(eachDate), newlyAffected]);
 
-            const newlyRecovered = recoveredList[index] - recoveredList[index - 1] || 0;
+            let newlyRecovered = recoveredList[index] - recoveredList[index - 1] || 0;
             formattedRecoveredList.push([filterDate(eachDate), newlyRecovered]);
         });
 
         zingchart.loadModules("calendar", function () {
             zingchart.render({
-                id: "affectedHeatMap", // id attribute of the division of chart
-                data: heatMapGenerator(formattedAffectedList, 3, 5, ["none","#f32160",]),
+                id: "affectedHeatMap", 
+                data: heatMapGenerator(formattedAffectedList, 3, 6, ["none","#f32160",]),
+                height: 400,
+                width: "100%",
+            });
+            zingchart.render({
+                id: "recoveredHeatMap", 
+                data: heatMapGenerator(formattedRecoveredList, 3, 6, ["none","#2bbd7e",]),
                 height: 400,
                 width: "100%",
             });
         });
-
-        // zingchart.loadModules("calendar", function () {
-        //     zingchart.render({
-        //         id: "affectedHeatMap", // id attribute of the division of chart
-        //         data: heatMapGenerator(formattedAffectedList, 3, 5, ["none","#f32160",]),
-        //         height: 400,
-        //         width: "100%",
-        //     });
-        // });
 
         console.log(formattedRecoveredList);
         console.log(formattedAffectedList);
