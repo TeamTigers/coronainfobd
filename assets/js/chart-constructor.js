@@ -226,6 +226,7 @@ function heatMapGenerator(
       {
         //Lefthand Label (middle portion)
         text: "%plot-value",
+        defaultValue: "00",
         fontColor: leftBoxMiddleLevelColor,
         fontFamily: "Google Sans",
         fontSize: 35,

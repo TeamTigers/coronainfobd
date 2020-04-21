@@ -282,4 +282,8 @@ ul .faqList {
     margin-right: 0rem;
   }
 }
+
+hr {
+  border-top: 1px dashed teal;
+}
 /*# sourceMappingURL=style.css.map */
