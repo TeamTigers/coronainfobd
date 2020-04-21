@@ -1,5 +1,6 @@
 $(function() {
-    $.getJSON('assets/json/dhakacity.json', function(res) {
+    let dhakaCityURL = "https://teamtigers.github.io/covid19-dataset-bd/dhakacity/dhakacity.json";
+    $.get(dhakaCityURL, function(res) {
         let dhakacityArray = Object.entries(res);
         makeTable(dhakacityArray);
     });
