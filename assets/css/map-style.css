@@ -32,7 +32,7 @@
 
 .districtLargeArea {
     font-size: 16px;
-    fill: #000000;
+    fill: #000;
     font-weight: 400;
     font-family: 'Hind Siliguri', sans-serif;
     cursor: pointer
@@ -40,8 +40,8 @@
 
 .districtMediumArea,
 .seat_300_map .districtLargeArea {
-    fill: #2bbd7e;
-    stroke: #000000;
+    /*fill: #2bbd7e;*/
+    stroke: #e0e0e0;
     stroke-width: .5;
     stroke-miterlimit: 10;
     cursor: pointer
@@ -61,6 +61,7 @@ polyline:hover {
     }
 }
 
+
 .st1 {
     font-family: 'Hind Siliguri', sans-serif;
 }
@@ -72,4 +73,36 @@ polyline:hover {
     stroke: #fff;
     stroke-width: .5;
     stroke-miterlimit: 10
+}
+
+.sylhetDivision {
+    fill: #ff5252;
+}
+
+.dhakaDivision {
+    fill: #2bbd7e;
+}
+
+.khulnaDivision {
+    fill: #ff4081;
+}
+
+.barishalDivision {
+    fill: #03a9f4;
+}
+
+.chittagongDivision {
+    fill: #ab47bc;
+}
+
+.mymenshingDivision {
+    fill: #ff7043;
+}
+
+.rajshahiDivision {
+    fill: #26c6da;
+}
+
+.rangpurDivision {
+    fill: #ff9800;
 }
