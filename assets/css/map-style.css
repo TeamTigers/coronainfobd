@@ -117,3 +117,7 @@ polyline:hover {
     }
 }
 
+#selectedDistrictInfoCards {
+    display: none;
+}
+
