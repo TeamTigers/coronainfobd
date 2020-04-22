@@ -29,7 +29,7 @@ $(function () {
         
         // Division
         let selectedDivision = '';
-        let totalAfftectedInDistrict = 0;
+        let totalAffectedInDivision = 0;
         
         divisionList.forEach(function (eachDivision, index) {
             if(districtId != null) {
@@ -44,7 +44,7 @@ $(function () {
             
             districtIdList.forEach(function name(eachDistrictId) {
                 let districtAffected = districtData.find(o => o.id === eachDistrictId);
-                totalAfftectedInDistrict += districtAffected.count;
+                totalAffectedInDivision += districtAffected.count;
             });
         }
 
@@ -55,7 +55,9 @@ $(function () {
             setSelectedValue(
                 selectedDistrict.name,
                 selectedDistrict.count,
-                (selectedDistrict.count/totalInfected)*100
+                (selectedDistrict.count/totalInfected)*100,
+                selectedDivision,
+                totalAffectedInDivision
             );
 
         $('#selectedDistrictInfoCards').slideDown('slow').delay(1500);
@@ -66,10 +68,17 @@ function setValueWhenNotFound(selectedDistrictName) {
     $('#selectedDistrict').text(selectedDistrictName);
     $('#selectedDistrictCount').text(0);
     $('#selectedDistrictPercentage').text('0 %');
+    $('#divisionCard').hide();
 }
 
-function setSelectedValue(districtName, districtAffected, percentage) {
+function setSelectedValue(districtName, districtAffected, percentage, divisionName, divisinCount) {
+    $('#divisionCard').slideDown();
+
     $('#selectedDistrict').text(districtName);
     $('#selectedDistrictCount').text(districtAffected);
+
     $('#selectedDistrictPercentage').text(percentage.toFixed(2).toString().concat(' %'));
+
+    $('#selectedDivisionName').text('Division: '.concat(divisionName));
+    $('#selectedDivisionCount').text(divisinCount);
 }
