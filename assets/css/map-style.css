@@ -106,3 +106,7 @@ polyline:hover {
 .rangpurDivision {
     fill: #ff9800;
 }
+
+.btn.waves-effect.waves-light { 
+    border-radius: 15px;
+}
