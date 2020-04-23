@@ -62,15 +62,21 @@ $(function () {
         // // Set values over cards
 
         selectedDistrict == null ?
-            setValueWhenNotFound(selectedDistrictName, selectedDivision, totalAffectedInDivision, totalAffectedInDivisionPreviously) :
+            setValueWhenNotFound(
+                selectedDistrictName,
+                selectedDivision,
+                totalAffectedInDivision,
+                (totalAffectedInDivision - totalAffectedInDivisionPreviously)
+            ) :
 
             setSelectedValue(
                 selectedDistrict.name,
                 selectedDistrict.count,
+                (selectedDistrict.count - selectedDistrict.prev_count),
                 (selectedDistrict.count / totalInfected) * 100,
                 selectedDivision,
                 totalAffectedInDivision,
-                totalAffectedInDivisionPreviously
+                (totalAffectedInDivision - totalAffectedInDivisionPreviously)
             );
 
 
@@ -98,21 +104,38 @@ function goToByScroll(id) {
     }, 'slow');
 }
 
-function setValueWhenNotFound(selectedDistrictName, selectedDivisionName, selectedDivisionAffected, selectedDivisionAffectedYesterday) {
+function setValueWhenNotFound(selectedDistrictName, selectedDivisionName, selectedDivisionAffected, selectedDivisionComparator) {
     $('#selectedDistrict').text(selectedDistrictName);
     $('#selectedDistrictCount').text(0);
+    setIncreasedText($('#districtComparator'), 0);
+
     $('#selectedDistrictPercentage').text('0 %');
     
     $('#selectedDivisionName').text('Division: '.concat(selectedDivisionName));
     $('#selectedDivisionCount').text(selectedDivisionAffected);
+    setIncreasedText($('#divisionComparator'), selectedDivisionComparator);
 }
 
-function setSelectedValue(districtName, districtAffected, percentage, divisionName, divisinCount, divisionYesterday) {
+function setSelectedValue(districtName, districtAffected, districtComparator, percentage, divisionName, divisinCount, divisionYesterday) {
     $('#selectedDistrict').text(districtName);
     $('#selectedDistrictCount').text(districtAffected);
+    setIncreasedText($('#districtComparator'), districtComparator);
 
     $('#selectedDistrictPercentage').text(percentage.toFixed(2).toString().concat(' %'));
 
     $('#selectedDivisionName').text('Division: '.concat(divisionName));
     $('#selectedDivisionCount').text(divisinCount);
+    setIncreasedText($('#divisionComparator'), divisionYesterday);
+}
+
+function setIncreasedText(element, count) {
+    if(count > 0) {
+        element.text(count);
+        element.attr("class","red-text");
+    } else if (count == 0) {
+        element.text(count);
+        element.attr("class","green-text");
+    } else {
+        element.text('N/A');
+    }
 }
