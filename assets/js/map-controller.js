@@ -2,62 +2,71 @@ $(function () {
     let districtUrl = "https://corona-bd.herokuapp.com/district";
     let districtData = [];
     let totalInfected = 0;
-    let divisionDistrict = {
-        "Dhaka": [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14],
-        "Chattogram": [15, 16, 17, 18, 19, 20, 21, 22, 23],
-        "Sylhet": [24, 25, 26, 27],
-        "Rangpur": [28, 29, 30, 31, 32, 33, 34, 35],
-        "Khulna": [36, 37, 38, 39, 40, 57, 58, 59],
-        "Mymensingh": [41, 42, 43, 44],
-        "Barishal": [45, 46, 47, 48, 49],
-        "Rajshahi": [50, 51, 52, 53, 54, 55, 56]
-    };
-
-    let divisionList = Object.keys(divisionDistrict);
+    let divisionJSON = {"Barisal":[{"district":"Barguna","alternativeName":"Barguna"},{"district":"Barisal","alternativeName":"Barishal"},{"district":"Bhola","alternativeName":"Bhola"},{"district":"Jhalokati","alternativeName":"Jhalokathi"},{"district":"Patuakhali","alternativeName":"Potuakhali"},{"district":"Pirojpur","alternativeName":"Pirojpur"}],"Chattogram":[{"district":"Bandarban","alternativeName":"Bandarban"},{"district":"Brahmanbaria","alternativeName":"B. Baria"},{"district":"Chandpur","alternativeName":"Chandpur"},{"district":"Chattogram","alternativeName":"Chattogram"},{"district":"Cumilla","alternativeName":"Cumilla"},{"district":"Cox's Bazar","alternativeName":"Cox’s bazar"},{"district":"Feni","alternativeName":"Feni"},{"district":"Khagrachhari","alternativeName":"Khagrachari"},{"district":"Lakshmipur","alternativeName":"Laksmipur"},{"district":"Noakhali","alternativeName":"Noakhali"},{"district":"Rangamati","alternativeName":"Rangamati"}],"Dhaka":[{"district":"Dhaka","alternativeName":"Dhaka City"},{"district":"Faridpur","alternativeName":"Faridpur"},{"district":"Gazipur","alternativeName":"Gazipur"},{"district":"Gopalganj","alternativeName":"Gopalganj"},{"district":"Kishoreganj","alternativeName":"Kishoreganj"},{"district":"Madaripur","alternativeName":"Madaripur"},{"district":"Manikganj","alternativeName":"Manikganj"},{"district":"Munshiganj","alternativeName":"Munshigonj"},{"district":"Narayanganj","alternativeName":"Narayanganj"},{"district":"Narsingdi","alternativeName":"Narshingdi"},{"district":"Rajbari","alternativeName":"Rajbari"},{"district":"Shariatpur","alternativeName":"Shariatpur"},{"district":"Tangail","alternativeName":"Tangail"}],"Khulna":[{"district":"Bagerhat","alternativeName":"Bagerhat"},{"district":"Chuadanga","alternativeName":"Chuadanga"},{"district":"Jashore","alternativeName":"Jessore"},{"district":"Jhenaidah","alternativeName":"Jhenaidah"},{"district":"Khulna","alternativeName":"Khulna"},{"district":"Kushtia","alternativeName":"Kushtia"},{"district":"Magura","alternativeName":"Magura"},{"district":"Meherpur","alternativeName":"Meherpur"},{"district":"Narail","alternativeName":"Narail"},{"district":"Satkhira","alternativeName":"Satkhira"}],"Mymensingh":[{"district":"Jamalpur","alternativeName":"Jamalpur"},{"district":"Mymensingh","alternativeName":"Mymensingh"},{"district":"Netrokona","alternativeName":"Netrokona"},{"district":"Sherpur","alternativeName":"Sherpur"}],"Rajshahi":[{"district":"Bogura","alternativeName":"Bogra"},{"district":"Joypurhat","alternativeName":"Joypurhat"},{"district":"Naogaon","alternativeName":"Naogaon"},{"district":"Natore","alternativeName":"Natore"},{"district":"Chapainawabganj","alternativeName":"Chapainawabganj"},{"district":"Pabna","alternativeName":"Pabna"},{"district":"Rajshahi","alternativeName":"Rajshahi"},{"district":"Sirajganj","alternativeName":"Sirajganj"}],"Rangpur":[{"district":"Dinajpur","alternativeName":"Dinajpur"},{"district":"Gaibandha","alternativeName":"Gaibandha"},{"district":"Kurigram","alternativeName":"Kurigram"},{"district":"Lalmonirhat","alternativeName":"Lalmonirhat"},{"district":"Nilphamari","alternativeName":"Nilphamari"},{"district":"Panchagarh","alternativeName":"Panchagar"},{"district":"Rangpur","alternativeName":"Rangpur"},{"district":"Thakurgaon","alternativeName":"Thakurgaon"}],"Sylhet":[{"district":"Habiganj","alternativeName":"Hobiganj"},{"district":"Moulvibazar","alternativeName":"Moulovi Bazar"},{"district":"Sunamganj","alternativeName":"Sunamganj"},{"district":"Sylhet","alternativeName":"Sylhet"}]};
+    let divisionList = Object.keys(divisionJSON);
 
     $.get(districtUrl, function () {})
-        .done(function (response) {
-            districtData = response.data;
-            totalInfected = response.total_infected;
-        });
+    .done(function (response) {
+        districtData = response.data;
+        totalInfected = response.total_infected;
+    });
 
     $('#mapColumn a').on('click mouseover', function () {
-        let districtId = $(this).data("id");
-        let districtName = $(this).data("value");
-        let selectedDistrict = districtData.find(o => o.id === districtId) || districtData.find(o => o.name === districtName);
+        // District
+        let selectedDistrictName = $(this).data("value");
+        let selectedDistrict = districtData.find(o => o.name === selectedDistrictName);
 
 
         // Division
         let selectedDivision = '';
         let totalAffectedInDivision = 0;
+        let totalAffectedInDivisionPreviously = 0;
 
-        divisionList.forEach(function (eachDivision, index) {
-            if (districtId != null) {
-                if (divisionDistrict[eachDivision].includes(districtId)) {
-                    selectedDivision = eachDivision;
-                }
-            }
+        divisionList.forEach(function (eachDivision) {
+            const districts_of_the_division = divisionJSON[eachDivision];
+            
+            districts_of_the_division.forEach(function(eachDistrict) {
+               if(eachDistrict.alternativeName === selectedDistrictName || eachDistrict.district === selectedDistrictName) {
+                   selectedDivision = eachDivision;
+               } 
+            });
         });
 
-        if (selectedDivision != '') {
-            let districtIdList = divisionDistrict[selectedDivision];
 
-            districtIdList.forEach(function name(eachDistrictId) {
-                let districtAffected = districtData.find(o => o.id === eachDistrictId);
-                totalAffectedInDivision += districtAffected.count;
+        if (selectedDivision != '') {
+            const districts_of_the_selected_division = divisionJSON[selectedDivision];
+
+            districts_of_the_selected_division.forEach(function(eachDistrict) {
+                const kDistrictName = eachDistrict.district;
+                const kDistrictAlternativeName = eachDistrict.alternativeName;
+                const kDistrictAffected = districtData.find(o => o.name === kDistrictName) || districtData.find(o => o.name === kDistrictAlternativeName);
+                
+                // If district isn't affected, it won't appear in API
+                if(kDistrictAffected != null) {
+                    totalAffectedInDivision += kDistrictAffected.count;
+                    totalAffectedInDivisionPreviously += kDistrictAffected.prev_count;
+                }
             });
         }
 
-        // Set values over cards
+        // // Set values over cards
 
         selectedDistrict == null ?
-            setValueWhenNotFound(districtName) :
+            setValueWhenNotFound(
+                selectedDistrictName,
+                selectedDivision,
+                totalAffectedInDivision,
+                (totalAffectedInDivision - totalAffectedInDivisionPreviously)
+            ) :
+
             setSelectedValue(
                 selectedDistrict.name,
                 selectedDistrict.count,
+                (selectedDistrict.count - selectedDistrict.prev_count),
                 (selectedDistrict.count / totalInfected) * 100,
                 selectedDivision,
-                totalAffectedInDivision
+                totalAffectedInDivision,
+                (totalAffectedInDivision - totalAffectedInDivisionPreviously)
             );
 
 
@@ -85,21 +94,38 @@ function goToByScroll(id) {
     }, 'slow');
 }
 
-function setValueWhenNotFound(selectedDistrictName) {
+function setValueWhenNotFound(selectedDistrictName, selectedDivisionName, selectedDivisionAffected, selectedDivisionComparator) {
     $('#selectedDistrict').text(selectedDistrictName);
     $('#selectedDistrictCount').text(0);
+    setIncreasedText($('#districtComparator'), 0);
+
     $('#selectedDistrictPercentage').text('0 %');
-    $('#divisionCard').hide();
+    
+    $('#selectedDivisionName').text('Division: '.concat(selectedDivisionName));
+    $('#selectedDivisionCount').text(selectedDivisionAffected);
+    setIncreasedText($('#divisionComparator'), selectedDivisionComparator);
 }
 
-function setSelectedValue(districtName, districtAffected, percentage, divisionName, divisinCount) {
-    $('#divisionCard').slideDown();
-
+function setSelectedValue(districtName, districtAffected, districtComparator, percentage, divisionName, divisinCount, divisionYesterday) {
     $('#selectedDistrict').text(districtName);
     $('#selectedDistrictCount').text(districtAffected);
+    setIncreasedText($('#districtComparator'), districtComparator);
 
     $('#selectedDistrictPercentage').text(percentage.toFixed(2).toString().concat(' %'));
 
     $('#selectedDivisionName').text('Division: '.concat(divisionName));
     $('#selectedDivisionCount').text(divisinCount);
+    setIncreasedText($('#divisionComparator'), divisionYesterday);
+}
+
+function setIncreasedText(element, count) {
+    if(count > 0) {
+        element.text(count);
+        element.attr("class","red-text");
+    } else if (count == 0) {
+        element.text(count);
+        element.attr("class","green-text");
+    } else {
+        element.text('N/A');
+    }
 }

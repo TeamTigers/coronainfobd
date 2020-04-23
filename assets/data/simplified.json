@@ -1,0 +1,274 @@
+{
+  "Barisal": [
+    {
+      "district": "Barguna",
+      "alternativeName": "Barguna"
+    },
+    {
+      "district": "Barisal",
+      "alternativeName": "Barishal"
+    },
+    {
+      "district": "Bhola",
+      "alternativeName": "Bhola"
+    },
+    {
+      "district": "Jhalokati",
+      "alternativeName": "Jhalokathi"
+    },
+    {
+      "district": "Patuakhali",
+      "alternativeName": "Potuakhali"
+    },
+    {
+      "district": "Pirojpur",
+      "alternativeName": "Pirojpur"
+    }
+  ],
+  "Chattogram": [
+    {
+      "district": "Bandarban",
+      "alternativeName": "Bandarban"
+    },
+    {
+      "district": "Brahmanbaria",
+      "alternativeName": "B. Baria"
+    },
+    {
+      "district": "Chandpur",
+      "alternativeName": "Chandpur"
+    },
+    {
+      "district": "Chattogram",
+      "alternativeName": "Chattogram"
+    },
+    {
+      "district": "Cumilla",
+      "alternativeName": "Cumilla"
+    },
+    {
+      "district": "Cox's Bazar",
+      "alternativeName": "Cox’s bazar"
+    },
+    {
+      "district": "Feni",
+      "alternativeName": "Feni"
+    },
+    {
+      "district": "Khagrachhari",
+      "alternativeName": "Khagrachari"
+    },
+    {
+      "district": "Lakshmipur",
+      "alternativeName": "Laksmipur"
+    },
+    {
+      "district": "Noakhali",
+      "alternativeName": "Noakhali"
+    },
+    {
+      "district": "Rangamati",
+      "alternativeName": "Rangamati"
+    }
+  ],
+  "Dhaka": [
+    {
+      "district": "Dhaka",
+      "alternativeName": "Dhaka City"
+    },
+    {
+      "district": "Faridpur",
+      "alternativeName": "Faridpur"
+    },
+    {
+      "district": "Gazipur",
+      "alternativeName": "Gazipur"
+    },
+    {
+      "district": "Gopalganj",
+      "alternativeName": "Gopalganj"
+    },
+    {
+      "district": "Kishoreganj",
+      "alternativeName": "Kishoreganj"
+    },
+    {
+      "district": "Madaripur",
+      "alternativeName": "Madaripur"
+    },
+    {
+      "district": "Manikganj",
+      "alternativeName": "Manikganj"
+    },
+    {
+      "district": "Munshiganj",
+      "alternativeName": "Munshigonj"
+    },
+    {
+      "district": "Narayanganj",
+      "alternativeName": "Narayanganj"
+    },
+    {
+      "district": "Narsingdi",
+      "alternativeName": "Narshingdi"
+    },
+    {
+      "district": "Rajbari",
+      "alternativeName": "Rajbari"
+    },
+    {
+      "district": "Shariatpur",
+      "alternativeName": "Shariatpur"
+    },
+    {
+      "district": "Tangail",
+      "alternativeName": "Tangail"
+    }
+  ],
+  "Khulna": [
+    {
+      "district": "Bagerhat",
+      "alternativeName": "Bagerhat"
+    },
+    {
+      "district": "Chuadanga",
+      "alternativeName": "Chuadanga"
+    },
+    {
+      "district": "Jashore",
+      "alternativeName": "Jessore"
+    },
+    {
+      "district": "Jhenaidah",
+      "alternativeName": "Jhenaidah"
+    },
+    {
+      "district": "Khulna",
+      "alternativeName": "Khulna"
+    },
+    {
+      "district": "Kushtia",
+      "alternativeName": "Kushtia"
+    },
+    {
+      "district": "Magura",
+      "alternativeName": "Magura"
+    },
+    {
+      "district": "Meherpur",
+      "alternativeName": "Meherpur"
+    },
+    {
+      "district": "Narail",
+      "alternativeName": "Narail"
+    },
+    {
+      "district": "Satkhira",
+      "alternativeName": "Satkhira"
+    }
+  ],
+  "Mymensingh": [
+    {
+      "district": "Jamalpur",
+      "alternativeName": "Jamalpur"
+    },
+    {
+      "district": "Mymensingh",
+      "alternativeName": "Mymensingh"
+    },
+    {
+      "district": "Netrokona",
+      "alternativeName": "Netrokona"
+    },
+    {
+      "district": "Sherpur",
+      "alternativeName": "Sherpur"
+    }
+  ],
+  "Rajshahi": [
+    {
+      "district": "Bogura",
+      "alternativeName": "Bogra"
+    },
+    {
+      "district": "Joypurhat",
+      "alternativeName": "Joypurhat"
+    },
+    {
+      "district": "Naogaon",
+      "alternativeName": "Naogaon"
+    },
+    {
+      "district": "Natore",
+      "alternativeName": "Natore"
+    },
+    {
+      "district": "Chapainawabganj",
+      "alternativeName": "Chapainawabganj"
+    },
+    {
+      "district": "Pabna",
+      "alternativeName": "Pabna"
+    },
+    {
+      "district": "Rajshahi",
+      "alternativeName": "Rajshahi"
+    },
+    {
+      "district": "Sirajganj",
+      "alternativeName": "Sirajganj"
+    }
+  ],
+  "Rangpur": [
+    {
+      "district": "Dinajpur",
+      "alternativeName": "Dinajpur"
+    },
+    {
+      "district": "Gaibandha",
+      "alternativeName": "Gaibandha"
+    },
+    {
+      "district": "Kurigram",
+      "alternativeName": "Kurigram"
+    },
+    {
+      "district": "Lalmonirhat",
+      "alternativeName": "Lalmonirhat"
+    },
+    {
+      "district": "Nilphamari",
+      "alternativeName": "Nilphamari"
+    },
+    {
+      "district": "Panchagarh",
+      "alternativeName": "Panchagar"
+    },
+    {
+      "district": "Rangpur",
+      "alternativeName": "Rangpur"
+    },
+    {
+      "district": "Thakurgaon",
+      "alternativeName": "Thakurgaon"
+    }
+  ],
+  "Sylhet": [
+    {
+      "district": "Habiganj",
+      "alternativeName": "Hobiganj"
+    },
+    {
+      "district": "Moulvibazar",
+      "alternativeName": "Moulovi Bazar"
+    },
+    {
+      "district": "Sunamganj",
+      "alternativeName": "Sunamganj"
+    },
+    {
+      "district": "Sylhet",
+      "alternativeName": "Sylhet"
+    }
+  ]
+}
