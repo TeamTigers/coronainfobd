@@ -18,7 +18,7 @@ main {
 }
 
 table th {
-  color: #2692da;
+  color: #135dcc;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -83,11 +83,11 @@ table th {
 }
 
 .contextTextTheme {
-  color: #03a892;
+  background: #7a7ae4;
 }
 
 .progressbarTheme {
-  color: #026b5d;
+  background: #001c77;
 }
 
 .headerText {
@@ -127,7 +127,7 @@ table th {
 }
 
 .tabs .tab a {
-  color: #03a892af;
+  color: #8787ce;
 }
 
 .tabs .tab a:focus,
@@ -139,11 +139,11 @@ table th {
 .tabs .tab a.active,
 .tabs .tab a:hover {
   background-color: transparent;
-  color: #02a892;
+  color: #3754e7ee;
 }
 
 .tabs .indicator {
-  background-color: #02a892;
+  background-color: #3754e7ee;
 }
 
 .gsans {
@@ -155,12 +155,12 @@ h3 {
 }
 
 .title {
-  color: #02a892;
+  color: #3754e7ee;
   font-weight: bold;
 }
 
 .navTheme {
-  background-color: #03a892;
+  background-color: #1b37c4dc;
 }
 
 .bannerSvg {

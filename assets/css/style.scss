@@ -1,6 +1,6 @@
 $foregroundColor: #0288d1;
 
-$secondayColor: #02a892; // html {
+$secondayColor: #3754e7ee; // html {
 //   scroll-behavior: smooth;
 // }
 header {
@@ -26,11 +26,11 @@ main {
 
 table {
   th {
-    color: #2692da;
+    color: #135dcc;
     position: sticky;
-    top:0;
-    z-index:1;
-    border-top:0;
+    top: 0;
+    z-index: 1;
+    border-top: 0;
     background: #ffffff;
   }
 }
@@ -107,10 +107,10 @@ table {
 }
 
 .contextTextTheme {
-  color: #03a892;
+  background: #7a7ae4;
 }
 .progressbarTheme {
-  color: #026b5d;
+  background: #001c77;
 }
 
 .headerText {
@@ -149,7 +149,7 @@ table {
 }
 
 .tabs .tab a {
-  color: #03a892af;
+  color: #8787ce;
 }
 
 .tabs .tab a:focus,
@@ -184,7 +184,7 @@ h3 {
 }
 
 .navTheme {
-  background-color: #03a892;
+  background-color: #1b37c4dc;
 }
 
 .bannerSvg {
