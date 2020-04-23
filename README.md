@@ -32,6 +32,17 @@ Yes. We tried our best to make it responsive so that people can get proper view 
 
 If you have any query, feature request or if you find any kind of bug in our site please let us know by simply opening a issue [here](https://github.com/TeamTigers/coronainfobd/issues).
 
+## API sources that we've used so far 
+
+- World, Bangladesh and More info data
+    - [API](https://coronavirus-19-api.herokuapp.com/tabs/tab1)
+- Chart Visualization
+  - [API](https://corona.lmao.ninja/docs/)
+- Map Visualization 
+  - [API](https://corona-bd.herokuapp.com/district)
+- Dhaka city affected areas (table)
+  - [API](https://teamtigers.github.io/covid19-dataset-bd/dhakacity/dhakacity.json)
+
 ## Can I contribute in this project?
 
 Of course you can. It is an open source project. If you want to contribute with us follow the procedures -
