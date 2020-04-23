@@ -4,6 +4,11 @@
 
 CoronaInfoBD is a web site which tracks the COVID-19 affect of Bangladesh. This site provides the total number of affected people, deaths, recovered patients, active cases and so on. It also provides some other features which includes visual mapping of how COVID-19 is spreading, statistical charts of infected number of people over time, deaths and recovered number of people over time, hotline number and many more.
 
+World/Bangladesh             |  Data Visualization             |  Map Visualization
+:-------------------------:|:-------------------------:|:-------------------------:
+![Snap](https://user-images.githubusercontent.com/29749035/80138604-da420500-85c6-11ea-90a2-0968bb70a754.png)  |  ![Snap](https://user-images.githubusercontent.com/29749035/80138602-da420500-85c6-11ea-9c91-a73909016660.png)  |  ![Snap](https://user-images.githubusercontent.com/29749035/80138590-d7dfab00-85c6-11ea-817a-5ef56b0f32f3.png)
+
+
 ## How it will help us?
 
 As it provides real data and visual mapping of spreading COVID-19, mass people will have a overall idea of current situation of COVID-19 and how the virus is spreading.
