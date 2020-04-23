@@ -1,0 +1,123 @@
+.bangladesh {
+    max-width: 800px;
+    width: 100%;
+    margin: auto
+}
+
+.bangladesh h3 {
+    text-align: center;
+    padding: 24px 12px;
+    position: relative
+}
+
+.bangladesh h3::before {
+    content: '';
+    width: 12%;
+    height: 3px;
+    background-color: #3764eb;
+    position: absolute;
+    bottom: 15px;
+    left: 44%
+}
+
+.bangladesh h3::after {
+    content: '';
+    width: 25%;
+    height: 1px;
+    background-color: #3764eb;
+    position: absolute;
+    bottom: 14px;
+    left: 38%
+}
+
+.districtLargeArea {
+    font-size: 16px;
+    fill: #000;
+    font-weight: 400;
+    font-family: 'Hind Siliguri', sans-serif;
+    cursor: pointer
+}
+
+.districtMediumArea,
+.seat_300_map .districtLargeArea {
+    /*fill: #2bbd7e;*/
+    stroke: #e0e0e0;
+    stroke-width: .5;
+    stroke-miterlimit: 10;
+    cursor: pointer
+}
+
+a:hover path,
+a:hover polyline,
+g:hover path,
+path:hover,
+polyline:hover {
+    fill: #ffab40
+}
+
+@media only screen and (max-width:823px) {
+    .districtLargeArea {
+        font-size: 20px
+    }
+}
+
+
+.st1 {
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+.redZone {
+    font-size: 16px;
+    font-weight: 700;
+    fill: #e53935;
+    stroke: #fff;
+    stroke-width: .5;
+    stroke-miterlimit: 10
+}
+
+.sylhetDivision {
+    fill: #ff5252;
+}
+
+.dhakaDivision {
+    fill: #2bbd7e;
+}
+
+.khulnaDivision {
+    fill: #ff4081;
+}
+
+.barishalDivision {
+    fill: #03a9f4;
+}
+
+.chittagongDivision {
+    fill: #ab47bc;
+}
+
+.mymenshingDivision {
+    fill: #ff7043;
+}
+
+.rajshahiDivision {
+    fill: #26c6da;
+}
+
+.rangpurDivision {
+    fill: #ff9800;
+}
+
+.btn.waves-effect.waves-light { 
+    border-radius: 15px;
+}
+
+@media only screen and (max-width:600px) {    
+    #desktopIndicator {
+        display: none;
+    }
+}
+
+#selectedDistrictInfoCards {
+    display: none;
+}
+
