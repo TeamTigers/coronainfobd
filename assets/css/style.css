@@ -18,7 +18,7 @@ main {
 }
 
 table th {
-  color: #2692da;
+  color: #135dcc;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -55,16 +55,39 @@ table th {
   color: #ffffff;
 }
 
-.contextTextTheme {
-  color: #03a892;
-}
-
-.progressbarTheme {
-  color: #026b5d;
+#logo-icon {
+  margin-bottom: -9px;
+  margin-right: 6px;
 }
 
 #scrollTop {
   display: none;
+}
+
+#affectedAreaNumber {
+  font-weight: bold;
+}
+
+#selectedDistrict {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.selectedDistrictPercentageDes {
+  font-weight: bold;
+}
+
+#selectedDivisionName {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.contextTextTheme {
+  background: #7a7ae4;
+}
+
+.progressbarTheme {
+  background: #001c77;
 }
 
 .headerText {
@@ -72,7 +95,7 @@ table th {
 }
 
 .customContainer {
-  margin-top: 2rem;
+  margin-top: 3rem;
   margin-left: 4rem;
   margin-right: 4rem;
   margin-bottom: 4rem;
@@ -97,10 +120,6 @@ table th {
   height: 150px;
 }
 
-#affectedAreaNumber {
-  font-weight: bold;
-}
-
 .subTitle {
   font-family: "Google Sans", sans-serif;
   margin-left: 1rem;
@@ -108,7 +127,7 @@ table th {
 }
 
 .tabs .tab a {
-  color: #03a892af;
+  color: #8787ce;
 }
 
 .tabs .tab a:focus,
@@ -120,11 +139,11 @@ table th {
 .tabs .tab a.active,
 .tabs .tab a:hover {
   background-color: transparent;
-  color: #02a892;
+  color: #3754e7ee;
 }
 
 .tabs .indicator {
-  background-color: #02a892;
+  background-color: #3754e7ee;
 }
 
 .gsans {
@@ -136,12 +155,12 @@ h3 {
 }
 
 .title {
-  color: #02a892;
+  color: #3754e7ee;
   font-weight: bold;
 }
 
 .navTheme {
-  background-color: #03a892;
+  background-color: #1b37c4dc;
 }
 
 .bannerSvg {
@@ -167,11 +186,6 @@ h3 {
   width: auto;
   height: 50rem;
   overflow-y: scroll;
-}
-
-#logo-icon {
-  margin-bottom: -9px;
-  margin-right: 6px;
 }
 
 .homeImg {
@@ -217,6 +231,10 @@ h3 {
 
 .countNumber {
   font-size: 2.5rem;
+}
+
+.countNumberMap {
+  font-size: 3rem;
 }
 
 .collapsible-header {

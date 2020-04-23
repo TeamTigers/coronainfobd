@@ -1,3 +1,4 @@
+
 $(function() {
     let dhakaCityURL = "https://teamtigers.github.io/covid19-dataset-bd/dhakacity/dhakacity.json";
     $.get(dhakaCityURL, function(){}) 
@@ -22,8 +23,9 @@ $(function() {
             showToast("Something went wrong!");
         });
 });
- 
+
 function makeTable(dhakacityArray) {
+
     let totalAffected = totalCount(dhakacityArray);
     let tableStr = "<table><thead><tr><th>Location</th><th>Total</th><th>Percent</th></tr></thead><tbody id='locationTotal'>";
     for (let index = 0; index < dhakacityArray.length; index++) {
@@ -42,3 +44,4 @@ function totalCount(dhakacityArray) {
     }
     return totalAffected;
 }
+

@@ -15,6 +15,7 @@ As it provides real data and visual mapping of spreading COVID-19, mass people w
 - **Case study**, where you will have a proper mind of all cases till now and the description of how many people were affected and which date they were affected.
 
 - **Charts**, here it provides two type of charts, calendar chart and are chart which visualize the time series of affected, deaths and recovered people. 
+- **Map** district information with division total in responsive map visualization
 
 - **Hotline** numbers that are provided from _IEDCR_. You can easily call those number in your emergency by tapping on the numbers. Also there is a map where you find the location of the hospitals of Bangladesh where COVID-19 can be cured.
 
@@ -48,6 +49,17 @@ Contributors who have worked/ working hard to keep this application up to date a
 - [Shah Fahad Hossen](https://www.facebook.com/shahfahad.hossain)
 - [Jinnatul Islam Morol](https://www.facebook.com/mdjinnatul.islam)
 - [Zubayer Himel](https://www.facebook.com/zubayerhimel0)
+
+## API sources that we've used so far 
+
+- World, Bangladesh and More info data
+    - [API](https://coronavirus-19-api.herokuapp.com/tabs/tab1)
+- Chart Visualization
+  - [API](https://corona.lmao.ninja/docs/)
+- Map Visualization 
+  - [API](https://corona-bd.herokuapp.com/district)
+- Dhaka city affected areas (table)
+  - [API](https://teamtigers.github.io/covid19-dataset-bd/dhakacity/dhakacity.json)
 
 ## License and copyright
 
