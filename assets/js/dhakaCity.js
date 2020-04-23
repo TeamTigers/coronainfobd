@@ -11,6 +11,12 @@ $(function() {
                 dhakacityArray.sort(function(first, last) {return first[1] - last[1]})
                 $('#dhakaCityInfo').html(makeTable(dhakacityArray))
             })
+
+            //Decending Sort
+            $('#decending').click(function() {
+                dhakacityArray.sort(function(first, last) {return last[1] - first[1]})
+                $('#dhakaCityInfo').html(makeTable(dhakacityArray))
+            })
         })
         .fail(function () {
             showToast("Something went wrong!");
@@ -20,14 +26,12 @@ $(function() {
 function makeTable(dhakacityArray) {
     let totalAffected = totalCount(dhakacityArray);
     let tableStr = "<table><thead><tr><th>Location</th><th>Total</th><th>Percent</th></tr></thead><tbody id='locationTotal'>";
-    console.log(dhakacityArray)
     for (let index = 0; index < dhakacityArray.length; index++) {
         let count = dhakacityArray[index][1];
         tableStr += "<tr><td>"+dhakacityArray[index][0]+"</td><td>"
                 +count+"</td><td>"+ ((count / totalAffected) * 100).toFixed(2).concat('%') +"</td></tr>"
     }
     tableStr += "</tbody></table>";
-    console.log(tableStr)
     $('#dhakaCityInfo').html(tableStr)
 } 
 
