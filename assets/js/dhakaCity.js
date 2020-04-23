@@ -12,12 +12,23 @@ $(function() {
 });
  
 function makeTable(dhakacityArray) {
-    let tableStr = "<table><thead><tr><th>Location</th><th>Total</th></tr></thead><tbody id='locationTotal'>";
+    let totalAffected = totalCount(dhakacityArray);
+    let tableStr = "<table><thead><tr><th>Location</th><th>Total</th><th>Percent</th></tr></thead><tbody id='locationTotal'>";
+    console.log(dhakacityArray)
     for (let index = 0; index < dhakacityArray.length; index++) {
-        
+        let count = dhakacityArray[index][1];
         tableStr += "<tr><td>"+dhakacityArray[index][0]+"</td><td>"
-                        +dhakacityArray[index][1]+"</td></tr>"
+                +count+"</td><td>"+ ((count / totalAffected) * 100).toFixed(2).concat('%') +"</td></tr>"
     }
     tableStr += "</tbody></table>";
+    console.log(tableStr)
     $('#dhakaCityInfo').html(tableStr)
 } 
+
+function totalCount(dhakacityArray) {
+    let totalAffected = 0;
+    for (let index = 0; index < dhakacityArray.length; index++) {
+        totalAffected += parseInt(dhakacityArray[index][1]);
+    }
+    return totalAffected;
+}
