@@ -134,8 +134,8 @@
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="advice_for_public.html">Advice for public</a></li>
       </ul>
-      <div class="progress contextTextTheme">
-        <div class="indeterminate progressbarTheme"></div>
+      <div class="progress indigo lighten-3">
+        <div class="indeterminate indigo darken-3"></div>
       </div>
     </header>
     <main id="elemets">
@@ -507,27 +507,44 @@
         </div>
       </div>
 
-
-      <div class="row">
-        <h4 class="center-align gsans text-blue-grey text-darken-1 headerText">
-          Confirmed cases in Dhaka city
-        </h4>
-        <div class="card round">
-          <div class="card-content">
-            <div class="row">
-              <h6 class="center-align">
-                <b>Total affected area in dhaka city:</b>
-                <span class="orange-text text-darken-4" id="affectedAreaNumber"></span>
-              </h6>
-              <div class="input-field col s12 m4 l4">
-                <input id="search" type="text" autocomplete="off" />
-                <label for="arealsearch">Search for a location...</label>
-                <input id="accending" class="waves-effect waves-light btn" type="button" value="Accending">
-                <input id="decending" class="waves-effect waves-light btn right" type="button" value="Decending">
-              </div>
-              <div class="col s12 m12 l12 scrollableTable">
-                <div id="dhakaCityInfo"></div>
-
+      <div class="customContainer">
+        <div class="row">
+          <h4
+            class="center-align gsans text-blue-grey text-darken-1 headerText"
+          >
+            Confirmed cases in Dhaka city
+          </h4>
+          <div class="card round">
+            <div class="card-content">
+              <div class="row">
+                <h6 class="center-align">
+                  <b>Total affected area in dhaka city:</b>
+                  <span
+                    class="orange-text text-darken-4"
+                    id="affectedAreaNumber"
+                  ></span>
+                </h6>
+                <div class="input-field col s12 m4 l4">
+                  <input id="search" type="text" autocomplete="off" />
+                  <label for="arealsearch">Search for a location...</label>
+                </div>
+                <div class="right-align">
+                  <a
+                    class="btn-floating tooltipped btn-small waves-effect waves-light indigo sortButton"
+                    id="accending"
+                    data-tooltip="Filter in ascending order"
+                    ><i class="material-icons">sort</i></a
+                  >
+                  <a
+                    class="btn-floating tooltipped btn-small waves-effect waves-light purple"
+                    id="decending"
+                    data-tooltip="Filter in descending order"
+                    ><i class="material-icons">filter_list</i></a
+                  >
+                </div>
+                <div class="col s12 m12 l12 scrollableTable">
+                  <div id="dhakaCityInfo"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -899,20 +916,18 @@
             >
           </div>
         </div>
+      </footer>
+    </main>
 
-      </div>
-    </footer>
-  </main>
-
-  <script src="assets/js/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="assets/js/minified/coronaCounter.min.js"></script>
-  <script src="assets/js/minified/chart-constructor.min.js"></script>
-  <script src="assets/js/minified/plugin.min.js"></script>
-  <script src="assets/js/minified/darkMood.min.js"></script>
-  <script src="assets/js/dhakaCity.js"></script>
-  <script src="assets/js/map.js"></script>
-  <script src="assets/js/map-controller.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="assets/js/minified/coronaCounter.min.js"></script>
+    <script src="assets/js/minified/chart-constructor.min.js"></script>
+    <script src="assets/js/minified/plugin.min.js"></script>
+    <script src="assets/js/minified/darkMood.min.js"></script>
+    <script src="assets/js/minified/dhaka-city.min.js"></script>
+    <script src="assets/js/map.js"></script>
+    <script src="assets/js/map-controller.js"></script>
 
     <script>
       window.onscroll = scroll1;

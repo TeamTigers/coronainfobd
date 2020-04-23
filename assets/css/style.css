@@ -82,12 +82,8 @@ table th {
   font-size: 1.3rem;
 }
 
-.contextTextTheme {
-  background: #7a7ae4;
-}
-
-.progressbarTheme {
-  background: #001c77;
+.sortButton {
+  margin-right: 1rem;
 }
 
 .headerText {
