@@ -5,6 +5,12 @@ $(function() {
             let dhakacityArray = Object.entries(res);
             $("#affectedAreaNumber").text(dhakacityArray.length)
             makeTable(dhakacityArray);
+
+            //Accending Sort
+            $('#accending').click(function() {
+                dhakacityArray.sort(function(first, last) {return first[1] - last[1]})
+                $('#dhakaCityInfo').html(makeTable(dhakacityArray))
+            })
         })
         .fail(function () {
             showToast("Something went wrong!");
