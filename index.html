@@ -302,16 +302,16 @@
       <div class="row">
         <div class="col s12 l12">
           <h4 class="center-align">Map Visualization</h4>
-          <div class="card round hoverable">
+          <div class="card round">
             <div class="row">
               <div class="col s12 l3">
                 <br><br>
                 <div id="desktopIndicator" class="container">
-                  <a class="waves-effect waves-light btn btn-small red accent-2 chi"><i class="material-icons left">location_on</i>Sylhet</a><br><br>
                   <a class="waves-effect waves-light btn btn-small" style="background-color: #2bbd7e;"><i class="material-icons left">location_on</i>Dhaka</a><br><br>
-                  <a class="waves-effect waves-light btn btn-small pink accent-2"><i class="material-icons left">location_on</i>Khulna</a><br><br>
-                  <a class="waves-effect waves-light btn btn-small light-blue"><i class="material-icons left">location_on</i>Barishal</a><br><br>
                   <a class="waves-effect waves-light btn btn-small purple lighten-1"><i class="material-icons left">location_on</i>Chattogram</a><br><br>
+                  <a class="waves-effect waves-light btn btn-small pink accent-2"><i class="material-icons left">location_on</i>Khulna</a><br><br>
+                  <a class="waves-effect waves-light btn btn-small red accent-2 chi"><i class="material-icons left">location_on</i>Sylhet</a><br><br>
+                  <a class="waves-effect waves-light btn btn-small light-blue"><i class="material-icons left">location_on</i>Barishal</a><br><br>
                   <a class="waves-effect waves-light btn btn-small deep-orange lighten-1"><i class="material-icons left">location_on</i>Mymensingh</a><br><br>
                   <a class="waves-effect waves-light btn btn-small cyan lighten-1"><i class="material-icons left">location_on</i>Rajshahi</a><br><br>
                   <a class="waves-effect waves-light btn btn-small orange"><i class="material-icons left">location_on</i>Rangpur</a><br><br>
@@ -324,11 +324,11 @@
                 <div class="row">
                   <div class="col s12 l12">
                     <div class="container">
-                      <div class="card round center-align">
+                      <div class="card round center-align z-depth-3">
                         <div class="card-content">
                           <div class="row">
                             <div class="col s12 m12 l12">
-                              <span class="countNumber count gsans" style="color: rgb(0, 122, 204);"
+                              <span class="countNumberMap count gsans" style="color: rgb(0, 122, 204);"
                                 id="selectedDistrictCount"></span><br />
                               <span id="selectedDistrict" class="gsans"></span>
                             </div>
@@ -341,13 +341,13 @@
                 <div class="row">
                   <div class="col s12 l12">
                     <div class="container">
-                      <div class="card round center-align">
+                      <div class="card round center-align z-depth-3">
                         <div class="card-content">
                           <div class="row">
                             <div class="col s12 m12 l12">
-                              <span class="countNumber count gsans" style="color: rgb(0, 122, 204);"
+                              <span class="countNumberMap count gsans" style="color: rgb(0, 122, 204);"
                                 id="selectedDistrictPercentage"></span><br />
-                              <span class="gsans">affected compare to total affected in Bangladesh.</span>
+                              <span class="gsans selectedDistrictPercentageDes">affected compared to total affected in Bangladesh.</span>
                             </div>
                           </div>
                         </div>
@@ -358,11 +358,11 @@
                 <div class="row">
                   <div class="col s12 l12">
                     <div class="container">
-                      <div id="divisionCard" class="card round center-align">
+                      <div id="divisionCard" class="card round center-align z-depth-3">
                         <div class="card-content">
                           <div class="row">
                             <div class="col s12 m12 l12">
-                              <span class="countNumber count gsans" style="color: rgb(0, 122, 204);"
+                              <span class="countNumberMap count gsans" style="color: rgb(0, 113, 189);"
                                 id="selectedDivisionCount"></span><br />
                               <span id="selectedDivisionName" class="gsans"></span>
                             </div>
@@ -386,7 +386,7 @@
           <div class="card-content">
             <div class="row">
               <h6 class="center-align">
-                <b>Total affected area in dhaka city:</b>
+                <b>Total affected areas in dhaka city:</b>
                 <span class="orange-text text-darken-4" id="affectedAreaNumber"></span>
               </h6>
               <div class="input-field col s12 m4 l4">
@@ -688,8 +688,8 @@
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
-            <h5 class="white-text https://github.com/TeamTigers/coronainfobd.git">
-              CoronaInfoBD Team
+            <h5 class="white-text">
+              CoronaInfoBD
             </h5>
             <p class="grey-text text-lighten-4">
               It is a voluntary act aimed at mass awareness. All content used

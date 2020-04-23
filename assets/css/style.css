@@ -55,16 +55,39 @@ table th {
   color: #ffffff;
 }
 
+#logo-icon {
+  margin-bottom: -9px;
+  margin-right: 6px;
+}
+
+#scrollTop {
+  display: none;
+}
+
+#affectedAreaNumber {
+  font-weight: bold;
+}
+
+#selectedDistrict {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.selectedDistrictPercentageDes {
+  font-weight: bold;
+}
+
+#selectedDivisionName {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
 .contextTextTheme {
   color: #03a892;
 }
 
 .progressbarTheme {
   color: #026b5d;
-}
-
-#scrollTop {
-  display: none;
 }
 
 .headerText {
@@ -95,10 +118,6 @@ table th {
   margin-bottom: 1rem;
   width: 200px;
   height: 150px;
-}
-
-#affectedAreaNumber {
-  font-weight: bold;
 }
 
 .subTitle {
@@ -169,11 +188,6 @@ h3 {
   overflow-y: scroll;
 }
 
-#logo-icon {
-  margin-bottom: -9px;
-  margin-right: 6px;
-}
-
 .homeImg {
   height: 200;
   max-width: 250;
@@ -217,6 +231,10 @@ h3 {
 
 .countNumber {
   font-size: 2.5rem;
+}
+
+.countNumberMap {
+  font-size: 3rem;
 }
 
 .collapsible-header {
