@@ -8,10 +8,13 @@ $(function () {
     $.get(districtUrl, function () {})
     .done(function (response) {
         districtData = response.data;
-        totalInfected = response.total_infected;
     });
 
     $('#mapColumn a').on('click mouseover', function () {
+        // Get total infected from previously loaded data
+        totalInfected = $('#numberOfConfirmedCases').text();
+
+
         // District
         let selectedDistrictName = $(this).data("value");
         let selectedDistrict = districtData.find(o => o.name === selectedDistrictName);
