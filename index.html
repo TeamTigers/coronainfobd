@@ -22,6 +22,8 @@
   <meta property="og:image" content="assets/img/svg/title.png" />
   <meta property="og:title" content="CoronaInfoBD  2020" />
   <meta property="og:description" content="An application to get updated with corona virus affected in Bangladesh" />
+  <meta name="Description" content="An application to get updated with corona virus affected in Bangladesh">
+  <meta name="keywords" content="করোনাভাইরাস, কোভিড-১৯, coronavirus info, covid-19, coronavirus bangladesh, coronainfobd, করোনাইনফোবিডি, coronainfobd com, coronainfobd github, coronainfobd github io">
   <title>CoronaInfoBD</title>
   <link rel="icon" href="assets/img/svg/title.png" />
 
@@ -329,6 +331,7 @@
       <div class="row">
         <div class="col s12 l12">
           <h4 class="center-align gsans">Map Visualization</h4>
+          <div class="center-align gsans"><span>Hover/Click on the district name to view details info</span></div>
           <div class="card round">
             <div class="row">
               <div class="col s12 l3">
@@ -418,14 +421,15 @@
                 <span class="orange-text text-darken-4" id="affectedAreaNumber"></span>
               </h6>
               <div class="input-field col s12 m4 l4">
+                <i class="material-icons prefix">location_searching</i>
                 <input id="search" type="text" autocomplete="off" />
                 <label for="arealsearch">Search for a location...</label>
               </div>
               <div class="right-align">
-                <a class="btn-floating tooltipped btn-small waves-effect waves-light orange darken-4 sortButton"
+                <a class="btn-floating tooltipped btn-small waves-effect waves-light orange darken-4 ascBtn"
                   id="accending" data-tooltip="Filter in ascending order"><i
                     class="material-icons">vertical_align_bottom</i></a>
-                <a class="btn-floating tooltipped btn-small waves-effect waves-light deep-purple darken-4"
+                <a class="btn-floating tooltipped btn-small waves-effect waves-light deep-purple darken-4 descBtn"
                   id="decending" data-tooltip="Filter in descending order"><i
                     class="material-icons">vertical_align_top</i></a>
               </div>
@@ -449,7 +453,7 @@
             <div class="row">
               <div class="col s12 l4 m6">
                 <figure>
-                  <img src="assets/img/CoronaInfo.PNG" alt="coronavirus" class="responsive-img" />
+                  <img src="assets/img/CoronaInfo.webp" alt="coronavirus" class="responsive-img" />
                   <figcaption class="center-align red-text">
                     Fig.1 - Mind map of cases. Due to logarithmic growth of
                     COVID-19 we are unable to provide details information of
