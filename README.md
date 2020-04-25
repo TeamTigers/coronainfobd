@@ -1,6 +1,4 @@
-# Welcome to CoronaInfoBD :wave:
-
-## What is CoronaInfoBD?
+# Welcome to CoronaInfoBD :wave: :tada:
 
 CoronaInfoBD is a web site which tracks the COVID-19 affect of Bangladesh. This site provides the total number of affected people, deaths, recovered patients, active cases and so on. It also provides some other features which includes visual mapping of how COVID-19 is spreading, statistical charts of infected number of people over time, deaths and recovered number of people over time, hotline number and many more.
 
@@ -13,7 +11,7 @@ World/Bangladesh             |  Data Visualization             |  Map Visualizat
 
 As it provides real data and visual mapping of spreading COVID-19, mass people will have a overall idea of current situation of COVID-19 and how the virus is spreading.
 
-## What are the features it is providing us?
+## What are the features it is providing us? :raised_eyebrow:
 
 - **Summary of COVID-19**, which includes total number of infected people, deaths, number of recovered patients of World and Bangladesh. Also it provides number of active cases, new cases and deaths of last 24 hours, tests, cases, deaths per one million.
 
@@ -30,32 +28,15 @@ As it provides real data and visual mapping of spreading COVID-19, mass people w
   
 - **Day/Night Mode** as most of the people prefer night mode, so we made sure to have a day/night mode in our application.
 
-## Is it responsive?
+## Is it responsive? :confused:
 
 Yes. We tried our best to make it responsive so that people can get proper view of the site whatever the device they use to access in the site.
 
-## I have a question. Where should I ask?
+## I have a question. Where should I ask? :thinking:
 
-If you have any query, feature request or if you find any kind of bug in our site please let us know by simply opening a issue [here](https://github.com/TeamTigers/coronainfobd/issues).
+If you have any query, feature request or if you find any kind of bug :beetle: in our site please let us know by simply opening a issue [here](https://github.com/TeamTigers/coronainfobd/issues).
 
-## Can I contribute in this project?
-
-Of course you can. It is an open source project. If you want to contribute with us follow the procedures -
-
-- Fork the repository in your github account.
-- Clone it in your local and do the changes you want.
-- Make a PR with proper documentation of what you did as they say _Lack of proper documentation is becoming a problem for acceptence_ :wink:
-
-## Contributor
-
-Contributors who have worked/ working hard to keep this application up to date are - 
-
-- [Shunjid Rahman Showrov](https://www.facebook.com/shunjid)
-- [Shah Fahad Hossen](https://www.facebook.com/shahfahad.hossain)
-- [Jinnatul Islam Morol](https://www.facebook.com/mdjinnatul.islam)
-- [Zubayer Himel](https://www.facebook.com/zubayerhimel0)
-
-## API sources that we've used so far 
+## API sources that we've used so far :fire:
 
 - World, Bangladesh and More info data
     - [API](https://coronavirus-19-api.herokuapp.com/tabs/tab1)
@@ -65,6 +46,24 @@ Contributors who have worked/ working hard to keep this application up to date a
   - [API](https://corona-bd.herokuapp.com/district)
 - Dhaka city affected areas (table)
   - [API](https://teamtigers.github.io/covid19-dataset-bd/dhakacity/dhakacity.json)
+
+## Can I contribute in this project? :smiley:
+
+Of course you can. It is an open source project. If you want to contribute with us follow the procedures -
+
+- Fork the repository in your github account.
+- Clone it in your local and do the changes you want.
+- Make a PR with proper documentation of what you did as they say _Lack of proper documentation is becoming a problem for acceptence_ :wink:
+
+## Contributor :nerd_face:
+
+Contributors who have worked/ working hard to keep this application up to date are - 
+
+- [Shunjid Rahman Showrov](https://www.facebook.com/shunjid)
+- [Shah Fahad Hossen](https://www.facebook.com/shahfahad.hossain)
+- [Jinnatul Islam Morol](https://www.facebook.com/mdjinnatul.islam)
+- [Zubayer Himel](https://www.facebook.com/zubayerhimel0)
+
 
 ## License and copyright
 
