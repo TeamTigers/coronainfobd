@@ -39,10 +39,10 @@ If you have any query, feature request or if you find any kind of bug :beetle: i
 ## API sources that we've used so far :fire:
 
 - World, Bangladesh and More info data
-    - [API](https://coronavirus-19-api.herokuapp.com/tabs/tab1)
+  - [API](https://coronavirus-19-api.herokuapp.com/countries/bangladesh)
 - Chart Visualization
   - [API](https://corona.lmao.ninja/docs/)
-- Map Visualization 
+- Map Visualization
   - [API](https://corona-bd.herokuapp.com/district)
 - Dhaka city affected areas (table)
   - [API](https://teamtigers.github.io/covid19-dataset-bd/dhakacity/dhakacity.json)
@@ -57,17 +57,15 @@ Of course you can. It is an open source project. If you want to contribute with 
 
 ## Contributor :nerd_face:
 
-Contributors who have worked/ working hard to keep this application up to date are - 
+Contributors who have worked/ working hard to keep this application up to date are -
 
 - [Shunjid Rahman Showrov](https://www.facebook.com/shunjid)
 - [Shah Fahad Hossen](https://www.facebook.com/shahfahad.hossain)
 - [Jinnatul Islam Morol](https://www.facebook.com/mdjinnatul.islam)
 - [Zubayer Himel](https://www.facebook.com/zubayerhimel0)
 
-
 ## License and copyright
 
-© TeamTigers Licensed under the [GPL License](LICENSE) 
+© TeamTigers Licensed under the [GPL License](LICENSE)
 
-### If you happen to like our work please give a star :star: on the repository.
-
+### If you happen to like our work please give a star :star: on the repository
