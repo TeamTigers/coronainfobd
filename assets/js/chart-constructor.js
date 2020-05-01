@@ -180,6 +180,7 @@ function heatMapGenerator(
 ) {
   return {
     type: "calendar",
+    theme: localStorage.getItem("darkMood") ? "dark" : "light",
     options: {
       year: {
         text: "2020",
@@ -191,14 +192,14 @@ function heatMapGenerator(
       month: {
         item: {
           fontFamily: "Google Sans",
-          fontColor: "black",
+          fontColor: localStorage.getItem("darkMood") ? "#ffffff" : "black",
           fontSize: 14,
         },
       },
       weekday: {
         values: ["", "M", "", "W", "", "F", ""],
         item: {
-          fontColor: "gray",
+          fontColor: localStorage.getItem("darkMood") ? "#ffffff" : "gray",
           fontSize: 9,
         },
       },
@@ -220,7 +221,7 @@ function heatMapGenerator(
         text: leftBoxTopLabel,
         fontFamily: "Google Sans",
         fontSize: 13,
-        fontColor: "#212121",
+        fontColor: localStorage.getItem("darkMood") ? "#ffffff": "#212121",
         textAlign: "center",
         x: "10%",
         y: "65%",
@@ -255,7 +256,7 @@ function heatMapGenerator(
         text: rightBoxTopLabel,
         fontFamily: "Google Sans",
         fontSize: 13,
-        fontColor: "#212121",
+        fontColor: localStorage.getItem("darkMood") ? "#ffffff": "#212121",
         textAlign: "center",
         x: "54%",
         y: "65%",
@@ -277,7 +278,7 @@ function heatMapGenerator(
         text: rightBoxBottomLevel,
         fontFamily: "Google Sans",
         fontSize: 13,
-        fontColor: "#212121",
+        fontColor: localStorage.getItem("darkMood") ? "#ffffff": "#212121",
         padding: 2,
         textAlign: "center",
         x: "54%",
@@ -294,7 +295,7 @@ function heatMapGenerator(
       borderColor: "none",
       fontFamily: "Google Sans",
       fontSize: 13,
-      fontColor: "#212121",
+      fontColor: localStorage.getItem("darkMood") ? "#ffffff": "#212121",
       padding: 2,
       //textAlign: 'center',
       align: "center",
@@ -322,7 +323,7 @@ function singleLineChartGenerator(formattedDate, data, labelText) {
     graphset: [
       {
         type: "area",
-        "background-color": "#fff",
+        "background-color": localStorage.getItem("darkMood") ? "#263238": "#fff",
         utc: true,
         plotarea: {
           "margin-top": "10%",
@@ -348,6 +349,7 @@ function singleLineChartGenerator(formattedDate, data, labelText) {
         "scale-x": {
           label: {
             text: "Date Range",
+            "font-color": localStorage.getItem("darkMood") ? "#fff" : "#212",
             "font-size": "14px",
             "font-weight": "normal",
             "offset-x": "10%",
@@ -355,7 +357,7 @@ function singleLineChartGenerator(formattedDate, data, labelText) {
           },
           item: {
             "text-align": "center",
-            "font-color": "#05636c",
+            "font-color": localStorage.getItem("darkMood") ? "#00e5ff" : "#05636c",
           },
           zooming: 1,
           "max-labels": 12,
@@ -379,12 +381,13 @@ function singleLineChartGenerator(formattedDate, data, labelText) {
         "scale-y": {
           values: `0:${Math.max(...data)}:${Math.min(...data) + 2}`,
           item: {
-            "font-color": "#05636c",
+            "font-color": localStorage.getItem("darkMood") ? "#00e5ff" : "#05636c",
             "font-weight": "normal",
           },
           label: {
-            text: "Metrics",
+            text: "Count",
             "font-size": "14px",
+            "font-color": localStorage.getItem("darkMood") ? "#fff" : "#212",
           },
           guide: {
             "line-width": "0px",
@@ -433,7 +436,7 @@ function multiLineChartGenerator(formattedDate, recoverdData, deathData) {
     graphset: [
       {
         type: "area",
-        "background-color": "#fff",
+        "background-color": localStorage.getItem("darkMood") ? "#263238": "#fff",
         utc: true,
         plotarea: {
           "margin-top": "10%",
@@ -471,6 +474,7 @@ function multiLineChartGenerator(formattedDate, recoverdData, deathData) {
         "scale-x": {
           label: {
             text: "Date Range",
+            "font-color": localStorage.getItem("darkMood") ? "#fff" : "#212",
             "font-size": "14px",
             "font-weight": "normal",
             "offset-x": "10%",
@@ -478,7 +482,7 @@ function multiLineChartGenerator(formattedDate, recoverdData, deathData) {
           },
           item: {
             "text-align": "center",
-            "font-color": "#05636c",
+            "font-color": localStorage.getItem("darkMood") ? "#00e5ff" : "#05636c",
           },
           zooming: 1,
           "max-labels": 12,
@@ -505,12 +509,13 @@ function multiLineChartGenerator(formattedDate, recoverdData, deathData) {
             Math.max(...deathData)
           )}:${Math.min(...recoverdData) + 1}`,
           item: {
-            "font-color": "#05636c",
+            "font-color": localStorage.getItem("darkMood") ? "#00e5ff" : "#05636c",
             "font-weight": "normal",
           },
           label: {
-            text: "Metrics",
+            text: "Count",
             "font-size": "14px",
+            "font-color": localStorage.getItem("darkMood") ? "#fff" : "#212",
           },
           guide: {
             "line-width": "0px",
