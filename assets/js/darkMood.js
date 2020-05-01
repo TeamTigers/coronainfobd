@@ -4,6 +4,9 @@
   if (localStorage.getItem("darkMood")) {
     document.querySelector("html").classList.toggle("dark");
     document.getElementById("moodIcon").innerHTML = "brightness_3";
+    $("#mindmap").attr("src", 'https://teamtigers.github.io/coronainfobd/assets/img/CoronaInfoDark.webp');
+  } else {
+    $("#mindmap").attr("src", 'https://teamtigers.github.io/coronainfobd/assets/img/CoronaInfo.webp');
   }
 })();
 
