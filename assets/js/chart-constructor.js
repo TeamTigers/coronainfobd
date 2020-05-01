@@ -1,5 +1,5 @@
 $(function () {
-  let apiUrl = "https://corona.lmao.ninja/v2/historical/bangladesh?";
+  let apiUrl = "https://disease.sh/v2/historical/bangladesh?";
 
   // EXP : Can be scaled days: More or, less
   // TODO: Change the function's @secondDate
