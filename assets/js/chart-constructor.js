@@ -91,8 +91,8 @@ $(function () {
         id: "affectedHeatMap",
         data: heatMapGenerator(
           formattedAffectedList,
-          3,
-          5,
+          4,
+          7,
           ["none", "#f32160"],
           "Newly affected",
           "#f32160",
@@ -109,8 +109,8 @@ $(function () {
         id: "recoveredHeatMap",
         data: heatMapGenerator(
           formattedRecoveredList,
-          3,
-          5,
+          4,
+          7,
           ["none", "#2bbd7e"],
           "Newly recovered",
           "#2bbd7e",
