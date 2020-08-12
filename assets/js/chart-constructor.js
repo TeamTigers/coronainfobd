@@ -91,8 +91,8 @@ $(function () {
         id: "affectedHeatMap",
         data: heatMapGenerator(
           formattedAffectedList,
-          4,
-          7,
+          5,
+          8,
           ["none", "#f32160"],
           "Newly affected",
           "#f32160",
